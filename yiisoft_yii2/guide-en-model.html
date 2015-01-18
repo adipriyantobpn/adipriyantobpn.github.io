@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/4b76110e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/710de68d/style.css" rel="stylesheet">
+<script src="./assets/75e46bf0/jquery.js"></script>
+<script src="./assets/4b76110e/js/bootstrap.js"></script>
+<script src="./assets/a44c75fa/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w54" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w54-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w54-collapse" class="collapse navbar-collapse"><ul id="w55" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Model <a href="#model" name="model" class="hashlink">&para;</a></h1><p>In keeping with the MVC approach, a model in Yii is intended for storing or temporarily representing application data. Yii models have the following basic features:</p>
+<ul>
+<li>Attribute declaration: a model defines what is considered an attribute.</li>
+<li>Attribute labels: each attribute may be associated with a label for display purpose.</li>
+<li>Massive attribute assignment: the ability to populate multiple model attributes in one step.</li>
+<li>Scenario-based data validation.</li>
+</ul>
+<p>Models in Yii extend from the <span class="broken-link">\yii\base\Model</span> class. Models are typically used to both hold data and define the validation rules for that data (aka, the business logic). The business logic greatly simplifies the generation of models from complex web forms by providing validation and error reporting.
+The Model class is also the base class for more advanced models with additional functionality, such as <a href="guide-en-active-record.html">Active Record</a>.</p>
+<h2>Attributes <a href="#attributes" name="attributes" class="hashlink">&para;</a></h2><p>The actual data represented by a model is stored in the model's <em>attributes</em>. Model attributes can
+be accessed like the member variables of any object. For example, a <code>Post</code> model
+may contain a <code>title</code> attribute and a <code>content</code> attribute, accessible as follows:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$post&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Post</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$post</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'Hello,&nbsp;world'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$post</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">content&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'Something&nbsp;interesting&nbsp;is&nbsp;happening'</span><span style="color: #007700">;<br />echo&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">;<br />echo&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">content</span><span style="color: #007700">;</span></code></pre>
+<p>Since <span class="broken-link">\yii\base\Model</span> implements the <a href="http://php.net/manual/en/class.arrayaccess.php">ArrayAccess</a> interface,
+you can also access the attributes as if they were array elements:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$post&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Post</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$post</span><span style="color: #007700">[</span><span style="color: #DD0000">'title'</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #DD0000">'Hello,&nbsp;world'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$post</span><span style="color: #007700">[</span><span style="color: #DD0000">'content'</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #DD0000">'Something&nbsp;interesting&nbsp;is&nbsp;happening'</span><span style="color: #007700">;<br />echo&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">[</span><span style="color: #DD0000">'title'</span><span style="color: #007700">];<br />echo&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">[</span><span style="color: #DD0000">'content'</span><span style="color: #007700">];</span></code></pre>
+<p>By default, <span class="broken-link">\yii\base\Model</span> requires that attributes be declared as <em>public</em> and <em>non-static</em>
+class member variables. In the following example, the <code>LoginForm</code> model class declares two attributes:
+<code>username</code> and <code>password</code>.</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;LoginForm&nbsp;has&nbsp;two&nbsp;attributes:&nbsp;username&nbsp;and&nbsp;password<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">LoginForm&nbsp;</span><span style="color: #007700">extends&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">base</span><span style="color: #007700">\</span><span style="color: #0000BB">Model<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000BB">$username</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000BB">$password</span><span style="color: #007700">;<br />}</span></code></pre>
+<p>Derived model classes may declare attributes in different ways, by overriding the <span class="broken-link">\yii\base\Model::attributes()</span>
+method. For example, <span class="broken-link">\yii\db\ActiveRecord</span> defines attributes using the column names of the database table
+that is associated with the class.</p>
+<h2>Attribute Labels <a href="#attribute-labels" name="attribute-labels" class="hashlink">&para;</a></h2><p>Attribute labels are mainly used for display purpose. For example, given an attribute <code>firstName</code>, we can declare
+a label <code>First Name</code> that is more user-friendly when displayed to end users in places such as form labels and
+error messages. Given an attribute name, you can obtain its label by calling <span class="broken-link">\yii\base\Model::getAttributeLabel()</span>.</p>
+<p>To declare attribute labels, override the <span class="broken-link">\yii\base\Model::attributeLabels()</span> method. The overridden method returns a mapping of attribute names to attribute labels, as shown in the example below. If an attribute is not found
+in this mapping, its label will be generated using the <span class="broken-link">\yii\base\Model::generateAttributeLabel()</span> method. In many cases, <span class="broken-link">\yii\base\Model::generateAttributeLabel()</span> will generate reasonable labels (e.g. <code>username</code> to <code>Username</code>, <code>orderNumber</code> to <code>Order Number</code>).</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;LoginForm&nbsp;has&nbsp;two&nbsp;attributes:&nbsp;username&nbsp;and&nbsp;password<br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">LoginForm&nbsp;</span><span style="color: #007700">extends&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">base</span><span style="color: #007700">\</span><span style="color: #0000BB">Model<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000BB">$username</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000BB">$password</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">attributeLabels</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Your&nbsp;name'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'password'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Your&nbsp;password'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span></code></pre>
+<h2>Scenarios <a href="#scenarios" name="scenarios" class="hashlink">&para;</a></h2><p>A model may be used in different <em>scenarios</em>. For example, a <code>User</code> model may be used to collect user login inputs,
+but it may also be used for user registration purposes. In the one scenario, every piece of data is required; in the other, only the username and password would be.</p>
+<p>To easily implement the business logic for different scenarios, each model has a property named <code>scenario</code>
+that stores the name of the scenario that the model is currently being used in. As will be explained in the next
+few sections, the concept of scenarios is mainly used for data validation and massive attribute assignment.</p>
+<p>Associated with each scenario is a list of attributes that are <em>active</em> in that particular scenario. For example,
+in the <code>login</code> scenario, only the <code>username</code> and <code>password</code> attributes are active; while in the <code>register</code> scenario,
+additional attributes such as <code>email</code> are <em>active</em>. When an attribute is <em>active</em> this means that it is subject to validation.</p>
+<p>Possible scenarios should be listed in the <code>scenarios()</code> method. This method returns an array whose keys are the scenario
+names and whose values are lists of attributes that should be active in that scenario:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">User&nbsp;</span><span style="color: #007700">extends&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">ActiveRecord<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">scenarios</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'login'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'password'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'register'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'password'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span></code></pre>
+<p>Sometimes, we want to mark an attribute as not safe for massive assignment (but we still want the attribute to be validated).
+We may do so by prefixing an exclamation character to the attribute name when declaring it in <code>scenarios()</code>. For example:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'!secret'</span><span style="color: #007700">]</span></code></pre>
+<p>In this example <code>username</code>, <code>password</code> and <code>secret</code> are <em>active</em> attributes but only <code>username</code> and <code>password</code> are
+considered safe for massive assignment.</p>
+<p>Identifying the active model scenario can be done using one of the following approaches:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">EmployeeController&nbsp;</span><span style="color: #007700">extends&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">web</span><span style="color: #007700">\</span><span style="color: #0000BB">Controller<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">actionCreate</span><span style="color: #007700">(</span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;first&nbsp;way<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$employee&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Employee</span><span style="color: #007700">([</span><span style="color: #DD0000">'scenario'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'managementPanel'</span><span style="color: #007700">]);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;second&nbsp;way<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$employee&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Employee</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$employee</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scenario&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'managementPanel'</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;third&nbsp;way<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$employee&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Employee</span><span style="color: #007700">::</span><span style="color: #0000BB">find</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">where</span><span style="color: #007700">(</span><span style="color: #DD0000">'id&nbsp;=&nbsp;:id'</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">':id'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$id</span><span style="color: #007700">])-&gt;</span><span style="color: #0000BB">one</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$employee&nbsp;</span><span style="color: #007700">!==&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$employee</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scenario&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'managementPanel'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span></code></pre>
+<p>The example above presumes that the model is based upon <a href="guide-en-active-record.html">Active Record</a>. For basic form models,
+scenarios are rarely needed, as the basic form model is normally tied directly to a single form.
+The default implementation of the <code>scenarios()</code>-method will return all scenarios found in the <code>rules()</code>
+declaration (explained in the next section) so in simple cases you do not need to define scenarios.</p>
+<h2>Validation <a href="#validation" name="validation" class="hashlink">&para;</a></h2><p>When a model is used to collect user input data via its attributes, it usually needs to validate the affected attributes
+to make sure they satisfy certain requirements, such as an attribute cannot be empty, an attribute must contain letters
+only, etc. If errors are found in validation, they may be presented to the user to help him fix the errors.
+The following example shows how the validation is performed:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$model&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">LoginForm</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">username&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$_POST</span><span style="color: #007700">[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">];<br /></span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">password&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$_POST</span><span style="color: #007700">[</span><span style="color: #DD0000">'password'</span><span style="color: #007700">];<br />if&nbsp;(</span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">validate</span><span style="color: #007700">())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...&nbsp;login&nbsp;the&nbsp;user&nbsp;...<br /></span><span style="color: #007700">}&nbsp;else&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$errors&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getErrors</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...&nbsp;display&nbsp;the&nbsp;errors&nbsp;to&nbsp;the&nbsp;end&nbsp;user&nbsp;...<br /></span><span style="color: #007700">}</span></code></pre>
+<p>The possible validation rules for a model should be listed in its <code>rules()</code> method. Each validation rule applies to one
+or several attributes and is effective in one or several scenarios. A rule can be specified using a validator object - an
+instance of a <span class="broken-link">\yii\validators\Validator</span> child class, or an array with the following format:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;[</span><span style="color: #DD0000">'attribute1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'attribute2'</span><span style="color: #007700">,&nbsp;...],<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'validator&nbsp;class&nbsp;or&nbsp;alias'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;specifies&nbsp;in&nbsp;which&nbsp;scenario(s)&nbsp;this&nbsp;rule&nbsp;is&nbsp;active.<br />&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;if&nbsp;not&nbsp;given,&nbsp;it&nbsp;means&nbsp;it&nbsp;is&nbsp;active&nbsp;in&nbsp;all&nbsp;scenarios<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'on'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'scenario1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'scenario2'</span><span style="color: #007700">,&nbsp;...],<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;the&nbsp;following&nbsp;name-value&nbsp;pairs&nbsp;will&nbsp;be&nbsp;used<br />&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;to&nbsp;initialize&nbsp;the&nbsp;validator&nbsp;properties<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'property1'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'value1'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'property2'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'value2'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br /></span><span style="color: #007700">]</span></code></pre>
+<p>When <code>validate()</code> is called, the actual validation rules executed are determined using both of the following criteria:</p>
+<ul>
+<li>the rule must be associated with at least one active attribute;</li>
+<li>the rule must be active for the current scenario.</li>
+</ul>
+<h3>Active Attributes <a href="#active-attributes" name="active-attributes" class="hashlink">&para;</a></h3><p>An attribute is <em>active</em> if it is subject to some validations in the current scenario.</p>
+<h3>Safe Attributes <a href="#safe-attributes" name="safe-attributes" class="hashlink">&para;</a></h3><p>An attribute is <em>safe</em> if it can be massively assigned in the current scenario.</p>
+<h2>Massive Attribute Retrieval and Assignment <a href="#massive-attribute-retrieval-and-assignment" name="massive-attribute-retrieval-and-assignment" class="hashlink">&para;</a></h2><p>Attributes can be massively retrieved via the <code>attributes</code> property.
+The following code will return <em>all</em> attributes in the <code>$post</code> model
+as an array of name-value pairs.</p>
+<pre><code class="language-php"><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">var_dump</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">);</span></code></pre>
+<p>Using the same <code>attributes</code> property you can massively assign data from associative array to model attributes:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'title'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Model&nbsp;attributes'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'create_time'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">time</span><span style="color: #007700">(),<br />];<br /></span><span style="color: #0000BB">$post</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">;</span></code></pre>
+<p>In the code above we're assigning corresponding data to model attributes named as array keys. The key difference from mass
+retrieval that always works for all attributes is that in order to be assigned an attribute should be <strong>safe</strong> else
+it will be ignored.</p>
+<h2>Validation rules and mass assignment <a href="#validation-rules-and-mass-assignment" name="validation-rules-and-mass-assignment" class="hashlink">&para;</a></h2><p>In Yii2 unlike Yii 1.x validation rules are separated from mass assignment. Validation
+rules are described in <code>rules()</code> method of the model while what's safe for mass
+assignment is described in <code>scenarios</code> method:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">function&nbsp;</span><span style="color: #0000BB">rules</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;rule&nbsp;applied&nbsp;when&nbsp;corresponding&nbsp;field&nbsp;is&nbsp;"safe"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'string'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'length'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #0000BB">4</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">32</span><span style="color: #007700">]],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[</span><span style="color: #DD0000">'first_name'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'string'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'max'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">128</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[</span><span style="color: #DD0000">'password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'required'</span><span style="color: #007700">],<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;rule&nbsp;applied&nbsp;when&nbsp;scenario&nbsp;is&nbsp;"signup"&nbsp;no&nbsp;matter&nbsp;if&nbsp;field&nbsp;is&nbsp;"safe"&nbsp;or&nbsp;not<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">[</span><span style="color: #DD0000">'hashcode'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'check'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'on'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'signup'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;];<br />}<br /><br />function&nbsp;</span><span style="color: #0000BB">scenarios</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;on&nbsp;signup&nbsp;allow&nbsp;mass&nbsp;assignment&nbsp;of&nbsp;username<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'signup'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'password'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'update'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'first_name'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;];<br />}</span></code></pre>
+<p>Note that everything is unsafe by default and you can't make field "safe" without specifying scenario.</p>
+<h2>See also <a href="#see-also" name="see-also" class="hashlink">&para;</a></h2><ul>
+<li><a href="guide-en-validation.html">Model validation reference</a></li>
+<li><span class="broken-link">\yii\base\Model</span></li>
+</ul>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:32:13 +0700</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/4b76110e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/710de68d/style.css" rel="stylesheet">
+<script src="./assets/75e46bf0/jquery.js"></script>
+<script src="./assets/4b76110e/js/bootstrap.js"></script>
+<script src="./assets/a44c75fa/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w78" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w78-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w78-collapse" class="collapse navbar-collapse"><ul id="w79" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Model validation reference <a href="#model-validation-reference" name="model-validation-reference" class="hashlink">&para;</a></h1><p>This guide section doesn't describe how validation works but instead describes all Yii validators and their parameters.
+In order to learn model validation basics please refer to <a href="guide-en-model.html#Validation">Model, Validation subsection</a>.</p>
+<h2>Standard Yii validators <a href="#standard-yii-validators" name="standard-yii-validators" class="hashlink">&para;</a></h2><p>Standard Yii validators could be specified using aliases instead of referring to class names. Here's the list of all
+validators bundled with Yii with their most useful properties:</p>
+<h3><code>boolean</code>: <span class="broken-link">BooleanValidator</span> <a href="#boolean-booleanvalidator" name="boolean-booleanvalidator" class="hashlink">&para;</a></h3><p>Checks if the attribute value is a boolean value.</p>
+<ul>
+<li><code>trueValue</code>, the value representing true status. <em>(1)</em></li>
+<li><code>falseValue</code>, the value representing false status. <em>(0)</em></li>
+<li><code>strict</code>, whether to compare the type of the value and <code>trueValue</code>/<code>falseValue</code>. <em>(false)</em></li>
+</ul>
+<h3><code>captcha</code>: <span class="broken-link">CaptchaValidator</span> <a href="#captcha-captchavalidator" name="captcha-captchavalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value is the same as the verification code displayed in the CAPTCHA. Should be used together
+with <span class="broken-link">CaptchaAction</span>.</p>
+<ul>
+<li><code>caseSensitive</code> whether the comparison is case sensitive. <em>(false)</em></li>
+<li><code>captchaAction</code> the route of the controller action that renders the CAPTCHA image. <em>('site/captcha')</em></li>
+</ul>
+<h3><code>compare</code>: <span class="broken-link">CompareValidator</span> <a href="#compare-comparevalidator" name="compare-comparevalidator" class="hashlink">&para;</a></h3><p>Compares the specified attribute value with another value and validates if they are equal.</p>
+<ul>
+<li><code>compareAttribute</code> the name of the attribute to be compared with. _(currentAttribute<em>repeat)</em></li>
+<li><code>compareValue</code> the constant value to be compared with.</li>
+<li><code>operator</code> the operator for comparison. <em>('==')</em></li>
+</ul>
+<h3><code>date</code>: <span class="broken-link">DateValidator</span> <a href="#date-datevalidator" name="date-datevalidator" class="hashlink">&para;</a></h3><p>Verifies if the attribute represents a date, time or datetime in a proper format.</p>
+<ul>
+<li><code>format</code> the date format that the value being validated should follow according to [[<a href="http://www.php.net/manual/en/datetime.createfromformat.php]]">http://www.php.net/manual/en/datetime.createfromformat.php]]</a>. <em>('Y-m-d')</em></li>
+<li><code>timestampAttribute</code> the name of the attribute to receive the parsing result.</li>
+</ul>
+<h3><code>default</code>: <span class="broken-link">DefaultValueValidator</span> <a href="#default-defaultvaluevalidator" name="default-defaultvaluevalidator" class="hashlink">&para;</a></h3><p>Sets the attribute to be the specified default value.</p>
+<ul>
+<li><code>value</code> the default value to be set to the specified attributes.</li>
+</ul>
+<h3><code>double</code>: <span class="broken-link">NumberValidator</span> <a href="#double-numbervalidator" name="double-numbervalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value is a number.</p>
+<ul>
+<li><code>max</code> limit of the number. <em>(null)</em></li>
+<li><code>min</code> lower limit of the number. <em>(null)</em></li>
+</ul>
+<h3><code>email</code>: <span class="broken-link">EmailValidator</span> <a href="#email-emailvalidator" name="email-emailvalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value is a valid email address.</p>
+<ul>
+<li><code>allowName</code> whether to allow name in the email address (e.g. <code>John Smith &lt;john.smith@example.com&gt;</code>). <em>(false)</em>.</li>
+<li><code>checkMX</code> whether to check the MX record for the email address. <em>(false)</em></li>
+<li><code>checkPort</code> whether to check port 25 for the email address. <em>(false)</em></li>
+<li><code>enableIDN</code> whether validation process should take into account IDN (internationalized domain names). <em>(false)</em></li>
+</ul>
+<h3><code>exist</code>: <span class="broken-link">ExistValidator</span> <a href="#exist-existvalidator" name="exist-existvalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value exists in a table.</p>
+<ul>
+<li><code>className</code> the ActiveRecord class name or alias of the class that should be used to look for the attribute value being
+validated. <em>(ActiveRecord class of the attribute being validated)</em></li>
+<li><code>attributeName</code> the ActiveRecord attribute name that should be used to look for the attribute value being validated.
+<em>(name of the attribute being validated)</em></li>
+</ul>
+<h3><code>file</code>: <span class="broken-link">FileValidator</span> <a href="#file-filevalidator" name="file-filevalidator" class="hashlink">&para;</a></h3><p>Verifies if an attribute is receiving a valid uploaded file.</p>
+<ul>
+<li><code>types</code> a list of file name extensions that are allowed to be uploaded. <em>(any)</em></li>
+<li><code>minSize</code> the minimum number of bytes required for the uploaded file.</li>
+<li><code>maxSize</code> the maximum number of bytes required for the uploaded file.</li>
+<li><code>maxFiles</code> the maximum file count the given attribute can hold. <em>(1)</em></li>
+</ul>
+<h3><code>filter</code>: <span class="broken-link">FilterValidator</span> <a href="#filter-filtervalidator" name="filter-filtervalidator" class="hashlink">&para;</a></h3><p>Converts the attribute value according to a filter.</p>
+<ul>
+<li><code>filter</code> PHP callback that defines a filter.</li>
+</ul>
+<p>Typically a callback is either the name of PHP function:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[</span><span style="color: #DD0000">'password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'filter'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'filter'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'trim'</span><span style="color: #007700">],</span></code></pre>
+<p>Or an anonymous function:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[</span><span style="color: #DD0000">'text'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'filter'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'filter'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;function&nbsp;(</span><span style="color: #0000BB">$value</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;here&nbsp;we&nbsp;are&nbsp;removing&nbsp;all&nbsp;swear&nbsp;words&nbsp;from&nbsp;text<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$newValue</span><span style="color: #007700">;<br />}],</span></code></pre>
+<h3><code>in</code>: <span class="broken-link">RangeValidator</span> <a href="#in-rangevalidator" name="in-rangevalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value is among a list of values.</p>
+<ul>
+<li><code>range</code> list of valid values that the attribute value should be among.</li>
+<li><code>strict</code> whether the comparison is strict (both type and value must be the same). <em>(false)</em></li>
+<li><code>not</code> whether to invert the validation logic. <em>(false)</em></li>
+</ul>
+<h3><code>integer</code>: <span class="broken-link">NumberValidator</span> <a href="#integer-numbervalidator" name="integer-numbervalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value is an integer number.</p>
+<ul>
+<li><code>max</code> limit of the number. <em>(null)</em></li>
+<li><code>min</code> lower limit of the number. <em>(null)</em></li>
+</ul>
+<h3><code>match</code>: <span class="broken-link">RegularExpressionValidator</span> <a href="#match-regularexpressionvalidator" name="match-regularexpressionvalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value matches the specified pattern defined by regular expression.</p>
+<ul>
+<li><code>pattern</code> the regular expression to be matched with.</li>
+<li><code>not</code> whether to invert the validation logic. <em>(false)</em></li>
+</ul>
+<h3><code>required</code>: <span class="broken-link">RequiredValidator</span> <a href="#required-requiredvalidator" name="required-requiredvalidator" class="hashlink">&para;</a></h3><p>Validates that the specified attribute does not have null or empty value.</p>
+<ul>
+<li><code>requiredValue</code> the desired value that the attribute must have. <em>(any)</em></li>
+<li><code>strict</code> whether the comparison between the attribute value and <span class="broken-link">requiredValue</span> is strict. <em>(false)</em></li>
+</ul>
+<h3><code>safe</code>: <span class="broken-link">SafeValidator</span> <a href="#safe-safevalidator" name="safe-safevalidator" class="hashlink">&para;</a></h3><p>Serves as a dummy validator whose main purpose is to mark the attributes to be safe for massive assignment.</p>
+<h3><code>string</code>: <span class="broken-link">StringValidator</span> <a href="#string-stringvalidator" name="string-stringvalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value is of certain length.</p>
+<ul>
+<li><code>length</code> specifies the length limit of the value to be validated. Can be <code>exactly X</code>, <code>[min X]</code>, <code>[min X, max Y]</code>.</li>
+<li><code>max</code>  maximum length. If not set, it means no maximum length limit.</li>
+<li><code>min</code> minimum length. If not set, it means no minimum length limit.</li>
+<li><code>encoding</code> the encoding of the string value to be validated. <em>(<span class="broken-link">\yii\base\Application::charset</span>)</em></li>
+</ul>
+<h3><code>unique</code>: <span class="broken-link">UniqueValidator</span> <a href="#unique-uniquevalidator" name="unique-uniquevalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value is unique in the corresponding database table.</p>
+<ul>
+<li><code>className</code> the ActiveRecord class name or alias of the class that should be used to look for the attribute value being
+validated. <em>(ActiveRecord class of the attribute being validated)</em></li>
+<li><code>attributeName</code> the ActiveRecord attribute name that should be used to look for the attribute value being validated.
+<em>(name of the attribute being validated)</em></li>
+</ul>
+<h3><code>url</code>: <span class="broken-link">UrlValidator</span> <a href="#url-urlvalidator" name="url-urlvalidator" class="hashlink">&para;</a></h3><p>Validates that the attribute value is a valid http or https URL.</p>
+<ul>
+<li><code>validSchemes</code> list of URI schemes which should be considered valid. <em>['http', 'https']</em></li>
+<li><code>defaultScheme</code> the default URI scheme. If the input doesn't contain the scheme part, the default scheme will be
+prepended to it. <em>(null)</em></li>
+<li><code>enableIDN</code> whether validation process should take into account IDN (internationalized domain names). <em>(false)</em></li>
+</ul>
+<h2>Validating values out of model context <a href="#validating-values-out-of-model-context" name="validating-values-out-of-model-context" class="hashlink">&para;</a></h2><p>Sometimes you need to validate a value that is not bound to any model such as email. In Yii <code>Validator</code> class has
+<code>validateValue</code> method that can help you with it. Not all validator classes have it implemented but the ones that can
+operate without model do. In our case to validate an email we can do the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$email&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'test@example.com'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$validator&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">validators</span><span style="color: #007700">\</span><span style="color: #0000BB">EmailValidator</span><span style="color: #007700">();<br />if&nbsp;(</span><span style="color: #0000BB">$validator</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">validateValue</span><span style="color: #007700">(</span><span style="color: #0000BB">$email</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">'Email&nbsp;is&nbsp;valid.'</span><span style="color: #007700">;<br />}&nbsp;else&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">'Email&nbsp;is&nbsp;not&nbsp;valid.'<br /></span><span style="color: #007700">}</span></code></pre>
+<p>TBD: refer to <a href="http://www.yiiframework.com/wiki/56/">http://www.yiiframework.com/wiki/56/</a> for the format</p>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:32:13 +0700</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

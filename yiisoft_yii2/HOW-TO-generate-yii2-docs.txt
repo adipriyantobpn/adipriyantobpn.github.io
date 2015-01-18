@@ -32,7 +32,7 @@ C:\>	D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc
 #-- extension apis : change {EXTENSIONS} into extension name like bootstrap, composer, etc
 C:\>	D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc 
 		api 
-		D:\installer\~gitrepo\yiisoft_yii2\extensions
+		D:\installer\~gitrepo\yiisoft_yii2\extensions 
 		D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 
 		--guide="." 
 		--guidePrefix="guide-en-" 
