@@ -400,8 +400,8 @@
 <div id="classDescription">
     <p><strong>PhpManager represents an authorization manager that stores authorization
 information in terms of a PHP script file.</strong></p>
-    <p>The authorization data will be saved to and loaded from a file
-specified by <span class="broken-link">\yii\rbac\authFile</span>, which defaults to 'protected/data/rbac.php'.</p>
+    <p>The authorization data will be saved to and loaded from three files
+specified by <a href="yii-rbac-phpmanager.html#$itemFile-detail">$itemFile</a>, <a href="yii-rbac-phpmanager.html#$assignmentFile-detail">$assignmentFile</a> and <a href="yii-rbac-phpmanager.html#$ruleFile-detail">$ruleFile</a>.</p>
 <p>PhpManager is mainly suitable for authorization data that is not too big
 (for example, the authorization data for a personal blog system).
 Use <a href="yii-rbac-dbmanager.html">yii\rbac\DbManager</a> for more complex authorization data.</p>
@@ -790,6 +790,11 @@ it relies on writing php files and including them afterwards which is not suppor
         <td>Removes a child from its parent.</td>
         <td><a href="yii-rbac-phpmanager.html">yii\rbac\PhpManager</a></td>
     </tr>
+            <tr id="removeChildren()">
+        <td><a href="yii-rbac-phpmanager.html#removeChildren()-detail">removeChildren()</a></td>
+        <td>Removed all children form their parent.</td>
+        <td><a href="yii-rbac-phpmanager.html">yii\rbac\PhpManager</a></td>
+    </tr>
             <tr id="removeItem()">
         <td><a href="yii-rbac-phpmanager.html#removeItem()-detail">removeItem()</a></td>
         <td>Removes an auth item from the RBAC system.</td>
@@ -882,7 +887,7 @@ it relies on writing php files and including them afterwards which is not suppor
         <td>Removes all auth items of the specified type.</td>
         <td><a href="yii-rbac-phpmanager.html">yii\rbac\PhpManager</a></td>
     </tr>
-                                <tr id="removeRule()">
+                                    <tr id="removeRule()">
         <td><a href="yii-rbac-phpmanager.html#removeRule()-detail">removeRule()</a></td>
         <td>Removes a rule from the RBAC system.</td>
         <td><a href="yii-rbac-phpmanager.html">yii\rbac\PhpManager</a></td>
@@ -1096,8 +1101,8 @@ Make sure this file is writable by the Web server process if the authorization n
     <div class="detail-header h3" id="addItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#addItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L593" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L593" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L607" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L607" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addItem()
         <span class="detail-header-tag small">
@@ -1137,8 +1142,8 @@ Make sure this file is writable by the Web server process if the authorization n
     <div class="detail-header h3" id="addRule()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#addRule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L548" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L548" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L562" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L562" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addRule()
         <span class="detail-header-tag small">
@@ -1178,8 +1183,8 @@ Make sure this file is writable by the Web server process if the authorization n
     <div class="detail-header h3" id="assign()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#assign()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L229" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L229" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L243" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L243" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         assign()
         <span class="detail-header-tag small">
@@ -1381,8 +1386,8 @@ which holds the value of <code>$userId</code>.</p>
     <div class="detail-header h3" id="getAssignment()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getAssignment()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L279" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L279" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L293" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L293" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getAssignment()
         <span class="detail-header-tag small">
@@ -1461,8 +1466,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getChildren()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getChildren()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L434" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L434" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L448" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L448" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getChildren()
         <span class="detail-header-tag small">
@@ -1497,8 +1502,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getChildrenRecursive()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getChildrenRecursive()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L397" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L397" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L411" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L411" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getChildrenRecursive()
         <span class="detail-header-tag small">
@@ -1533,8 +1538,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L325" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L325" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L339" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L339" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getItem()
         <span class="detail-header-tag small">
@@ -1569,8 +1574,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getItems()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L287" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L287" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L301" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L301" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getItems()
         <span class="detail-header-tag small">
@@ -1605,8 +1610,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getPermissionsByRole()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getPermissionsByRole()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L375" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L375" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L389" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L389" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getPermissionsByRole()
         <span class="detail-header-tag small">
@@ -1641,8 +1646,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getPermissionsByUser()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getPermissionsByUser()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L410" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L410" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L424" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L424" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getPermissionsByUser()
         <span class="detail-header-tag small">
@@ -1677,8 +1682,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getRolesByUser()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getRolesByUser()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L362" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L362" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L376" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L376" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getRolesByUser()
         <span class="detail-header-tag small">
@@ -1714,8 +1719,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getRule()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getRule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L346" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L346" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L360" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L360" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getRule()
         <span class="detail-header-tag small">
@@ -1750,8 +1755,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getRules()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#getRules()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L354" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L354" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L368" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L368" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getRules()
         <span class="detail-header-tag small">
@@ -1780,8 +1785,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="hasChild()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#hasChild()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L221" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L221" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L235" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L235" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         hasChild()
         <span class="detail-header-tag small">
@@ -1846,8 +1851,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="load()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#load()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L614" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L614" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L628" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L628" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         load()
         <span class="detail-header-tag small">
@@ -1870,8 +1875,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="loadFromFile()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#loadFromFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L682" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L682" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L696" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L696" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadFromFile()
         <span class="detail-header-tag small">
@@ -1906,8 +1911,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="removeAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L442" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L442" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L456" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L456" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAll()
         <span class="detail-header-tag small">
@@ -1930,8 +1935,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="removeAllAssignments()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeAllAssignments()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L520" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L520" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L534" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L534" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllAssignments()
         <span class="detail-header-tag small">
@@ -1954,8 +1959,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="removeAllItems()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeAllItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L471" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L471" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L485" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L485" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllItems()
         <span class="detail-header-tag small">
@@ -1984,8 +1989,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="removeAllPermissions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeAllPermissions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L454" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L454" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L468" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L468" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllPermissions()
         <span class="detail-header-tag small">
@@ -2009,8 +2014,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="removeAllRoles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeAllRoles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L462" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L462" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L476" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L476" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllRoles()
         <span class="detail-header-tag small">
@@ -2034,8 +2039,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="removeAllRules()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeAllRules()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L508" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L508" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L522" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L522" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllRules()
         <span class="detail-header-tag small">
@@ -2097,11 +2102,47 @@ from PHP script.</p>
 
 <!--	-->
 
+    <div class="detail-header h3" id="removeChildren()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeChildren()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L221" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L221" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        removeChildren()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Removed all children form their parent.</strong></p>
+
+        <p>Note, the children items are not deleted. Only the parent-child relationships are removed.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-rbac-phpmanager.html#removeChildren()-detail">removeChildren</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$parent&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$parent</span></td>
+                  <td class="param-type-col"><a href="yii-rbac-item.html">yii\rbac\Item</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the removal is successful</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="removeItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L305" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L305" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L319" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L319" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeItem()
         <span class="detail-header-tag small">
@@ -2141,8 +2182,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="removeRule()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#removeRule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L529" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L529" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L543" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L543" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeRule()
         <span class="detail-header-tag small">
@@ -2182,8 +2223,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="revoke()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#revoke()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L249" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L249" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L263" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L263" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         revoke()
         <span class="detail-header-tag small">
@@ -2223,8 +2264,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="revokeAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#revokeAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L263" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L263" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L277" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L277" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         revokeAll()
         <span class="detail-header-tag small">
@@ -2259,8 +2300,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="save()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#save()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L668" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L668" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L682" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L682" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         save()
         <span class="detail-header-tag small">
@@ -2283,8 +2324,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="saveAssignments()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#saveAssignments()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L732" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L732" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L746" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L746" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveAssignments()
         <span class="detail-header-tag small">
@@ -2307,8 +2348,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="saveItems()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#saveItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L706" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L706" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L720" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L720" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveItems()
         <span class="detail-header-tag small">
@@ -2331,8 +2372,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="saveRules()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#saveRules()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L747" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L747" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L761" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L761" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveRules()
         <span class="detail-header-tag small">
@@ -2355,8 +2396,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="saveToFile()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#saveToFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L698" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L698" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L712" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L712" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveToFile()
         <span class="detail-header-tag small">
@@ -2391,8 +2432,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="updateItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#updateItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L558" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L558" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L572" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L572" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateItem()
         <span class="detail-header-tag small">
@@ -2438,8 +2479,8 @@ from PHP script.</p>
     <div class="detail-header h3" id="updateRule()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-phpmanager.html#updateRule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L333" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L333" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/PhpManager.php#L347" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/PhpManager.php#L347" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateRule()
         <span class="detail-header-tag small">
@@ -2520,7 +2561,7 @@ from PHP script.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:42:42 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:07 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

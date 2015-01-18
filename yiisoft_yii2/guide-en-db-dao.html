@@ -52,7 +52,8 @@
 <a class="list-group-item" href="./guide-en-structure-widgets.html">Widgets</a>
 <a class="list-group-item" href="./guide-en-structure-assets.html">Assets</a>
 <a class="list-group-item" href="./guide-en-structure-extensions.html">Extensions</a></div>
-<a class="list-group-item" href="#navigation-273" data-toggle="collapse" data-parent="#navigation">Handling Requests <b class="caret"></b></a><div id="navigation-273" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-runtime-bootstrapping.html">Bootstrapping</a>
+<a class="list-group-item" href="#navigation-273" data-toggle="collapse" data-parent="#navigation">Handling Requests <b class="caret"></b></a><div id="navigation-273" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-runtime-overview.html">Overview</a>
+<a class="list-group-item" href="./guide-en-runtime-bootstrapping.html">Bootstrapping</a>
 <a class="list-group-item" href="./guide-en-runtime-routing.html">Routing</a>
 <a class="list-group-item" href="./guide-en-runtime-requests.html">Requests</a>
 <a class="list-group-item" href="./guide-en-runtime-responses.html">Responses</a>
@@ -76,12 +77,12 @@
 <a class="list-group-item" href="./guide-en-db-sphinx.html">Sphinx</a>
 <a class="list-group-item" href="./guide-en-db-redis.html">Redis</a>
 <a class="list-group-item" href="./guide-en-db-mongodb.html">MongoDB</a>
-<a class="list-group-item" href="./guide-en-db-elastic-search.html">ElasticSearch</a></div>
+<a class="list-group-item" href="./guide-en-db-elasticsearch.html">ElasticSearch</a></div>
 <a class="list-group-item" href="#navigation-276" data-toggle="collapse" data-parent="#navigation">Getting Data from Users <b class="caret"></b></a><div id="navigation-276" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-input-forms.html">Creating Forms</a>
 <a class="list-group-item" href="./guide-en-input-validation.html">Validating Input</a>
 <a class="list-group-item" href="./guide-en-input-file-upload.html">Uploading Files</a>
 <a class="list-group-item" href="./guide-en-input-multiple-models.html">Getting Data for Multiple Models</a></div>
-<a class="list-group-item" href="#navigation-277" data-toggle="collapse" data-parent="#navigation">Displaying Data <b class="caret"></b></a><div id="navigation-277" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-output-formatting.html">Data Formatting</a>
+<a class="list-group-item" href="#navigation-277" data-toggle="collapse" data-parent="#navigation">Displaying Data <b class="caret"></b></a><div id="navigation-277" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-output-formatter.html">Data Formatting</a>
 <a class="list-group-item" href="./guide-en-output-pagination.html">Pagination</a>
 <a class="list-group-item" href="./guide-en-output-sorting.html">Sorting</a>
 <a class="list-group-item" href="./guide-en-output-data-providers.html">Data Providers</a>
@@ -111,7 +112,7 @@
 <a class="list-group-item" href="./guide-en-tool-gii.html">Generating Code using Gii</a>
 <a class="list-group-item" href="./guide-en-tool-api-doc.html">Generating API Documentation</a></div>
 <a class="list-group-item" href="#navigation-282" data-toggle="collapse" data-parent="#navigation">Testing <b class="caret"></b></a><div id="navigation-282" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-test-overview.html">Overview</a>
-<a class="list-group-item" href="./guide-en-test-endvironment-setup.html">Testing environment setup</a>
+<a class="list-group-item" href="./guide-en-test-environment-setup.html">Testing environment setup</a>
 <a class="list-group-item" href="./guide-en-test-unit.html">Unit Tests</a>
 <a class="list-group-item" href="./guide-en-test-functional.html">Functional Tests</a>
 <a class="list-group-item" href="./guide-en-test-acceptance.html">Acceptance Tests</a>
@@ -143,7 +144,8 @@ uniform API and solves some inconsistencies between different DBMS. By default Y
 <li><a href="https://mariadb.com/">MariaDB</a></li>
 <li><a href="http://sqlite.org/">SQLite</a></li>
 <li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
-<li><a href="http://www.cubrid.org/">CUBRID</a>: version 9.1.0 or higher.</li>
+<li><a href="http://www.cubrid.org/">CUBRID</a>: version 9.3 or higher. (Note that due to a <a href="http://jira.cubrid.org/browse/APIS-658">bug</a> in
+the cubrid PDO extension, quoting of values will not work, so you need CUBRID 9.3 as the client as well as the server)</li>
 <li><a href="http://www.oracle.com/us/products/database/overview/index.html">Oracle</a></li>
 <li><a href="https://www.microsoft.com/en-us/sqlserver/default.aspx">MSSQL</a>: version 2005 or higher.</li>
 </ul>
@@ -161,7 +163,7 @@ on the format of the DSN string.</p>
 <p>You can refer to <span class="broken-link">yii\db\Connection</span> for a list of properties you can configure. Also note that you can define more
 than one connection component and use both at the same time if needed:</p>
 <pre><code class="language-php"><span style="color: #0000BB">$primaryConnection&nbsp;</span><span style="color: #007700">=&nbsp;\</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">db</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$secondaryConnection&nbsp;</span><span style="color: #007700">=&nbsp;\</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">secondDb</span><span style="color: #007700">;</span></code></pre>
-<p>If you don't want to define the connection as an application component you can instantiate it directly:</p>
+<p>If you don't want to define the connection as an <a href="guide-en-structure-application-components.html">application component</a> you can instantiate it directly:</p>
 <pre><code class="language-php"><span style="color: #0000BB">$connection&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">Connection</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'dsn'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$dsn</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$username</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'password'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$password</span><span style="color: #007700">,<br />]);<br /></span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">open</span><span style="color: #007700">();</span></code></pre>
 <blockquote><p><strong>Tip</strong>: if you need to execute additional SQL queries right after establishing a connection you can add the
 following to your application configuration file:</p>
@@ -193,7 +195,7 @@ config file:</p>
 <span class="broken-link">yii\db\Connection::quoteColumnName()</span>:</p>
 <pre><code class="language-php"><span style="color: #0000BB">$column&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteColumnName</span><span style="color: #007700">(</span><span style="color: #0000BB">$column</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$table&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteTableName</span><span style="color: #007700">(</span><span style="color: #0000BB">$table</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$sql&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"SELECT&nbsp;COUNT(</span><span style="color: #0000BB">$column</span><span style="color: #DD0000">)&nbsp;FROM&nbsp;</span><span style="color: #0000BB">$table</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$rowCount&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$sql</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">queryScalar</span><span style="color: #007700">();</span></code></pre>
 <h2>Prepared statements <a href="#prepared-statements" name="prepared-statements" class="hashlink">&para;</a></h2><p>In order to securely pass query parameters you can use prepared statements:</p>
-<pre><code class="language-php"><span style="color: #0000BB">$command&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createCommand</span><span style="color: #007700">(</span><span style="color: #DD0000">'SELECT&nbsp;*&nbsp;FROM&nbsp;post&nbsp;WHERE&nbsp;id=:id'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$command</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">bindValue</span><span style="color: #007700">(</span><span style="color: #DD0000">':id'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$_GET</span><span style="color: #007700">[</span><span style="color: #DD0000">'id'</span><span style="color: #007700">]);<br /></span><span style="color: #0000BB">$post&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$command</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">query</span><span style="color: #007700">();</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB">$command&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createCommand</span><span style="color: #007700">(</span><span style="color: #DD0000">'SELECT&nbsp;*&nbsp;FROM&nbsp;post&nbsp;WHERE&nbsp;id=:id'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$command</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">bindValue</span><span style="color: #007700">(</span><span style="color: #DD0000">':id'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$_GET</span><span style="color: #007700">[</span><span style="color: #DD0000">'id'</span><span style="color: #007700">]);<br /></span><span style="color: #0000BB">$post&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$command</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">queryOne</span><span style="color: #007700">();</span></code></pre>
 <p>Another usage is performing a query multiple times while preparing it only once:</p>
 <pre><code class="language-php"><span style="color: #0000BB">$command&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createCommand</span><span style="color: #007700">(</span><span style="color: #DD0000">'DELETE&nbsp;FROM&nbsp;post&nbsp;WHERE&nbsp;id=:id'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$command</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">bindParam</span><span style="color: #007700">(</span><span style="color: #DD0000">':id'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$id</span><span style="color: #007700">);<br /><br /></span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$command</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">execute</span><span style="color: #007700">();<br /><br /></span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">2</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$command</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">execute</span><span style="color: #007700">();</span></code></pre>
 <h2>Transactions <a href="#transactions" name="transactions" class="hashlink">&para;</a></h2><p>When running multiple related queries in a sequence you may need to wrap them in a transaction to
@@ -306,7 +308,7 @@ with the <code>useMaster()</code> method:</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:33:38 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:58:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

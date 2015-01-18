@@ -390,7 +390,7 @@
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
                 <tr><th>Implements</th><td><a href="yii-db-queryinterface.html">yii\db\QueryInterface</a></td></tr>
                 <tr><th>Uses Traits</th><td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td></tr>
-                <tr><th>Subclasses</th><td><a href="yii-db-activequery.html">yii\db\ActiveQuery</a></td></tr>
+                <tr><th>Subclasses</th><td><a href="yii-db-activequery.html">yii\db\ActiveQuery</a>, <a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a>, <a href="yii-sphinx-query.html">yii\sphinx\Query</a></td></tr>
                         <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
@@ -1352,7 +1352,7 @@ on how to specify this parameter.</p>
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a> <strong><a href="yii-db-query.html#average()-detail">average</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$q</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">mixed <strong><a href="yii-db-query.html#average()-detail">average</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$q</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
@@ -1369,7 +1369,7 @@ If this parameter is not given, the <code>db</code> application component will b
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-type-col">mixed</td>
                   <td class="param-desc-col"><p>The average of the specified column values.</p>
 </td>
                 </tr>
@@ -2019,7 +2019,7 @@ Please refer to <a href="yii-db-query.html#where()-detail">where()</a> on how to
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a> <strong><a href="yii-db-query.html#max()-detail">max</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$q</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">mixed <strong><a href="yii-db-query.html#max()-detail">max</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$q</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
@@ -2036,7 +2036,7 @@ If this parameter is not given, the <code>db</code> application component will b
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-type-col">mixed</td>
                   <td class="param-desc-col"><p>The maximum of the specified column values.</p>
 </td>
                 </tr>
@@ -2063,7 +2063,7 @@ If this parameter is not given, the <code>db</code> application component will b
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a> <strong><a href="yii-db-query.html#min()-detail">min</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$q</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">mixed <strong><a href="yii-db-query.html#min()-detail">min</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$q</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
@@ -2080,7 +2080,7 @@ If this parameter is not given, the <code>db</code> application component will b
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-type-col">mixed</td>
                   <td class="param-desc-col"><p>The minimum of the specified column values.</p>
 </td>
                 </tr>
@@ -2491,7 +2491,7 @@ in MySQL, the option 'SQL_CALC_FOUND_ROWS' can be used.</p>
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a> <strong><a href="yii-db-query.html#sum()-detail">sum</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$q</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">mixed <strong><a href="yii-db-query.html#sum()-detail">sum</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$q</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
@@ -2508,7 +2508,7 @@ If this parameter is not given, the <code>db</code> application component will b
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-type-col">mixed</td>
                   <td class="param-desc-col"><p>The sum of the specified column values</p>
 </td>
                 </tr>
@@ -2615,6 +2615,10 @@ in the generated condition.</p>
 the range of the values that the column or DB expression should be in. For example,
 <code>['in', 'id', [1, 2, 3]]</code> will generate <code>id IN (1, 2, 3)</code>.
 The method will properly quote the column name and escape values in the range.</p>
+<p>To create a composite <code>IN</code> condition you can use and array for the column name and value, where the values are indexed by the column name:
+<code>['in', ['id', 'name'], [['id' =&gt; 1, 'name' =&gt; 'foo'], ['id' =&gt; 2, 'name' =&gt; 'bar']] ]</code>.</p>
+<p>You may also specify a sub-query that is used to get the values for the <code>IN</code>-condition:
+<code>['in', 'user_id', (new Query())-&gt;select('id')-&gt;from('users')-&gt;where(['active' =&gt; 1])]</code></p>
 </li>
 <li><p><strong>not in</strong>: similar to the <code>in</code> operator except that <code>IN</code> is replaced with <code>NOT IN</code> in the generated condition.</p>
 </li>
@@ -2636,6 +2640,12 @@ in the generated condition.</p>
 </li>
 <li><p><strong>or not like</strong>: similar to the <code>not like</code> operator except that <code>OR</code> is used to concatenate
 the <code>NOT LIKE</code> predicates.</p>
+</li>
+<li><p><strong>exists</strong>: operand 1 is a query object that used to build an <code>EXISTS</code> condition. For example
+<code>['exists', (new Query())-&gt;select('id')-&gt;from('users')-&gt;where(['active' =&gt; 1])]</code> will result in the following SQL expression:
+<code>EXISTS (SELECT "id" FROM "users" WHERE "active"=1)</code>.</p>
+</li>
+<li><p><strong>not exists</strong>: similar to the <code>exists</code> operator except that <code>EXISTS</code> is replaced with <code>NOT EXISTS</code> in the generated condition.</p>
 </li>
 <li><p>Additionally you can specify arbitrary operators as follows: A condition of <code>['&gt;=', 'id', 10]</code> will result in the
 following SQL expression: <code>id &gt;= 10</code>.</p>
@@ -2706,7 +2716,7 @@ following SQL expression: <code>id &gt;= 10</code>.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:42:36 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:01 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

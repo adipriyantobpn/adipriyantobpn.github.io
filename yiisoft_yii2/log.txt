@@ -2,12 +2,11 @@ C:\Users\User>D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc gu
 Loading apidoc data from cache... no data available.
 Updating cross references and backlinks... done.
 Searching files to process... done.
-Rendering markdown files: done.(85/85)   : 0 sec.
+Rendering markdown files: done.(91/91)   : 0 sec.
 generating search index...done.
 Publishing images...done.
 
 C:\Users\User>D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc api D:\installer\~gitrepo\yiisoft_yii2\framework D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 --guide="." --guidePrefix="guide-en-"--interactive=0
-TargetDirectory already exists. Overwrite? (yes|no) [yes]:y
 Searching files to process... done.
 Loading apidoc data from cache... no data available.
 Checking for updated files... done.
@@ -17,16 +16,16 @@ Updating cross references and backlinks... done.
 Rendering files: done.(326/326)   : 0 sec.
 generating extension index files...done.
 generating search index...done.
-110 errors have been logged to D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2/errors.txt
+107 errors have been logged to D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2/errors.txt
 
 C:\Users\User>D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc api D:\installer\~gitrepo\yiisoft_yii2\extensions D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 --guide="." --guidePrefix="guide-en-" --interactive=0
 Searching files to process... done.
 Loading apidoc data from cache... done.
 Checking for updated files... done.
-197 files to update.
-Processing files... done.(197/197)   : 0 sec.
+198 files to update.
+Processing files... done.(198/198)   : 0 sec.
 Updating cross references and backlinks... done.
-Rendering files: done.(522/522)   : 0 sec.
+Rendering files: done.(523/523)   : 0 sec.
 generating extension index files...done.
 generating search index...done.
-690 errors have been logged to D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2/errors.txt
+691 errors have been logged to D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2/errors.txt
