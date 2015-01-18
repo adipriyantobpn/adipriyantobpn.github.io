@@ -52,7 +52,8 @@
 <a class="list-group-item" href="./guide-en-structure-widgets.html">Widgets</a>
 <a class="list-group-item" href="./guide-en-structure-assets.html">Assets</a>
 <a class="list-group-item" href="./guide-en-structure-extensions.html">Extensions</a></div>
-<a class="list-group-item" href="#navigation-381" data-toggle="collapse" data-parent="#navigation">Handling Requests <b class="caret"></b></a><div id="navigation-381" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-runtime-bootstrapping.html">Bootstrapping</a>
+<a class="list-group-item" href="#navigation-381" data-toggle="collapse" data-parent="#navigation">Handling Requests <b class="caret"></b></a><div id="navigation-381" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-runtime-overview.html">Overview</a>
+<a class="list-group-item" href="./guide-en-runtime-bootstrapping.html">Bootstrapping</a>
 <a class="list-group-item" href="./guide-en-runtime-routing.html">Routing</a>
 <a class="list-group-item" href="./guide-en-runtime-requests.html">Requests</a>
 <a class="list-group-item" href="./guide-en-runtime-responses.html">Responses</a>
@@ -76,12 +77,12 @@
 <a class="list-group-item" href="./guide-en-db-sphinx.html">Sphinx</a>
 <a class="list-group-item" href="./guide-en-db-redis.html">Redis</a>
 <a class="list-group-item" href="./guide-en-db-mongodb.html">MongoDB</a>
-<a class="list-group-item" href="./guide-en-db-elastic-search.html">ElasticSearch</a></div>
+<a class="list-group-item" href="./guide-en-db-elasticsearch.html">ElasticSearch</a></div>
 <a class="list-group-item active" href="#navigation-384" data-toggle="collapse" data-parent="#navigation">Getting Data from Users <b class="caret"></b></a><div id="navigation-384" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./guide-en-input-forms.html">Creating Forms</a>
 <a class="list-group-item" href="./guide-en-input-validation.html">Validating Input</a>
 <a class="list-group-item" href="./guide-en-input-file-upload.html">Uploading Files</a>
 <a class="list-group-item" href="./guide-en-input-multiple-models.html">Getting Data for Multiple Models</a></div>
-<a class="list-group-item" href="#navigation-385" data-toggle="collapse" data-parent="#navigation">Displaying Data <b class="caret"></b></a><div id="navigation-385" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-output-formatting.html">Data Formatting</a>
+<a class="list-group-item" href="#navigation-385" data-toggle="collapse" data-parent="#navigation">Displaying Data <b class="caret"></b></a><div id="navigation-385" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-output-formatter.html">Data Formatting</a>
 <a class="list-group-item" href="./guide-en-output-pagination.html">Pagination</a>
 <a class="list-group-item" href="./guide-en-output-sorting.html">Sorting</a>
 <a class="list-group-item" href="./guide-en-output-data-providers.html">Data Providers</a>
@@ -111,7 +112,7 @@
 <a class="list-group-item" href="./guide-en-tool-gii.html">Generating Code using Gii</a>
 <a class="list-group-item" href="./guide-en-tool-api-doc.html">Generating API Documentation</a></div>
 <a class="list-group-item" href="#navigation-390" data-toggle="collapse" data-parent="#navigation">Testing <b class="caret"></b></a><div id="navigation-390" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-test-overview.html">Overview</a>
-<a class="list-group-item" href="./guide-en-test-endvironment-setup.html">Testing environment setup</a>
+<a class="list-group-item" href="./guide-en-test-environment-setup.html">Testing environment setup</a>
 <a class="list-group-item" href="./guide-en-test-unit.html">Unit Tests</a>
 <a class="list-group-item" href="./guide-en-test-functional.html">Functional Tests</a>
 <a class="list-group-item" href="./guide-en-test-acceptance.html">Acceptance Tests</a>
@@ -175,7 +176,7 @@ following shows how to implement it with Yii.</p>
 <p>Let's start with controller action:</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">\</span><span style="color: #0000BB">controllers</span><span style="color: #007700">;<br /><br />use&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">base</span><span style="color: #007700">\</span><span style="color: #0000BB">Model</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">web</span><span style="color: #007700">\</span><span style="color: #0000BB">Controller</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">\</span><span style="color: #0000BB">models</span><span style="color: #007700">\</span><span style="color: #0000BB">Setting</span><span style="color: #007700">;<br /><br />class&nbsp;</span><span style="color: #0000BB">SettingsController&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">Controller<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">actionUpdate</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$settings&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Setting</span><span style="color: #007700">::</span><span style="color: #0000BB">find</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">indexBy</span><span style="color: #007700">(</span><span style="color: #DD0000">'id'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">all</span><span style="color: #007700">();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">Model</span><span style="color: #007700">::</span><span style="color: #0000BB">loadMultiple</span><span style="color: #007700">(</span><span style="color: #0000BB">$settings</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">request</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">post</span><span style="color: #007700">())&nbsp;&amp;&amp;&nbsp;</span><span style="color: #0000BB">Model</span><span style="color: #007700">::</span><span style="color: #0000BB">validateMultiple</span><span style="color: #007700">(</span><span style="color: #0000BB">$settings</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$settings&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$setting</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$setting</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">save</span><span style="color: #007700">(</span><span style="color: #0000BB">false</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">redirect</span><span style="color: #007700">(</span><span style="color: #DD0000">'index'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(</span><span style="color: #DD0000">'update'</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">'settings'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$settings</span><span style="color: #007700">]);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span></code></pre>
 <p>In the code above we're using <code>indexBy</code> when retrieving models from database to make array indexed by model ids. These
-will be later used to identify form fields. <code>loadMultiple</code> fills multiple modelds with the form data coming from POST
+will be later used to identify form fields. <code>loadMultiple</code> fills multiple models with the form data coming from POST
 and <code>validateMultiple</code> validates all models at once. In order to skip validation when saving we're passing <code>false</code> as
 a parameter to <code>save</code>.</p>
 <p>Now the form that's in <code>update</code> view:</p>
@@ -190,7 +191,7 @@ to input name since that is how <code>loadMultiple</code> determines which model
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:33:38 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:58:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

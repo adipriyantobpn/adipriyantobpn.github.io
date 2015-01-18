@@ -52,7 +52,8 @@
 <a class="list-group-item" href="./guide-en-structure-widgets.html">Widgets</a>
 <a class="list-group-item" href="./guide-en-structure-assets.html">Assets</a>
 <a class="list-group-item" href="./guide-en-structure-extensions.html">Extensions</a></div>
-<a class="list-group-item" href="#navigation-417" data-toggle="collapse" data-parent="#navigation">Handling Requests <b class="caret"></b></a><div id="navigation-417" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-runtime-bootstrapping.html">Bootstrapping</a>
+<a class="list-group-item" href="#navigation-417" data-toggle="collapse" data-parent="#navigation">Handling Requests <b class="caret"></b></a><div id="navigation-417" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-runtime-overview.html">Overview</a>
+<a class="list-group-item" href="./guide-en-runtime-bootstrapping.html">Bootstrapping</a>
 <a class="list-group-item" href="./guide-en-runtime-routing.html">Routing</a>
 <a class="list-group-item" href="./guide-en-runtime-requests.html">Requests</a>
 <a class="list-group-item" href="./guide-en-runtime-responses.html">Responses</a>
@@ -76,12 +77,12 @@
 <a class="list-group-item" href="./guide-en-db-sphinx.html">Sphinx</a>
 <a class="list-group-item" href="./guide-en-db-redis.html">Redis</a>
 <a class="list-group-item" href="./guide-en-db-mongodb.html">MongoDB</a>
-<a class="list-group-item" href="./guide-en-db-elastic-search.html">ElasticSearch</a></div>
+<a class="list-group-item" href="./guide-en-db-elasticsearch.html">ElasticSearch</a></div>
 <a class="list-group-item" href="#navigation-420" data-toggle="collapse" data-parent="#navigation">Getting Data from Users <b class="caret"></b></a><div id="navigation-420" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-input-forms.html">Creating Forms</a>
 <a class="list-group-item" href="./guide-en-input-validation.html">Validating Input</a>
 <a class="list-group-item" href="./guide-en-input-file-upload.html">Uploading Files</a>
 <a class="list-group-item" href="./guide-en-input-multiple-models.html">Getting Data for Multiple Models</a></div>
-<a class="list-group-item" href="#navigation-421" data-toggle="collapse" data-parent="#navigation">Displaying Data <b class="caret"></b></a><div id="navigation-421" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-output-formatting.html">Data Formatting</a>
+<a class="list-group-item" href="#navigation-421" data-toggle="collapse" data-parent="#navigation">Displaying Data <b class="caret"></b></a><div id="navigation-421" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-output-formatter.html">Data Formatting</a>
 <a class="list-group-item" href="./guide-en-output-pagination.html">Pagination</a>
 <a class="list-group-item" href="./guide-en-output-sorting.html">Sorting</a>
 <a class="list-group-item" href="./guide-en-output-data-providers.html">Data Providers</a>
@@ -111,7 +112,7 @@
 <a class="list-group-item" href="./guide-en-tool-gii.html">Generating Code using Gii</a>
 <a class="list-group-item" href="./guide-en-tool-api-doc.html">Generating API Documentation</a></div>
 <a class="list-group-item" href="#navigation-426" data-toggle="collapse" data-parent="#navigation">Testing <b class="caret"></b></a><div id="navigation-426" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-test-overview.html">Overview</a>
-<a class="list-group-item" href="./guide-en-test-endvironment-setup.html">Testing environment setup</a>
+<a class="list-group-item" href="./guide-en-test-environment-setup.html">Testing environment setup</a>
 <a class="list-group-item" href="./guide-en-test-unit.html">Unit Tests</a>
 <a class="list-group-item" href="./guide-en-test-functional.html">Functional Tests</a>
 <a class="list-group-item" href="./guide-en-test-acceptance.html">Acceptance Tests</a>
@@ -145,7 +146,7 @@ some features you previously had to develop for yourself are now part of the cor
 of the core framework, as well as extensions, are handled through Composer. Please refer to
 the <a href="guide-en-start-installation.html">Installing Yii</a> section to learn how to install Yii 2.0. If you want to
 create new extensions, or turn your existing 1.1 extensions into 2.0-compatible extensions, please refer to
-the <a href="guide-en-extend-creating-extensions.html">Creating Extensions</a> section of the guide.</p>
+the <a href="guide-en-structure-extensions.html#creating-extensions">Creating Extensions</a> section of the guide.</p>
 <h2>PHP Requirements <a href="#php-requirements" name="php-requirements" class="hashlink">&para;</a></h2><p>Yii 2.0 requires PHP 5.4 or above, which is a huge improvement over PHP version 5.2 that is required by Yii 1.1.
 As a result, there are many differences on the language level that you should pay attention to.
 Below is a summary of the major changes regarding PHP:</p>
@@ -229,7 +230,7 @@ supported scenarios, and to indicate under which scenario an attribute needs to 
 if the <span class="broken-link">yii\base\Model::rules()</span> method fully specifies the scenarios that will exist, and if there is no need to declare
 <code>unsafe</code> attributes.</p>
 <p>To learn more details about models, please refer to the <a href="guide-en-structure-models.html">Models</a> section.</p>
-<h2>Controllers <a href="#controllers" name="controllers" class="hashlink">&para;</a></h2><p>Yii 2.0 uses <span class="broken-link">yii\web\Controller</span> as the base controller class, similar to <code>CWebController</code> in Yii 1.1.
+<h2>Controllers <a href="#controllers" name="controllers" class="hashlink">&para;</a></h2><p>Yii 2.0 uses <span class="broken-link">yii\web\Controller</span> as the base controller class, which is similar to <code>CController</code> in Yii 1.1.
 <span class="broken-link">yii\base\Action</span> is the base class for action classes.</p>
 <p>The most obvious impact of these changes on your code is that a controller action should return the content
 that you want to render instead of echoing it:</p>
@@ -347,7 +348,7 @@ the <a href="guide-en-tutorial-yii-integration.html">Using Yii 1.1 and 2.0 Toget
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:33:39 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:58:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

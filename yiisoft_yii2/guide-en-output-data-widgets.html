@@ -52,7 +52,8 @@
 <a class="list-group-item" href="./guide-en-structure-widgets.html">Widgets</a>
 <a class="list-group-item" href="./guide-en-structure-assets.html">Assets</a>
 <a class="list-group-item" href="./guide-en-structure-extensions.html">Extensions</a></div>
-<a class="list-group-item" href="#navigation-489" data-toggle="collapse" data-parent="#navigation">Handling Requests <b class="caret"></b></a><div id="navigation-489" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-runtime-bootstrapping.html">Bootstrapping</a>
+<a class="list-group-item" href="#navigation-489" data-toggle="collapse" data-parent="#navigation">Handling Requests <b class="caret"></b></a><div id="navigation-489" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-runtime-overview.html">Overview</a>
+<a class="list-group-item" href="./guide-en-runtime-bootstrapping.html">Bootstrapping</a>
 <a class="list-group-item" href="./guide-en-runtime-routing.html">Routing</a>
 <a class="list-group-item" href="./guide-en-runtime-requests.html">Requests</a>
 <a class="list-group-item" href="./guide-en-runtime-responses.html">Responses</a>
@@ -76,12 +77,12 @@
 <a class="list-group-item" href="./guide-en-db-sphinx.html">Sphinx</a>
 <a class="list-group-item" href="./guide-en-db-redis.html">Redis</a>
 <a class="list-group-item" href="./guide-en-db-mongodb.html">MongoDB</a>
-<a class="list-group-item" href="./guide-en-db-elastic-search.html">ElasticSearch</a></div>
+<a class="list-group-item" href="./guide-en-db-elasticsearch.html">ElasticSearch</a></div>
 <a class="list-group-item" href="#navigation-492" data-toggle="collapse" data-parent="#navigation">Getting Data from Users <b class="caret"></b></a><div id="navigation-492" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-input-forms.html">Creating Forms</a>
 <a class="list-group-item" href="./guide-en-input-validation.html">Validating Input</a>
 <a class="list-group-item" href="./guide-en-input-file-upload.html">Uploading Files</a>
 <a class="list-group-item" href="./guide-en-input-multiple-models.html">Getting Data for Multiple Models</a></div>
-<a class="list-group-item active" href="#navigation-493" data-toggle="collapse" data-parent="#navigation">Displaying Data <b class="caret"></b></a><div id="navigation-493" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./guide-en-output-formatting.html">Data Formatting</a>
+<a class="list-group-item active" href="#navigation-493" data-toggle="collapse" data-parent="#navigation">Displaying Data <b class="caret"></b></a><div id="navigation-493" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./guide-en-output-formatter.html">Data Formatting</a>
 <a class="list-group-item" href="./guide-en-output-pagination.html">Pagination</a>
 <a class="list-group-item" href="./guide-en-output-sorting.html">Sorting</a>
 <a class="list-group-item" href="./guide-en-output-data-providers.html">Data Providers</a>
@@ -111,7 +112,7 @@
 <a class="list-group-item" href="./guide-en-tool-gii.html">Generating Code using Gii</a>
 <a class="list-group-item" href="./guide-en-tool-api-doc.html">Generating API Documentation</a></div>
 <a class="list-group-item" href="#navigation-498" data-toggle="collapse" data-parent="#navigation">Testing <b class="caret"></b></a><div id="navigation-498" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-test-overview.html">Overview</a>
-<a class="list-group-item" href="./guide-en-test-endvironment-setup.html">Testing environment setup</a>
+<a class="list-group-item" href="./guide-en-test-environment-setup.html">Testing environment setup</a>
 <a class="list-group-item" href="./guide-en-test-unit.html">Unit Tests</a>
 <a class="list-group-item" href="./guide-en-test-functional.html">Functional Tests</a>
 <a class="list-group-item" href="./guide-en-test-acceptance.html">Acceptance Tests</a>
@@ -185,10 +186,10 @@ grid columns.</p>
 <li><code>footerOptions</code></li>
 <li><code>filterOptions</code></li>
 </ul>
-<h4>Data column <a href="#data-column" name="data-column" class="hashlink">&para;</a></h4><p>Data column is for displaying and sorting data. It is default column type so specifying class could be omitted when
+<h4>Data column <a name="data-column"></a> <a href="#data-column" name="data-column" class="hashlink">&para;</a></h4><p>Data column is for displaying and sorting data. It is default column type so specifying class could be omitted when
 using it.</p>
 <p>The main setting of the data column is its format. It could be specified via <code>format</code> attribute. Its values are
-corresponding to methods in <code>format</code> application component that is <span class="broken-link">\yii\i18n\Formatter</span> by default:</p>
+corresponding to methods in <code>formatter</code> <a href="guide-en-structure-application-components.html">application component</a> that is <span class="broken-link">\yii\i18n\Formatter</span> by default:</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">&lt;?=&nbsp;</span><span style="color: #0000BB">GridView</span><span style="color: #007700">::</span><span style="color: #0000BB">widget</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'columns'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'attribute'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'name'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'format'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'text'<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'attribute'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'birthday'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'format'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'date'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Y-m-d'</span><span style="color: #007700">]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;],<br />]);&nbsp;</span><span style="color: #0000BB">?&gt;</span></code></pre>
 <p>In the above <code>text</code> corresponds to <span class="broken-link">\yii\i18n\Formatter::asText()</span>. The value of the column is passed as the first
 argument. In the second column definition <code>date</code> corresponds to <span class="broken-link">\yii\i18n\Formatter::asDate()</span>. The value of the
@@ -304,7 +305,7 @@ in <code>$userProvider</code> and <code>$postProvider</code>:</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:33:39 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:58:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
