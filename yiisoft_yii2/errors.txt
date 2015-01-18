@@ -1,0 +1,636 @@
+Array
+(
+    [0] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\base\Component.php
+            [message] => broken link to Object in yii\base\Component
+        )
+
+    [1] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\captcha\CaptchaAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [2] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\captcha\CaptchaAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [3] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\captcha\CaptchaAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [4] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\captcha\CaptchaAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [5] => Array
+        (
+            [line] => 24
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\captcha\CaptchaAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [6] => Array
+        (
+            [line] => 24
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\captcha\CaptchaAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [7] => Array
+        (
+            [line] => 45
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\Exception.php
+            [message] => No docblock for element '__toString'
+        )
+
+    [8] => Array
+        (
+            [line] => 1057
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\QueryBuilder.php
+            [message] => No docblock for element 'buildCompositeInCondition'
+        )
+
+    [9] => Array
+        (
+            [line] => 341
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\QueryTrait.php
+            [message] => No docblock for element 'normalizeOrderBy'
+        )
+
+    [10] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\oci\QueryBuilder.php
+            [message] => broken link to \yii\db\oci\Query in yii\db\oci\QueryBuilder
+        )
+
+    [11] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\oci\QueryBuilder.php
+            [message] => broken link to \yii\db\oci\Query in yii\db\oci\QueryBuilder
+        )
+
+    [12] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\oci\QueryBuilder.php
+            [message] => broken link to \yii\db\oci\Query in yii\db\oci\QueryBuilder
+        )
+
+    [13] => Array
+        (
+            [line] => 52
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\oci\QueryBuilder.php
+            [message] => No docblock for element 'buildLimit'
+        )
+
+    [14] => Array
+        (
+            [line] => 162
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\oci\Schema.php
+            [message] => No docblock for element 'createColumn'
+        )
+
+    [15] => Array
+        (
+            [line] => 182
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\db\oci\Schema.php
+            [message] => No docblock for element 'findConstraints'
+        )
+
+    [16] => Array
+        (
+            [line] => 106
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\filters\PageCache.php
+            [message] => No docblock for element 'init'
+        )
+
+    [17] => Array
+        (
+            [line] => 37
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\Column.php
+            [message] => No short description for element '$content'
+        )
+
+    [18] => Array
+        (
+            [line] => 161
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\DataColumn.php
+            [message] => Method getDataCellValue has no parent to inherit from in yii\grid\DataColumn.
+        )
+
+    [19] => Array
+        (
+            [line] => 143
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridView.php
+            [message] => No docblock for element '$emptyCell'
+        )
+
+    [20] => Array
+        (
+            [line] => 143
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridView.php
+            [message] => No short description for element '$emptyCell'
+        )
+
+    [21] => Array
+        (
+            [line] => 162
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridView.php
+            [message] => No docblock for element '$filterSelector'
+        )
+
+    [22] => Array
+        (
+            [line] => 162
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridView.php
+            [message] => No short description for element '$filterSelector'
+        )
+
+    [23] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridViewAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [24] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridViewAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [25] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridViewAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [26] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridViewAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [27] => Array
+        (
+            [line] => 24
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridViewAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [28] => Array
+        (
+            [line] => 24
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\GridViewAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [29] => Array
+        (
+            [line] => 30
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\SerialColumn.php
+            [message] => No docblock for element '$header'
+        )
+
+    [30] => Array
+        (
+            [line] => 30
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\grid\SerialColumn.php
+            [message] => No short description for element '$header'
+        )
+
+    [31] => Array
+        (
+            [line] => 335
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\helpers\BaseConsole.php
+            [message] => No docblock for element 'ansiToHtml'
+        )
+
+    [32] => Array
+        (
+            [line] => 444
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\helpers\BaseConsole.php
+            [message] => No docblock for element 'markdownToAnsi'
+        )
+
+    [33] => Array
+        (
+            [line] => 485
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\helpers\BaseConsole.php
+            [message] => No docblock for element 'renderColoredString'
+        )
+
+    [34] => Array
+        (
+            [line] => 550
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\helpers\BaseConsole.php
+            [message] => No docblock for element 'escape'
+        )
+
+    [35] => Array
+        (
+            [line] => 37
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\i18n\GettextMessageSource.php
+            [message] => No short description for element '$basePath'
+        )
+
+    [36] => Array
+        (
+            [line] => 41
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\i18n\GettextMessageSource.php
+            [message] => No short description for element '$catalog'
+        )
+
+    [37] => Array
+        (
+            [line] => 45
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\i18n\GettextMessageSource.php
+            [message] => No short description for element '$useMoFile'
+        )
+
+    [38] => Array
+        (
+            [line] => 49
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\i18n\GettextMessageSource.php
+            [message] => No short description for element '$useBigEndian'
+        )
+
+    [39] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\rbac\Assignment.php
+            [message] => broken link to \yii\rbac\data in yii\rbac\Assignment
+        )
+
+    [40] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\rbac\Assignment.php
+            [message] => broken link to \yii\rbac\ruleName in yii\rbac\Assignment
+        )
+
+    [41] => Array
+        (
+            [line] => 31
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\rbac\Assignment.php
+            [message] => No short description for element '$roleName'
+        )
+
+    [42] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\rbac\DbManager.php
+            [message] => broken link to \yii\rbac\allow() in yii\rbac\DbManager
+        )
+
+    [43] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\rbac\ManagerInterface.php
+            [message] => broken link to \yii\rbac\allow() in yii\rbac\ManagerInterface
+        )
+
+    [44] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\rbac\Rule.php
+            [message] => broken link to yii\rbac\ManagerInterface::allow() in yii\rbac\Rule
+        )
+
+    [45] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\rest\ActiveController.php
+            [message] => broken link to \yii\rest\VerbFilter::actions in yii\rest\ActiveController
+        )
+
+    [46] => Array
+        (
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\rest\Controller.php
+            [message] => broken link to \yii\rest\Behavior in yii\rest\Controller
+        )
+
+    [47] => Array
+        (
+            [line] => 168
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\FileValidator.php
+            [message] => Method param $file does not exist in parent method, @inheritdoc not possible in validateValue in yii\validators\FileValidator.
+        )
+
+    [48] => Array
+        (
+            [line] => 233
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\FileValidator.php
+            [message] => Method param $trim does not exist in parent method, @inheritdoc not possible in isEmpty in yii\validators\FileValidator.
+        )
+
+    [49] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\PunycodeAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [50] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\PunycodeAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [51] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\PunycodeAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [52] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\PunycodeAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [53] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\ValidationAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [54] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\ValidationAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [55] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\ValidationAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [56] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\ValidationAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [57] => Array
+        (
+            [line] => 24
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\ValidationAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [58] => Array
+        (
+            [line] => 24
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\validators\ValidationAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [59] => Array
+        (
+            [line] => 61
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\AssetManager.php
+            [message] => No short description for element '$basePath'
+        )
+
+    [60] => Array
+        (
+            [line] => 65
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\AssetManager.php
+            [message] => No short description for element '$baseUrl'
+        )
+
+    [61] => Array
+        (
+            [line] => 69
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\ErrorAction.php
+            [message] => No docblock for element 'run'
+        )
+
+    [62] => Array
+        (
+            [line] => 18
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\JqueryAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [63] => Array
+        (
+            [line] => 18
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\JqueryAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [64] => Array
+        (
+            [line] => 19
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\JqueryAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [65] => Array
+        (
+            [line] => 19
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\JqueryAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [66] => Array
+        (
+            [line] => 18
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\YiiAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [67] => Array
+        (
+            [line] => 18
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\YiiAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [68] => Array
+        (
+            [line] => 19
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\YiiAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [69] => Array
+        (
+            [line] => 19
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\YiiAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [70] => Array
+        (
+            [line] => 22
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\YiiAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [71] => Array
+        (
+            [line] => 22
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\web\YiiAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [72] => Array
+        (
+            [line] => 29
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\ActiveForm.php
+            [message] => No short description for element '$action'
+        )
+
+    [73] => Array
+        (
+            [line] => 18
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\ActiveFormAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [74] => Array
+        (
+            [line] => 18
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\ActiveFormAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [75] => Array
+        (
+            [line] => 19
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\ActiveFormAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [76] => Array
+        (
+            [line] => 19
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\ActiveFormAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [77] => Array
+        (
+            [line] => 22
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\ActiveFormAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [78] => Array
+        (
+            [line] => 22
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\ActiveFormAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [79] => Array
+        (
+            [line] => 153
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\FragmentCache.php
+            [message] => No docblock for element 'updateDynamicContent'
+        )
+
+    [80] => Array
+        (
+            [line] => 18
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\MaskedInputAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [81] => Array
+        (
+            [line] => 18
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\MaskedInputAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [82] => Array
+        (
+            [line] => 19
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\MaskedInputAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [83] => Array
+        (
+            [line] => 19
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\MaskedInputAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [84] => Array
+        (
+            [line] => 22
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\MaskedInputAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [85] => Array
+        (
+            [line] => 22
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\MaskedInputAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [86] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\PjaxAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [87] => Array
+        (
+            [line] => 20
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\PjaxAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [88] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\PjaxAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [89] => Array
+        (
+            [line] => 21
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\PjaxAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [90] => Array
+        (
+            [line] => 24
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\PjaxAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [91] => Array
+        (
+            [line] => 24
+            [file] => D:\installer\~gitrepo\yiisoft_yii2\framework\widgets\PjaxAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+)
