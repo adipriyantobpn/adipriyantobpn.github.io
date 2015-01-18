@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w11038" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11038-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11586" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11586-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11038-collapse" class="collapse navbar-collapse"><ul id="w11039" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11040" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11586-collapse" class="collapse navbar-collapse"><ul id="w11587" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11588" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11037" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11037" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11584" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11584" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-sphinx-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-sphinx-columnschema.html">ColumnSchema</a>
 <a class="list-group-item" href="./yii-sphinx-command.html">Command</a>
@@ -56,7 +56,8 @@
 <a class="list-group-item" href="./yii-sphinx-indexschema.html">IndexSchema</a>
 <a class="list-group-item" href="./yii-sphinx-query.html">Query</a>
 <a class="list-group-item" href="./yii-sphinx-querybuilder.html">QueryBuilder</a>
-<a class="list-group-item" href="./yii-sphinx-schema.html">Schema</a></div></div>    </div>
+<a class="list-group-item" href="./yii-sphinx-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11585" data-toggle="collapse" data-parent="#navigation">yii\sphinx\gii\model <b class="caret"></b></a><div id="navigation-11585" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-sphinx-gii-model-generator.html">Generator</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Class yii\sphinx\Connection</h1>
 <div id="nav">
@@ -191,6 +192,12 @@ to establish a DB connection.</td>
         <td>Whether to enable schema caching.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
+            <tr class="inherited" id="$enableSlaves">
+        <td><a href="yii-db-connection.html#$enableSlaves-detail">$enableSlaves</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to enable read/write splitting by using <a href="yii-db-connection.html#$slaves-detail">$slaves</a> to read data.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
             <tr class="inherited" id="$isActive">
         <td><a href="yii-db-connection.html#$isActive-detail">$isActive</a></td>
         <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
@@ -202,6 +209,24 @@ to establish a DB connection.</td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
         <td>The row ID of the last row inserted, or the last value retrieved from the sequence object</td>
         <td><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$masterConfig">
+        <td><a href="yii-db-connection.html#$masterConfig-detail">$masterConfig</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The configuration that should be merged with every master configuration listed in <a href="yii-db-connection.html#$masters-detail">$masters</a>.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$masterPdo">
+        <td><a href="yii-db-connection.html#$masterPdo-detail">$masterPdo</a></td>
+        <td><a href="http://www.php.net/class.pdo">PDO</a></td>
+        <td>The PDO instance for the currently active master connection.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$masters">
+        <td><a href="yii-db-connection.html#$masters-detail">$masters</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of master connection configurations.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
             <tr class="inherited" id="$password">
         <td><a href="yii-db-connection.html#$password-detail">$password</a></td>
@@ -234,16 +259,10 @@ to establish a DB connection.</td>
 that is used for query caching.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
-            <tr class="inherited" id="$queryCacheDependency">
-        <td><a href="yii-db-connection.html#$queryCacheDependency-detail">$queryCacheDependency</a></td>
-        <td><a href="yii-caching-dependency.html">yii\caching\Dependency</a></td>
-        <td>The dependency that will be used when saving query results into cache.</td>
-        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
-    </tr>
             <tr class="inherited" id="$queryCacheDuration">
         <td><a href="yii-db-connection.html#$queryCacheDuration-detail">$queryCacheDuration</a></td>
         <td><a href="http://www.php.net/language.types.integer">integer</a></td>
-        <td>Number of seconds that query results can remain valid in cache.</td>
+        <td>The default number of seconds that query results can remain valid in cache.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
             <tr class="inherited" id="$schema">
@@ -276,6 +295,43 @@ is used to cache the table metadata.</td>
         <td></td>
         <td></td>
         <td><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$serverRetryInterval">
+        <td><a href="yii-db-connection.html#$serverRetryInterval-detail">$serverRetryInterval</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The retry interval in seconds for dead servers listed in <a href="yii-db-connection.html#$masters-detail">$masters</a> and <a href="yii-db-connection.html#$slaves-detail">$slaves</a>.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$serverStatusCache">
+        <td><a href="yii-db-connection.html#$serverStatusCache-detail">$serverStatusCache</a></td>
+        <td><a href="yii-caching-cache.html">yii\caching\Cache</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The cache object or the ID of the cache application component that is used to store
+the health status of the DB servers specified in <a href="yii-db-connection.html#$masters-detail">$masters</a> and <a href="yii-db-connection.html#$slaves-detail">$slaves</a>.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$slave">
+        <td><a href="yii-db-connection.html#$slave-detail">$slave</a></td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+        <td>The currently active slave connection.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$slaveConfig">
+        <td><a href="yii-db-connection.html#$slaveConfig-detail">$slaveConfig</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The configuration that should be merged with every slave configuration listed in <a href="yii-db-connection.html#$slaves-detail">$slaves</a>.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$slavePdo">
+        <td><a href="yii-db-connection.html#$slavePdo-detail">$slavePdo</a></td>
+        <td><a href="http://www.php.net/class.pdo">PDO</a></td>
+        <td>The PDO instance for the currently active slave connection.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="$slaves">
+        <td><a href="yii-db-connection.html#$slaves-detail">$slaves</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of slave connection configurations.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
             <tr class="inherited" id="$tablePrefix">
         <td><a href="yii-db-connection.html#$tablePrefix-detail">$tablePrefix</a></td>
@@ -359,11 +415,6 @@ is used to cache the table metadata.</td>
         <td>Attaches a list of behaviors to the component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="beginCache()">
-        <td><a href="yii-db-connection.html#beginCache()-detail">beginCache()</a></td>
-        <td>Turns on query caching.</td>
-        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
-    </tr>
             <tr class="inherited" id="beginTransaction()">
         <td><a href="yii-db-connection.html#beginTransaction()-detail">beginTransaction()</a></td>
         <td>Starts a transaction.</td>
@@ -373,6 +424,11 @@ is used to cache the table metadata.</td>
         <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
         <td>Returns a list of behaviors that this component should behave as.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="cache()">
+        <td><a href="yii-db-connection.html#cache()-detail">cache()</a></td>
+        <td>Uses query cache for the queries performed with the callable.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
             <tr class="inherited" id="canGetProperty()">
         <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
@@ -386,7 +442,7 @@ is used to cache the table metadata.</td>
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr class="inherited" id="close()">
@@ -409,15 +465,15 @@ is used to cache the table metadata.</td>
         <td>Detaches all behaviors from the component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="endCache()">
-        <td><a href="yii-db-connection.html#endCache()-detail">endCache()</a></td>
-        <td>Turns off query caching.</td>
-        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
-    </tr>
             <tr class="inherited" id="ensureBehaviors()">
         <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
         <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="escapeMatchValue()">
+        <td><a href="yii-sphinx-connection.html#escapeMatchValue()-detail">escapeMatchValue()</a></td>
+        <td>Escapes all special characters from 'MATCH' statement argument.</td>
+        <td><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
     </tr>
             <tr class="inherited" id="getBehavior()">
         <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
@@ -450,14 +506,34 @@ by an end user.</td>
         <td>This method is not supported by Sphinx.</td>
         <td><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
     </tr>
+            <tr class="inherited" id="getMasterPdo()">
+        <td><a href="yii-db-connection.html#getMasterPdo()-detail">getMasterPdo()</a></td>
+        <td>Returns the PDO instance for the currently active master connection.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
             <tr class="inherited" id="getQueryBuilder()">
         <td><a href="yii-db-connection.html#getQueryBuilder()-detail">getQueryBuilder()</a></td>
         <td>Returns the query builder for the current DB connection.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
+            <tr class="inherited" id="getQueryCacheInfo()">
+        <td><a href="yii-db-connection.html#getQueryCacheInfo()-detail">getQueryCacheInfo()</a></td>
+        <td>Returns the current query cache information.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
             <tr class="inherited" id="getSchema()">
         <td><a href="yii-db-connection.html#getSchema()-detail">getSchema()</a></td>
         <td>Returns the schema information for the database opened by this connection.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="getSlave()">
+        <td><a href="yii-db-connection.html#getSlave()-detail">getSlave()</a></td>
+        <td>Returns the currently active slave connection.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="getSlavePdo()">
+        <td><a href="yii-db-connection.html#getSlavePdo()-detail">getSlavePdo()</a></td>
+        <td>Returns the PDO instance for the currently active slave connection.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
             <tr class="inherited" id="getTableSchema()">
@@ -490,7 +566,12 @@ by an end user.</td>
         <td>Initializes the object.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
-                <tr class="inherited" id="off()">
+                <tr class="inherited" id="noCache()">
+        <td><a href="yii-db-connection.html#noCache()-detail">noCache()</a></td>
+        <td>Disables query cache temporarily.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
         <td><a href="yii-base-component.html#off()-detail">off()</a></td>
         <td>Detaches an existing event handler from this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
@@ -505,7 +586,7 @@ by an end user.</td>
         <td>Establishes a DB connection.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
-            <tr class="inherited" id="quoteColumnName()">
+                <tr class="inherited" id="quoteColumnName()">
         <td><a href="yii-db-connection.html#quoteColumnName()-detail">quoteColumnName()</a></td>
         <td>Quotes a column name for use in a query.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
@@ -535,10 +616,20 @@ by an end user.</td>
         <td>Changes the current driver name.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
+            <tr class="inherited" id="transaction()">
+        <td><a href="yii-db-connection.html#transaction()-detail">transaction()</a></td>
+        <td>Executes callback provided in a transaction.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="useMaster()">
+        <td><a href="yii-db-connection.html#useMaster()-detail">useMaster()</a></td>
+        <td>Executes the provided callback by using the master connection.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
     </table>
 </div>
@@ -562,12 +653,17 @@ by an end user.</td>
         <td>Creates the PDO instance.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
-                                                                                    <tr class="inherited" id="initConnection()">
+                                                                                                    <tr class="inherited" id="initConnection()">
         <td><a href="yii-db-connection.html#initConnection()-detail">initConnection()</a></td>
         <td>Initializes the DB connection.</td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
-                                            </table>
+                            <tr class="inherited" id="openFromPool()">
+        <td><a href="yii-db-connection.html#openFromPool()-detail">openFromPool()</a></td>
+        <td>Opens the connection to a server in the pool.</td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+                                        </table>
 </div>
 
 <a name="events"></a>
@@ -591,6 +687,27 @@ by an end user.</td>
         <td>\yii\db\Event</td>
         <td>
             An event that is triggered after a DB connection is established                    </td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEGIN_TRANSACTION">
+        <td><a href="yii-db-connection.html#EVENT_BEGIN_TRANSACTION-detail">EVENT_BEGIN_TRANSACTION</a></td>
+        <td>\yii\db\Event</td>
+        <td>
+            An event that is triggered right before a top-level transaction is started                    </td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_COMMIT_TRANSACTION">
+        <td><a href="yii-db-connection.html#EVENT_COMMIT_TRANSACTION-detail">EVENT_COMMIT_TRANSACTION</a></td>
+        <td>\yii\db\Event</td>
+        <td>
+            An event that is triggered right after a top-level transaction is committed                    </td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_ROLLBACK_TRANSACTION">
+        <td><a href="yii-db-connection.html#EVENT_ROLLBACK_TRANSACTION-detail">EVENT_ROLLBACK_TRANSACTION</a></td>
+        <td>\yii\db\Event</td>
+        <td>
+            An event that is triggered right after a top-level transaction is rolled back                    </td>
         <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
     </tr>
         </table>
@@ -642,8 +759,8 @@ by an end user.</td>
     <div class="detail-header h3" id="createCommand()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-connection.html#createCommand()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L110" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L110" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L111" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L111" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createCommand()
         <span class="detail-header-tag small">
@@ -681,11 +798,50 @@ by an end user.</td>
 
 <!--	-->
 
+    <div class="detail-header h3" id="escapeMatchValue()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-sphinx-connection.html#escapeMatchValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L140" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L140" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        escapeMatchValue()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Escapes all special characters from 'MATCH' statement argument.</strong></p>
+
+        <p>Make sure you are using this method whenever composing 'MATCH' search statement.
+Note: this method does not perform quoting, you should place the result in the quotes
+an perform additional escaping for it manually, the best way to do it is using PDO parameter.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-sphinx-connection.html#escapeMatchValue()-detail">escapeMatchValue</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$str&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$str</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>String to be escaped.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The properly escaped string.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="getIndexSchema()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-connection.html#getIndexSchema()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getIndexSchema()
         <span class="detail-header-tag small">
@@ -768,8 +924,8 @@ by an end user.</td>
     <div class="detail-header h3" id="quoteIndexName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-connection.html#quoteIndexName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L89" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L89" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L90" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L90" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         quoteIndexName()
         <span class="detail-header-tag small">
@@ -807,8 +963,8 @@ then this method will do nothing.</p>
     <div class="detail-header h3" id="quoteTableName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-connection.html#quoteTableName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L99" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L99" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Connection.php#L100" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Connection.php#L100" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         quoteTableName()
         <span class="detail-header-tag small">
@@ -878,7 +1034,7 @@ then this method will do nothing.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:42 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:43:04 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

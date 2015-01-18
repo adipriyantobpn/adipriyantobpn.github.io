@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w10998" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10998-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11537" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11537-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10998-collapse" class="collapse navbar-collapse"><ul id="w10999" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11000" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11537-collapse" class="collapse navbar-collapse"><ul id="w11538" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11539" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10997" data-toggle="collapse" data-parent="#navigation">yii\redis <b class="caret"></b></a><div id="navigation-10997" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-redis-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11536" data-toggle="collapse" data-parent="#navigation">yii\redis <b class="caret"></b></a><div id="navigation-11536" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-redis-activequery.html">ActiveQuery</a>
 <a class="list-group-item active" href="./yii-redis-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-redis-cache.html">Cache</a>
 <a class="list-group-item" href="./yii-redis-connection.html">Connection</a>
@@ -335,7 +335,7 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr class="inherited" id="clearErrors()">
@@ -395,10 +395,10 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
     </tr>
             <tr class="inherited" id="findAll()">
         <td><a href="yii-db-baseactiverecord.html#findAll()-detail">findAll()</a></td>
-        <td>Returns a list of active record models that match the specified primary key value or a set of column values.</td>
+        <td>Returns a list of active record models that match the specified primary key value(s) or a set of column values.</td>
         <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
     </tr>
-            <tr class="inherited" id="findOne()">
+                <tr class="inherited" id="findOne()">
         <td><a href="yii-db-baseactiverecord.html#findOne()-detail">findOne()</a></td>
         <td>Returns a single active record model instance by a primary key or an array of column values.</td>
         <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
@@ -748,6 +748,11 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
         <td>Destroys the relationship between two models.</td>
         <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
     </tr>
+            <tr class="inherited" id="unlinkAll()">
+        <td><a href="yii-db-baseactiverecord.html#unlinkAll()-detail">unlinkAll()</a></td>
+        <td>Destroys the relationship in current model.</td>
+        <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
+    </tr>
             <tr class="inherited" id="update()">
         <td><a href="yii-db-baseactiverecord.html#update()-detail">update()</a></td>
         <td>Saves the changes to this active record into the associated database table.</td>
@@ -800,12 +805,17 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                                                                                                                                                                                                                                                                                                                <tr class="inherited" id="resolveFields()">
+                                                                                                                                                            <tr class="inherited" id="findByCondition()">
+        <td><a href="yii-db-baseactiverecord.html#findByCondition()-detail">findByCondition()</a></td>
+        <td>Finds ActiveRecord instance(s) by the given condition.</td>
+        <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
+    </tr>
+                                                                                                                                                                                                                                                <tr class="inherited" id="resolveFields()">
         <td><a href="yii-base-arrayabletrait.html#resolveFields()-detail">resolveFields()</a></td>
         <td>Determines which fields can be returned by <a href="yii-base-arrayabletrait.html#toArray()-detail">toArray()</a>.</td>
         <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
     </tr>
-                                                                                    <tr class="inherited" id="updateInternal()">
+                                                                                        <tr class="inherited" id="updateInternal()">
         <td><a href="yii-db-baseactiverecord.html#updateInternal()-detail">updateInternal()</a></td>
         <td></td>
         <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
@@ -935,8 +945,8 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
     <div class="detail-header h3" id="attributes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#attributes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L79" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L79" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         attributes()
         <span class="detail-header-tag small">
@@ -966,8 +976,8 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
     <div class="detail-header h3" id="buildKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#buildKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L281" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L281" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L307" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L307" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildKey()
         <span class="detail-header-tag small">
@@ -1002,8 +1012,8 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
     <div class="detail-header h3" id="deleteAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#deleteAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L234" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L234" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L261" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L261" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         deleteAll()
         <span class="detail-header-tag small">
@@ -1026,9 +1036,8 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the DELETE SQL.</p>
-<pre><code>                       Please refer to [[ActiveQuery::where()]] on how to specify this parameter.
-</code></pre>
+                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the DELETE SQL.
+Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\redis\ActiveQuery::where()</a> on how to specify this parameter.</p>
 </td>
                 </tr>
                                         <tr>
@@ -1044,8 +1053,8 @@ attributes. A primary key can be defined via <a href="yii-redis-activerecord.htm
     <div class="detail-header h3" id="find()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#find()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L54" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L54" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         find()
         <span class="detail-header-tag small">
@@ -1070,11 +1079,11 @@ create a relational query.</p>
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="yii-db-activequeryinterface.html">yii\db\ActiveQueryInterface</a> <strong><a href="yii-redis-activerecord.html#find()-detail">find</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a> <strong><a href="yii-redis-activerecord.html#find()-detail">find</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
                                                 <tr>
                   <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="yii-db-activequeryinterface.html">yii\db\ActiveQueryInterface</a></td>
-                  <td class="param-desc-col"><p>The newly created <span class="broken-link">\yii\redis\ActiveQueryInterface</span> instance.</p>
+                  <td class="param-type-col"><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a></td>
+                  <td class="param-desc-col"><p>The newly created <a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a> instance.</p>
 </td>
                 </tr>
                                     </table>
@@ -1084,8 +1093,8 @@ create a relational query.</p>
     <div class="detail-header h3" id="getDb()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#getDb()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L46" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L46" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getDb()
         <span class="detail-header-tag small">
@@ -1116,8 +1125,8 @@ You may override this method if you want to use a different database connection.
     <div class="detail-header h3" id="insert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#insert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L97" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L97" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L99" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L99" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         insert()
         <span class="detail-header-tag small">
@@ -1162,8 +1171,8 @@ meaning all attributes that are loaded from DB will be saved.</p>
     <div class="detail-header h3" id="keyPrefix()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#keyPrefix()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L89" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L89" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         keyPrefix()
         <span class="detail-header-tag small">
@@ -1195,8 +1204,8 @@ For example, 'Customer' becomes 'customer', and 'OrderItem' becomes
     <div class="detail-header h3" id="primaryKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#primaryKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L69" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L69" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         primaryKey()
         <span class="detail-header-tag small">
@@ -1227,8 +1236,8 @@ For example, 'Customer' becomes 'customer', and 'OrderItem' becomes
     <div class="detail-header h3" id="updateAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#updateAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L149" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L149" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L158" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L158" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateAll()
         <span class="detail-header-tag small">
@@ -1256,9 +1265,8 @@ For example, 'Customer' becomes 'customer', and 'OrderItem' becomes
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the UPDATE SQL.</p>
-<pre><code>                        Please refer to [[ActiveQuery::where()]] on how to specify this parameter.
-</code></pre>
+                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the UPDATE SQL.
+Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\redis\ActiveQuery::where()</a> on how to specify this parameter.</p>
 </td>
                 </tr>
                                         <tr>
@@ -1274,8 +1282,8 @@ For example, 'Customer' becomes 'customer', and 'OrderItem' becomes
     <div class="detail-header h3" id="updateAllCounters()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activerecord.html#updateAllCounters()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L202" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L202" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveRecord.php#L229" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveRecord.php#L229" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateAllCounters()
         <span class="detail-header-tag small">
@@ -1297,17 +1305,15 @@ For example, 'Customer' becomes 'customer', and 'OrderItem' becomes
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$counters</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The counters to be updated (attribute name =&gt; increment value).</p>
-<pre><code>                       Use negative values if you want to decrement the counters.
-</code></pre>
+                  <td class="param-desc-col"><p>The counters to be updated (attribute name =&gt; increment value).
+Use negative values if you want to decrement the counters.</p>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the UPDATE SQL.</p>
-<pre><code>                       Please refer to [[ActiveQuery::where()]] on how to specify this parameter.
-</code></pre>
+                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the UPDATE SQL.
+Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\redis\ActiveQuery::where()</a> on how to specify this parameter.</p>
 </td>
                 </tr>
                                         <tr>
@@ -1358,7 +1364,7 @@ For example, 'Customer' becomes 'customer', and 'OrderItem' becomes
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:41 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:43:03 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

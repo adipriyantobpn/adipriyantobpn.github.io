@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w11026" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11026-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11571" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11571-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11026-collapse" class="collapse navbar-collapse"><ul id="w11027" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11028" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11571-collapse" class="collapse navbar-collapse"><ul id="w11572" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11573" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11025" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11025" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11569" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11569" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
 <a class="list-group-item active" href="./yii-sphinx-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-sphinx-columnschema.html">ColumnSchema</a>
 <a class="list-group-item" href="./yii-sphinx-command.html">Command</a>
@@ -56,7 +56,8 @@
 <a class="list-group-item" href="./yii-sphinx-indexschema.html">IndexSchema</a>
 <a class="list-group-item" href="./yii-sphinx-query.html">Query</a>
 <a class="list-group-item" href="./yii-sphinx-querybuilder.html">QueryBuilder</a>
-<a class="list-group-item" href="./yii-sphinx-schema.html">Schema</a></div></div>    </div>
+<a class="list-group-item" href="./yii-sphinx-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11570" data-toggle="collapse" data-parent="#navigation">yii\sphinx\gii\model <b class="caret"></b></a><div id="navigation-11570" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-sphinx-gii-model-generator.html">Generator</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Abstract Class yii\sphinx\ActiveRecord</h1>
 <div id="nav">
@@ -352,7 +353,7 @@ runtime indexes!</p>
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr class="inherited" id="clearErrors()">
@@ -412,10 +413,10 @@ runtime indexes!</p>
     </tr>
             <tr class="inherited" id="findAll()">
         <td><a href="yii-db-activerecordinterface.html#findAll()-detail">findAll()</a></td>
-        <td>Returns a list of active record models that match the specified primary key value or a set of column values.</td>
+        <td>Returns a list of active record models that match the specified primary key value(s) or a set of column values.</td>
         <td><a href="yii-db-activerecordinterface.html">yii\db\ActiveRecordInterface</a></td>
     </tr>
-            <tr id="findBySql()">
+                <tr id="findBySql()">
         <td><a href="yii-sphinx-activerecord.html#findBySql()-detail">findBySql()</a></td>
         <td>Creates an <a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a> instance with a given SQL statement.</td>
         <td><a href="yii-sphinx-activerecord.html">yii\sphinx\ActiveRecord</a></td>
@@ -801,6 +802,11 @@ Active Record instance.</td>
         <td>Destroys the relationship between two records.</td>
         <td><a href="yii-db-activerecordinterface.html">yii\db\ActiveRecordInterface</a></td>
     </tr>
+            <tr class="inherited" id="unlinkAll()">
+        <td><a href="yii-db-baseactiverecord.html#unlinkAll()-detail">unlinkAll()</a></td>
+        <td>Destroys the relationship in current model.</td>
+        <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
+    </tr>
             <tr id="update()">
         <td><a href="yii-sphinx-activerecord.html#update()-detail">update()</a></td>
         <td>Saves the changes to this active record into the associated Sphinx index.</td>
@@ -858,12 +864,17 @@ Active Record instance.</td>
         <td>Builds up the snippet value from the given query.</td>
         <td><a href="yii-sphinx-activerecord.html">yii\sphinx\ActiveRecord</a></td>
     </tr>
-                                                                                                                                                                                                                                                                                <tr class="inherited" id="resolveFields()">
+                        <tr class="inherited" id="findByCondition()">
+        <td><a href="yii-db-baseactiverecord.html#findByCondition()-detail">findByCondition()</a></td>
+        <td>Finds ActiveRecord instance(s) by the given condition.</td>
+        <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
+    </tr>
+                                                                                                                                                                                                                                                                    <tr class="inherited" id="resolveFields()">
         <td><a href="yii-base-arrayabletrait.html#resolveFields()-detail">resolveFields()</a></td>
         <td>Determines which fields can be returned by <a href="yii-base-arrayabletrait.html#toArray()-detail">toArray()</a>.</td>
         <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
     </tr>
-                                                                                            <tr id="updateInternal()">
+                                                                                                <tr id="updateInternal()">
         <td><a href="yii-sphinx-activerecord.html#updateInternal()-detail">updateInternal()</a></td>
         <td></td>
         <td><a href="yii-sphinx-activerecord.html">yii\sphinx\ActiveRecord</a></td>
@@ -1058,8 +1069,8 @@ This is a shortcut of the expression: OP_INSERT | OP_UPDATE | OP_DELETE.</td>
     <div class="detail-header h3" id="attributes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#attributes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L311" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L311" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L313" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L313" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         attributes()
         <span class="detail-header-tag small">
@@ -1089,8 +1100,8 @@ This is a shortcut of the expression: OP_INSERT | OP_UPDATE | OP_DELETE.</td>
     <div class="detail-header h3" id="callKeywords()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#callKeywords()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L213" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L213" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L215" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L215" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         callKeywords()
         <span class="detail-header-tag small">
@@ -1131,8 +1142,8 @@ This is a shortcut of the expression: OP_INSERT | OP_UPDATE | OP_DELETE.</td>
     <div class="detail-header h3" id="callSnippets()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#callSnippets()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L196" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L196" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L198" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L198" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         callSnippets()
         <span class="detail-header-tag small">
@@ -1151,9 +1162,8 @@ This is a shortcut of the expression: OP_INSERT | OP_UPDATE | OP_DELETE.</td>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$source</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Is the source data to extract a snippet from.</p>
-<pre><code>                          It could be either a single string or array of strings.
-</code></pre>
+                  <td class="param-desc-col"><p>Is the source data to extract a snippet from.
+It could be either a single string or array of strings.</p>
 </td>
                 </tr>
                             <tr>
@@ -1171,9 +1181,8 @@ This is a shortcut of the expression: OP_INSERT | OP_UPDATE | OP_DELETE.</td>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Built snippet in case "source" is a string, list of built snippets</p>
-<pre><code>                         in case "source" is an array.
-</code></pre>
+                  <td class="param-desc-col"><p>Built snippet in case "source" is a string, list of built snippets
+in case "source" is an array.</p>
 </td>
                 </tr>
                                     </table>
@@ -1183,8 +1192,8 @@ This is a shortcut of the expression: OP_INSERT | OP_UPDATE | OP_DELETE.</td>
     <div class="detail-header h3" id="delete()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#delete()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L560" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L560" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L565" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L565" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         delete()
         <span class="detail-header-tag small">
@@ -1212,17 +1221,15 @@ will be raised by the corresponding methods.</p>
                                                 <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>The number of rows deleted, or false if the deletion is unsuccessful for some reason.</p>
-<pre><code>                         Note that it is possible the number of rows deleted is 0, even though the deletion execution is successful.
-</code></pre>
+                  <td class="param-desc-col"><p>The number of rows deleted, or false if the deletion is unsuccessful for some reason.
+Note that it is possible the number of rows deleted is 0, even though the deletion execution is successful.</p>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-db-staleobjectexception.html">yii\db\StaleObjectException</a></td>
-                  <td class="param-desc-col"><p>if <a href="yii-db-baseactiverecord.html#optimisticLock()-detail">optimistic locking</a> is enabled and the data</p>
-<pre><code>                         being deleted is outdated.
-</code></pre>
+                  <td class="param-desc-col"><p>if <a href="yii-db-baseactiverecord.html#optimisticLock()-detail">optimistic locking</a> is enabled and the data
+being deleted is outdated.</p>
 </td>
                 </tr>
                             <tr>
@@ -1238,8 +1245,8 @@ will be raised by the corresponding methods.</p>
     <div class="detail-header h3" id="deleteAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#deleteAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L130" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L130" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L131" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L131" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         deleteAll()
         <span class="detail-header-tag small">
@@ -1261,9 +1268,8 @@ will be raised by the corresponding methods.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the DELETE SQL.</p>
-<pre><code>                            Please refer to [[Query::where()]] on how to specify this parameter.
-</code></pre>
+                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the DELETE SQL.
+Please refer to <a href="yii-sphinx-query.html#where()-detail">yii\sphinx\Query::where()</a> on how to specify this parameter.</p>
 </td>
                 </tr>
                             <tr>
@@ -1285,8 +1291,8 @@ will be raised by the corresponding methods.</p>
     <div class="detail-header h3" id="equals()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#equals()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L605" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L605" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L610" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L610" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         equals()
         <span class="detail-header-tag small">
@@ -1323,8 +1329,8 @@ If one of the records <a href="yii-db-activerecordinterface.html#$isNewRecord-de
     <div class="detail-header h3" id="fetchSnippet()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#fetchSnippet()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L250" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L250" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L252" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L252" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         fetchSnippet()
         <span class="detail-header-tag small">
@@ -1365,8 +1371,8 @@ If one of the records <a href="yii-db-activerecordinterface.html#$isNewRecord-de
     <div class="detail-header h3" id="find()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#find()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L141" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L141" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L143" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L143" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         find()
         <span class="detail-header-tag small">
@@ -1391,11 +1397,11 @@ create a relational query.</p>
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="yii-db-activequeryinterface.html">yii\db\ActiveQueryInterface</a> <strong><a href="yii-sphinx-activerecord.html#find()-detail">find</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a> <strong><a href="yii-sphinx-activerecord.html#find()-detail">find</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
                                                 <tr>
                   <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="yii-db-activequeryinterface.html">yii\db\ActiveQueryInterface</a></td>
-                  <td class="param-desc-col"><p>The newly created <span class="broken-link">\yii\sphinx\ActiveQueryInterface</span> instance.</p>
+                  <td class="param-type-col"><a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a></td>
+                  <td class="param-desc-col"><p>The newly created <a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a> instance.</p>
 </td>
                 </tr>
                                     </table>
@@ -1405,8 +1411,8 @@ create a relational query.</p>
     <div class="detail-header h3" id="findBySql()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#findBySql()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L86" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L86" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L87" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L87" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findBySql()
         <span class="detail-header-tag small">
@@ -1454,8 +1460,8 @@ still fine.</p>
     <div class="detail-header h3" id="getDb()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#getDb()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L63" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L63" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L64" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L64" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getDb()
         <span class="detail-header-tag small">
@@ -1486,8 +1492,8 @@ You may override this method if you want to use a different Sphinx connection.</
     <div class="detail-header h3" id="getIndexSchema()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#getIndexSchema()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L163" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L163" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L165" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L165" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getIndexSchema()
         <span class="detail-header-tag small">
@@ -1522,8 +1528,8 @@ You may override this method if you want to use a different Sphinx connection.</
     <div class="detail-header h3" id="getSnippet()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#getSnippet()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L235" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L235" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L237" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L237" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getSnippet()
         <span class="detail-header-tag small">
@@ -1564,8 +1570,8 @@ You may override this method if you want to use a different Sphinx connection.</
     <div class="detail-header h3" id="getSnippetSource()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#getSnippetSource()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L269" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L269" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L271" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L271" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getSnippetSource()
         <span class="detail-header-tag small">
@@ -1610,8 +1616,8 @@ public function getSnippetSource()
     <div class="detail-header h3" id="indexName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#indexName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L153" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L153" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L155" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L155" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         indexName()
         <span class="detail-header-tag small">
@@ -1643,8 +1649,8 @@ For example, 'Article' becomes 'article', and 'StockItem' becomes
     <div class="detail-header h3" id="insert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#insert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L352" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L352" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L354" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L354" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         insert()
         <span class="detail-header-tag small">
@@ -1684,17 +1690,15 @@ $article-&gt;insert();
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$runValidation</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>Whether to perform validation before saving the record.</p>
-<pre><code>                              If the validation fails, the record will not be inserted.
-</code></pre>
+                  <td class="param-desc-col"><p>Whether to perform validation before saving the record.
+If the validation fails, the record will not be inserted.</p>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$attributes</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>List of attributes that need to be saved. Defaults to null,</p>
-<pre><code>                              meaning all attributes that are loaded from index will be saved.
-</code></pre>
+                  <td class="param-desc-col"><p>List of attributes that need to be saved. Defaults to null,
+meaning all attributes that are loaded from index will be saved.</p>
 </td>
                 </tr>
                                         <tr>
@@ -1716,8 +1720,8 @@ $article-&gt;insert();
     <div class="detail-header h3" id="isTransactional()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#isTransactional()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L633" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L633" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L643" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L643" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         isTransactional()
         <span class="detail-header-tag small">
@@ -1752,8 +1756,8 @@ $article-&gt;insert();
     <div class="detail-header h3" id="populateRecord()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#populateRecord()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L617" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L617" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L622" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L622" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         populateRecord()
         <span class="detail-header-tag small">
@@ -1794,8 +1798,8 @@ created by <a href="yii-db-baseactiverecord.html#instantiate()-detail">instantia
     <div class="detail-header h3" id="primaryKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#primaryKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L182" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L182" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L184" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L184" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         primaryKey()
         <span class="detail-header-tag small">
@@ -1827,8 +1831,8 @@ in the Sphinx index, which is associated with this AR class.</p>
     <div class="detail-header h3" id="setSnippet()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#setSnippet()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L224" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L224" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L226" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L226" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setSnippet()
         <span class="detail-header-tag small">
@@ -1856,8 +1860,8 @@ in the Sphinx index, which is associated with this AR class.</p>
     <div class="detail-header h3" id="transactions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#transactions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L301" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L301" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L303" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L303" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         transactions()
         <span class="detail-header-tag small">
@@ -1893,9 +1897,8 @@ in a transaction.</p>
                                                 <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The declarations of transactional operations. The array keys are scenarios names,</p>
-<pre><code>          and the array values are the corresponding transaction operations.
-</code></pre>
+                  <td class="param-desc-col"><p>The declarations of transactional operations. The array keys are scenarios names,
+and the array values are the corresponding transaction operations.</p>
 </td>
                 </tr>
                                     </table>
@@ -1905,8 +1908,8 @@ in a transaction.</p>
     <div class="detail-header h3" id="update()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#update()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L454" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L454" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L457" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L457" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         update()
         <span class="detail-header-tag small">
@@ -1954,33 +1957,29 @@ code to check if update() is successful or not:</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$runValidation</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>Whether to perform validation before saving the record.</p>
-<pre><code>                                        If the validation fails, the record will not be inserted into the database.
-</code></pre>
+                  <td class="param-desc-col"><p>Whether to perform validation before saving the record.
+If the validation fails, the record will not be inserted into the database.</p>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$attributeNames</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>List of attributes that need to be saved. Defaults to null,</p>
-<pre><code>                                        meaning all attributes that are loaded from DB will be saved.
-</code></pre>
+                  <td class="param-desc-col"><p>List of attributes that need to be saved. Defaults to null,
+meaning all attributes that are loaded from DB will be saved.</p>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>The number of rows affected, or false if validation fails</p>
-<pre><code>                                       or [[beforeSave()]] stops the updating process.
-</code></pre>
+                  <td class="param-desc-col"><p>The number of rows affected, or false if validation fails
+or <a href="yii-db-baseactiverecord.html#beforeSave()-detail">beforeSave()</a> stops the updating process.</p>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-db-staleobjectexception.html">yii\db\StaleObjectException</a></td>
-                  <td class="param-desc-col"><p>if <a href="yii-db-baseactiverecord.html#optimisticLock()-detail">optimistic locking</a> is enabled and the data</p>
-<pre><code>                                       being updated is outdated.
-</code></pre>
+                  <td class="param-desc-col"><p>if <a href="yii-db-baseactiverecord.html#optimisticLock()-detail">optimistic locking</a> is enabled and the data
+being updated is outdated.</p>
 </td>
                 </tr>
                             <tr>
@@ -1996,8 +1995,8 @@ code to check if update() is successful or not:</p>
     <div class="detail-header h3" id="updateAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#updateAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L108" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L108" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L109" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L109" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateAll()
         <span class="detail-header-tag small">
@@ -2025,9 +2024,8 @@ code to check if update() is successful or not:</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the UPDATE SQL.</p>
-<pre><code>                             Please refer to [[Query::where()]] on how to specify this parameter.
-</code></pre>
+                  <td class="param-desc-col"><p>The conditions that will be put in the WHERE part of the UPDATE SQL.
+Please refer to <a href="yii-sphinx-query.html#where()-detail">yii\sphinx\Query::where()</a> on how to specify this parameter.</p>
 </td>
                 </tr>
                             <tr>
@@ -2049,8 +2047,8 @@ code to check if update() is successful or not:</p>
     <div class="detail-header h3" id="updateInternal()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activerecord.html#updateInternal()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L484" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L484" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveRecord.php#L487" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveRecord.php#L487" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateInternal()
         <span class="detail-header-tag small">
@@ -2118,7 +2116,7 @@ code to check if update() is successful or not:</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:41 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:43:03 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

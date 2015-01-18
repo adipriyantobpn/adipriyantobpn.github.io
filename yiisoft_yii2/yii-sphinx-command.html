@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w11034" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11034-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11581" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11581-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11034-collapse" class="collapse navbar-collapse"><ul id="w11035" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11036" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11581-collapse" class="collapse navbar-collapse"><ul id="w11582" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11583" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11033" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11033" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11579" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11579" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-sphinx-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-sphinx-columnschema.html">ColumnSchema</a>
 <a class="list-group-item active" href="./yii-sphinx-command.html">Command</a>
@@ -56,7 +56,8 @@
 <a class="list-group-item" href="./yii-sphinx-indexschema.html">IndexSchema</a>
 <a class="list-group-item" href="./yii-sphinx-query.html">Query</a>
 <a class="list-group-item" href="./yii-sphinx-querybuilder.html">QueryBuilder</a>
-<a class="list-group-item" href="./yii-sphinx-schema.html">Schema</a></div></div>    </div>
+<a class="list-group-item" href="./yii-sphinx-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11580" data-toggle="collapse" data-parent="#navigation">yii\sphinx\gii\model <b class="caret"></b></a><div id="navigation-11580" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-sphinx-gii-model-generator.html">Generator</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Class yii\sphinx\Command</h1>
 <div id="nav">
@@ -148,6 +149,18 @@ For example,</p>
         <td><a href="yii-db-command.html#$pdoStatement-detail">$pdoStatement</a></td>
         <td><a href="http://www.php.net/class.pdostatement">PDOStatement</a></td>
         <td>The PDOStatement object that this command is associated with</td>
+        <td><a href="yii-db-command.html">yii\db\Command</a></td>
+    </tr>
+            <tr class="inherited" id="$queryCacheDependency">
+        <td><a href="yii-db-command.html#$queryCacheDependency-detail">$queryCacheDependency</a></td>
+        <td><a href="yii-caching-dependency.html">yii\caching\Dependency</a></td>
+        <td>The dependency to be associated with the cached query result for this command</td>
+        <td><a href="yii-db-command.html">yii\db\Command</a></td>
+    </tr>
+            <tr class="inherited" id="$queryCacheDuration">
+        <td><a href="yii-db-command.html#$queryCacheDuration-detail">$queryCacheDuration</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The default number of seconds that query results can remain valid in cache.</td>
         <td><a href="yii-db-command.html">yii\db\Command</a></td>
     </tr>
             <tr class="inherited" id="$rawSql">
@@ -266,7 +279,7 @@ For example,</p>
         <td>Binds a parameter to the SQL statement to be executed.</td>
         <td><a href="yii-db-command.html">yii\db\Command</a></td>
     </tr>
-            <tr class="inherited" id="bindValue()">
+                <tr class="inherited" id="bindValue()">
         <td><a href="yii-db-command.html#bindValue()-detail">bindValue()</a></td>
         <td>Binds a value to a parameter.</td>
         <td><a href="yii-db-command.html">yii\db\Command</a></td>
@@ -274,6 +287,11 @@ For example,</p>
             <tr class="inherited" id="bindValues()">
         <td><a href="yii-db-command.html#bindValues()-detail">bindValues()</a></td>
         <td>Binds a list of values to the corresponding parameters.</td>
+        <td><a href="yii-db-command.html">yii\db\Command</a></td>
+    </tr>
+            <tr class="inherited" id="cache()">
+        <td><a href="yii-db-command.html#cache()-detail">cache()</a></td>
+        <td>Enables query cache for this command.</td>
         <td><a href="yii-db-command.html">yii\db\Command</a></td>
     </tr>
             <tr id="callKeywords()">
@@ -308,7 +326,7 @@ For example,</p>
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr id="createIndex()">
@@ -416,6 +434,11 @@ For example,</p>
         <td>Creates an INSERT command.</td>
         <td><a href="yii-db-command.html">yii\db\Command</a></td>
     </tr>
+            <tr class="inherited" id="noCache()">
+        <td><a href="yii-db-command.html#noCache()-detail">noCache()</a></td>
+        <td>Disables query cache for this command.</td>
+        <td><a href="yii-db-command.html">yii\db\Command</a></td>
+    </tr>
             <tr class="inherited" id="off()">
         <td><a href="yii-base-component.html#off()-detail">off()</a></td>
         <td>Detaches an existing event handler from this component.</td>
@@ -504,6 +527,28 @@ For example,</p>
     </table>
 </div>
 
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                            <tr class="inherited" id="bindPendingParams()">
+        <td><a href="yii-db-command.html#bindPendingParams()-detail">bindPendingParams()</a></td>
+        <td>Binds pending parameters that were registered via <a href="yii-db-command.html#bindValue()-detail">bindValue()</a> and <a href="yii-db-command.html#bindValues()-detail">bindValues()</a>.</td>
+        <td><a href="yii-db-command.html">yii\db\Command</a></td>
+    </tr>
+                                                                                                                                                                                                        </table>
+</div>
+
 <a name="events"></a>
 
 <a name="constants"></a>
@@ -536,8 +581,8 @@ For example,</p>
     <div class="detail-header h3" id="addColumn()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#addColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L241" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L241" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L242" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L242" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addColumn()
         <span class="detail-header-tag small">
@@ -586,8 +631,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
     <div class="detail-header h3" id="addForeignKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#addForeignKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L289" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L289" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L290" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L290" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addForeignKey()
         <span class="detail-header-tag small">
@@ -659,8 +704,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
     <div class="detail-header h3" id="addPrimaryKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#addPrimaryKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L273" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L273" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L274" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L274" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addPrimaryKey()
         <span class="detail-header-tag small">
@@ -708,8 +753,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
     <div class="detail-header h3" id="alterColumn()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#alterColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L265" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L265" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L266" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L266" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         alterColumn()
         <span class="detail-header-tag small">
@@ -758,8 +803,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
     <div class="detail-header h3" id="batchInsert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#batchInsert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L71" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L71" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L72" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L72" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         batchInsert()
         <span class="detail-header-tag small">
@@ -814,8 +859,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
     <div class="detail-header h3" id="batchReplace()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#batchReplace()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L125" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L125" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         batchReplace()
         <span class="detail-header-tag small">
@@ -870,8 +915,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
     <div class="detail-header h3" id="callKeywords()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#callKeywords()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L196" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L196" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L197" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L197" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         callKeywords()
         <span class="detail-header-tag small">
@@ -886,7 +931,7 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-sphinx-command.html#callKeywords()-detail">callKeywords</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$index</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$text</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$fetchStatistic&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">static <strong><a href="yii-sphinx-command.html#callKeywords()-detail">callKeywords</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$index</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$text</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$fetchStatistic&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$index</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
@@ -907,8 +952,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The SQL statement for call keywords.</p>
+                  <td class="param-type-col">static</td>
+                  <td class="param-desc-col"><p>The command object itself</p>
 </td>
                 </tr>
                                     </table>
@@ -918,8 +963,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
     <div class="detail-header h3" id="callSnippets()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#callSnippets()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L181" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L181" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L182" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L182" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         callSnippets()
         <span class="detail-header-tag small">
@@ -944,9 +989,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$source</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Is the source data to extract a snippet from.</p>
-<pre><code>                          It could be either a single string or array of strings.
-</code></pre>
+                  <td class="param-desc-col"><p>Is the source data to extract a snippet from.
+It could be either a single string or array of strings.</p>
 </td>
                 </tr>
                             <tr>
@@ -974,8 +1018,8 @@ as <code>varchar(255)</code>, and <code>string not null</code> becomes <code>var
     <div class="detail-header h3" id="checkIntegrity()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#checkIntegrity()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L329" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L329" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L330" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L330" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         checkIntegrity()
         <span class="detail-header-tag small">
@@ -1029,8 +1073,8 @@ or default schema.</p>
     <div class="detail-header h3" id="createIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#createIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L305" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L305" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L306" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L306" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createIndex()
         <span class="detail-header-tag small">
@@ -1084,8 +1128,8 @@ by commas. The column names will be properly quoted by the method.</p>
     <div class="detail-header h3" id="createTable()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#createTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L209" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L209" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L210" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L210" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createTable()
         <span class="detail-header-tag small">
@@ -1140,8 +1184,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="dropColumn()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#dropColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L249" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L249" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L250" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L250" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropColumn()
         <span class="detail-header-tag small">
@@ -1182,8 +1226,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="dropForeignKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#dropForeignKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L297" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L297" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L298" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L298" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropForeignKey()
         <span class="detail-header-tag small">
@@ -1224,8 +1268,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="dropIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#dropIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L313" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L313" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L314" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L314" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropIndex()
         <span class="detail-header-tag small">
@@ -1266,8 +1310,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="dropPrimaryKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#dropPrimaryKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L281" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L281" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L282" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L282" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropPrimaryKey()
         <span class="detail-header-tag small">
@@ -1308,8 +1352,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="dropTable()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#dropTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L225" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L225" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L226" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L226" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropTable()
         <span class="detail-header-tag small">
@@ -1344,8 +1388,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="renameColumn()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#renameColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L257" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L257" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L258" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L258" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renameColumn()
         <span class="detail-header-tag small">
@@ -1392,8 +1436,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="renameTable()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#renameTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L217" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L217" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L218" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L218" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renameTable()
         <span class="detail-header-tag small">
@@ -1434,8 +1478,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="replace()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#replace()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L98" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L98" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L99" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L99" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         replace()
         <span class="detail-header-tag small">
@@ -1484,8 +1528,8 @@ inserted into the generated SQL.</p>
     <div class="detail-header h3" id="resetSequence()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#resetSequence()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L321" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L321" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L322" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L322" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         resetSequence()
         <span class="detail-header-tag small">
@@ -1535,8 +1579,8 @@ the next new row's primary key will have a value 1.</p>
     <div class="detail-header h3" id="truncateIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#truncateIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L165" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L165" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L166" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L166" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         truncateIndex()
         <span class="detail-header-tag small">
@@ -1571,8 +1615,8 @@ the next new row's primary key will have a value 1.</p>
     <div class="detail-header h3" id="truncateTable()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#truncateTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L233" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L233" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L234" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L234" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         truncateTable()
         <span class="detail-header-tag small">
@@ -1607,8 +1651,8 @@ the next new row's primary key will have a value 1.</p>
     <div class="detail-header h3" id="update()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-command.html#update()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L153" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L153" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Command.php#L154" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Command.php#L154" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         update()
         <span class="detail-header-tag small">
@@ -1644,9 +1688,8 @@ the next new row's primary key will have a value 1.</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The condition that will be put in the WHERE part. Please</p>
-<pre><code>                            refer to [[Query::where()]] on how to specify condition.
-</code></pre>
+                  <td class="param-desc-col"><p>The condition that will be put in the WHERE part. Please
+refer to <a href="yii-sphinx-query.html#where()-detail">yii\sphinx\Query::where()</a> on how to specify condition.</p>
 </td>
                 </tr>
                             <tr>
@@ -1709,7 +1752,7 @@ the next new row's primary key will have a value 1.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:42 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:43:04 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

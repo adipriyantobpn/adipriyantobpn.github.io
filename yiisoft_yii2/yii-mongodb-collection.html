@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w10945" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10945-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11425" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11425-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10945-collapse" class="collapse navbar-collapse"><ul id="w10946" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10947" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11425-collapse" class="collapse navbar-collapse"><ul id="w11426" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11427" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10943" data-toggle="collapse" data-parent="#navigation">yii\mongodb <b class="caret"></b></a><div id="navigation-10943" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-mongodb-activefixture.html">ActiveFixture</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11420" data-toggle="collapse" data-parent="#navigation">yii\mongodb <b class="caret"></b></a><div id="navigation-11420" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-mongodb-activefixture.html">ActiveFixture</a>
 <a class="list-group-item" href="./yii-mongodb-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-mongodb-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-mongodb-cache.html">Cache</a>
@@ -56,12 +56,16 @@
 <a class="list-group-item" href="./yii-mongodb-connection.html">Connection</a>
 <a class="list-group-item" href="./yii-mongodb-database.html">Database</a>
 <a class="list-group-item" href="./yii-mongodb-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-mongodb-migration.html">Migration</a>
 <a class="list-group-item" href="./yii-mongodb-query.html">Query</a>
 <a class="list-group-item" href="./yii-mongodb-session.html">Session</a></div>
-<a class="list-group-item" href="#navigation-10944" data-toggle="collapse" data-parent="#navigation">yii\mongodb\file <b class="caret"></b></a><div id="navigation-10944" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-file-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="#navigation-11421" data-toggle="collapse" data-parent="#navigation">yii\mongodb\console\controllers <b class="caret"></b></a><div id="navigation-11421" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-console-controllers-migratecontroller.html">MigrateController</a></div>
+<a class="list-group-item" href="#navigation-11422" data-toggle="collapse" data-parent="#navigation">yii\mongodb\file <b class="caret"></b></a><div id="navigation-11422" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-file-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-mongodb-file-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-mongodb-file-collection.html">Collection</a>
-<a class="list-group-item" href="./yii-mongodb-file-query.html">Query</a></div></div>    </div>
+<a class="list-group-item" href="./yii-mongodb-file-query.html">Query</a></div>
+<a class="list-group-item" href="#navigation-11423" data-toggle="collapse" data-parent="#navigation">yii\mongodb\gii\model <b class="caret"></b></a><div id="navigation-11423" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-gii-model-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-11424" data-toggle="collapse" data-parent="#navigation">yii\mongodb\log <b class="caret"></b></a><div id="navigation-11424" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-log-mongodbtarget.html">MongoDbTarget</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Class yii\mongodb\Collection</h1>
 <div id="nav">
@@ -263,6 +267,11 @@ should take care of possible typecast on your own.</p>
         <td>Connects two or more conditions with the <code>OR</code> operator.</td>
         <td><a href="yii-mongodb-collection.html">yii\mongodb\Collection</a></td>
     </tr>
+            <tr id="buildRegexCondition()">
+        <td><a href="yii-mongodb-collection.html#buildRegexCondition()-detail">buildRegexCondition()</a></td>
+        <td>Creates a Mongo regular expression condition.</td>
+        <td><a href="yii-mongodb-collection.html">yii\mongodb\Collection</a></td>
+    </tr>
             <tr class="inherited" id="canGetProperty()">
         <td><a href="yii-base-object.html#canGetProperty()-detail">canGetProperty()</a></td>
         <td>Returns a value indicating whether a property can be read.</td>
@@ -275,7 +284,7 @@ should take care of possible typecast on your own.</p>
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
                 <tr id="createIndex()">
@@ -400,7 +409,7 @@ should take care of possible typecast on your own.</p>
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                <tr id="composeLogToken()">
+                                                                                    <tr id="composeLogToken()">
         <td><a href="yii-mongodb-collection.html#composeLogToken()-detail">composeLogToken()</a></td>
         <td>Composes log/profile token.</td>
         <td><a href="yii-mongodb-collection.html">yii\mongodb\Collection</a></td>
@@ -488,8 +497,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="$mongoCollection-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#$mongoCollection-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L74" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L74" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L73" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L73" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $mongoCollection        <span class="detailHeaderTag small">
             public                                    property
@@ -526,8 +535,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="aggregate()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#aggregate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L538" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L538" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L542" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L542" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         aggregate()
         <span class="detail-header-tag small">
@@ -552,9 +561,8 @@ should take care of possible typecast on your own.</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$pipelineOperator</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Additional pipeline operator. You can specify additional</p>
-<pre><code>                                pipelines via third argument, fourth argument etc.
-</code></pre>
+                  <td class="param-desc-col"><p>Additional pipeline operator. You can specify additional
+pipelines via third argument, fourth argument etc.</p>
 </td>
                 </tr>
                                         <tr>
@@ -576,8 +584,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="batchInsert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#batchInsert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L396" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L396" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L400" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L400" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         batchInsert()
         <span class="detail-header-tag small">
@@ -624,8 +632,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="buildAndCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#buildAndCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L900" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L900" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L905" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L905" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildAndCondition()
         <span class="detail-header-tag small">
@@ -666,8 +674,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="buildBetweenCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#buildBetweenCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L936" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L936" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L941" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L941" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildBetweenCondition()
         <span class="detail-header-tag small">
@@ -692,9 +700,8 @@ should take care of possible typecast on your own.</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$operands</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The first operand is the column name. The second and third operands</p>
-<pre><code>                                    describe the interval that column value should be in.
-</code></pre>
+                  <td class="param-desc-col"><p>The first operand is the column name. The second and third operands
+describe the interval that column value should be in.</p>
 </td>
                 </tr>
                                         <tr>
@@ -716,8 +723,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="buildCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#buildCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L827" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L827" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L831" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L831" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildCondition()
         <span class="detail-header-tag small">
@@ -736,9 +743,8 @@ should take care of possible typecast on your own.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The condition specification. Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\mongodb\Query::where()</a></p>
-<pre><code>                                     on how to specify a condition.
-</code></pre>
+                  <td class="param-desc-col"><p>The condition specification. Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\mongodb\Query::where()</a>
+on how to specify a condition.</p>
 </td>
                 </tr>
                                         <tr>
@@ -760,8 +766,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="buildHashCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#buildHashCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L865" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L865" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L870" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L870" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildHashCondition()
         <span class="detail-header-tag small">
@@ -796,8 +802,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="buildInCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#buildInCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L968" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L968" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L973" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L973" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildInCondition()
         <span class="detail-header-tag small">
@@ -822,10 +828,9 @@ should take care of possible typecast on your own.</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$operands</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The first operand is the column name. If it is an array</p>
-<pre><code>                                    a composite IN condition will be generated.
-                                    The second operand is an array of values that column value should be among.
-</code></pre>
+                  <td class="param-desc-col"><p>The first operand is the column name. If it is an array
+a composite IN condition will be generated.
+The second operand is an array of values that column value should be among.</p>
 </td>
                 </tr>
                                         <tr>
@@ -847,8 +852,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="buildLikeCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#buildLikeCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L1010" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L1010" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L1036" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L1036" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildLikeCondition()
         <span class="detail-header-tag small">
@@ -873,9 +878,8 @@ should take care of possible typecast on your own.</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$operands</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The first operand is the column name.</p>
-<pre><code>                                    The second operand is a single value that column value should be compared with.
-</code></pre>
+                  <td class="param-desc-col"><p>The first operand is the column name.
+The second operand is a single value that column value should be compared with.</p>
 </td>
                 </tr>
                                         <tr>
@@ -897,8 +901,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="buildOrCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#buildOrCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L917" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L917" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L922" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L922" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildOrCondition()
         <span class="detail-header-tag small">
@@ -933,6 +937,55 @@ should take care of possible typecast on your own.</p>
 </td>
                 </tr>
                                     </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="buildRegexCondition()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-mongodb-collection.html#buildRegexCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L1015" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L1015" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        buildRegexCondition()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Creates a Mongo regular expression condition.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a> <strong><a href="yii-mongodb-collection.html#buildRegexCondition()-detail">buildRegexCondition</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$operator</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$operands&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$operator</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The operator to use</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$operands</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The first operand is the column name.
+The second operand is a single value that column value should be compared with.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The generated Mongo condition.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidparamexception.html">yii\base\InvalidParamException</a></td>
+                  <td class="param-desc-col"><p>if wrong number of operands have been given.</p>
+</td>
+                </tr>
+                        </table>
 
 <!--	-->
 
@@ -1001,19 +1054,19 @@ should take care of possible typecast on your own.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>Column name or list of column names.</p>
-<pre><code>                          If array is given, each element in the array has as key the field name, and as
-                          value either 1 for ascending sort, or -1 for descending sort.
-                          You can specify field using native numeric key with the field name as a value,
-                          in this case ascending sort will be used.
-                          For example:
-                          ~~~
-                          [
-                          'name',
-                          'status' =&gt; -1,
-                          ]
-                          ~~~
+                  <td class="param-desc-col"><p>Column name or list of column names.
+If array is given, each element in the array has as key the field name, and as
+value either 1 for ascending sort, or -1 for descending sort.
+You can specify field using native numeric key with the field name as a value,
+in this case ascending sort will be used.
+For example:
+~~~
+[</p>
+<pre><code>'name',
+'status' =&gt; -1,
 </code></pre>
+<p>]
+~~~</p>
 </td>
                 </tr>
                             <tr>
@@ -1041,8 +1094,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="distinct()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#distinct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L512" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L512" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L516" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L516" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         distinct()
         <span class="detail-header-tag small">
@@ -1125,8 +1178,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="dropAllIndexes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#dropAllIndexes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L298" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L298" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L302" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L302" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropAllIndexes()
         <span class="detail-header-tag small">
@@ -1161,8 +1214,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="dropIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#dropIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L255" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L255" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L259" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L259" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropIndex()
         <span class="detail-header-tag small">
@@ -1181,21 +1234,21 @@ should take care of possible typecast on your own.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Column name or list of column names.</p>
-<pre><code>                          If array is given, each element in the array has as key the field name, and as
-                          value either 1 for ascending sort, or -1 for descending sort.
-                          Use value 'text' to specify text index.
-                          You can specify field using native numeric key with the field name as a value,
-                          in this case ascending sort will be used.
-                          For example:
-                          ~~~
-                          [
-                          'name',
-                          'status' =&gt; -1,
-                          'description' =&gt; 'text',
-                          ]
-                          ~~~
+                  <td class="param-desc-col"><p>Column name or list of column names.
+If array is given, each element in the array has as key the field name, and as
+value either 1 for ascending sort, or -1 for descending sort.
+Use value 'text' to specify text index.
+You can specify field using native numeric key with the field name as a value,
+in this case ascending sort will be used.
+For example:
+~~~
+[</p>
+<pre><code>'name',
+'status' =&gt; -1,
+'description' =&gt; 'text',
 </code></pre>
+<p>]
+~~~</p>
 </td>
                 </tr>
                                         <tr>
@@ -1253,8 +1306,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="ensureMongoId()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#ensureMongoId()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L794" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L794" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L798" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L798" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         ensureMongoId()
         <span class="detail-header-tag small">
@@ -1290,8 +1343,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="find()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#find()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L321" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L321" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L325" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L325" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         find()
         <span class="detail-header-tag small">
@@ -1333,8 +1386,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="findAndModify()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#findAndModify()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L348" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L348" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L352" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L352" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findAndModify()
         <span class="detail-header-tag small">
@@ -1393,8 +1446,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="findOne()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#findOne()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L333" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L333" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L337" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L337" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findOne()
         <span class="detail-header-tag small">
@@ -1435,8 +1488,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="fullTextSearch()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#fullTextSearch()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L700" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L700" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L704" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L704" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         fullTextSearch()
         <span class="detail-header-tag small">
@@ -1474,11 +1527,12 @@ should take care of possible typecast on your own.</p>
                   <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
                   <td class="param-desc-col"><p>Additional optional parameters to the mapReduce command. Valid options include:</p>
-<pre><code>                         - limit - the maximum number of documents to include in the response (by default 100).
-                         - language - the language that determines the list of stop words for the search
-                         and the rules for the stemmer and tokenizer. If not specified, the search uses the default
-                         language of the index.
-</code></pre>
+<ul>
+<li>limit - the maximum number of documents to include in the response (by default 100).</li>
+<li>language - the language that determines the list of stop words for the search
+and the rules for the stemmer and tokenizer. If not specified, the search uses the default
+language of the index.</li>
+</ul>
 </td>
                 </tr>
                                         <tr>
@@ -1590,8 +1644,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="group()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#group()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L572" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L572" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L576" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L576" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         group()
         <span class="detail-header-tag small">
@@ -1610,10 +1664,9 @@ should take care of possible typecast on your own.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$keys</span></td>
                   <td class="param-type-col">mixed</td>
-                  <td class="param-desc-col"><p>Fields to group by. If an array or non-code object is passed,</p>
-<pre><code>                               it will be the key used to group results. If instance of [[\MongoCode]] passed,
-                               it will be treated as a function that returns the key to group by.
-</code></pre>
+                  <td class="param-desc-col"><p>Fields to group by. If an array or non-code object is passed,
+it will be the key used to group results. If instance of <span class="broken-link">\MongoCode</span> passed,
+it will be treated as a function that returns the key to group by.</p>
 </td>
                 </tr>
                             <tr>
@@ -1625,19 +1678,19 @@ should take care of possible typecast on your own.</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$reduce</span></td>
                   <td class="param-type-col">\MongoCode|<a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>Function that takes two arguments (the current</p>
-<pre><code>                               document and the aggregation to this point) and does the aggregation.
-                               Argument will be automatically cast to [[\MongoCode]].
-</code></pre>
+                  <td class="param-desc-col"><p>Function that takes two arguments (the current
+document and the aggregation to this point) and does the aggregation.
+Argument will be automatically cast to <span class="broken-link">\MongoCode</span>.</p>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
                   <td class="param-desc-col"><p>Optional parameters to the group command. Valid options include:</p>
-<pre><code>                               - condition - criteria for including a document in the aggregation.
-                               - finalize - function called once per unique key that takes the final output of the reduce function.
-</code></pre>
+<ul>
+<li>condition - criteria for including a document in the aggregation.</li>
+<li>finalize - function called once per unique key that takes the final output of the reduce function.</li>
+</ul>
 </td>
                 </tr>
                                         <tr>
@@ -1659,8 +1712,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="insert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#insert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L372" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L372" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L376" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L376" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         insert()
         <span class="detail-header-tag small">
@@ -1707,8 +1760,8 @@ should take care of possible typecast on your own.</p>
     <div class="detail-header h3" id="mapReduce()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#mapReduce()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L646" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L646" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L650" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L650" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         mapReduce()
         <span class="detail-header-tag small">
@@ -1740,27 +1793,24 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$map</span></td>
                   <td class="param-type-col">\MongoCode|<a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>Function, which emits map data from collection.</p>
-<pre><code>                                 Argument will be automatically cast to [[\MongoCode]].
-</code></pre>
+                  <td class="param-desc-col"><p>Function, which emits map data from collection.
+Argument will be automatically cast to <span class="broken-link">\MongoCode</span>.</p>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$reduce</span></td>
                   <td class="param-type-col">\MongoCode|<a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>Function that takes two arguments (the map key</p>
-<pre><code>                                 and the map values) and does the aggregation.
-                                 Argument will be automatically cast to [[\MongoCode]].
-</code></pre>
+                  <td class="param-desc-col"><p>Function that takes two arguments (the map key
+and the map values) and does the aggregation.
+Argument will be automatically cast to <span class="broken-link">\MongoCode</span>.</p>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$out</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Output collection name. It could be a string for simple output</p>
-<pre><code>                                 ('outputCollection'), or an array for parametrized output (['merge' =&gt; 'outputCollection']).
-                                 You can pass ['inline' =&gt; true] to fetch the result at once without temporary collection usage.
-</code></pre>
+                  <td class="param-desc-col"><p>Output collection name. It could be a string for simple output
+('outputCollection'), or an array for parametrized output (['merge' => 'outputCollection']).
+You can pass ['inline' => true] to fetch the result at once without temporary collection usage.</p>
 </td>
                 </tr>
                             <tr>
@@ -1773,13 +1823,14 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
                   <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
                   <td class="param-desc-col"><p>Additional optional parameters to the mapReduce command. Valid options include:</p>
-<pre><code>                                 - sort - array - key to sort the input documents. The sort key must be in an existing index for this collection.
-                                 - limit - the maximum number of documents to return in the collection.
-                                 - finalize - function, which follows the reduce method and modifies the output.
-                                 - scope - array - specifies global variables that are accessible in the map, reduce and finalize functions.
-                                 - jsMode - boolean -Specifies whether to convert intermediate data into BSON format between the execution of the map and reduce functions.
-                                 - verbose - boolean - specifies whether to include the timing information in the result information.
-</code></pre>
+<ul>
+<li>sort - array - key to sort the input documents. The sort key must be in an existing index for this collection.</li>
+<li>limit - the maximum number of documents to return in the collection.</li>
+<li>finalize - function, which follows the reduce method and modifies the output.</li>
+<li>scope - array - specifies global variables that are accessible in the map, reduce and finalize functions.</li>
+<li>jsMode - boolean -Specifies whether to convert intermediate data into BSON format between the execution of the map and reduce functions.</li>
+<li>verbose - boolean - specifies whether to include the timing information in the result information.</li>
+</ul>
 </td>
                 </tr>
                                         <tr>
@@ -1801,8 +1852,8 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
     <div class="detail-header h3" id="normalizeConditionKeyword()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#normalizeConditionKeyword()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L772" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L772" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L776" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L776" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         normalizeConditionKeyword()
         <span class="detail-header-tag small">
@@ -1837,8 +1888,8 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
     <div class="detail-header h3" id="normalizeIndexKeys()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#normalizeIndexKeys()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L279" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L279" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L283" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L283" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         normalizeIndexKeys()
         <span class="detail-header-tag small">
@@ -1909,8 +1960,8 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
     <div class="detail-header h3" id="remove()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#remove()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L483" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L483" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L487" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L487" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         remove()
         <span class="detail-header-tag small">
@@ -1957,8 +2008,8 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
     <div class="detail-header h3" id="save()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#save()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L458" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L458" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L462" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L462" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         save()
         <span class="detail-header-tag small">
@@ -2005,8 +2056,8 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
     <div class="detail-header h3" id="tryLastError()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#tryLastError()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L762" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L762" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L766" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L766" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         tryLastError()
         <span class="detail-header-tag small">
@@ -2035,8 +2086,8 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
     <div class="detail-header h3" id="tryResultError()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#tryResultError()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L735" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L735" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L739" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L739" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         tryResultError()
         <span class="detail-header-tag small">
@@ -2071,8 +2122,8 @@ $results = $query-&gt;from($resultCollectionName)-&gt;all();
     <div class="detail-header h3" id="update()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-collection.html#update()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L423" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L423" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Collection.php#L427" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Collection.php#L427" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         update()
         <span class="detail-header-tag small">
@@ -2162,7 +2213,7 @@ to be specified for the "newData". If no strategy is passed "$set" will be used.
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:40 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:43:01 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

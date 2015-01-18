@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w10940" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10940-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11417" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11417-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10940-collapse" class="collapse navbar-collapse"><ul id="w10941" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10942" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11417-collapse" class="collapse navbar-collapse"><ul id="w11418" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11419" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10938" data-toggle="collapse" data-parent="#navigation">yii\mongodb <b class="caret"></b></a><div id="navigation-10938" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-mongodb-activefixture.html">ActiveFixture</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11412" data-toggle="collapse" data-parent="#navigation">yii\mongodb <b class="caret"></b></a><div id="navigation-11412" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-mongodb-activefixture.html">ActiveFixture</a>
 <a class="list-group-item" href="./yii-mongodb-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-mongodb-activerecord.html">ActiveRecord</a>
 <a class="list-group-item active" href="./yii-mongodb-cache.html">Cache</a>
@@ -56,12 +56,16 @@
 <a class="list-group-item" href="./yii-mongodb-connection.html">Connection</a>
 <a class="list-group-item" href="./yii-mongodb-database.html">Database</a>
 <a class="list-group-item" href="./yii-mongodb-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-mongodb-migration.html">Migration</a>
 <a class="list-group-item" href="./yii-mongodb-query.html">Query</a>
 <a class="list-group-item" href="./yii-mongodb-session.html">Session</a></div>
-<a class="list-group-item" href="#navigation-10939" data-toggle="collapse" data-parent="#navigation">yii\mongodb\file <b class="caret"></b></a><div id="navigation-10939" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-file-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="#navigation-11413" data-toggle="collapse" data-parent="#navigation">yii\mongodb\console\controllers <b class="caret"></b></a><div id="navigation-11413" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-console-controllers-migratecontroller.html">MigrateController</a></div>
+<a class="list-group-item" href="#navigation-11414" data-toggle="collapse" data-parent="#navigation">yii\mongodb\file <b class="caret"></b></a><div id="navigation-11414" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-file-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-mongodb-file-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-mongodb-file-collection.html">Collection</a>
-<a class="list-group-item" href="./yii-mongodb-file-query.html">Query</a></div></div>    </div>
+<a class="list-group-item" href="./yii-mongodb-file-query.html">Query</a></div>
+<a class="list-group-item" href="#navigation-11415" data-toggle="collapse" data-parent="#navigation">yii\mongodb\gii\model <b class="caret"></b></a><div id="navigation-11415" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-gii-model-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-11416" data-toggle="collapse" data-parent="#navigation">yii\mongodb\log <b class="caret"></b></a><div id="navigation-11416" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-log-mongodbtarget.html">MongoDbTarget</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Class yii\mongodb\Cache</h1>
 <div id="nav">
@@ -148,7 +152,7 @@ when storing a piece of data in the cache.</td>
             <tr class="inherited" id="$keyPrefix">
         <td><a href="yii-caching-cache.html#$keyPrefix-detail">$keyPrefix</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
-        <td>A string prefixed to every cache key so that it is unique.</td>
+        <td>A string prefixed to every cache key so that it is unique globally in the whole cache storage.</td>
         <td><a href="yii-caching-cache.html">yii\caching\Cache</a></td>
     </tr>
             <tr class="inherited" id="$serializer">
@@ -231,7 +235,12 @@ when storing a piece of data in the cache.</td>
         <td>Returns a list of behaviors that this component should behave as.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-                <tr class="inherited" id="canGetProperty()">
+            <tr class="inherited" id="buildKey()">
+        <td><a href="yii-caching-cache.html#buildKey()-detail">buildKey()</a></td>
+        <td>Builds a normalized cache key from a given key.</td>
+        <td><a href="yii-caching-cache.html">yii\caching\Cache</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
         <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
         <td>Returns a value indicating whether a property can be read.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
@@ -243,7 +252,7 @@ when storing a piece of data in the cache.</td>
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr class="inherited" id="delete()">
@@ -399,12 +408,7 @@ This method is required by the interface ArrayAccess.</td>
         <td>Adds multiple key-value pairs to cache.</td>
         <td><a href="yii-caching-cache.html">yii\caching\Cache</a></td>
     </tr>
-                        <tr class="inherited" id="buildKey()">
-        <td><a href="yii-caching-cache.html#buildKey()-detail">buildKey()</a></td>
-        <td>Builds a normalized cache key from a given key.</td>
-        <td><a href="yii-caching-cache.html">yii\caching\Cache</a></td>
-    </tr>
-                            <tr id="deleteValue()">
+                                            <tr id="deleteValue()">
         <td><a href="yii-mongodb-cache.html#deleteValue()-detail">deleteValue()</a></td>
         <td>Deletes a value with the specified key from cache
 This method should be implemented by child classes to delete the data from actual cache storage.</td>
@@ -510,8 +514,8 @@ This number should be between 0 and 1000000. A value 0 meaning no GC will be per
     <div class="detail-header h3" id="addValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#addValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L134" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L134" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L135" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L135" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addValue()
         <span class="detail-header-tag small">
@@ -560,8 +564,8 @@ in specific cache storage.</p>
     <div class="detail-header h3" id="deleteValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#deleteValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L164" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L164" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L165" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L165" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         deleteValue()
         <span class="detail-header-tag small">
@@ -597,8 +601,8 @@ This method should be implemented by child classes to delete the data from actua
     <div class="detail-header h3" id="flushValues()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#flushValues()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L177" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L177" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L178" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L178" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         flushValues()
         <span class="detail-header-tag small">
@@ -628,8 +632,8 @@ This method should be implemented by child classes to delete the data from actua
     <div class="detail-header h3" id="gc()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#gc()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L190" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L190" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L191" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L191" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         gc()
         <span class="detail-header-tag small">
@@ -648,9 +652,8 @@ This method should be implemented by child classes to delete the data from actua
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$force</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>Whether to enforce the garbage collection regardless of <a href="yii-mongodb-cache.html#$gcProbability-detail">$gcProbability</a>.</p>
-<pre><code>                  Defaults to false, meaning the actual deletion happens with the probability as specified by [[gcProbability]].
-</code></pre>
+                  <td class="param-desc-col"><p>Whether to enforce the garbage collection regardless of <a href="yii-mongodb-cache.html#$gcProbability-detail">$gcProbability</a>.
+Defaults to false, meaning the actual deletion happens with the probability as specified by <a href="yii-mongodb-cache.html#$gcProbability-detail">$gcProbability</a>.</p>
 </td>
                 </tr>
                                                 </table>
@@ -660,8 +663,8 @@ This method should be implemented by child classes to delete the data from actua
     <div class="detail-header h3" id="getValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#getValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L75" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L75" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getValue()
         <span class="detail-header-tag small">
@@ -698,8 +701,8 @@ from specific cache storage.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L62" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L62" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L63" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L63" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -729,8 +732,8 @@ from specific cache storage.</p>
     <div class="detail-header h3" id="setValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#setValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L108" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L108" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L109" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L109" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setValue()
         <span class="detail-header-tag small">
@@ -814,7 +817,7 @@ in specific cache storage.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:40 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:43:01 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

@@ -6,7 +6,7 @@ Rendering markdown files: done.(52/52)   : 0 sec.
 generating search index...done.
 Publishing images...done.
 
-C:\Users\User>D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc api D:\installer\~gitrepo\yiisoft_yii2\framework D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 --guide="." --guidePrefix="guide-en-"--interactive=0
+C:\Users\User>D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc api D:\installer\~gitrepo\yiisoft_yii2\framework D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 --guide="." --guidePrefix="guide-en-" --interactive=0
 TargetDirectory already exists. Overwrite? (yes|no) [yes]:y
 Searching files to process... done.
 Loading apidoc data from cache... no data available.
