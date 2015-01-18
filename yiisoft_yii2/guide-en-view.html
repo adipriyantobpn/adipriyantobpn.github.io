@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/4b76110e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/710de68d/style.css" rel="stylesheet">
+<script src="./assets/75e46bf0/jquery.js"></script>
+<script src="./assets/4b76110e/js/bootstrap.js"></script>
+<script src="./assets/a44c75fa/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w80" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w80-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w80-collapse" class="collapse navbar-collapse"><ul id="w81" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>View <a href="#view" name="view" class="hashlink">&para;</a></h1><p>View is an important part of MVC and is responsible for presenting data to end users.</p>
+<h2>Basics <a href="#basics" name="basics" class="hashlink">&para;</a></h2><p>Yii uses PHP in view templates by default so in a web application a view typically contains some HTML, <code>echo</code>, <code>foreach</code>
+and such basic constructs. It may also contain widget calls. Using complex code in views is considered a bad practice.
+Such code should be moved to controller or widgets.</p>
+<p>View is typically called from controller action like the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">actionIndex</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(</span><span style="color: #DD0000">'index'</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'samdark'</span><span style="color: #007700">]);<br />}</span></code></pre>
+<p>First argument is the view name. In context of the controller Yii will search for its views in <code>views/site/</code> where <code>site</code>
+is controller ID. For details on how view name is resolved please refer to [yii\base\Controller::render] method.
+Second argument is data array that contains key-value pairs. Value is available in the view as a variable named the same
+as the corresponding key.</p>
+<p>So the view for the action above should be in <code>views/site/index.php</code> and can be something like:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">&lt;</span><span style="color: #0000BB">p</span><span style="color: #007700">&gt;</span><span style="color: #0000BB">Hello</span><span style="color: #007700">,&nbsp;&lt;?=&nbsp;</span><span style="color: #0000BB">$username&nbsp;?&gt;</span>!&lt;/p&gt</code></pre>
+<p>Instead of just scalar values you can pass anything else such as arrays or objects.</p>
+<h2>Widgets <a href="#widgets" name="widgets" class="hashlink">&para;</a></h2><p>Widgets are a self-contained building blocks for your views. A widget may contain advanced logic, typically takes some
+configuration and data and returns HTML. There is a good number of widgets bundled with Yii such as <a href="guide-en-form.html">active form</a>,
+breadcrumbs, menu or <a href="guide-en-bootstrap-widgets.html">wrappers around bootstrap component framework</a>. Additionally there are
+extensions providing additional widgets such as official one for jQueryUI components.</p>
+<p>In order to use widget you need to do the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;Note&nbsp;that&nbsp;you&nbsp;have&nbsp;to&nbsp;"echo"&nbsp;the&nbsp;result&nbsp;to&nbsp;display&nbsp;it<br /></span><span style="color: #007700">echo&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">widgets</span><span style="color: #007700">\</span><span style="color: #0000BB">Menu</span><span style="color: #007700">::</span><span style="color: #0000BB">widget</span><span style="color: #007700">([</span><span style="color: #DD0000">'items'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$items</span><span style="color: #007700">]);<br /><br /></span><span style="color: #FF8000">//&nbsp;Passing&nbsp;an&nbsp;array&nbsp;to&nbsp;initialize&nbsp;the&nbsp;object&nbsp;properties<br /></span><span style="color: #0000BB">$form&nbsp;</span><span style="color: #007700">=&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">widgets</span><span style="color: #007700">\</span><span style="color: #0000BB">ActiveForm</span><span style="color: #007700">::</span><span style="color: #0000BB">begin</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'options'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'form-horizontal'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'fieldConfig'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'inputOptions'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'input-xlarge'</span><span style="color: #007700">]],<br />]);<br />...&nbsp;</span><span style="color: #0000BB">form&nbsp;inputs&nbsp;here&nbsp;</span><span style="color: #007700">...<br />\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">widgets</span><span style="color: #007700">\</span><span style="color: #0000BB">ActiveForm</span><span style="color: #007700">::</span><span style="color: #0000BB">end</span><span style="color: #007700">();</span></code></pre>
+<p>In the code above <code>widget</code> method is used for a widget that just outputs content while <code>begin</code> and <code>end</code> are used for a
+widget that wraps content between method calls with its own output. In case of the form this output is the <code>&lt;form&gt;</code> tag
+with some properties set.</p>
+<h2>Security <a href="#security" name="security" class="hashlink">&para;</a></h2><p>One of the main security principles is to always escape output. If violated it leads to script execution and,
+most probably, to cross-site scripting known as XSS leading to leaking of admin passwords, making a user to automatically
+perform actions etc.</p>
+<p>Yii provides a good toolset in order help you escaping your output. The very basic thing to escape is a text without any
+markup. You can deal with it like the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">helpers</span><span style="color: #007700">\</span><span style="color: #0000BB">Html</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">?&gt;<br /></span><br />&lt;div&nbsp;class="username"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">&lt;?=&nbsp;Html</span><span style="color: #007700">::</span><span style="color: #0000BB">encode</span><span style="color: #007700">(</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">name</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>&lt;/div&gt</code></pre>
+<p>When you want to render HTML it becomes complex so we're delegating the task to excellent
+<a href="http://htmlpurifier.org/">HTMLPurifier</a> library. In order to use it you need to modify your <code>composer.json</code> first by
+adding the following to <code>require</code>:</p>
+<pre><code class="language-javascript">"ezyang/htmlpurifier": "v4.5.0"
+</code></pre>
+<p>After it's done run <code>php composer.phar install</code> and wait till package is downloaded. Now everything is prepared to use
+Yii's HtmlPurifier helper:</p>
+<pre><code class="language-php"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">helpers</span><span style="color: #007700">\</span><span style="color: #0000BB">HtmlPurifier</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">?&gt;<br /></span><br />&lt;div&nbsp;class="post"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">&lt;?=&nbsp;HtmlPurifier</span><span style="color: #007700">::</span><span style="color: #0000BB">process</span><span style="color: #007700">(</span><span style="color: #0000BB">$post</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">text</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>&lt;/div&gt</code></pre>
+<p>Note that besides HTMLPurifier does excellent job making output safe it's not very fast so consider
+<a href="guide-en-caching.html">caching result</a>.</p>
+<h2>Alternative template languages <a href="#alternative-template-languages" name="alternative-template-languages" class="hashlink">&para;</a></h2><p>There are official extensions for <a href="http://www.smarty.net/">Smarty</a> and <a href="http://twig.sensiolabs.org/">Twig</a>. In order
+to learn more refer to <a href="guide-en-template.html">Using template engines</a> section of the guide.</p>
+<h2>Using View object in templates <a href="#using-view-object-in-templates" name="using-view-object-in-templates" class="hashlink">&para;</a></h2><p>An instance of <code>yii\web\View</code> component is available in view templates as <code>$this</code> variable. Using it in templates you
+can do many useful things including setting page title and meta, registering scripts and accessing the context.</p>
+<h3>Setting page title <a href="#setting-page-title" name="setting-page-title" class="hashlink">&para;</a></h3><p>A common place to set page title are view templates. Since we can access view object with <code>$this</code>, setting a title
+becomes as easy as:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'My&nbsp;page&nbsp;title'</span><span style="color: #007700">;</span></code></pre>
+<h3>Adding meta tags <a href="#adding-meta-tags" name="adding-meta-tags" class="hashlink">&para;</a></h3><p>Adding meta tags such as encoding, description, keywords is easy with view object as well:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerMetaTag</span><span style="color: #007700">([</span><span style="color: #DD0000">'encoding'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'utf-8'</span><span style="color: #007700">]);</span></code></pre>
+<p>The first argument is an map of <code>&lt;meta&gt;</code> tag option names and values. The code above will produce:</p>
+<pre><code class="language-html">&lt;meta encoding="utf-8"&gt;
+</code></pre>
+<p>Sometimes there's a need to have only a single tag of a type. In this case you need to specify the second argument:</p>
+<pre><code class="language-html">$this-&gt;registerMetaTag(['description' =&gt; 'This is my cool website made with Yii!'], 'meta-description');
+$this-&gt;registerMetaTag(['description' =&gt; 'This website is about funny raccoons.'], 'meta-description');
+</code></pre>
+<p>If there are multiple calls with the same value of the second argument (<code>meta-description</code> in this case), the latter will
+override the former and only a single tag will be rendered:</p>
+<pre><code class="language-html">&lt;meta description="This website is about funny raccoons."&gt;
+</code></pre>
+<h3>Registering link tags <a href="#registering-link-tags" name="registering-link-tags" class="hashlink">&para;</a></h3><p><code>&lt;link&gt;</code> tag is useful in many cases such as customizing favicon, pointing to RSS feed or delegating OpenID to another
+server. Yii view object has a method to work with these:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerLinkTag</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'title'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Lives&nbsp;News&nbsp;for&nbsp;Yii&nbsp;Framework'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'rel'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'alternate'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'type'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'application/rss+xml'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'href'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'http://www.yiiframework.com/rss.xml/'</span><span style="color: #007700">,<br />]);</span></code></pre>
+<p>The code above will result in</p>
+<pre><code class="language-html">&lt;link title="Lives News for Yii Framework" rel="alternate" type="application/rss+xml" href="http://www.yiiframework.com/rss.xml/" /&gt;
+</code></pre>
+<p>Same as with meta tags you can specify additional argument to make sure there's only one link of a type registered.</p>
+<h3>Registering CSS <a href="#registering-css" name="registering-css" class="hashlink">&para;</a></h3><p>You can register CSS using <code>registerCss</code> or <code>registerCssFile</code>. Former is for outputting code in <code>&lt;style&gt;</code> tags directly
+to the page which is not recommended in most cases (but still valid). Latter is for registering CSS file. In Yii it's
+much better to <a href="guide-en-assets.html">use asset manager</a> to deal with these since it provides extra features so <code>registerCssFile</code>
+is manly useful for external CSS files.</p>
+<pre><code class="language-php"><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerCss</span><span style="color: #007700">(</span><span style="color: #DD0000">"body&nbsp;{&nbsp;background:&nbsp;#f00;&nbsp;}"</span><span style="color: #007700">);</span></code></pre>
+<p>The code above will result in adding the following to the head section of the page:</p>
+<pre><code class="language-html">&lt;style&gt;
+body { background: #f00; }
+&lt;/style&gt;
+</code></pre>
+<p>If you want to specify additional properties of the style tag, pass array of name-values to the second argument. If you
+need to make sure there's only a single style tag use third argument as was mentioned in meta tags description.</p>
+<pre><code class="language-php"><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerCssFile</span><span style="color: #007700">(</span><span style="color: #DD0000">"http://example.com/css/themes/black-and-white.css"</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">'media'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'print'</span><span style="color: #007700">],&nbsp;</span><span style="color: #DD0000">'css-print-theme'</span><span style="color: #007700">);</span></code></pre>
+<p>The code above will add a link to CSS file to the head section of the page. The CSS will be used only when printing the
+page. We're using third argument so one of the views could override it.</p>
+<h3>Registering scripts <a href="#registering-scripts" name="registering-scripts" class="hashlink">&para;</a></h3><p>With View object you can register scripts. There are two dedicated methods for it: <code>registerJs</code> for inline scripts
+and <code>registerJsFile</code> for external scripts. Inline scripts are useful for configuration and dynamically generated code.
+The method for adding these can be used as follows:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerJs</span><span style="color: #007700">(</span><span style="color: #DD0000">"var&nbsp;options&nbsp;=&nbsp;"</span><span style="color: #007700">.</span><span style="color: #0000BB">json_encode</span><span style="color: #007700">(</span><span style="color: #0000BB">$options</span><span style="color: #007700">).</span><span style="color: #DD0000">";"</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">View</span><span style="color: #007700">::</span><span style="color: #0000BB">POS_END</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'my-options'</span><span style="color: #007700">);</span></code></pre>
+<p>First argument is the actual code where we're converting a PHP array of options to JavaScript one. Second argument
+determines where script should be in the page. Possible values are:</p>
+<ul>
+<li><code>View::POS_HEAD</code> for head section.</li>
+<li><code>View::POS_BEGIN</code> for right after opening <code>&lt;body&gt;</code>.</li>
+<li><code>View::POS_END</code> for right before closing <code>&lt;/body&gt;</code>.</li>
+<li><code>View::POS_READY</code> for executing code on document <code>ready</code> event. This one registers jQuery automatically.</li>
+</ul>
+<p>The last argument is unique script ID that is used to identify code block and replace existing one with the same ID
+instead of adding a new one.</p>
+<p>External script can be added like the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerJsFile</span><span style="color: #007700">(</span><span style="color: #DD0000">'http://example.com/js/main.js'</span><span style="color: #007700">);</span></code></pre>
+<p>Same as with external CSS it's preferred to use asset bundles for external scripts.</p>
+<h3>Registering asset bundles <a href="#registering-asset-bundles" name="registering-asset-bundles" class="hashlink">&para;</a></h3><p>As was mentioned earlier it's preferred to use asset bundles instead of using CSS and JavaScript directly. You can get
+details on how to define asset bundles in <a href="guide-en-assets.html">asset manager</a> section of the guide. As for using already defined
+asset bundle, it's very straightforward:</p>
+<pre><code class="language-php"><span style="color: #0000BB">frontend</span><span style="color: #007700">\</span><span style="color: #0000BB">assets</span><span style="color: #007700">\</span><span style="color: #0000BB">AppAsset</span><span style="color: #007700">::</span><span style="color: #0000BB">register</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">);</span></code></pre>
+<h3>Layout <a href="#layout" name="layout" class="hashlink">&para;</a></h3><p>A layout is a very convenient way to represent the part of the page that is common for all or at least for most pages
+generated by your application. Typically it includes <code>&lt;head&gt;</code> section, footer, main menu and alike elements.
+You can fine a fine example of the layout in a <a href="guide-en-apps-basic.html">basic application template</a>. Here we'll review the very
+basic one without any widgets or extra markup.</p>
+<pre><code class="language-php"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">helpers</span><span style="color: #007700">\</span><span style="color: #0000BB">Html</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">?&gt;<br />&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">beginPage</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>&lt;!DOCTYPE&nbsp;html&gt;<br />&lt;html&nbsp;lang="<span style="color: #0000BB">&lt;?=&nbsp;Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">language&nbsp;?&gt;</span>"&gt;<br />&lt;head&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;charset="<span style="color: #0000BB">&lt;?=&nbsp;Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">charset&nbsp;?&gt;</span>"/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;<span style="color: #0000BB">&lt;?=&nbsp;Html</span><span style="color: #007700">::</span><span style="color: #0000BB">encode</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;</span>&lt;/title&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">head</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>&lt;/head&gt;<br />&lt;body&gt;<br /><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">beginBody</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="container"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">&lt;?=&nbsp;$content&nbsp;?&gt;<br /></span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&nbsp;class="footer"&gt;©&nbsp;2013&nbsp;me&nbsp;:)&lt;/footer&gt;<br /><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">endBody</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>&lt;/body&gt;<br />&lt;/html&gt;<br /><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">endPage</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;</span></code></pre>
+<p>In the markup above there's some code. First of all, <code>$content</code> is a variable that will contain result of views rendered
+with controller's <code>$this-&gt;render()</code> method.</p>
+<p>We are importing <code>Html</code> helper via standard PHP <code>use</code> statement. This helper is typically used for almost all views
+where one need to escape outputted data.</p>
+<p>Several special methods such as <code>beginPage</code>/<code>endPage</code>, <code>head</code>, <code>beginBody</code>/<code>endBody</code> are triggering page rendering events
+that are used for registering scripts, links and process page in many other ways. Always include these in your layout in
+order for rendering to work correctly.</p>
+<h3>Partials <a href="#partials" name="partials" class="hashlink">&para;</a></h3><p>Often you need to reuse some HTML markup in many views and often it's too simple to create a full-featured widget for it.
+In this case you may use partials.</p>
+<p>Partial is a view as well. It resides in one of directories under <code>views</code> and by convention is often started with <code>_</code>.
+For example, we need to render a list of user profiles and, at the same time, display individual profile elsewhere.</p>
+<p>First we need to define a partial for user profile in <code>_profile.php</code>:</p>
+<pre><code class="language-php"><span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">helpers</span><span style="color: #007700">\</span><span style="color: #0000BB">Html</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">?&gt;<br /></span><br />&lt;div&nbsp;class="profile"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;<span style="color: #0000BB">&lt;?=&nbsp;Html</span><span style="color: #007700">::</span><span style="color: #0000BB">encode</span><span style="color: #007700">(</span><span style="color: #0000BB">$username</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;</span>&lt;/h2&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<span style="color: #0000BB">&lt;?=&nbsp;Html</span><span style="color: #007700">::</span><span style="color: #0000BB">encode</span><span style="color: #007700">(</span><span style="color: #0000BB">$tagline</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;</span>&lt;/p&gt;<br />&lt;/div&gt</code></pre>
+<p>Then we're using it in <code>index.php</code> view where we display a list of users:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">&lt;</span><span style="color: #0000BB">div&nbsp;</span><span style="color: #007700">class=</span><span style="color: #DD0000">"user-index"</span><span style="color: #007700">&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;?</span><span style="color: #0000BB">php<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$users&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(</span><span style="color: #DD0000">'_profile'</span><span style="color: #007700">,&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">name</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'tagline'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tagline</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>&lt;/div&gt</code></pre>
+<p>Same way we can reuse it in another view displaying a single user profile:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(</span><span style="color: #DD0000">'_profile'</span><span style="color: #007700">,&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">name</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'tagline'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tagline</span><span style="color: #007700">,<br />]);</span></code></pre>
+<h3>Accessing context <a href="#accessing-context" name="accessing-context" class="hashlink">&para;</a></h3><p>Views are generally used either by controller or by widget. In both cases the object that called view rendering is
+available in the view as <code>$this-&gt;context</code>. For example if we need to print out the current internal request route in a
+view rendered by controller we can use the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">context</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getRoute</span><span style="color: #007700">();</span></code></pre>
+<h3>Caching blocks <a href="#caching-blocks" name="caching-blocks" class="hashlink">&para;</a></h3><p>To learn about caching of view fragments please refer to <a href="guide-en-caching.html">caching</a> section of the guide.</p>
+<h2>Customizing View component <a href="#customizing-view-component" name="customizing-view-component" class="hashlink">&para;</a></h2><p>Since view is also an application component named <code>view</code> you can replace it with your own component that extends
+from <code>yii\base\View</code> or <code>yii\web\View</code>. It can be done via application configuration file such as <code>config/web.php</code>:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'components'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'view'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'app\components\View'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />];</span></code></pre>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:32:13 +0700</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

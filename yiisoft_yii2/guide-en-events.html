@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/4b76110e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/710de68d/style.css" rel="stylesheet">
+<script src="./assets/75e46bf0/jquery.js"></script>
+<script src="./assets/4b76110e/js/bootstrap.js"></script>
+<script src="./assets/a44c75fa/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w36" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w36-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w36-collapse" class="collapse navbar-collapse"><ul id="w37" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Events <a href="#events" name="events" class="hashlink">&para;</a></h1><p>TBD, see also <a href="../api/base/Component.md">Component.md</a>.</p>
+<p>There is no longer the need to define an <code>on</code>-method in order to define an event in Yii 2.0.
+Instead, you can use whatever event names. To attach a handler to an event, you should
+use the <code>on</code> method now:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$component</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">on</span><span style="color: #007700">(</span><span style="color: #0000BB">$eventName</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$handler</span><span style="color: #007700">);<br /></span><span style="color: #FF8000">//&nbsp;To&nbsp;detach&nbsp;the&nbsp;handler,&nbsp;use:<br />//&nbsp;$component-&gt;off($eventName,&nbsp;$handler);</span></code></pre>
+<p>When you attach a handler, you can now associate it with some parameters which can be later
+accessed via the event parameter by the handler:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$component</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">on</span><span style="color: #007700">(</span><span style="color: #0000BB">$eventName</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$handler</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params</span><span style="color: #007700">);</span></code></pre>
+<p>Because of this change, you can now use "global" events. Simply trigger and attach handlers to
+an event of the application instance:</p>
+<pre><code class="language-php"><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">on</span><span style="color: #007700">(</span><span style="color: #0000BB">$eventName</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$handler</span><span style="color: #007700">);<br />....<br /></span><span style="color: #FF8000">//&nbsp;this&nbsp;will&nbsp;trigger&nbsp;the&nbsp;event&nbsp;and&nbsp;cause&nbsp;$handler&nbsp;to&nbsp;be&nbsp;invoked.<br /></span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">trigger</span><span style="color: #007700">(</span><span style="color: #0000BB">$eventName</span><span style="color: #007700">);</span></code></pre>
+<p>If you need to handle all instances of a class instead of the object you can attach a handler like the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB">Event</span><span style="color: #007700">::</span><span style="color: #0000BB">on</span><span style="color: #007700">(</span><span style="color: #0000BB">ActiveRecord</span><span style="color: #007700">::</span><span style="color: #0000BB">className</span><span style="color: #007700">(),&nbsp;</span><span style="color: #0000BB">ActiveRecord</span><span style="color: #007700">::</span><span style="color: #0000BB">EVENT_AFTER_INSERT</span><span style="color: #007700">,&nbsp;function&nbsp;(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">trace</span><span style="color: #007700">(</span><span style="color: #0000BB">get_class</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">sender</span><span style="color: #007700">)&nbsp;.&nbsp;</span><span style="color: #DD0000">'&nbsp;is&nbsp;inserted.'</span><span style="color: #007700">);<br />});</span></code></pre>
+<p>The code above defines a handler that will be triggered for every Active Record object's <code>EVENT_AFTER_INSERT</code> event.</p>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:32:13 +0700</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>
