@@ -144,12 +144,11 @@
 <a class="list-group-item" href="./guide-en-tutorial-template-engines.html">Template Engines</a>
 <a class="list-group-item" href="./guide-en-tutorial-yii-integration.html">Working with Third-Party Code</a></div>
 <a class="list-group-item" href="#navigation-1838" data-toggle="collapse" data-parent="#navigation">Widgets <b class="caret"></b></a><div id="navigation-1838" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-widget-bootstrap.html">Bootstrap Widgets</a>
-<a class="list-group-item" href="./guide-en-widget-jui.html">Jquery UI Widgets</a></div>
+<a class="list-group-item" href="./guide-en-widget-jui.html">jQuery UI Widgets</a></div>
 <a class="list-group-item" href="#navigation-1839" data-toggle="collapse" data-parent="#navigation">Helpers <b class="caret"></b></a><div id="navigation-1839" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-helper-overview.html">Overview</a>
 <a class="list-group-item" href="./guide-en-helper-array.html">ArrayHelper</a>
 <a class="list-group-item" href="./guide-en-helper-html.html">Html</a>
-<a class="list-group-item" href="./guide-en-helper-url.html">Url</a>
-<a class="list-group-item" href="./guide-en-helper-security.html">Security</a></div></div>    </div>
+<a class="list-group-item" href="./guide-en-helper-url.html">Url</a></div></div>    </div>
     <div class="col-md-9 guide-content" role="main">
         <h1>Performance Tuning <a href="#performance-tuning" name="performance-tuning" class="hashlink">&para;</a></h1><blockquote><p>Note: This section is under development.</p>
 </blockquote>
@@ -160,15 +159,15 @@ environment. As for the application, we'll provide some of the best practices
 along with examples on how to apply them to Yii.</p>
 <h2>Preparing environment <a href="#preparing-environment" name="preparing-environment" class="hashlink">&para;</a></h2><p>A well configured environment to run PHP application really matters. In order to get maximum performance:</p>
 <ul>
-<li>Always use latest stable PHP version. Each major release brings significant performance improvements and reduced
+<li>Always use the latest stable PHP version. Each major release brings significant performance improvements and reduced
 memory usage.</li>
 <li>Use <a href="http://ru2.php.net/apc">APC</a> for PHP 5.4 and less or <a href="http://php.net/opcache">Opcache</a> for PHP 5.5 and more. It
 gives a very good performance boost.</li>
 </ul>
 <h2>Preparing framework for production <a href="#preparing-framework-for-production" name="preparing-framework-for-production" class="hashlink">&para;</a></h2><h3>Disabling Debug Mode <a href="#disabling-debug-mode" name="disabling-debug-mode" class="hashlink">&para;</a></h3><p>First thing you should do before deploying your application to production environment
 is to disable debug mode. A Yii application runs in debug mode if the constant
-<code>YII_DEBUG</code> is defined as <code>true</code> in <code>index.php</code> so to disable debug the following
-should be in your <code>index.php</code>:</p>
+<code>YII_DEBUG</code> is defined as <code>true</code> in <code>index.php</code>.
+So, in order to disable debug mode, the following should be in your <code>index.php</code>:</p>
 <pre><code class="language-php"><span style="color: #0000BB">defined</span><span style="color: #007700">(</span><span style="color: #DD0000">'YII_DEBUG'</span><span style="color: #007700">)&nbsp;or&nbsp;</span><span style="color: #0000BB">define</span><span style="color: #007700">(</span><span style="color: #DD0000">'YII_DEBUG'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">);</span></code></pre>
 <p>Debug mode is very useful during development stage, but it would impact performance
 because some components cause extra burden in debug mode. For example, the message
@@ -177,7 +176,7 @@ logger may record additional debug information for every message being logged.</
 memory usage significantly. Yii is no exception. It was tested with both
 <a href="http://php.net/manual/en/book.opcache.php">PHP 5.5 OPcache</a> and
 <a href="http://php.net/manual/en/book.apc.php">APC PHP extension</a>. Both cache
-and optimize PHP intermediate code and avoid the time spent in parsing PHP
+optimize PHP intermediate code and avoid the time spent in parsing PHP
 scripts for every incoming request.</p>
 <h3>Turning on ActiveRecord database schema caching <a href="#turning-on-activerecord-database-schema-caching" name="turning-on-activerecord-database-schema-caching" class="hashlink">&para;</a></h3><p>If the application is using Active Record, we should turn on the schema caching
 to save the time of parsing database schema. This can be done by setting the
@@ -189,13 +188,13 @@ to save the time of parsing database schema. This can be done by setting the
 time and therefore deliver better experience for end user of your application.</p>
 <p>In order to learn how it can be achieved, refer to <a href="guide-en-structure-assets.html">assets</a> guide section.</p>
 <h3>Using better storage for sessions <a href="#using-better-storage-for-sessions" name="using-better-storage-for-sessions" class="hashlink">&para;</a></h3><p>By default PHP uses files to handle sessions. It is OK for development and
-small projects but when it comes to handling concurrent requests it's better to
+small projects. But when it comes to handling concurrent requests, it's better to
 switch to another storage such as database. You can do so by configuring your
 application via <code>config/web.php</code>:</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'components'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'session'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\web\DbSession'</span><span style="color: #007700">,<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Set&nbsp;the&nbsp;following&nbsp;if&nbsp;want&nbsp;to&nbsp;use&nbsp;DB&nbsp;component&nbsp;other&nbsp;than<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;default&nbsp;'db'.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;'db'&nbsp;=&gt;&nbsp;'mydb',<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;To&nbsp;override&nbsp;default&nbsp;session&nbsp;table&nbsp;set&nbsp;the&nbsp;following<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;'sessionTable'&nbsp;=&gt;&nbsp;'my_session',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;],<br />];</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'components'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'session'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\web\DbSession'</span><span style="color: #007700">,<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Set&nbsp;the&nbsp;following&nbsp;if&nbsp;you&nbsp;want&nbsp;to&nbsp;use&nbsp;DB&nbsp;component&nbsp;other&nbsp;than<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;default&nbsp;'db'.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;'db'&nbsp;=&gt;&nbsp;'mydb',<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;To&nbsp;override&nbsp;default&nbsp;session&nbsp;table,&nbsp;set&nbsp;the&nbsp;following<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;'sessionTable'&nbsp;=&gt;&nbsp;'my_session',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;],<br />];</span></code></pre>
 <p>You can use <code>CacheSession</code> to store sessions using cache. Note that some
 cache storage such as memcached has no guarantee that session data will not
-be lost leading to unexpected logouts.</p>
+be lost, and it would lead to unexpected logouts.</p>
 <p>If you have <a href="http://redis.io/">Redis</a> on your server, it's highly recommended as session storage.</p>
 <h2>Improving application <a href="#improving-application" name="improving-application" class="hashlink">&para;</a></h2><h3>Using Serverside Caching Techniques <a href="#using-serverside-caching-techniques" name="using-serverside-caching-techniques" class="hashlink">&para;</a></h3><p>As described in the Caching section, Yii provides several caching solutions that
 may improve the performance of a Web application significantly. If the generation
@@ -204,7 +203,7 @@ data generation frequency; If a portion of page remains relatively static, we
 can use the fragment caching approach to reduce its rendering frequency;
 If a whole page remains relative static, we can use the page caching approach to
 save the rendering cost for the whole page.</p>
-<h3>Leveraging HTTP to save processing time and bandwidth <a href="#leveraging-http-to-save-processing-time-and-bandwidth" name="leveraging-http-to-save-processing-time-and-bandwidth" class="hashlink">&para;</a></h3><p>Leveraging HTTP caching saves both processing time, bandwidth and resources significantly. It can be implemented by
+<h3>Leveraging HTTP caching to save processing time and bandwidth <a href="#leveraging-http-caching-to-save-processing-time-and-bandwidth" name="leveraging-http-caching-to-save-processing-time-and-bandwidth" class="hashlink">&para;</a></h3><p>Leveraging HTTP caching saves both processing time, bandwidth and resources significantly. It can be implemented by
 sending either <code>ETag</code> or <code>Last-Modified</code> header in your application response. If browser is implemented according to
 HTTP specification (most browsers are), content will be fetched only if it is different from what it was prevously.</p>
 <p>Forming proper headers is time consuming task so Yii provides a shortcut in form of controller filter
@@ -236,20 +235,26 @@ overwhelming data from database and exhausting the memory allocated to PHP.</p>
 ActiveRecord's <code>asArray</code> method.</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">PostController&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">Controller<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">actionIndex</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$posts&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Post</span><span style="color: #007700">::</span><span style="color: #0000BB">find</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">orderBy</span><span style="color: #007700">(</span><span style="color: #DD0000">'id&nbsp;DESC'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">limit</span><span style="color: #007700">(</span><span style="color: #0000BB">100</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">asArray</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">all</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(</span><span style="color: #DD0000">'index'</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">'posts'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$posts</span><span style="color: #007700">]);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span></code></pre>
 <p>In the view you should access fields of each individual record from <code>$posts</code> as array:</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$posts&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">[</span><span style="color: #DD0000">'title'</span><span style="color: #007700">].</span><span style="color: #DD0000">"&lt;br&gt;"</span><span style="color: #007700">;<br />}</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$posts&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #0000BB">$post</span><span style="color: #007700">[</span><span style="color: #DD0000">'title'</span><span style="color: #007700">]&nbsp;.&nbsp;</span><span style="color: #DD0000">"&lt;br&gt;"</span><span style="color: #007700">;<br />}</span></code></pre>
 <p>Note that you can use array notation even if <code>asArray</code> wasn't specified and you're
 working with AR objects.</p>
 <h3>Processing data in background <a href="#processing-data-in-background" name="processing-data-in-background" class="hashlink">&para;</a></h3><p>In order to respond to user requests faster you can process heavy parts of the
 request later if there's no need for immediate response.</p>
-<ul>
-<li>Cron jobs + console.</li>
-<li>queues + handlers.</li>
-</ul>
-<p>TBD</p>
+<p>There are two common ways to achieve it: cron job processing and specialized queues.</p>
+<p>In the first case we need to save the data that we want to process later to a persistent storage
+such as database. A <a href="guide-en-tutorial-console.html">console command</a> that is run regularly via cron job queries
+database and processes data if there's any.</p>
+<p>The solution is OK for most cases but has one significant drawback. We aren't aware if there's data to
+process before we query database, so we're either querying database quite often or have a slight delay
+between each data processing.</p>
+<p>This issue could be solved by queue and job servers such RabbitMQ, ActiveMQ, Amazon SQS and more.
+In this case instead of writing data to persistent storage you're queueing it via APIs provided
+by queue or job server. Processing is often put into job handler class. Job from the queue is executed
+right after all jobs before it are done.</p>
 <h3>If nothing helps <a href="#if-nothing-helps" name="if-nothing-helps" class="hashlink">&para;</a></h3><p>If nothing helps, never assume what may fix performance problem. Always profile your code instead before changing
 anything. The following tools may be helpful:</p>
 <ul>
-<li><a href="guide-en-module-debug.html">Yii debug toolbar and debugger</a></li>
+<li><a href="guide-en-tool-debugger.html">Yii debug toolbar and debugger</a></li>
 <li><a href="http://xdebug.org/docs/profiler">XDebug profiler</a></li>
 <li><a href="http://www.php.net/manual/en/book.xhprof.php">XHProf</a></li>
 </ul>
@@ -261,7 +266,7 @@ anything. The following tools may be helpful:</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:18:15 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:33:27 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

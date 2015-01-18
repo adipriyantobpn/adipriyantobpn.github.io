@@ -144,12 +144,11 @@
 <a class="list-group-item" href="./guide-en-tutorial-template-engines.html">Template Engines</a>
 <a class="list-group-item" href="./guide-en-tutorial-yii-integration.html">Working with Third-Party Code</a></div>
 <a class="list-group-item" href="#navigation-755" data-toggle="collapse" data-parent="#navigation">Widgets <b class="caret"></b></a><div id="navigation-755" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-widget-bootstrap.html">Bootstrap Widgets</a>
-<a class="list-group-item" href="./guide-en-widget-jui.html">Jquery UI Widgets</a></div>
+<a class="list-group-item" href="./guide-en-widget-jui.html">jQuery UI Widgets</a></div>
 <a class="list-group-item" href="#navigation-756" data-toggle="collapse" data-parent="#navigation">Helpers <b class="caret"></b></a><div id="navigation-756" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-helper-overview.html">Overview</a>
 <a class="list-group-item" href="./guide-en-helper-array.html">ArrayHelper</a>
 <a class="list-group-item" href="./guide-en-helper-html.html">Html</a>
-<a class="list-group-item" href="./guide-en-helper-url.html">Url</a>
-<a class="list-group-item" href="./guide-en-helper-security.html">Security</a></div></div>    </div>
+<a class="list-group-item" href="./guide-en-helper-url.html">Url</a></div></div>    </div>
     <div class="col-md-9 guide-content" role="main">
         <h1>Theming <a href="#theming" name="theming" class="hashlink">&para;</a></h1><blockquote><p>Note: This section is under development.</p>
 </blockquote>
@@ -170,6 +169,9 @@ original view.</p>
 <p>For example, with a configuration above a themed version of a view file <code>@app/views/site/index.php</code> will be
 <code>@app/themes/basic/site/index.php</code>. It basically replaces <code>@app/views</code> in <code>@app/views/site/index.php</code> with
 <code>@app/themes/basic</code>.</p>
+<p>In order to configure theme runtime you can use the following code before rendering a view. Typically it will be
+placed in controller:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getView</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">theme&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">createObject</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\yii\base\Theme'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'pathMap'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'@app/views'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'@app/themes/basic'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'baseUrl'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'@web/themes/basic'</span><span style="color: #007700">,<br />]);</span></code></pre>
 <h3>Theming modules <a href="#theming-modules" name="theming-modules" class="hashlink">&para;</a></h3><p>In order to theme modules, <code>pathMap</code> may look like the following:</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'components'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'view'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'theme'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'pathMap'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'@app/views'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'@app/themes/basic'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'@app/modules'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'@app/themes/basic/modules'</span><span style="color: #007700">,&nbsp;</span><span style="color: #FF8000">//&nbsp;&lt;--&nbsp;!!!<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;],<br />],</span></code></pre>
 <p>It will allow you to theme <code>@app/modules/blog/views/comment/index.php</code> with <code>@app/themes/basic/modules/blog/views/comment/index.php</code>.</p>
@@ -191,7 +193,7 @@ the view component theme:</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:18:13 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:33:26 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
