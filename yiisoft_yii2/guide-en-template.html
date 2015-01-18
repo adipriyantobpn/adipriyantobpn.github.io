@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/4b76110e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/710de68d/style.css" rel="stylesheet">
+<script src="./assets/75e46bf0/jquery.js"></script>
+<script src="./assets/4b76110e/js/bootstrap.js"></script>
+<script src="./assets/a44c75fa/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w66" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w66-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w66-collapse" class="collapse navbar-collapse"><ul id="w67" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Using template engines <a href="#using-template-engines" name="using-template-engines" class="hashlink">&para;</a></h1><p>By default Yii uses PHP as template language, but you can configure it to support other rendering engines, such as
+<a href="http://twig.sensiolabs.org/">Twig</a> or <a href="http://www.smarty.net/">Smarty</a>.</p>
+<p>The <code>view</code> component is responsible for rendering views. You can add a custom template engines by reconfiguring this
+component's behavior:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'components'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'view'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\web\View'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'renderers'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'tpl'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\smarty\ViewRenderer'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//'cachePath'&nbsp;=&gt;&nbsp;'@runtime/Smarty/cache',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'twig'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\twig\ViewRenderer'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//'cachePath'&nbsp;=&gt;&nbsp;'@runtime/Twig/cache',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//'options'&nbsp;=&gt;&nbsp;[],&nbsp;/*&nbsp;&nbsp;Array&nbsp;of&nbsp;twig&nbsp;options&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;],<br />]</span></code></pre>
+<p>In the config above we're using Smarty and Twig. In order to get these extensions in your project you need to modify
+your <code>composer.json</code> to include</p>
+<pre><code>"yiisoft/yii2-smarty": "*",
+"yiisoft/yii2-twig": "*",
+</code></pre>
+<p>in <code>require</code> section and then run <code>composer update</code>.</p>
+<h2>Twig <a href="#twig" name="twig" class="hashlink">&para;</a></h2><p>To use Twig, you need to create templates in files with the <code>.twig</code> extension (or use another file extension but configure the component accordingly).
+Unlike standard view files, when using Twig, you must include the extension  when calling <code>$this-&gt;render()</code>
+or <code>$this-&gt;renderPartial()</code> from your controller:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(</span><span style="color: #DD0000">'renderer.twig'</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Alex'</span><span style="color: #007700">]);</span></code></pre>
+<h3>Additional functions <a href="#additional-functions" name="additional-functions" class="hashlink">&para;</a></h3><p>Yii adds the following construct to the standard Twig syntax:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">&lt;</span><span style="color: #0000BB">a&nbsp;href</span><span style="color: #007700">=</span><span style="color: #DD0000">"{{&nbsp;path('blog/view',&nbsp;{'alias'&nbsp;:&nbsp;post.alias})&nbsp;}}"</span><span style="color: #007700">&gt;{{&nbsp;</span><span style="color: #0000BB">post</span><span style="color: #007700">.</span><span style="color: #0000BB">title&nbsp;</span><span style="color: #007700">}}&lt;/</span><span style="color: #0000BB">a</span><span style="color: #007700">&gt;</span></code></pre>
+<p>Internally, the <code>path()</code> function calls Yii's <code>Html::url()</code> method.</p>
+<h3>Additional variables <a href="#additional-variables" name="additional-variables" class="hashlink">&para;</a></h3><p>Within Twig templates, you can also make use of these variables:</p>
+<ul>
+<li><code>app</code>, which equates to <code>\Yii::$app</code></li>
+<li><code>this</code>, which equates to the current <code>View</code> object</li>
+</ul>
+<h2>Smarty <a href="#smarty" name="smarty" class="hashlink">&para;</a></h2><p>To use Smarty, you need to create templates in files with the <code>.tpl</code> extension (or use another file extension but configure the component accordingly). Unlike standard view files, when using Smarty, you must include the extension  when calling <code>$this-&gt;render()</code>
+or <code>$this-&gt;renderPartial()</code> from your controller:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(</span><span style="color: #DD0000">'renderer.tpl'</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Alex'</span><span style="color: #007700">]);</span></code></pre>
+<h3>Additional functions <a href="#additional-functions" name="additional-functions" class="hashlink">&para;</a></h3><p>Yii adds the following construct to the standard Smarty syntax:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">&lt;</span><span style="color: #0000BB">a&nbsp;href</span><span style="color: #007700">=</span><span style="color: #DD0000">"{path&nbsp;route='blog/view'&nbsp;alias=</span><span style="color: #0000BB">$post</span><span style="color: #DD0000">.alias}"</span><span style="color: #007700">&gt;{</span><span style="color: #0000BB">$post</span><span style="color: #007700">.</span><span style="color: #0000BB">title</span><span style="color: #007700">}&lt;/</span><span style="color: #0000BB">a</span><span style="color: #007700">&gt;</span></code></pre>
+<p>Internally, the <code>path()</code> function calls Yii's <code>Html::url()</code> method.</p>
+<h3>Additional variables <a href="#additional-variables" name="additional-variables" class="hashlink">&para;</a></h3><p>Within Smarty templates, you can also make use of these variables:</p>
+<ul>
+<li><code>$app</code>, which equates to <code>\Yii::$app</code></li>
+<li><code>$this</code>, which equates to the current <code>View</code> object</li>
+</ul>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:32:13 +0700</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>
