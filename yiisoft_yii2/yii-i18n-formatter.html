@@ -405,7 +405,10 @@ You can access that instance via <code>Yii::$app-&gt;formatter</code>.</p>
 <p>The Formatter class is designed to format values according to a <a href="yii-i18n-formatter.html#$locale-detail">$locale</a>. For this feature to work
 the <a href="http://php.net/manual/en/book.intl.php">PHP intl extension</a> has to be installed.
 Most of the methods however work also if the PHP intl extension is not installed by providing
-a fallback implementation. Without intl month and day names are in English only.</p>
+a fallback implementation. Without intl month and day names are in English only.
+Note that even if the intl extension is installed, formatting date and time values for years &gt;=2038 or &lt;=1901
+on 32bit systems will fall back to the PHP implementation because intl uses a 32bit UNIX timestamp internally.
+On a 64bit system the intl formatter is used in all cases if installed.</p>
 
     </div>
 
@@ -828,8 +831,8 @@ intl [Numberformatter::setTextAttribute()](<a href="http://php">http://php</a>.<
     <div class="detail-header h3" id="$booleanFormat-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$booleanFormat-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L58" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L58" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $booleanFormat        <span class="detailHeaderTag small">
             public                                    property
@@ -848,8 +851,8 @@ will be translated according to <a href="yii-i18n-formatter.html#$locale-detail"
     <div class="detail-header h3" id="$currencyCode-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$currencyCode-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L193" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L193" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L196" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L196" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $currencyCode        <span class="detailHeaderTag small">
             public                                    property
@@ -868,8 +871,8 @@ is not possible to determine the default currency.</p>
     <div class="detail-header h3" id="$dateFormat-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$dateFormat-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L104" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L104" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L107" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L107" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $dateFormat        <span class="detailHeaderTag small">
             public                                    property
@@ -891,8 +894,8 @@ PHP <a href="http://php.net/manual/de/function.date.php">date()</a>-function.</p
     <div class="detail-header h3" id="$datetimeFormat-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$datetimeFormat-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L137" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L137" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L140" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L140" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $datetimeFormat        <span class="detailHeaderTag small">
             public                                    property
@@ -914,8 +917,8 @@ PHP <a href="http://php.net/manual/de/function.date.php">date()</a>-function.</p
     <div class="detail-header h3" id="$decimalSeparator-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$decimalSeparator-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L143" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L143" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $decimalSeparator        <span class="detailHeaderTag small">
             public                                    property
@@ -933,8 +936,8 @@ If <a href="http://php.net/manual/en/book.intl.php">PHP intl extension</a> is no
     <div class="detail-header h3" id="$defaultTimeZone-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$defaultTimeZone-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L88" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L88" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $defaultTimeZone        <span class="detailHeaderTag small">
             public                                    property
@@ -954,8 +957,8 @@ Please refer to the <a href="http://www.php.net/manual/en/timezones.php">php man
     <div class="detail-header h3" id="$locale-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$locale-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L65" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L65" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $locale        <span class="detailHeaderTag small">
             public                                    property
@@ -974,8 +977,8 @@ If not set, <a href="yii-base-application.html#$language-detail">yii\base\Applic
     <div class="detail-header h3" id="$nullDisplay-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$nullDisplay-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L54" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L54" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $nullDisplay        <span class="detailHeaderTag small">
             public                                    property
@@ -993,8 +996,8 @@ will be translated according to <a href="yii-i18n-formatter.html#$locale-detail"
     <div class="detail-header h3" id="$numberFormatterOptions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$numberFormatterOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L168" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L168" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L171" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L171" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $numberFormatterOptions        <span class="detailHeaderTag small">
             public                                    property
@@ -1017,8 +1020,8 @@ for the possible options.</p>
     <div class="detail-header h3" id="$numberFormatterTextOptions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$numberFormatterTextOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L186" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L186" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L189" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L189" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $numberFormatterTextOptions        <span class="detailHeaderTag small">
             public                                    property
@@ -1041,8 +1044,8 @@ for the possible options.</p>
     <div class="detail-header h3" id="$sizeFormatBase-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$sizeFormatBase-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L198" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L198" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L201" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L201" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $sizeFormatBase        <span class="detailHeaderTag small">
             public                                    property
@@ -1059,8 +1062,8 @@ Defaults to 1024.</p>
     <div class="detail-header h3" id="$thousandSeparator-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$thousandSeparator-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L149" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L149" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L152" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L152" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $thousandSeparator        <span class="detailHeaderTag small">
             public                                    property
@@ -1078,8 +1081,8 @@ If <a href="http://php.net/manual/en/book.intl.php">PHP intl extension</a> is no
     <div class="detail-header h3" id="$timeFormat-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$timeFormat-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L120" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L120" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L123" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L123" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $timeFormat        <span class="detailHeaderTag small">
             public                                    property
@@ -1101,8 +1104,8 @@ PHP <a href="http://php.net/manual/de/function.date.php">date()</a>-function.</p
     <div class="detail-header h3" id="$timeZone-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#$timeZone-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L80" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L80" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $timeZone        <span class="detailHeaderTag small">
             public                                    property
@@ -1128,8 +1131,8 @@ If you store your data in a different time zone in the database, you have to adj
     <div class="detail-header h3" id="asBoolean()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asBoolean()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L397" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L397" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L400" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L400" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asBoolean()
         <span class="detail-header-tag small">
@@ -1164,8 +1167,8 @@ If you store your data in a different time zone in the database, you have to adj
     <div class="detail-header h3" id="asCurrency()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asCurrency()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L901" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L901" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L906" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L906" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asCurrency()
         <span class="detail-header-tag small">
@@ -1233,8 +1236,8 @@ If null, <a href="yii-i18n-formatter.html#$currencyCode-detail">$currencyCode</a
     <div class="detail-header h3" id="asDate()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asDate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L434" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L434" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L437" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L437" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asDate()
         <span class="detail-header-tag small">
@@ -1299,8 +1302,8 @@ PHP <a href="http://php.net/manual/de/function.date.php">date()</a>-function.</p
     <div class="detail-header h3" id="asDatetime()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asDatetime()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L498" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L498" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L501" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L501" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asDatetime()
         <span class="detail-header-tag small">
@@ -1365,8 +1368,8 @@ PHP <a href="http://php.net/manual/de/function.date.php">date()</a>-function.</p
     <div class="detail-header h3" id="asDecimal()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asDecimal()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L809" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L809" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L814" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L814" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asDecimal()
         <span class="detail-header-tag small">
@@ -1428,8 +1431,8 @@ value is rounded automatically to the defined decimal digits.</p>
     <div class="detail-header h3" id="asEmail()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asEmail()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L350" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L350" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L353" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L353" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asEmail()
         <span class="detail-header-tag small">
@@ -1470,8 +1473,8 @@ value is rounded automatically to the defined decimal digits.</p>
     <div class="detail-header h3" id="asHtml()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asHtml()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L336" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L336" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L339" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L339" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asHtml()
         <span class="detail-header-tag small">
@@ -1514,8 +1517,8 @@ Use <a href="yii-i18n-formatter.html#asRaw()-detail">asRaw()</a> if you do not w
     <div class="detail-header h3" id="asImage()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asImage()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L364" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L364" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L367" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L367" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asImage()
         <span class="detail-header-tag small">
@@ -1556,8 +1559,8 @@ Use <a href="yii-i18n-formatter.html#asRaw()-detail">asRaw()</a> if you do not w
     <div class="detail-header h3" id="asInteger()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asInteger()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L778" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L778" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L783" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L783" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asInteger()
         <span class="detail-header-tag small">
@@ -1610,8 +1613,8 @@ Use <a href="yii-i18n-formatter.html#asRaw()-detail">asRaw()</a> if you do not w
     <div class="detail-header h3" id="asNtext()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asNtext()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L305" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L305" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L308" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L308" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asNtext()
         <span class="detail-header-tag small">
@@ -1646,8 +1649,8 @@ Use <a href="yii-i18n-formatter.html#asRaw()-detail">asRaw()</a> if you do not w
     <div class="detail-header h3" id="asOrdinal()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asOrdinal()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L963" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L963" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L968" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L968" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asOrdinal()
         <span class="detail-header-tag small">
@@ -1695,8 +1698,8 @@ Use <a href="yii-i18n-formatter.html#asRaw()-detail">asRaw()</a> if you do not w
     <div class="detail-header h3" id="asParagraphs()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asParagraphs()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L320" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L320" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L323" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L323" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asParagraphs()
         <span class="detail-header-tag small">
@@ -1733,8 +1736,8 @@ One or multiple consecutive empty lines divide two paragraphs.</p>
     <div class="detail-header h3" id="asPercent()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asPercent()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L838" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L838" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L843" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L843" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asPercent()
         <span class="detail-header-tag small">
@@ -1793,8 +1796,8 @@ One or multiple consecutive empty lines divide two paragraphs.</p>
     <div class="detail-header h3" id="asRaw()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asRaw()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L279" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L279" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L282" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L282" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asRaw()
         <span class="detail-header-tag small">
@@ -1831,8 +1834,8 @@ The only exception is a <code>null</code> value which will be formatted using <a
     <div class="detail-header h3" id="asRelativeTime()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asRelativeTime()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L686" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L686" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L691" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L691" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asRelativeTime()
         <span class="detail-header-tag small">
@@ -1894,8 +1897,8 @@ when <code>$value</code> is not a <code>DateInterval</code> object.</p>
     <div class="detail-header h3" id="asScientific()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asScientific()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L867" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L867" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L872" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L872" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asScientific()
         <span class="detail-header-tag small">
@@ -1954,8 +1957,8 @@ when <code>$value</code> is not a <code>DateInterval</code> object.</p>
     <div class="detail-header h3" id="asShortSize()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asShortSize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L994" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L994" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L999" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L999" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asShortSize()
         <span class="detail-header-tag small">
@@ -2017,8 +2020,8 @@ are used in the formatting result.</p>
     <div class="detail-header h3" id="asSize()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asSize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L1038" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L1038" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L1043" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L1043" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asSize()
         <span class="detail-header-tag small">
@@ -2079,8 +2082,8 @@ are used in the formatting result.</p>
     <div class="detail-header h3" id="asSpellout()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asSpellout()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L939" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L939" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L944" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L944" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asSpellout()
         <span class="detail-header-tag small">
@@ -2128,8 +2131,8 @@ are used in the formatting result.</p>
     <div class="detail-header h3" id="asText()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asText()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L292" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L292" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L295" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L295" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asText()
         <span class="detail-header-tag small">
@@ -2164,8 +2167,8 @@ are used in the formatting result.</p>
     <div class="detail-header h3" id="asTime()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asTime()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L466" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L466" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L469" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L469" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asTime()
         <span class="detail-header-tag small">
@@ -2230,8 +2233,8 @@ PHP <a href="http://php.net/manual/de/function.date.php">date()</a>-function.</p
     <div class="detail-header h3" id="asTimestamp()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asTimestamp()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L654" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L654" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L659" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L659" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asTimestamp()
         <span class="detail-header-tag small">
@@ -2273,8 +2276,8 @@ The timestamp is assumed to be in <a href="yii-i18n-formatter.html#$defaultTimeZ
     <div class="detail-header h3" id="asUrl()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#asUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L378" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L378" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L381" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L381" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         asUrl()
         <span class="detail-header-tag small">
@@ -2315,8 +2318,8 @@ The timestamp is assumed to be in <a href="yii-i18n-formatter.html#$defaultTimeZ
     <div class="detail-header h3" id="createNumberFormatter()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#createNumberFormatter()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L1152" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L1152" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L1157" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L1157" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createNumberFormatter()
         <span class="detail-header-tag small">
@@ -2373,8 +2376,8 @@ Values: NumberFormatter::DECIMAL, ::CURRENCY, ::PERCENT, ::SCIENTIFIC, ::SPELLOU
     <div class="detail-header h3" id="format()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#format()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L247" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L247" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L250" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L250" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         format()
         <span class="detail-header-tag small">
@@ -2427,8 +2430,8 @@ method. For example, a format of <code>['date', 'Y-m-d']</code> will cause the i
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L209" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L209" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L212" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L212" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -2453,8 +2456,8 @@ given configuration.</p>
     <div class="detail-header h3" id="normalizeDatetimeValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#normalizeDatetimeValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L607" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L607" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L612" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L612" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         normalizeDatetimeValue()
         <span class="detail-header-tag small">
@@ -2514,8 +2517,8 @@ the timestamp has time information or it is just a date value.</p>
     <div class="detail-header h3" id="normalizeNumericValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-i18n-formatter.html#normalizeNumericValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L1125" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L1125" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/i18n/Formatter.php#L1130" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/i18n/Formatter.php#L1130" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         normalizeNumericValue()
         <span class="detail-header-tag small">
@@ -2583,7 +2586,7 @@ the timestamp has time information or it is just a date value.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:32 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:16 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

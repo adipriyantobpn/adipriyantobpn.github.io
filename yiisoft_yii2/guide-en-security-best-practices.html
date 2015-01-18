@@ -144,16 +144,79 @@
 <a class="list-group-item" href="./guide-en-tutorial-template-engines.html">Template Engines</a>
 <a class="list-group-item" href="./guide-en-tutorial-yii-integration.html">Working with Third-Party Code</a></div>
 <a class="list-group-item" href="#navigation-1173" data-toggle="collapse" data-parent="#navigation">Widgets <b class="caret"></b></a><div id="navigation-1173" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-widget-bootstrap.html">Bootstrap Widgets</a>
-<a class="list-group-item" href="./guide-en-widget-jui.html">Jquery UI Widgets</a></div>
+<a class="list-group-item" href="./guide-en-widget-jui.html">jQuery UI Widgets</a></div>
 <a class="list-group-item" href="#navigation-1174" data-toggle="collapse" data-parent="#navigation">Helpers <b class="caret"></b></a><div id="navigation-1174" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-helper-overview.html">Overview</a>
 <a class="list-group-item" href="./guide-en-helper-array.html">ArrayHelper</a>
 <a class="list-group-item" href="./guide-en-helper-html.html">Html</a>
-<a class="list-group-item" href="./guide-en-helper-url.html">Url</a>
-<a class="list-group-item" href="./guide-en-helper-security.html">Security</a></div></div>    </div>
+<a class="list-group-item" href="./guide-en-helper-url.html">Url</a></div></div>    </div>
     <div class="col-md-9 guide-content" role="main">
-        <h1>Security best practice <a href="#security-best-practice" name="security-best-practice" class="hashlink">&para;</a></h1><blockquote><p>Note: This section is under development.</p>
-<p>It has no content yet.</p>
-</blockquote>
+        <h1>Security best practices <a href="#security-best-practices" name="security-best-practices" class="hashlink">&para;</a></h1><p>Below we'll review common security principles and describe how to avoid threats when developing applications using Yii.</p>
+<h2>Basic principles <a href="#basic-principles" name="basic-principles" class="hashlink">&para;</a></h2><p>There are two main principles when it comes to security no matter which application is being developed:</p>
+<ol>
+<li>Filter input.</li>
+<li>Escape output.</li>
+</ol>
+<h3>Filter input <a href="#filter-input" name="filter-input" class="hashlink">&para;</a></h3><p>Filter input means that input should never be considered safe and you should always check if the value you've got is
+actually among allowed ones i.e. if we know that sorting could be done by three fields <code>title</code>, <code>created_at</code> and <code>status</code>
+and the field could be supplied via used input it's better to check the value we've got right where we're receiving it.
+In terms of basic PHP that would look like the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$sortBy&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$_GET</span><span style="color: #007700">[</span><span style="color: #DD0000">'sort'</span><span style="color: #007700">];<br />if&nbsp;(!</span><span style="color: #0000BB">in_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$sortBy</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">'title'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'created_at'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'status'</span><span style="color: #007700">]))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #0000BB">Exception</span><span style="color: #007700">(</span><span style="color: #DD0000">'Invalid&nbsp;sort&nbsp;value.'</span><span style="color: #007700">);<br />}</span></code></pre>
+<p>In Yii, most probably you'll use <a href="guide-en-input-validation.html">form validation</a> to do alike checks.</p>
+<h3>Escape output <a href="#escape-output" name="escape-output" class="hashlink">&para;</a></h3><p>Escape output means that depending on context where we're using data it should be escaped i.e. in context of HTML you
+should escape <code>&lt;</code>, <code>&gt;</code> and alike special characters. In context of JavaScript or SQL it will be different set of characters.
+Since it's error-prone to escape everything manually Yii provides various tools to perform escaping for different
+contexts.</p>
+<h2>Avoiding SQL injections <a href="#avoiding-sql-injections" name="avoiding-sql-injections" class="hashlink">&para;</a></h2><p>SQL injection happens when query text is formed by concatenating unescaped strings such as the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$username&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$_GET</span><span style="color: #007700">[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">];<br /></span><span style="color: #0000BB">$sql&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"SELECT&nbsp;*&nbsp;FROM&nbsp;user&nbsp;WHERE&nbsp;username&nbsp;=&nbsp;'</span><span style="color: #0000BB">$username</span><span style="color: #DD0000">'"</span><span style="color: #007700">;</span></code></pre>
+<p>Instead of supplying correct username attacker could give your applications something like <code>'; DROP TABLE user; --</code>.
+Resulting SQL will be the following:</p>
+<pre><code class="language-sql">SELECT * FROM user WHERE username = ''; DROP TABLE user; --'
+</code></pre>
+<p>This is valid query that will search for users with empty username and then will drop <code>user</code> table most probably
+resulting in broken website and data loss (you've set up regular backups, right?).</p>
+<p>In Yii most of database querying happens via <a href="guide-en-db-active-record.html">Active Record</a> which properly uses PDO prepared
+statements internally. In case of prepared statements it's not possible to manipulate query as was demonstrated above.</p>
+<p>Still, sometimes you need <a href="guide-en-db-dao.html">raw queries</a> or <a href="guide-en-db-query-builder.html">query builder</a>. In this case you should use
+safe ways of passing data. If data is used for column values it's preferred to use prepared statements:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;query&nbsp;builder<br /></span><span style="color: #0000BB">$userIDs&nbsp;</span><span style="color: #007700">=&nbsp;(new&nbsp;</span><span style="color: #0000BB">Query</span><span style="color: #007700">())<br />&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">select</span><span style="color: #007700">(</span><span style="color: #DD0000">'id'</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">from</span><span style="color: #007700">(</span><span style="color: #DD0000">'user'</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">where</span><span style="color: #007700">(</span><span style="color: #DD0000">'status=:status'</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">':status'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$status</span><span style="color: #007700">])<br />&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">all</span><span style="color: #007700">();<br /><br /></span><span style="color: #FF8000">//&nbsp;DAO<br /></span><span style="color: #0000BB">$userIDs&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$connection<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createCommand</span><span style="color: #007700">(</span><span style="color: #DD0000">'SELECT&nbsp;id&nbsp;FROM&nbsp;user&nbsp;where&nbsp;status=:status'</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">bindValues</span><span style="color: #007700">([</span><span style="color: #DD0000">':status'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$status</span><span style="color: #007700">])<br />&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">queryColumn</span><span style="color: #007700">();</span></code></pre>
+<p>If data is used to specify column names or table names the best thing to do is to allow only predefined set of values:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">function&nbsp;</span><span style="color: #0000BB">actionList</span><span style="color: #007700">(</span><span style="color: #0000BB">$orderBy&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">in_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$orderBy</span><span style="color: #007700">,&nbsp;[</span><span style="color: #DD0000">'name'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'status'</span><span style="color: #007700">]))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #0000BB">BadRequestHttpException</span><span style="color: #007700">(</span><span style="color: #DD0000">'Only&nbsp;name&nbsp;and&nbsp;status&nbsp;are&nbsp;allowed&nbsp;to&nbsp;order&nbsp;by.'</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br /></span><span style="color: #007700">}</span></code></pre>
+<p>In case it's not possible, table and column names should be escaped. Yii has special syntax for such escaping
+which allows doing it the same way for all databases it supports:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$sql&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"SELECT&nbsp;COUNT([[</span><span style="color: #0000BB">$column</span><span style="color: #DD0000">]])&nbsp;FROM&nbsp;{{table}}"</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$rowCount&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$connection</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$sql</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">queryScalar</span><span style="color: #007700">();</span></code></pre>
+<p>You can get details about the syntax in <a href="guide-en-db-dao.html#quoting-table-and-column-names">Quoting Table and Column Names</a>.</p>
+<h2>Avoiding XSS <a href="#avoiding-xss" name="avoiding-xss" class="hashlink">&para;</a></h2><p>XSS or cross-site scripting happens when output isn't escaped properly when outputting HTML to the browser. For example,
+if user can enter his name and instead of <code>Alexander</code> he enters <code>&lt;script&gt;alert('Hello!');&lt;/script&gt;</code>, every page that
+outputs user name without escaping it will execute JavaScript <code>alert('Hello!');</code> resulting in alert box popping up
+in a browser. Depending on website instead of innocent alert such script could send messages using your name or even
+perform bank transactions.</p>
+<p>Avoiding XSS is quite easy in Yii. There are generally two cases:</p>
+<ol>
+<li>You want data to be outputted as plain text.</li>
+<li>You want data to be outputted as HTML.</li>
+</ol>
+<p>If all you need is plain text then escaping is as easy as the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">&lt;?=&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">helpers</span><span style="color: #007700">\</span><span style="color: #0000BB">Html</span><span style="color: #007700">::</span><span style="color: #0000BB">encode</span><span style="color: #007700">(</span><span style="color: #0000BB">$username</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;</span></code></pre>
+<p>If it should be HTML we could get some help from HtmlPurifier:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">&lt;?=&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">helpers</span><span style="color: #007700">\</span><span style="color: #0000BB">HtmlPurifier</span><span style="color: #007700">::</span><span style="color: #0000BB">process</span><span style="color: #007700">(</span><span style="color: #0000BB">$description</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;</span></code></pre>
+<p>Note that HtmlPurifier processing is quite heavy so consider adding caching.</p>
+<h2>Avoiding CSRF <a href="#avoiding-csrf" name="avoiding-csrf" class="hashlink">&para;</a></h2><p>TBD: what's CSRF, how it works, intro</p>
+<ol>
+<li>Follow HTTP specification i.e. GET should not change application state.</li>
+<li>Keep Yii CSRF protection enabled.</li>
+</ol>
+<p>TBD: how CSRF protection works</p>
+<h2>Avoiding file exposure <a href="#avoiding-file-exposure" name="avoiding-file-exposure" class="hashlink">&para;</a></h2><p>By default server webroot is meant to be pointed to <code>web</code> directory where <code>index.php</code> is. In case of shared hosting
+environments it could be impossible to achieve so we'll end up with all the code, configs and logs in server webroot.</p>
+<p>If it's the case don't forget to deny access to everything except <code>web</code>. If it can't be done consider hosting your
+application elsewhere.</p>
+<h2>Avoiding debug info and tools at production <a href="#avoiding-debug-info-and-tools-at-production" name="avoiding-debug-info-and-tools-at-production" class="hashlink">&para;</a></h2><p>In debug mode Yii shows quite verbose errors which are certainly helpful for development. The thing is that these
+verbose errors are handy for attacker as well since these could reveal database structure, configuration values and
+parts of your code. Never run production applications with <code>YII_DEBUG</code> set to <code>true</code> in your <code>index.php</code>.</p>
+<p>You should never enalble Gii at production. It could be used to get information about database structure, code and to
+simply rewrite code with what's generated by Gii.</p>
+<p>Debug toolbar should be avoided at production unless really necessary. It exposes all the application and config
+details possible. If you absolutely need it check twice that access is proerly restricted to your IP only.</p>
         <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
     </div>
 </div>
@@ -162,7 +225,7 @@
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:18:14 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:33:26 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

@@ -10,22 +10,22 @@ C:\Users\User>D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc ap
 Searching files to process... done.
 Loading apidoc data from cache... done.
 Checking for updated files... done.
-98 files to update.
-Processing files... done.(98/98)   : 0 sec.
+55 files to update.
+Processing files... done.(55/55)   : 0 sec.
 Updating cross references and backlinks... done.
-Rendering files: done.(523/523)   : 0 sec.
+Rendering files: done.(525/525)   : 0 sec.
 generating extension index files...done.
 generating search index...done.
-700 errors have been logged to D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2/errors.txt
+904 errors have been logged to D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2/errors.txt
 
 C:\Users\User>D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc api D:\installer\~gitrepo\yiisoft_yii2\extensions D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 --guide="." --guidePrefix="guide-en-" --interactive=0
 Searching files to process... done.
 Loading apidoc data from cache... done.
 Checking for updated files... done.
-79 files to update.
-Processing files... done.(79/79)   : 0 sec.
+28 files to update.
+Processing files... done.(28/28)   : 0 sec.
 Updating cross references and backlinks... done.
-Rendering files: done.(525/525)   : 0 sec.
+Rendering files: done.(526/526)   : 0 sec.
 generating extension index files...done.
 generating search index...done.
-902 errors have been logged to D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2/errors.txt
+959 errors have been logged to D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2/errors.txt

@@ -840,7 +840,7 @@ used to perform/execute the DB query against a database.</p>
         <td>Prepares for building SQL.</td>
         <td><a href="yii-db-query.html">yii\db\Query</a></td>
     </tr>
-            <tr id="rightJoin()">
+                <tr id="rightJoin()">
         <td><a href="yii-db-query.html#rightJoin()-detail">rightJoin()</a></td>
         <td>Appends a RIGHT OUTER JOIN part to the query.</td>
         <td><a href="yii-db-query.html">yii\db\Query</a></td>
@@ -907,7 +907,12 @@ used to perform/execute the DB query against a database.</p>
         <td>Normalizes format of ORDER BY data</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
-                                                                            </table>
+                                                        <tr id="queryScalar()">
+        <td><a href="yii-db-query.html#queryScalar()-detail">queryScalar()</a></td>
+        <td>Queries a scalar value by setting <a href="yii-db-query.html#select()-detail">select()</a> first.</td>
+        <td><a href="yii-db-query.html">yii\db\Query</a></td>
+    </tr>
+                                </table>
 </div>
 
 <a name="events"></a>
@@ -2326,6 +2331,41 @@ You may override this method to do some final preparation work when converting a
 
 <!--	-->
 
+    <div class="detail-header h3" id="queryScalar()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-query.html#queryScalar()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/Query.php#L357" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/Query.php#L357" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        queryScalar()
+        <span class="detail-header-tag small">
+            protected            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Queries a scalar value by setting <a href="yii-db-query.html#select()-detail">select()</a> first.</strong></p>
+
+        <p>Restores the value of select to make this query reusable.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">bool|<a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-db-query.html#queryScalar()-detail">queryScalar</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$selectExpression</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$selectExpression</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="yii-db-expression.html">yii\db\Expression</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
+                  <td class="param-type-col"><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="rightJoin()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-db-query.html#rightJoin()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
@@ -2590,7 +2630,7 @@ in the generated expression. Below are some examples:</p>
 <ul>
 <li><code>['type' =&gt; 1, 'status' =&gt; 2]</code> generates <code>(type = 1) AND (status = 2)</code>.</li>
 <li><code>['id' =&gt; [1, 2, 3], 'status' =&gt; 2]</code> generates <code>(id IN (1, 2, 3)) AND (status = 2)</code>.</li>
-<li><code>['status' =&gt; null] generates </code>status IS NULL`.</li>
+<li><code>['status' =&gt; null]</code> generates <code>status IS NULL</code>.</li>
 </ul>
 <p>A condition in operator format generates the SQL expression according to the specified operator, which
 can be one of the followings:</p>
@@ -2719,7 +2759,7 @@ following SQL expression: <code>id &gt;= 10</code>.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:28 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:12 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
