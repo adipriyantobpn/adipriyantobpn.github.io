@@ -442,6 +442,12 @@ the <a href="yii-behaviors-sluggablebehavior.html#$slugAttribute-detail">$slugAt
         <td>Whether to ensure generated slug value to be unique among owner class records.</td>
         <td><a href="yii-behaviors-sluggablebehavior.html">yii\behaviors\SluggableBehavior</a></td>
     </tr>
+            <tr id="$immutable">
+        <td><a href="yii-behaviors-sluggablebehavior.html#$immutable-detail">$immutable</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to generate a new slug if it has already been generated before.</td>
+        <td><a href="yii-behaviors-sluggablebehavior.html">yii\behaviors\SluggableBehavior</a></td>
+    </tr>
             <tr class="inherited" id="$owner">
         <td><a href="yii-base-behavior.html#$owner-detail">$owner</a></td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
@@ -624,8 +630,8 @@ the <a href="yii-behaviors-sluggablebehavior.html#$slugAttribute-detail">$slugAt
     <div class="detail-header h3" id="$ensureUnique-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-behaviors-sluggablebehavior.html#$ensureUnique-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L84" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L84" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L90" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L90" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $ensureUnique        <span class="detailHeaderTag small">
             public                                    property
@@ -637,6 +643,25 @@ the <a href="yii-behaviors-sluggablebehavior.html#$slugAttribute-detail">$slugAt
     <p>Whether to ensure generated slug value to be unique among owner class records.
 If enabled behavior will validate slug uniqueness automatically. If validation fails it will attempt
 generating unique slug value from based one until success.</p>
+
+    
+
+    <div class="detail-header h3" id="$immutable-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-behaviors-sluggablebehavior.html#$immutable-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L84" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L84" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $immutable        <span class="detailHeaderTag small">
+            public                                    property
+                            (available since version 2.0.2)
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <a href="yii-behaviors-sluggablebehavior.html#$immutable-detail">$immutable</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+    <p>Whether to generate a new slug if it has already been generated before.
+If true, the behavior will not generate a new slug even if <a href="yii-behaviors-sluggablebehavior.html#$attribute-detail">$attribute</a> is changed.</p>
 
     
 
@@ -660,8 +685,8 @@ generating unique slug value from based one until success.</p>
     <div class="detail-header h3" id="$uniqueSlugGenerator-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-behaviors-sluggablebehavior.html#$uniqueSlugGenerator-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L104" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L104" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L110" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L110" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $uniqueSlugGenerator        <span class="detailHeaderTag small">
             public                                    property
@@ -680,8 +705,8 @@ slug is not unique. This should be a PHP callable with following signature:</p>
     <div class="detail-header h3" id="$uniqueValidator-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-behaviors-sluggablebehavior.html#$uniqueValidator-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L90" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L90" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L96" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L96" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $uniqueValidator        <span class="detailHeaderTag small">
             public                                    property
@@ -722,8 +747,8 @@ The signature of the function should be as follows,</p>
     <div class="detail-header h3" id="getValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-behaviors-sluggablebehavior.html#getValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L132" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L132" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getValue()
         <span class="detail-header-tag small">
@@ -760,8 +785,8 @@ to the attributes corresponding to the triggering event.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-behaviors-sluggablebehavior.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L110" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L110" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/behaviors/SluggableBehavior.php#L116" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/behaviors/SluggableBehavior.php#L116" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -821,7 +846,7 @@ given configuration.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:22 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:35:05 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

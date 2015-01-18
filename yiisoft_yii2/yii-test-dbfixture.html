@@ -428,7 +428,7 @@
     </tr>
             <tr id="$db">
         <td><a href="yii-test-dbfixture.html#$db-detail">$db</a></td>
-        <td><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
         <td>The DB connection object or the application component ID of the DB connection.</td>
         <td><a href="yii-test-dbfixture.html">yii\test\DbFixture</a></td>
     </tr>
@@ -626,19 +626,20 @@
     <div class="detail-header h3" id="$db-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-test-dbfixture.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/test/DbFixture.php#L30" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/test/DbFixture.php#L30" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/test/DbFixture.php#L31" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/test/DbFixture.php#L31" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $db        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-test-dbfixture.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'db'</span></div>
+    <div class="signature"><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-test-dbfixture.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'db'</span></div>
 
     <p>The DB connection object or the application component ID of the DB connection.
 After the DbFixture object is created, if you want to change this property, you should only assign it
-with a DB connection object.</p>
+with a DB connection object.
+Starting from version 2.0.2, this can also be a configuration array for creating the object.</p>
 
     
 </div>
@@ -649,8 +650,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-test-dbfixture.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/test/DbFixture.php#L36" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/test/DbFixture.php#L36" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/test/DbFixture.php#L37" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/test/DbFixture.php#L37" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -710,7 +711,7 @@ given configuration.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:36 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:35:19 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

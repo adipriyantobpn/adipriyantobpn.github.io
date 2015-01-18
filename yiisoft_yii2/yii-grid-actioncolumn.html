@@ -398,7 +398,7 @@
 <div id="classDescription">
     <p><strong>ActionColumn is a column for the <a href="yii-grid-gridview.html">yii\grid\GridView</a> widget that displays buttons for viewing and manipulating the items.</strong></p>
     <p>To add an ActionColumn to the gridview, add it to the <a href="yii-grid-gridview.html#$columns-detail">columns</a> configuration as follows:</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'columns'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\grid\ActionColumn'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;you&nbsp;may&nbsp;configure&nbsp;additional&nbsp;properties&nbsp;here<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />]</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'columns'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">ActionColumn</span><span style="color: #007700">::</span><span style="color: #0000BB">className</span><span style="color: #007700">(),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;you&nbsp;may&nbsp;configure&nbsp;additional&nbsp;properties&nbsp;here<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />]</span></code></pre>
 
     </div>
 
@@ -626,7 +626,7 @@
 </tr>
                                                             <tr id="initDefaultButtons()">
         <td><a href="yii-grid-actioncolumn.html#initDefaultButtons()-detail">initDefaultButtons()</a></td>
-        <td>Initializes the default button rendering callbacks</td>
+        <td>Initializes the default button rendering callbacks.</td>
         <td><a href="yii-grid-actioncolumn.html">yii\grid\ActionColumn</a></td>
     </tr>
                 <tr id="renderDataCellContent()">
@@ -663,8 +663,8 @@
     <div class="detail-header h3" id="$buttons-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-actioncolumn.html#$buttons-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L83" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L83" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $buttons        <span class="detailHeaderTag small">
             public                                    property
@@ -681,7 +681,7 @@ signature:</p>
 being rendered for the current row, and <code>$key</code> is the key of the model in the data provider array.</p>
 <p>You can add further conditions to the button, for example only display it, when the model is
 editable (here assuming you have a status field that indicates that):</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'update'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;function&nbsp;(</span><span style="color: #0000BB">$url</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$key</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">status&nbsp;</span><span style="color: #007700">==&nbsp;</span><span style="color: #DD0000">'editable'&nbsp;</span><span style="color: #007700">?&nbsp;</span><span style="color: #0000BB">Html</span><span style="color: #007700">::</span><span style="color: #0000BB">a</span><span style="color: #007700">(</span><span style="color: #DD0000">'Update'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$url</span><span style="color: #007700">)&nbsp;:&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;};<br />],</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'update'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;function&nbsp;(</span><span style="color: #0000BB">$url</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$key</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">status&nbsp;</span><span style="color: #007700">===&nbsp;</span><span style="color: #DD0000">'editable'&nbsp;</span><span style="color: #007700">?&nbsp;</span><span style="color: #0000BB">Html</span><span style="color: #007700">::</span><span style="color: #0000BB">a</span><span style="color: #007700">(</span><span style="color: #DD0000">'Update'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$url</span><span style="color: #007700">)&nbsp;:&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;};<br />],</span></code></pre>
 
     
 
@@ -708,8 +708,8 @@ to each action name to form the route of the action.</p>
     <div class="detail-header h3" id="$template-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-actioncolumn.html#$template-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L50" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L50" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L57" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L57" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $template        <span class="detailHeaderTag small">
             public                                    property
@@ -723,14 +723,17 @@ Tokens enclosed within curly brackets are treated as controller action IDs (also
 in the context of action column). They will be replaced by the corresponding button rendering callbacks
 specified in <a href="yii-grid-actioncolumn.html#$buttons-detail">$buttons</a>. For example, the token <code>{view}</code> will be replaced by the result of
 the callback <code>buttons['view']</code>. If a callback cannot be found, the token will be replaced with an empty string.</p>
+<p>As an example, to only have the view, and update button you can add the ActionColumn to your GridView columns as follows:</p>
+<pre><code>['class' =&gt; 'yii\grid\ActionColumn', 'template' =&gt; '{view} {update}'],
+</code></pre>
 
     <p>See also <a href="yii-grid-actioncolumn.html#$buttons-detail">$buttons</a>.</p>
 
     <div class="detail-header h3" id="$urlCreator-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-actioncolumn.html#$urlCreator-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L82" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L82" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L89" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L89" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $urlCreator        <span class="detailHeaderTag small">
             public                                    property
@@ -752,8 +755,8 @@ If this property is not set, button URLs will be created using <a href="yii-grid
     <div class="detail-header h3" id="createUrl()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-actioncolumn.html#createUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L136" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L136" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L143" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L143" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createUrl()
         <span class="detail-header-tag small">
@@ -807,8 +810,8 @@ If this property is not set, button URLs will be created using <a href="yii-grid
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-actioncolumn.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L88" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L88" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L95" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L95" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -833,8 +836,8 @@ given configuration.</p>
     <div class="detail-header h3" id="initDefaultButtons()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-actioncolumn.html#initDefaultButtons()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L97" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L97" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L104" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L104" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         initDefaultButtons()
         <span class="detail-header-tag small">
@@ -843,7 +846,7 @@ given configuration.</p>
     </div>
 
     <div class="doc-description">
-        <p><strong>Initializes the default button rendering callbacks</strong></p>
+        <p><strong>Initializes the default button rendering callbacks.</strong></p>
 
         
             </div>
@@ -857,8 +860,8 @@ given configuration.</p>
     <div class="detail-header h3" id="renderDataCellContent()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-actioncolumn.html#renderDataCellContent()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L151" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L151" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/ActionColumn.php#L158" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/ActionColumn.php#L158" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderDataCellContent()
         <span class="detail-header-tag small">
@@ -940,7 +943,7 @@ given configuration.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:30 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:35:13 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

@@ -987,7 +987,7 @@ is to be added to relational query join condition.</p>
         <td>Prepares for building SQL.</td>
         <td><a href="yii-db-activequery.html">yii\db\ActiveQuery</a></td>
     </tr>
-            <tr class="inherited" id="rightJoin()">
+                <tr class="inherited" id="rightJoin()">
         <td><a href="yii-db-query.html#rightJoin()-detail">rightJoin()</a></td>
         <td>Appends a RIGHT OUTER JOIN part to the query.</td>
         <td><a href="yii-db-query.html">yii\db\Query</a></td>
@@ -1069,7 +1069,12 @@ is to be added to relational query join condition.</p>
         <td>Normalizes format of ORDER BY data</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
-                                                                                                    </table>
+                                                                    <tr class="inherited" id="queryScalar()">
+        <td><a href="yii-db-query.html#queryScalar()-detail">queryScalar()</a></td>
+        <td>Queries a scalar value by setting <a href="yii-db-query.html#select()-detail">select()</a> first.</td>
+        <td><a href="yii-db-query.html">yii\db\Query</a></td>
+    </tr>
+                                            </table>
 </div>
 
 <a name="events"></a>
@@ -1185,7 +1190,7 @@ This is set by <a href="yii-db-activerecord.html#findBySql()-detail">yii\db\Acti
         <tr><td colspan="3" class="signature">void <strong><a href="yii-db-activequery.html#__construct()-detail">__construct</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$modelClass</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$config&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$modelClass</span></td>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"><p>The model class associated with this query</p>
 </td>
                 </tr>
@@ -1368,7 +1373,7 @@ Please refer to <a href="yii-db-activequery.html#joinWith()-detail">joinWith()</
         <tr><td colspan="3" class="signature">static <strong><a href="yii-db-activequery.html#innerJoinWith()-detail">innerJoinWith</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$with</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$eagerLoading&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$with</span></td>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
                   <td class="param-desc-col"><p>The relations to be joined with</p>
 </td>
                 </tr>
@@ -1418,7 +1423,7 @@ for the primary table. And when <code>$eagerLoading</code> is true, it will call
         <tr><td colspan="3" class="signature">static <strong><a href="yii-db-activequery.html#joinWith()-detail">joinWith</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$with</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$eagerLoading&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$joinType&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'LEFT&nbsp;JOIN'&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$with</span></td>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
                   <td class="param-desc-col"><p>The relations to be joined. Each array element represents a single relation.
 The array keys are relation names, and the array values are the corresponding anonymous functions that
 can be used to modify the relation queries on-the-fly. If a relation query does not need modification,
@@ -1762,7 +1767,7 @@ Its signature should be <code>function($query)</code>, where <code>$query</code>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:26 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:35:08 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

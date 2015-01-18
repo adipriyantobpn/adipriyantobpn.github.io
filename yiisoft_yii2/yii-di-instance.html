@@ -553,8 +553,8 @@ or alias name. The reference can later be resolved into the actual object by the
     <div class="detail-header h3" id="ensure()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-di-instance.html#ensure()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/di/Instance.php#L107" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/di/Instance.php#L107" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/di/Instance.php#L108" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/di/Instance.php#L108" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         ensure()
         <span class="detail-header-tag small">
@@ -569,7 +569,7 @@ or alias name. The reference can later be resolved into the actual object by the
 it will be treated as a component ID, a class/interface name or an alias, depending on the container type.</p>
 <p>If you do not specify a container, the method will first try <code>Yii::$app</code> followed by <code>Yii::$container</code>.</p>
 <p>For example,</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">Connection</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;returns&nbsp;Yii::$app-&gt;db<br /></span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Instance</span><span style="color: #007700">::</span><span style="color: #0000BB">ensure</span><span style="color: #007700">(</span><span style="color: #DD0000">'db'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">Connection</span><span style="color: #007700">::</span><span style="color: #0000BB">className</span><span style="color: #007700">());<br /></span><span style="color: #FF8000">//&nbsp;or<br /></span><span style="color: #0000BB">$instance&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Instance</span><span style="color: #007700">::</span><span style="color: #0000BB">of</span><span style="color: #007700">(</span><span style="color: #DD0000">'db'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Instance</span><span style="color: #007700">::</span><span style="color: #0000BB">ensure</span><span style="color: #007700">(</span><span style="color: #0000BB">$instance</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">Connection</span><span style="color: #007700">::</span><span style="color: #0000BB">className</span><span style="color: #007700">());</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">Connection</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;returns&nbsp;Yii::$app-&gt;db<br /></span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Instance</span><span style="color: #007700">::</span><span style="color: #0000BB">ensure</span><span style="color: #007700">(</span><span style="color: #DD0000">'db'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">Connection</span><span style="color: #007700">::</span><span style="color: #0000BB">className</span><span style="color: #007700">());<br /></span><span style="color: #FF8000">//&nbsp;returns&nbsp;an&nbsp;instance&nbsp;of&nbsp;Connection&nbsp;using&nbsp;the&nbsp;given&nbsp;configuration<br /></span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Instance</span><span style="color: #007700">::</span><span style="color: #0000BB">ensure</span><span style="color: #007700">([</span><span style="color: #DD0000">'dsn'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'sqlite:path/to/my.db'</span><span style="color: #007700">],&nbsp;</span><span style="color: #0000BB">Connection</span><span style="color: #007700">::</span><span style="color: #0000BB">className</span><span style="color: #007700">());</span></code></pre>
 
             </div>
 
@@ -577,9 +577,11 @@ it will be treated as a component ID, a class/interface name or an alias, depend
         <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.object">object</a> <strong><a href="yii-di-instance.html#ensure()-detail">ensure</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$reference</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$type&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$container&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$reference</span></td>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.object">object</a>|<a href="http://www.php.net/language.types.string">string</a>|static</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.object">object</a>|<a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a>|static</td>
                   <td class="param-desc-col"><p>An object or a reference to the desired object.
-You may specify a reference in terms of a component ID or an Instance object.</p>
+You may specify a reference in terms of a component ID or an Instance object.
+Starting from version 2.0.2, you may also pass in a configuration array for creating the object.
+If the "class" value is not specified in the configuration array, it will use the value of <code>$type</code>.</p>
 </td>
                 </tr>
                             <tr>
@@ -613,8 +615,8 @@ You may specify a reference in terms of a component ID or an Instance object.</p
     <div class="detail-header h3" id="get()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-di-instance.html#get()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/di/Instance.php#L138" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/di/Instance.php#L138" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/di/Instance.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/di/Instance.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         get()
         <span class="detail-header-tag small">
@@ -721,7 +723,7 @@ If null, the method will first try <code>Yii::$app</code> then <code>Yii::$conta
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:29 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:35:12 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

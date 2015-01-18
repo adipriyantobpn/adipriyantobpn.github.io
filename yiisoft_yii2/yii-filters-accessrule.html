@@ -816,8 +816,8 @@ they are checked via <a href="yii-web-user.html#$isGuest-detail">yii\web\User::$
 <li><code>?</code>: matches a guest user (not authenticated yet)</li>
 <li><code>@</code>: matches an authenticated user</li>
 </ul>
-<p>Using other role names requires RBAC (Role-Based Access Control), and
-<a href="yii-web-user.html#can()-detail">yii\web\User::can()</a> will be called.</p>
+<p>If you are using RBAC (Role-Based Access Control), you may also specify role or permission names.
+In this case, <a href="yii-web-user.html#can()-detail">yii\web\User::can()</a> will be called to check access.</p>
 <p>If this property is not set or empty, it means this rule applies to all roles.</p>
 
     
@@ -1146,7 +1146,7 @@ If not set or empty, it means this rule applies to all request methods.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:29 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:35:12 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
