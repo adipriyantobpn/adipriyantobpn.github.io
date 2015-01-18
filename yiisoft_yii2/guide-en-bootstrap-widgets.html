@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/4b76110e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/710de68d/style.css" rel="stylesheet">
+<script src="./assets/75e46bf0/jquery.js"></script>
+<script src="./assets/4b76110e/js/bootstrap.js"></script>
+<script src="./assets/a44c75fa/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w18" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w18-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w18-collapse" class="collapse navbar-collapse"><ul id="w19" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Bootstrap widgets <a href="#bootstrap-widgets" name="bootstrap-widgets" class="hashlink">&para;</a></h1><p>Out of the box, Yii includes support for the <a href="http://getbootstrap.com/">Bootstrap 3</a> markup and components framework (also known as "Twitter Bootstrap"). Bootstrap is an excellent, responsive framework that can greatly speed up the client-side of your development process.</p>
+<p>The core of Bootstrap is represented by two parts:</p>
+<ul>
+<li>CSS basics, such as a grid layout system, typography, helper classes, and responsive utilities.</li>
+<li>Ready to use components, such as menus, pagination, modal boxes, tabs etc.</li>
+</ul>
+<h2>Basics <a href="#basics" name="basics" class="hashlink">&para;</a></h2><p>Yii doesn't wrap the bootstrap basics into PHP code since HTML is very simple by itself in this case. You can find details
+about using the basics at <a href="http://getbootstrap.com/css/">bootstrap documentation website</a>. Still Yii provides a
+convenient way to include bootstrap assets in your pages with a single line added to <code>AppAsset.php</code> located in your
+<code>config</code> directory:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;</span><span style="color: #0000BB">$depends&nbsp;</span><span style="color: #007700">=&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'yii\web\YiiAsset'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'yii\bootstrap\BootstrapAsset'</span><span style="color: #007700">,&nbsp;</span><span style="color: #FF8000">//&nbsp;this&nbsp;line<br />&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;'yii\bootstrap\BootstrapThemeAsset'&nbsp;//&nbsp;uncomment&nbsp;to&nbsp;apply&nbsp;bootstrap&nbsp;2&nbsp;style&nbsp;to&nbsp;bootstrap&nbsp;3<br /></span><span style="color: #007700">];</span></code></pre>
+<p>Using bootstrap through Yii asset manager allows you to minimize its resources and combine with your own resources when
+needed.</p>
+<h2>Yii widgets <a href="#yii-widgets" name="yii-widgets" class="hashlink">&para;</a></h2><p>Most complex bootstrap components are wrapped into Yii widgets to allow more robust syntax and integrate with
+framework features. All widgets belong to <code>\yii\bootstrap</code> namespace:</p>
+<ul>
+<li><span class="broken-link">yii\bootstrap\Alert</span></li>
+<li><span class="broken-link">yii\bootstrap\Button</span></li>
+<li><span class="broken-link">yii\bootstrap\ButtonDropdown</span></li>
+<li><span class="broken-link">yii\bootstrap\ButtonGroup</span></li>
+<li><span class="broken-link">yii\bootstrap\Carousel</span></li>
+<li><span class="broken-link">yii\bootstrap\Collapse</span></li>
+<li><span class="broken-link">yii\bootstrap\Dropdown</span></li>
+<li><span class="broken-link">yii\bootstrap\Modal</span></li>
+<li><span class="broken-link">yii\bootstrap\Nav</span></li>
+<li><span class="broken-link">yii\bootstrap\NavBar</span></li>
+<li><span class="broken-link">yii\bootstrap\Progress</span></li>
+<li><span class="broken-link">yii\bootstrap\Tabs</span></li>
+</ul>
+<h2>Using the .less files of Bootstrap directly <a href="#using-the-less-files-of-bootstrap-directly" name="using-the-less-files-of-bootstrap-directly" class="hashlink">&para;</a></h2><p>If you want to include the <a href="http://getbootstrap.com/getting-started/#customizing">Bootstrap css directly in your less files</a>
+you may need to disable the original bootstrap css files to be loaded.
+You can do this by setting the css property of the <span class="broken-link">yii\bootstrap\BootstrapAsset</span> to be empty.
+For this you need to configure the <code>assetManagner</code> application component as follows:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'assetManager'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'bundles'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'yii\bootstrap\BootstrapAsset'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'css'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br />&nbsp;&nbsp;&nbsp;&nbsp;]</span></code></pre>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:03:04 +0700</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>
