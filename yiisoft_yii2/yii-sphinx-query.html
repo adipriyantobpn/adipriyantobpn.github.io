@@ -710,10 +710,10 @@ for the snippets building.</td>
         <td>Normalizes format of ORDER BY data</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
-                                                            <tr class="inherited" id="queryScalar()">
-        <td><a href="yii-db-query.html#queryScalar()-detail">queryScalar()</a></td>
+                                                            <tr id="queryScalar()">
+        <td><a href="yii-sphinx-query.html#queryScalar()-detail">queryScalar()</a></td>
         <td>Queries a scalar value by setting <a href="yii-db-query.html#select()-detail">select()</a> first.</td>
-        <td><a href="yii-db-query.html">yii\db\Query</a></td>
+        <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
                                                 </table>
 </div>
@@ -1027,8 +1027,8 @@ The method will automatically quote the column names unless a column contains so
     <div class="detail-header h3" id="create()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#create()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L375" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L375" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L403" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L403" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         create()
         <span class="detail-header-tag small">
@@ -1529,6 +1529,41 @@ into the format as required by this query.</p>
 
 <!--	-->
 
+    <div class="detail-header h3" id="queryScalar()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-sphinx-query.html#queryScalar()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L372" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L372" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        queryScalar()
+        <span class="detail-header-tag small">
+            protected            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Queries a scalar value by setting <a href="yii-db-query.html#select()-detail">select()</a> first.</strong></p>
+
+        <p>Restores the value of select to make this query reusable.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">bool|<a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-sphinx-query.html#queryScalar()-detail">queryScalar</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$selectExpression</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$selectExpression</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="yii-db-expression.html">yii\db\Expression</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
+                  <td class="param-type-col"><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="rightJoin()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#rightJoin()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
@@ -1772,7 +1807,7 @@ The method will automatically quote the column names unless a column contains so
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:35:36 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:38 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
