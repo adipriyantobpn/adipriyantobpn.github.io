@@ -398,8 +398,16 @@
     </table>
 
 <div id="classDescription">
-    <p><strong></strong></p>
-    
+    <p><strong>Block records all output between <a href="yii-base-widget.html#begin()-detail">begin()</a> and <a href="yii-base-widget.html#end()-detail">end()</a> calls and stores it in <a href="yii-base-view.html#$blocks-detail">yii\base\View::$blocks</a>.</strong></p>
+    <p>for later use.</p>
+<p><a href="yii-base-view.html">yii\base\View</a> component contains two methods <a href="yii-base-view.html#beginBlock()-detail">yii\base\View::beginBlock()</a> and <a href="yii-base-view.html#endBlock()-detail">yii\base\View::endBlock()</a>.
+The general idea is that you're defining block default in a view or layout:</p>
+<pre><code class="language-php"><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">beginBlock</span><span style="color: #007700">(</span><span style="color: #DD0000">'messages'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>Nothing.<br /><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">endBlock</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;</span></code></pre>
+<p>And then overriding default in sub-views:</p>
+<pre><code class="language-php"><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">beginBlock</span><span style="color: #007700">(</span><span style="color: #DD0000">'username'</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span>Umm...&nbsp;hello?<br /><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">endBlock</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;</span></code></pre>
+<p>Second parameter defines if block content should be outputted which is desired when rendering its content but isn't
+desired when redefining it in subviews.</p>
+
     </div>
 
 <a name="properties"></a>
@@ -680,8 +688,8 @@
     <div class="detail-header h3" id="$renderInPlace-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-block.html#$renderInPlace-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Block.php#L22" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Block.php#L22" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Block.php#L45" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Block.php#L45" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $renderInPlace        <span class="detailHeaderTag small">
             public                                    property
@@ -702,8 +710,8 @@ meaning the captured block content will not be displayed.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-block.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Block.php#L28" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Block.php#L28" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Block.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Block.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -726,8 +734,8 @@ meaning the captured block content will not be displayed.</p>
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-block.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Block.php#L38" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Block.php#L38" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Block.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Block.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -786,7 +794,7 @@ meaning the captured block content will not be displayed.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:14 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

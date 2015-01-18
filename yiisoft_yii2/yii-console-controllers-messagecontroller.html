@@ -716,7 +716,7 @@ yii message /path/to/myapp/messages/config.php</li>
         <td>Returns one-line short summary describing this controller.</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-            <tr class="inherited" id="getModules()">
+                <tr class="inherited" id="getModules()">
         <td><a href="yii-base-controller.html#getModules()-detail">getModules()</a></td>
         <td>Returns all ancestor modules of this controller.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
@@ -793,6 +793,11 @@ name is the option name.</td>
         <td>Renders a view and applies layout if available.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
             <tr class="inherited" id="renderFile()">
         <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
@@ -800,7 +805,7 @@ name is the option name.</td>
     </tr>
             <tr class="inherited" id="renderPartial()">
         <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
-        <td>Renders a view.</td>
+        <td>Renders a view without applying layout.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
             <tr class="inherited" id="run()">
@@ -834,7 +839,7 @@ a list of options to choose from and their explanations.</td>
         <td>Prints a string to STDOUT</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-            <tr class="inherited" id="trigger()">
+                <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
@@ -866,7 +871,12 @@ a list of options to choose from and their explanations.</td>
         <td></td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-                                                                                    <tr class="inherited" id="parseDocCommentDetail()">
+                                <tr id="getLine()">
+        <td><a href="yii-console-controllers-messagecontroller.html#getLine()-detail">getLine()</a></td>
+        <td>Finds out a line of the first non-char PHP token found</td>
+        <td><a href="yii-console-controllers-messagecontroller.html">yii\console\controllers\MessageController</a></td>
+    </tr>
+                                                                <tr class="inherited" id="parseDocCommentDetail()">
         <td><a href="yii-console-controller.html#parseDocCommentDetail()-detail">parseDocCommentDetail()</a></td>
         <td>Returns full description from the docblock.</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
@@ -881,7 +891,7 @@ a list of options to choose from and their explanations.</td>
         <td>Parses the comment block into tags.</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-                                    <tr id="saveMessagesCategoryToPHP()">
+                                        <tr id="saveMessagesCategoryToPHP()">
         <td><a href="yii-console-controllers-messagecontroller.html#saveMessagesCategoryToPHP()-detail">saveMessagesCategoryToPHP()</a></td>
         <td>Writes category messages into PHP file</td>
         <td><a href="yii-console-controllers-messagecontroller.html">yii\console\controllers\MessageController</a></td>
@@ -901,7 +911,12 @@ a list of options to choose from and their explanations.</td>
         <td>Writes messages into PO file</td>
         <td><a href="yii-console-controllers-messagecontroller.html">yii\console\controllers\MessageController</a></td>
     </tr>
-                        </table>
+                            <tr id="tokensEqual()">
+        <td><a href="yii-console-controllers-messagecontroller.html#tokensEqual()-detail">tokensEqual()</a></td>
+        <td>Finds out if two PHP tokens are equal</td>
+        <td><a href="yii-console-controllers-messagecontroller.html">yii\console\controllers\MessageController</a></td>
+    </tr>
+        </table>
 </div>
 
 <a name="events"></a>
@@ -977,8 +992,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="$defaultAction-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#$defaultAction-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L42" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L42" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $defaultAction        <span class="detailHeaderTag small">
             public                                    property
@@ -998,8 +1013,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="actionConfig()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#actionConfig()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L57" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L57" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionConfig()
         <span class="detail-header-tag small">
@@ -1017,14 +1032,20 @@ you may use this configuration file with the "extract" command.</p>
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-console-controllers-messagecontroller.html#actionConfig()-detail">actionConfig</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$filePath&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a> <strong><a href="yii-console-controllers-messagecontroller.html#actionConfig()-detail">actionConfig</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$filePath&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$filePath</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"><p>Output file name or alias.</p>
 </td>
                 </tr>
-                                                    <tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>CLI exit code</p>
+</td>
+                </tr>
+                                        <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-console-exception.html">yii\console\Exception</a></td>
                   <td class="param-desc-col"><p>on failure.</p>
@@ -1037,8 +1058,8 @@ you may use this configuration file with the "extract" command.</p>
     <div class="detail-header h3" id="actionExtract()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#actionExtract()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L78" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L78" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionExtract()
         <span class="detail-header-tag small">
@@ -1077,8 +1098,8 @@ this file and then customize it for your needs.</p>
     <div class="detail-header h3" id="extractMessages()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#extractMessages()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L247" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L247" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L245" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L245" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         extractMessages()
         <span class="detail-header-tag small">
@@ -1110,11 +1131,41 @@ this file and then customize it for your needs.</p>
 
 <!--	-->
 
+    <div class="detail-header h3" id="getLine()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#getLine()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L335" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L335" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getLine()
+        <span class="detail-header-tag small">
+            protected            method
+                            (available since version 2.0.1)
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Finds out a line of the first non-char PHP token found</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">int|<a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-console-controllers-messagecontroller.html#getLine()-detail">getLine</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$tokens&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$tokens</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="saveMessagesCategoryToPHP()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#saveMessagesCategoryToPHP()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L303" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L303" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L377" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L377" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveMessagesCategoryToPHP()
         <span class="detail-header-tag small">
@@ -1172,8 +1223,8 @@ this file and then customize it for your needs.</p>
     <div class="detail-header h3" id="saveMessagesToDb()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#saveMessagesToDb()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L160" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L160" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L163" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L163" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveMessagesToDb()
         <span class="detail-header-tag small">
@@ -1226,8 +1277,8 @@ this file and then customize it for your needs.</p>
     <div class="detail-header h3" id="saveMessagesToPHP()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#saveMessagesToPHP()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L281" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L281" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L354" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L354" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveMessagesToPHP()
         <span class="detail-header-tag small">
@@ -1279,8 +1330,8 @@ this file and then customize it for your needs.</p>
     <div class="detail-header h3" id="saveMessagesToPO()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#saveMessagesToPO()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L393" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L393" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L467" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L467" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveMessagesToPO()
         <span class="detail-header-tag small">
@@ -1334,6 +1385,41 @@ this file and then customize it for your needs.</p>
                                                 </table>
 
 <!--	-->
+
+    <div class="detail-header h3" id="tokensEqual()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-console-controllers-messagecontroller.html#tokensEqual()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/MessageController.php#L318" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/MessageController.php#L318" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        tokensEqual()
+        <span class="detail-header-tag small">
+            protected            method
+                            (available since version 2.0.1)
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Finds out if two PHP tokens are equal</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-console-controllers-messagecontroller.html#tokensEqual()-detail">tokensEqual</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$a</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$b&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$a</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$b</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
 </div>
         </div>
 </div>
@@ -1373,7 +1459,7 @@ this file and then customize it for your needs.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:05:57 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:25 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

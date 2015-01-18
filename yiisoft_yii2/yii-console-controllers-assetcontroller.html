@@ -839,6 +839,11 @@ name is the option name.</td>
         <td>Renders a view and applies layout if available.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
             <tr class="inherited" id="renderFile()">
         <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
@@ -846,7 +851,7 @@ name is the option name.</td>
     </tr>
             <tr class="inherited" id="renderPartial()">
         <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
-        <td>Renders a view.</td>
+        <td>Renders a view without applying layout.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
             <tr class="inherited" id="run()">
@@ -977,7 +982,7 @@ a list of options to choose from and their explanations.</td>
         <td>Registers asset bundles including their dependencies.</td>
         <td><a href="yii-console-controllers-assetcontroller.html">yii\console\controllers\AssetController</a></td>
     </tr>
-                                <tr id="saveTargets()">
+                                    <tr id="saveTargets()">
         <td><a href="yii-console-controllers-assetcontroller.html#saveTargets()-detail">saveTargets()</a></td>
         <td>Saves new asset bundles configuration.</td>
         <td><a href="yii-console-controllers-assetcontroller.html">yii\console\controllers\AssetController</a></td>
@@ -1075,8 +1080,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="$bundles-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#$bundles-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L52" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L52" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $bundles        <span class="detailHeaderTag small">
             public                                    property
@@ -1092,8 +1097,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="$cssCompressor-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#$cssCompressor-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L88" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L88" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L89" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L89" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $cssCompressor        <span class="detailHeaderTag small">
             public                                    property
@@ -1113,8 +1118,8 @@ Otherwise, it is treated as PHP callback, which should perform the compression.<
     <div class="detail-header h3" id="$defaultAction-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#$defaultAction-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L48" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L48" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $defaultAction        <span class="detailHeaderTag small">
             public                                    property
@@ -1130,8 +1135,8 @@ Otherwise, it is treated as PHP callback, which should perform the compression.<
     <div class="detail-header h3" id="$jsCompressor-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#$jsCompressor-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L78" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L78" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L79" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L79" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $jsCompressor        <span class="detailHeaderTag small">
             public                                    property
@@ -1151,8 +1156,8 @@ Otherwise, it is treated as PHP callback, which should perform the compression.<
     <div class="detail-header h3" id="$targets-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#$targets-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L69" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L69" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $targets        <span class="detailHeaderTag small">
             public                                    property
@@ -1181,8 +1186,8 @@ For example:</p>
     <div class="detail-header h3" id="actionCompress()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#actionCompress()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L141" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L141" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L142" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L142" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionCompress()
         <span class="detail-header-tag small">
@@ -1219,8 +1224,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="actionTemplate()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#actionTemplate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L606" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L606" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L609" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L609" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionTemplate()
         <span class="detail-header-tag small">
@@ -1235,14 +1240,20 @@ You should replace your original asset bundle configuration with this file in or
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-console-controllers-assetcontroller.html#actionTemplate()-detail">actionTemplate</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$configFile&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a> <strong><a href="yii-console-controllers-assetcontroller.html#actionTemplate()-detail">actionTemplate</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$configFile&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$configFile</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"><p>Output file name.</p>
 </td>
                 </tr>
-                                                    <tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>CLI exit code</p>
+</td>
+                </tr>
+                                        <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-console-exception.html">yii\console\Exception</a></td>
                   <td class="param-desc-col"><p>on failure.</p>
@@ -1255,8 +1266,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="adjustCssUrl()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#adjustCssUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L532" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L532" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L534" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L534" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         adjustCssUrl()
         <span class="detail-header-tag small">
@@ -1303,8 +1314,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="adjustDependency()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#adjustDependency()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L325" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L325" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L326" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L326" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         adjustDependency()
         <span class="detail-header-tag small">
@@ -1345,8 +1356,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="buildTarget()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#buildTarget()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L293" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L293" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L294" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L294" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildTarget()
         <span class="detail-header-tag small">
@@ -1393,8 +1404,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="combineCssFiles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#combineCssFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L512" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L512" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L513" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L513" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         combineCssFiles()
         <span class="detail-header-tag small">
@@ -1435,8 +1446,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="combineJsFiles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#combineJsFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L493" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L493" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L494" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L494" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         combineJsFiles()
         <span class="detail-header-tag small">
@@ -1477,8 +1488,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="compressCssFiles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#compressCssFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L464" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L464" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L465" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L465" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         compressCssFiles()
         <span class="detail-header-tag small">
@@ -1519,8 +1530,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="compressJsFiles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#compressJsFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L435" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L435" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L436" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L436" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         compressJsFiles()
         <span class="detail-header-tag small">
@@ -1561,8 +1572,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="getAssetManager()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#getAssetManager()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L102" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L102" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L103" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L103" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getAssetManager()
         <span class="detail-header-tag small">
@@ -1597,8 +1608,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="loadBundles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#loadBundles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L185" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L185" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L186" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L186" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadBundles()
         <span class="detail-header-tag small">
@@ -1633,8 +1644,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="loadConfiguration()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#loadConfiguration()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L166" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L166" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L167" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L167" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadConfiguration()
         <span class="detail-header-tag small">
@@ -1669,8 +1680,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="loadDependency()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#loadDependency()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L207" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L207" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L208" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L208" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadDependency()
         <span class="detail-header-tag small">
@@ -1711,8 +1722,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="loadTargets()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#loadTargets()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L229" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L229" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L230" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L230" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadTargets()
         <span class="detail-header-tag small">
@@ -1759,8 +1770,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="registerBundle()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#registerBundle()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L370" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L370" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L371" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L371" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         registerBundle()
         <span class="detail-header-tag small">
@@ -1807,8 +1818,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="saveTargets()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#saveTargets()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L391" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L391" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L392" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L392" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveTargets()
         <span class="detail-header-tag small">
@@ -1849,8 +1860,8 @@ You should replace your original asset bundle configuration with this file in or
     <div class="detail-header h3" id="setAssetManager()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-assetcontroller.html#setAssetManager()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/AssetController.php#L127" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/AssetController.php#L127" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setAssetManager()
         <span class="detail-header-tag small">
@@ -1920,7 +1931,7 @@ You should replace your original asset bundle configuration with this file in or
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:05:57 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:24 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

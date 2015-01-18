@@ -411,6 +411,9 @@
 <p>flush all cache components that can be found in the system</p>
 <pre><code>yii cache/flush-all
 </code></pre>
+<p>Note that the command uses cache components defined in your console application configuration file. If components
+configured are different from web application, web application cache won't be cleared. In order to fix it please
+duplicate web application cache components in console config. You can use any component names.</p>
 
     </div>
 
@@ -584,6 +587,11 @@ in the request.</td>
             <tr id="actionFlushAll()">
         <td><a href="yii-console-controllers-cachecontroller.html#actionFlushAll()-detail">actionFlushAll()</a></td>
         <td>Flushes all caches registered in the system.</td>
+        <td><a href="yii-console-controllers-cachecontroller.html">yii\console\controllers\CacheController</a></td>
+    </tr>
+            <tr id="actionFlushSchema()">
+        <td><a href="yii-console-controllers-cachecontroller.html#actionFlushSchema()-detail">actionFlushSchema()</a></td>
+        <td>Clears DB schema cache for a given connection component.</td>
         <td><a href="yii-console-controllers-cachecontroller.html">yii\console\controllers\CacheController</a></td>
     </tr>
             <tr id="actionIndex()">
@@ -793,6 +801,11 @@ name is the option name.</td>
         <td>Renders a view and applies layout if available.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
             <tr class="inherited" id="renderFile()">
         <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
@@ -800,7 +813,7 @@ name is the option name.</td>
     </tr>
             <tr class="inherited" id="renderPartial()">
         <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
-        <td>Renders a view.</td>
+        <td>Renders a view without applying layout.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
             <tr class="inherited" id="run()">
@@ -856,7 +869,7 @@ a list of options to choose from and their explanations.</td>
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                                                <tr class="inherited" id="getActionMethodReflection()">
+                                                                                                                                    <tr class="inherited" id="getActionMethodReflection()">
         <td><a href="yii-console-controller.html#getActionMethodReflection()-detail">getActionMethodReflection()</a></td>
         <td></td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
@@ -876,7 +889,7 @@ a list of options to choose from and their explanations.</td>
         <td>Parses the comment block into tags.</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-                                                </table>
+                                                    </table>
 </div>
 
 <a name="events"></a>
@@ -952,8 +965,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="actionFlush()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-cachecontroller.html#actionFlush()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/CacheController.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/CacheController.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/CacheController.php#L65" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/CacheController.php#L65" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionFlush()
         <span class="detail-header-tag small">
@@ -980,8 +993,8 @@ yii cache/flush first second third
     <div class="detail-header h3" id="actionFlushAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-cachecontroller.html#actionFlushAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/CacheController.php#L102" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/CacheController.php#L102" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/CacheController.php#L106" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/CacheController.php#L106" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionFlushAll()
         <span class="detail-header-tag small">
@@ -1001,11 +1014,61 @@ yii cache/flush first second third
 
 <!--	-->
 
+    <div class="detail-header h3" id="actionFlushSchema()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-console-controllers-cachecontroller.html#actionFlushSchema()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/CacheController.php#L142" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/CacheController.php#L142" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        actionFlushSchema()
+        <span class="detail-header-tag small">
+            public            method
+                            (available since version 2.0.1)
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Clears DB schema cache for a given connection component.</strong></p>
+
+        <pre><code># clears cache schema specified by component id: "db"
+yii cache/flush-schema db
+</code></pre>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">int <strong><a href="yii-console-controllers-cachecontroller.html#actionFlushSchema()-detail">actionFlushSchema</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'db'&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Id connection component</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col">int</td>
+                  <td class="param-desc-col"><p>Exit code</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-console-exception.html">yii\console\Exception</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                        </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="actionIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-cachecontroller.html#actionIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/CacheController.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/CacheController.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/CacheController.php#L44" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/CacheController.php#L44" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionIndex()
         <span class="detail-header-tag small">
@@ -1063,7 +1126,7 @@ yii cache/flush first second third
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:05:57 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:24 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

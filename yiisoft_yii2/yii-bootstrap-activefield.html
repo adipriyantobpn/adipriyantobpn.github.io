@@ -178,13 +178,13 @@ and radioLists in the <a href="yii-widgets-activeform.html#$fieldConfig-detail">
     </tr>
             <tr id="$enableError">
         <td><a href="yii-bootstrap-activefield.html#$enableError-detail">$enableError</a></td>
-        <td>bool</td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
         <td>Whether to render the error.</td>
         <td><a href="yii-bootstrap-activefield.html">yii\bootstrap\ActiveField</a></td>
     </tr>
             <tr id="$enableLabel">
         <td><a href="yii-bootstrap-activefield.html#$enableLabel-detail">$enableLabel</a></td>
-        <td>bool</td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
         <td>Whether to render the label.</td>
         <td><a href="yii-bootstrap-activefield.html">yii\bootstrap\ActiveField</a></td>
     </tr>
@@ -226,7 +226,7 @@ and radioLists in the <a href="yii-widgets-activeform.html#$fieldConfig-detail">
     </tr>
             <tr id="$inline">
         <td><a href="yii-bootstrap-activefield.html#$inline-detail">$inline</a></td>
-        <td>bool</td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
         <td>Whether to render <a href="yii-bootstrap-activefield.html#checkboxList()-detail">checkboxList()</a> and <a href="yii-bootstrap-activefield.html#radioList()-detail">radioList()</a> inline.</td>
         <td><a href="yii-bootstrap-activefield.html">yii\bootstrap\ActiveField</a></td>
     </tr>
@@ -652,7 +652,7 @@ and <a href="yii-widgets-activefield.html#$validateOnType-detail">$validateOnTyp
                     </span>
     </div>
 
-    <div class="signature">bool <a href="yii-bootstrap-activefield.html#$enableError-detail">$enableError</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <a href="yii-bootstrap-activefield.html#$enableError-detail">$enableError</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
 
     <p>Whether to render the error. Default is <code>true</code> except for layout <code>inline</code>.</p>
 
@@ -669,7 +669,7 @@ and <a href="yii-widgets-activefield.html#$validateOnType-detail">$validateOnTyp
                     </span>
     </div>
 
-    <div class="signature">bool <a href="yii-bootstrap-activefield.html#$enableLabel-detail">$enableLabel</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <a href="yii-bootstrap-activefield.html#$enableLabel-detail">$enableLabel</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
 
     <p>Whether to render the label. Default is <code>true</code>.</p>
 
@@ -744,7 +744,7 @@ and <a href="yii-widgets-activefield.html#$validateOnType-detail">$validateOnTyp
                     </span>
     </div>
 
-    <div class="signature">bool <a href="yii-bootstrap-activefield.html#$inline-detail">$inline</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <a href="yii-bootstrap-activefield.html#$inline-detail">$inline</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
 
     <p>Whether to render <a href="yii-bootstrap-activefield.html#checkboxList()-detail">checkboxList()</a> and <a href="yii-bootstrap-activefield.html#radioList()-detail">radioList()</a> inline.</p>
 
@@ -909,8 +909,8 @@ and <a href="yii-widgets-activefield.html#$validateOnType-detail">$validateOnTyp
 it will take the default value '0'. This method will render a hidden input so that if the radio button
 is not checked and is submitted, the value of this attribute will still be submitted to the server
 via the hidden input.</li>
-<li>label: string, a label displayed next to the checkbox.  It will NOT be HTML-encoded. Therefore you can pass
-in HTML code such as an image tag. If this is is coming from end users, you should <a href="yii-helpers-basehtml.html#encode()-detail">yii\helpers\Html::encode()</a> it to prevent XSS attacks.
+<li>label: string, a label displayed next to the checkbox. It will NOT be HTML-encoded. Therefore you can pass
+in HTML code such as an image tag. If this is coming from end users, you should <a href="yii-helpers-basehtml.html#encode()-detail">encode</a> it to prevent XSS attacks.
 When this option is specified, the checkbox will be enclosed by a label tag.</li>
 <li>labelOptions: array, the HTML attributes for the label tag. This is only used when the "label" option is specified.</li>
 </ul>
@@ -1053,7 +1053,7 @@ value and the checked status of the checkbox input.</p>
         <tr><td colspan="3" class="signature">static <strong><a href="yii-bootstrap-activefield.html#inline()-detail">inline</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$value</span></td>
-                  <td class="param-type-col">bool</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
                   <td class="param-desc-col"><p>Whether to render a inline list</p>
 </td>
                 </tr>
@@ -1144,8 +1144,8 @@ using <a href="yii-helpers-basehtml.html#encode()-detail">yii\helpers\Html::enco
 it will take the default value '0'. This method will render a hidden input so that if the radio button
 is not checked and is submitted, the value of this attribute will still be submitted to the server
 via the hidden input.</li>
-<li>label: string, a label displayed next to the radio button.  It will NOT be HTML-encoded. Therefore you can pass
-in HTML code such as an image tag. If this is is coming from end users, you should <a href="yii-helpers-basehtml.html#encode()-detail">yii\helpers\Html::encode()</a> it to prevent XSS attacks.
+<li>label: string, a label displayed next to the radio button. It will NOT be HTML-encoded. Therefore you can pass
+in HTML code such as an image tag. If this is coming from end users, you should <a href="yii-helpers-basehtml.html#encode()-detail">encode</a> it to prevent XSS attacks.
 When this option is specified, the radio button will be enclosed by a label tag.</li>
 <li>labelOptions: array, the HTML attributes for the label tag. This is only used when the "label" option is specified.</li>
 </ul>
@@ -1348,7 +1348,7 @@ If a callable, it will be called to generate the content. The signature of the c
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:19 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:47 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

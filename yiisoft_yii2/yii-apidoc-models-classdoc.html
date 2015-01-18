@@ -374,12 +374,12 @@
     </tr>
             <tr class="inherited" id="extractFirstSentence()">
         <td><a href="yii-apidoc-models-basedoc.html#extractFirstSentence()-detail">extractFirstSentence()</a></td>
-        <td></td>
+        <td>Extracts first sentence out of text</td>
         <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
     </tr>
             <tr id="findSubject()">
         <td><a href="yii-apidoc-models-classdoc.html#findSubject()-detail">findSubject()</a></td>
-        <td></td>
+        <td>Finds subject (method or property) by name</td>
         <td><a href="yii-apidoc-models-classdoc.html">yii\apidoc\models\ClassDoc</a></td>
     </tr>
             <tr id="getNativeEvents()">
@@ -429,7 +429,7 @@
     </tr>
             <tr class="inherited" id="hasTag()">
         <td><a href="yii-apidoc-models-basedoc.html#hasTag()-detail">hasTag()</a></td>
-        <td></td>
+        <td>Checks if doc has tag of a given name</td>
         <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
     </tr>
             <tr class="inherited" id="init()">
@@ -439,7 +439,7 @@
     </tr>
             <tr class="inherited" id="removeTag()">
         <td><a href="yii-apidoc-models-basedoc.html#removeTag()-detail">removeTag()</a></td>
-        <td></td>
+        <td>Removes tag of a given name</td>
         <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
     </tr>
     </table>
@@ -604,8 +604,8 @@
     <div class="detail-header h3" id="__construct()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-models-classdoc.html#__construct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/models/ClassDoc.php#L80" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/models/ClassDoc.php#L80" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/models/ClassDoc.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/models/ClassDoc.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         __construct()
         <span class="detail-header-tag small">
@@ -623,7 +623,7 @@
         <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-models-classdoc.html#__construct()-detail">__construct</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$reflector&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$context&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$config&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$reflector</span></td>
-                  <td class="param-type-col">\phpDocumentor\Reflection\ClassReflector</td>
+                  <td class="param-type-col">\phpDocumentor\Reflection\InterfaceReflector</td>
                   <td class="param-desc-col"></td>
                 </tr>
                             <tr>
@@ -643,8 +643,8 @@
     <div class="detail-header h3" id="findSubject()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-models-classdoc.html#findSubject()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/models/ClassDoc.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/models/ClassDoc.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/models/ClassDoc.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/models/ClassDoc.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findSubject()
         <span class="detail-header-tag small">
@@ -653,13 +653,21 @@
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Finds subject (method or property) by name</strong></p>
 
-        
+        <p>If there is a property with the same as a method, the method will be returned if the name is not stated
+explicitly by prefixing with <code>$</code>.</p>
+<p>Example for method <code>attributes()</code> and property <code>$attributes</code> which both may exist:</p>
+<ul>
+<li><code>$subjectName = '$attributes'</code> finds a property or nothing.</li>
+<li><code>$subjectName = 'attributes()'</code> finds a method or nothing.</li>
+<li><code>$subjectName = 'attributes'</code> finds the method if it exists, if not it will find the property.</li>
+</ul>
+
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-models-classdoc.html#findSubject()-detail">findSubject</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$subjectName&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.null">null</a>|<a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>|<a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a> <strong><a href="yii-apidoc-models-classdoc.html#findSubject()-detail">findSubject</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$subjectName&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$subjectName</span></td>
                   <td class="param-type-col"></td>
@@ -672,8 +680,8 @@
     <div class="detail-header h3" id="getNativeEvents()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-models-classdoc.html#getNativeEvents()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/models/ClassDoc.php#L62" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/models/ClassDoc.php#L62" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/models/ClassDoc.php#L65" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/models/ClassDoc.php#L65" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getNativeEvents()
         <span class="detail-header-tag small">
@@ -731,7 +739,7 @@
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:16 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:44 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

@@ -114,7 +114,7 @@
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-            <tr class="inherited" id="$autoIdPrefix">
+        <tr class="inherited" id="$autoIdPrefix">
         <td><a href="yii-base-widget.html#$autoIdPrefix-detail">$autoIdPrefix</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
         <td>The prefix to the automatically generated widget IDs.</td>
@@ -187,30 +187,6 @@
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
     </table>
-</div>
-
-<div class="summary doc-property">
-<h2>Protected Properties</h2>
-
-<p><a href="#" class="toggle">Hide inherited properties</a></p>
-
-<table class="summary-table table table-striped table-bordered table-hover">
-<colgroup>
-    <col class="col-property" />
-    <col class="col-type" />
-    <col class="col-description" />
-    <col class="col-defined" />
-</colgroup>
-<tr>
-  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
-</tr>
-        <tr id="$_containerOptions">
-        <td><a href="yii-bootstrap-dropdown.html#$_containerOptions-detail">$_containerOptions</a></td>
-        <td><a href="http://www.php.net/language.types.array">array</a></td>
-        <td>The HTML attributes for the widget container tag.</td>
-        <td><a href="yii-bootstrap-dropdown.html">yii\bootstrap\Dropdown</a></td>
-    </tr>
-                                                    </table>
 </div>
 
 <a name="methods"></a>
@@ -447,28 +423,11 @@
 
 <div class="property-doc">
 
-    <div class="detail-header h3" id="$_containerOptions-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-bootstrap-dropdown.html#$_containerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        $_containerOptions        <span class="detailHeaderTag small">
-            protected                                    property
-                    </span>
-    </div>
-
-    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-bootstrap-dropdown.html#$_containerOptions-detail">$_containerOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
-
-    <p>The HTML attributes for the widget container tag.</p>
-
-    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
-
     <div class="detail-header h3" id="$encodeLabels-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-dropdown.html#$encodeLabels-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $encodeLabels        <span class="detailHeaderTag small">
             public                                    property
@@ -484,8 +443,8 @@
     <div class="detail-header h3" id="$items-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-dropdown.html#$items-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L37" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L37" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $items        <span class="detailHeaderTag small">
             public                                    property
@@ -498,7 +457,8 @@
 or an array representing a single menu with the following structure:</p>
 <ul>
 <li>label: string, required, the label of the item link</li>
-<li>url: string, optional, the url of the item link. Defaults to "#".</li>
+<li>url: string|array, optional, the url of the item link. This will be processed by <a href="yii-helpers-baseurl.html#to()-detail">yii\helpers\Url::to()</a>.
+If not set, the item will be treated as a menu header when the item has no sub-menu.</li>
 <li>visible: boolean, optional, whether this menu item is visible. Defaults to true.</li>
 <li>linkOptions: array, optional, the HTML attributes of the item link.</li>
 <li>options: array, optional, the HTML attributes of the item.</li>
@@ -516,8 +476,8 @@ Note that Bootstrap doesn't support dropdown submenu. You have to add your own C
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-dropdown.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L50" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L50" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -541,8 +501,8 @@ Note that Bootstrap doesn't support dropdown submenu. You have to add your own C
     <div class="detail-header h3" id="renderItems()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-dropdown.html#renderItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L75" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L75" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L72" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L72" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderItems()
         <span class="detail-header-tag small">
@@ -557,11 +517,17 @@ Note that Bootstrap doesn't support dropdown submenu. You have to add your own C
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-bootstrap-dropdown.html#renderItems()-detail">renderItems</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$items&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-bootstrap-dropdown.html#renderItems()-detail">renderItems</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$items</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$items</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
                   <td class="param-desc-col"><p>The menu items to be rendered</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The container HTML attributes</p>
 </td>
                 </tr>
                                         <tr>
@@ -583,8 +549,8 @@ Note that Bootstrap doesn't support dropdown submenu. You have to add your own C
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-dropdown.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L63" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L63" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Dropdown.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Dropdown.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -642,7 +608,7 @@ Note that Bootstrap doesn't support dropdown submenu. You have to add your own C
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:19 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:47 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

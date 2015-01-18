@@ -151,16 +151,10 @@
         <td>List of behaviors attached to this component</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr id="$controller">
-        <td><a href="yii-gii-generators-controller-generator.html#$controller-detail">$controller</a></td>
-        <td><a href="http://www.php.net/language.types.string">string</a></td>
-        <td>The controller ID</td>
-        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
-    </tr>
             <tr id="$controllerClass">
         <td><a href="yii-gii-generators-controller-generator.html#$controllerClass-detail">$controllerClass</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
-        <td>The controller class name without the namespace part.</td>
+        <td>The controller class name</td>
         <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
     </tr>
             <tr id="$controllerFile">
@@ -172,7 +166,13 @@
             <tr id="$controllerID">
         <td><a href="yii-gii-generators-controller-generator.html#$controllerID-detail">$controllerID</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
-        <td>The controller ID (without the module ID prefix)</td>
+        <td>The controller ID</td>
+        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
+    </tr>
+            <tr id="$controllerNamespace">
+        <td><a href="yii-gii-generators-controller-generator.html#$controllerNamespace-detail">$controllerNamespace</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The namespace of the controller class</td>
         <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
     </tr>
             <tr id="$description">
@@ -211,22 +211,10 @@
         <td>The message category used by <code>Yii::t()</code> when <code>$enableI18N</code> is <code>true</code>.</td>
         <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
     </tr>
-            <tr id="$module">
-        <td><a href="yii-gii-generators-controller-generator.html#$module-detail">$module</a></td>
-        <td><a href="yii-base-module.html">yii\base\Module</a></td>
-        <td>The module that the new controller belongs to</td>
-        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
-    </tr>
             <tr id="$name">
         <td><a href="yii-gii-generators-controller-generator.html#$name-detail">$name</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
         <td>Name of the code generator</td>
-        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
-    </tr>
-            <tr id="$ns">
-        <td><a href="yii-gii-generators-controller-generator.html#$ns-detail">$ns</a></td>
-        <td><a href="http://www.php.net/language.types.string">string</a></td>
-        <td>The namespace of the controller class</td>
         <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
     </tr>
             <tr class="inherited" id="$scenario">
@@ -264,6 +252,12 @@
         <td><a href="http://www.php.net/class.arrayobject">ArrayObject</a>|<a href="yii-validators-validator.html">yii\validators\Validator</a>[]</td>
         <td>All the validators declared in the model.</td>
         <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="$viewPath">
+        <td><a href="yii-gii-generators-controller-generator.html#$viewPath-detail">$viewPath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The controller's view path</td>
+        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
     </tr>
     </table>
 </div>
@@ -479,11 +473,6 @@
         <td>Returns all behaviors attached to this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr id="getControllerClass()">
-        <td><a href="yii-gii-generators-controller-generator.html#getControllerClass()-detail">getControllerClass()</a></td>
-        <td></td>
-        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
-    </tr>
             <tr id="getControllerFile()">
         <td><a href="yii-gii-generators-controller-generator.html#getControllerFile()-detail">getControllerFile()</a></td>
         <td></td>
@@ -491,6 +480,11 @@
     </tr>
             <tr id="getControllerID()">
         <td><a href="yii-gii-generators-controller-generator.html#getControllerID()-detail">getControllerID()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
+    </tr>
+            <tr id="getControllerNamespace()">
+        <td><a href="yii-gii-generators-controller-generator.html#getControllerNamespace()-detail">getControllerNamespace()</a></td>
         <td></td>
         <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
     </tr>
@@ -518,11 +512,6 @@
         <td><a href="yii-base-model.html#getIterator()-detail">getIterator()</a></td>
         <td>Returns an iterator for traversing the attributes in the model.</td>
         <td><a href="yii-base-model.html">yii\base\Model</a></td>
-    </tr>
-            <tr id="getModule()">
-        <td><a href="yii-gii-generators-controller-generator.html#getModule()-detail">getModule()</a></td>
-        <td></td>
-        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
     </tr>
             <tr id="getName()">
         <td><a href="yii-gii-generators-controller-generator.html#getName()-detail">getName()</a></td>
@@ -579,10 +568,10 @@
         <td>Returns the list of hint messages.</td>
         <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
     </tr>
-            <tr id="init()">
-        <td><a href="yii-gii-generators-controller-generator.html#init()-detail">init()</a></td>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-gii-generator.html#init()-detail">init()</a></td>
         <td>Initializes the object.</td>
-        <td><a href="yii-gii-generators-controller-generator.html">yii\gii\generators\controller\Generator</a></td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
     </tr>
             <tr class="inherited" id="isAttributeActive()">
         <td><a href="yii-base-model.html#isAttributeActive()-detail">isAttributeActive()</a></td>
@@ -766,7 +755,7 @@
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                                                                                                                                                                                                                                        <tr class="inherited" id="resolveFields()">
+                                                                                                                                                                                                                                                                                                                    <tr class="inherited" id="resolveFields()">
         <td><a href="yii-base-arrayabletrait.html#resolveFields()-detail">resolveFields()</a></td>
         <td>Determines which fields can be returned by <a href="yii-base-arrayabletrait.html#toArray()-detail">toArray()</a>.</td>
         <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
@@ -857,8 +846,8 @@
     <div class="detail-header h3" id="$actions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$actions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L44" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L44" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $actions        <span class="detailHeaderTag small">
             public                                    property
@@ -874,8 +863,8 @@
     <div class="detail-header h3" id="$baseClass-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$baseClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $baseClass        <span class="detailHeaderTag small">
             public                                    property
@@ -888,37 +877,20 @@
 
     
 
-    <div class="detail-header h3" id="$controller-detail">
+    <div class="detail-header h3" id="$controllerClass-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$controller-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L35" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L35" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$controllerClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L32" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L32" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
-        $controller        <span class="detailHeaderTag small">
+        $controllerClass        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-gii-generators-controller-generator.html#$controller-detail">$controller</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-gii-generators-controller-generator.html#$controllerClass-detail">$controllerClass</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
 
-    <p>The controller ID</p>
-
-    
-
-    <div class="detail-header h3" id="$controllerClass-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$controllerClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        $controllerClass        <span class="detailHeaderTag small">
-            public             <em>read-only</em>                         property
-                    </span>
-    </div>
-
-    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-gii-generators-controller-generator.html#getControllerClass()-detail">getControllerClass</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></div>
-
-    <p>The controller class name without the namespace part.</p>
+    <p>The controller class name</p>
 
     
 
@@ -952,7 +924,24 @@
 
     <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-gii-generators-controller-generator.html#getControllerID()-detail">getControllerID</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></div>
 
-    <p>The controller ID (without the module ID prefix)</p>
+    <p>The controller ID</p>
+
+    
+
+    <div class="detail-header h3" id="$controllerNamespace-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$controllerNamespace-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $controllerNamespace        <span class="detailHeaderTag small">
+            public             <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-gii-generators-controller-generator.html#getControllerNamespace()-detail">getControllerNamespace</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></div>
+
+    <p>The namespace of the controller class</p>
 
     
 
@@ -973,23 +962,6 @@
 
     
 
-    <div class="detail-header h3" id="$module-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$module-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        $module        <span class="detailHeaderTag small">
-            public             <em>read-only</em>                         property
-                    </span>
-    </div>
-
-    <div class="signature"><a href="yii-base-module.html">yii\base\Module</a> <strong><a href="yii-gii-generators-controller-generator.html#getModule()-detail">getModule</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></div>
-
-    <p>The module that the new controller belongs to</p>
-
-    
-
     <div class="detail-header h3" id="$name-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$name-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
@@ -1007,20 +979,20 @@
 
     
 
-    <div class="detail-header h3" id="$ns-detail">
+    <div class="detail-header h3" id="$viewPath-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$ns-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#$viewPath-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L36" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L36" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
-        $ns        <span class="detailHeaderTag small">
+        $viewPath        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-gii-generators-controller-generator.html#$ns-detail">$ns</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-gii-generators-controller-generator.html#$viewPath-detail">$viewPath</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
 
-    <p>The namespace of the controller class</p>
+    <p>The controller's view path</p>
 
     
 </div>
@@ -1031,8 +1003,8 @@
     <div class="detail-header h3" id="attributeLabels()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#attributeLabels()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L94" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L94" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L83" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L83" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         attributeLabels()
         <span class="detail-header-tag small">
@@ -1068,8 +1040,8 @@ merge the parent labels with child labels using functions such as <code>array_me
     <div class="detail-header h3" id="generate()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#generate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L165" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L165" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L154" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L154" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generate()
         <span class="detail-header-tag small">
@@ -1101,8 +1073,8 @@ on how to implement this method.</p>
     <div class="detail-header h3" id="getActionIDs()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getActionIDs()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L188" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L188" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L177" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L177" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getActionIDs()
         <span class="detail-header-tag small">
@@ -1128,41 +1100,11 @@ on how to implement this method.</p>
 
 <!--	-->
 
-    <div class="detail-header h3" id="getControllerClass()-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getControllerClass()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L199" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L199" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        getControllerClass()
-        <span class="detail-header-tag small">
-            public            method
-                    </span>
-    </div>
-
-    <div class="doc-description">
-        <p><strong></strong></p>
-
-        
-            </div>
-
-    <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-gii-generators-controller-generator.html#getControllerClass()-detail">getControllerClass</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
-                                                <tr>
-                  <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The controller class name without the namespace part.</p>
-</td>
-                </tr>
-                                    </table>
-
-<!--	-->
-
     <div class="detail-header h3" id="getControllerFile()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getControllerFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L234" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L234" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L188" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L188" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getControllerFile()
         <span class="detail-header-tag small">
@@ -1191,8 +1133,8 @@ on how to implement this method.</p>
     <div class="detail-header h3" id="getControllerID()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getControllerID()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L207" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L207" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L196" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L196" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getControllerID()
         <span class="detail-header-tag small">
@@ -1211,7 +1153,37 @@ on how to implement this method.</p>
                                                 <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The controller ID (without the module ID prefix)</p>
+                  <td class="param-desc-col"><p>The controller ID</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getControllerNamespace()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getControllerNamespace()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L218" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L218" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getControllerNamespace()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-gii-generators-controller-generator.html#getControllerNamespace()-detail">getControllerNamespace</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The namespace of the controller class</p>
 </td>
                 </tr>
                                     </table>
@@ -1221,8 +1193,8 @@ on how to implement this method.</p>
     <div class="detail-header h3" id="getDescription()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getDescription()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L70" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L70" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L58" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L58" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getDescription()
         <span class="detail-header-tag small">
@@ -1248,41 +1220,11 @@ on how to implement this method.</p>
 
 <!--	-->
 
-    <div class="detail-header h3" id="getModule()-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getModule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L219" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L219" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        getModule()
-        <span class="detail-header-tag small">
-            public            method
-                    </span>
-    </div>
-
-    <div class="doc-description">
-        <p><strong></strong></p>
-
-        
-            </div>
-
-    <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="yii-base-module.html">yii\base\Module</a> <strong><a href="yii-gii-generators-controller-generator.html#getModule()-detail">getModule</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
-                                                <tr>
-                  <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="yii-base-module.html">yii\base\Module</a></td>
-                  <td class="param-desc-col"><p>The module that the new controller belongs to</p>
-</td>
-                </tr>
-                                    </table>
-
-<!--	-->
-
     <div class="detail-header h3" id="getName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L62" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L62" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L50" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L50" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getName()
         <span class="detail-header-tag small">
@@ -1311,8 +1253,8 @@ on how to implement this method.</p>
     <div class="detail-header h3" id="getViewFile()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#getViewFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L245" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L245" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L206" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L206" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getViewFile()
         <span class="detail-header-tag small">
@@ -1347,8 +1289,8 @@ on how to implement this method.</p>
     <div class="detail-header h3" id="hints()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#hints()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L115" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L115" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         hints()
         <span class="detail-header-tag small">
@@ -1376,37 +1318,11 @@ Hint messages will be displayed to end users when they are filling the form for 
 
 <!--	-->
 
-    <div class="detail-header h3" id="init()-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        init()
-        <span class="detail-header-tag small">
-            public            method
-                    </span>
-    </div>
-
-    <div class="doc-description">
-        <p><strong>Initializes the object.</strong></p>
-
-        <p>This method is invoked at the end of the constructor after the object is initialized with the
-given configuration.</p>
-
-            </div>
-
-    <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-gii-generators-controller-generator.html#init()-detail">init</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
-            </table>
-
-<!--	-->
-
     <div class="detail-header h3" id="requiredTemplates()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#requiredTemplates()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L107" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L107" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L96" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L96" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         requiredTemplates()
         <span class="detail-header-tag small">
@@ -1438,8 +1354,8 @@ relative to <a href="yii-gii-generator.html#$templatePath-detail">$templatePath<
     <div class="detail-header h3" id="rules()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#rules()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L79" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L79" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         rules()
         <span class="detail-header-tag small">
@@ -1514,8 +1430,8 @@ merge the parent rules with child rules using functions such as <code>array_merg
     <div class="detail-header h3" id="stickyAttributes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#stickyAttributes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L118" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L118" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L107" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L107" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         stickyAttributes()
         <span class="detail-header-tag small">
@@ -1546,8 +1462,8 @@ when the generator is restarted.</p>
     <div class="detail-header h3" id="successMessage()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-gii-generators-controller-generator.html#successMessage()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L149" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L149" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/gii/generators/controller/Generator.php#L138" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/gii/generators/controller/Generator.php#L138" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         successMessage()
         <span class="detail-header-tag small">
@@ -1612,7 +1528,7 @@ when the generator is restarted.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:23 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:50 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

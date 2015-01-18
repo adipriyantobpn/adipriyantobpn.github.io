@@ -156,6 +156,12 @@
         <td>The apidoc controller instance.</td>
         <td><a href="yii-apidoc-renderers-baserenderer.html">yii\apidoc\renderers\BaseRenderer</a></td>
     </tr>
+            <tr class="inherited" id="$guidePrefix">
+        <td><a href="yii-apidoc-renderers-baserenderer.html#$guidePrefix-detail">$guidePrefix</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-renderers-baserenderer.html">yii\apidoc\renderers\BaseRenderer</a></td>
+    </tr>
             <tr class="inherited" id="$guideUrl">
         <td><a href="yii-apidoc-renderers-baserenderer.html#$guideUrl-detail">$guideUrl</a></td>
         <td></td>
@@ -309,7 +315,7 @@
     </tr>
             <tr id="generateApiUrl()">
         <td><a href="yii-apidoc-templates-online-apirenderer.html#generateApiUrl()-detail">generateApiUrl()</a></td>
-        <td></td>
+        <td>Generate an url to a type in apidocs</td>
         <td><a href="yii-apidoc-templates-online-apirenderer.html">yii\apidoc\templates\online\ApiRenderer</a></td>
     </tr>
                 <tr class="inherited" id="generateGuideUrl()">
@@ -431,7 +437,7 @@
 </tr>
                                                                                     <tr id="generateFileName()">
         <td><a href="yii-apidoc-templates-online-apirenderer.html#generateFileName()-detail">generateFileName()</a></td>
-        <td></td>
+        <td>Generates file name for API page for a given type</td>
         <td><a href="yii-apidoc-templates-online-apirenderer.html">yii\apidoc\templates\online\ApiRenderer</a></td>
     </tr>
                 <tr class="inherited" id="generateLink()">
@@ -441,7 +447,7 @@
     </tr>
                                                                                     <tr class="inherited" id="renderWithLayout()">
         <td><a href="yii-apidoc-templates-html-apirenderer.html#renderWithLayout()-detail">renderWithLayout()</a></td>
-        <td></td>
+        <td>Renders file applying layout</td>
         <td><a href="yii-apidoc-templates-html-apirenderer.html">yii\apidoc\templates\html\ApiRenderer</a></td>
     </tr>
         </table>
@@ -534,8 +540,8 @@
     <div class="detail-header h3" id="generateApiUrl()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-templates-online-apirenderer.html#generateApiUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/templates/online/ApiRenderer.php#L57" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/templates/online/ApiRenderer.php#L57" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/templates/online/ApiRenderer.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/templates/online/ApiRenderer.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generateApiUrl()
         <span class="detail-header-tag small">
@@ -544,13 +550,13 @@
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Generate an url to a type in apidocs</strong></p>
 
         
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-templates-online-apirenderer.html#generateApiUrl()-detail">generateApiUrl</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$typeName&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">mixed <strong><a href="yii-apidoc-templates-online-apirenderer.html#generateApiUrl()-detail">generateApiUrl</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$typeName&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$typeName</span></td>
                   <td class="param-type-col"></td>
@@ -563,8 +569,8 @@
     <div class="detail-header h3" id="generateFileName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-templates-online-apirenderer.html#generateFileName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/templates/online/ApiRenderer.php#L62" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/templates/online/ApiRenderer.php#L62" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/templates/online/ApiRenderer.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/templates/online/ApiRenderer.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generateFileName()
         <span class="detail-header-tag small">
@@ -573,16 +579,16 @@
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Generates file name for API page for a given type</strong></p>
 
         
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-templates-online-apirenderer.html#generateFileName()-detail">generateFileName</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$typeName&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-apidoc-templates-online-apirenderer.html#generateFileName()-detail">generateFileName</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$typeName&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$typeName</span></td>
-                  <td class="param-type-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"></td>
                 </tr>
                                                 </table>
@@ -662,7 +668,7 @@
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:17 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:45 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

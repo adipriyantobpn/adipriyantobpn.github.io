@@ -980,11 +980,11 @@ If this property is not set, this validator will be always applied on the client
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-validators-validator.html#addError()-detail">addError</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$object</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$message</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-validators-validator.html#addError()-detail">addError</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$message</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
                                     <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$object</span></td>
+                  <td class="param-name-col"><span style="color: #0000BB">$model</span></td>
                   <td class="param-type-col"><a href="yii-base-model.html">yii\base\Model</a></td>
-                  <td class="param-desc-col"><p>The data object being validated</p>
+                  <td class="param-desc-col"><p>The data model being validated</p>
 </td>
                 </tr>
                             <tr>
@@ -1037,11 +1037,11 @@ the validator can support client-side validation.</p>
         <p>See also <a href="yii-widgets-activeform.html#$enableClientValidation-detail">yii\widgets\ActiveForm::$enableClientValidation</a>.</p>    </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-validators-validator.html#clientValidateAttribute()-detail">clientValidateAttribute</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$object</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$view&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-validators-validator.html#clientValidateAttribute()-detail">clientValidateAttribute</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$view&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$object</span></td>
+                  <td class="param-name-col"><span style="color: #0000BB">$model</span></td>
                   <td class="param-type-col"><a href="yii-base-model.html">yii\base\Model</a></td>
-                  <td class="param-desc-col"><p>The data object being validated</p>
+                  <td class="param-desc-col"><p>The data model being validated</p>
 </td>
                 </tr>
                             <tr>
@@ -1087,7 +1087,7 @@ client-side validation.</p>
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="yii-validators-validator.html">yii\validators\Validator</a> <strong><a href="yii-validators-validator.html#createValidator()-detail">createValidator</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$type</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$object</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="yii-validators-validator.html">yii\validators\Validator</a> <strong><a href="yii-validators-validator.html#createValidator()-detail">createValidator</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$type</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$type</span></td>
                   <td class="param-type-col">mixed</td>
@@ -1096,9 +1096,9 @@ a method name of the model class, an anonymous function, or a validator class na
 </td>
                 </tr>
                             <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$object</span></td>
+                  <td class="param-name-col"><span style="color: #0000BB">$model</span></td>
                   <td class="param-type-col"><a href="yii-base-model.html">yii\base\Model</a></td>
-                  <td class="param-desc-col"><p>The data object to be validated.</p>
+                  <td class="param-desc-col"><p>The data model to be validated.</p>
 </td>
                 </tr>
                             <tr>
@@ -1292,11 +1292,11 @@ Note that this method is different from PHP empty(). It will return false when t
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-validators-validator.html#validateAttribute()-detail">validateAttribute</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$object</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-validators-validator.html#validateAttribute()-detail">validateAttribute</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$object</span></td>
+                  <td class="param-name-col"><span style="color: #0000BB">$model</span></td>
                   <td class="param-type-col"><a href="yii-base-model.html">yii\base\Model</a></td>
-                  <td class="param-desc-col"><p>The data object to be validated</p>
+                  <td class="param-desc-col"><p>The data model to be validated</p>
 </td>
                 </tr>
                             <tr>
@@ -1328,11 +1328,11 @@ Note that this method is different from PHP empty(). It will return false when t
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-validators-validator.html#validateAttributes()-detail">validateAttributes</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$object</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-validators-validator.html#validateAttributes()-detail">validateAttributes</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$object</span></td>
+                  <td class="param-name-col"><span style="color: #0000BB">$model</span></td>
                   <td class="param-type-col"><a href="yii-base-model.html">yii\base\Model</a></td>
-                  <td class="param-desc-col"><p>The data object being validated</p>
+                  <td class="param-desc-col"><p>The data model being validated</p>
 </td>
                 </tr>
                             <tr>
@@ -1430,7 +1430,7 @@ Null should be returned if the data is valid.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:10 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:38 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

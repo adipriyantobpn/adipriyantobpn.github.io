@@ -888,8 +888,8 @@ This option is recommended, but it requires PHP version &gt;= 5.5.0</li>
     <div class="detail-header h3" id="compareString()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-security.html#compareString()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L618" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L618" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L620" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L620" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         compareString()
         <span class="detail-header-tag small">
@@ -955,7 +955,7 @@ This option is recommended, but it requires PHP version &gt;= 5.5.0</li>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$passwordBased</span></td>
-                  <td class="param-type-col">bool</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
                   <td class="param-desc-col"><p>Set true to use password-based key derivation</p>
 </td>
                 </tr>
@@ -1099,7 +1099,7 @@ This option is recommended, but it requires PHP version &gt;= 5.5.0</li>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$passwordBased</span></td>
-                  <td class="param-type-col">bool</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
                   <td class="param-desc-col"><p>Set true to use password-based key derivation</p>
 </td>
                 </tr>
@@ -1207,7 +1207,7 @@ determined by <a href="yii-base-security.html#$derivationIterations-detail">$der
 The encrypted data includes a keyed message authentication code (MAC) so there is no need
 to hash input or output data.
 &gt; Note: Avoid encrypting with passwords wherever possible. Nothing can protect against
-poor-quality or compromosed passwords.</p>
+poor-quality or compromised passwords.</p>
 
         <p>See also:</p><ul><li><a href="yii-base-security.html#decryptByPassword()-detail">decryptByPassword()</a></li><li><a href="yii-base-security.html#encryptByKey()-detail">encryptByKey()</a></li></ul>    </div>
 
@@ -1238,8 +1238,8 @@ poor-quality or compromosed passwords.</p>
     <div class="detail-header h3" id="generatePasswordHash()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-security.html#generatePasswordHash()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L523" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L523" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L525" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L525" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generatePasswordHash()
         <span class="detail-header-tag small">
@@ -1297,13 +1297,14 @@ might increase in future versions of PHP (<a href="http://php.net/manual/en/func
                                         <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-exception.html">yii\base\Exception</a></td>
-                  <td class="param-desc-col"><p>on bad password parameter or cost parameter</p>
+                  <td class="param-desc-col"><p>on bad password parameter or cost parameter.</p>
 </td>
                 </tr>
                             <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-desc-col"><p>when an unsupported password hash strategy is configured.</p>
+</td>
                 </tr>
                         </table>
 
@@ -1312,8 +1313,8 @@ might increase in future versions of PHP (<a href="http://php.net/manual/en/func
     <div class="detail-header h3" id="generateRandomKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-security.html#generateRandomKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L461" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L461" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L462" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L462" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generateRandomKey()
         <span class="detail-header-tag small">
@@ -1344,6 +1345,12 @@ might increase in future versions of PHP (<a href="http://php.net/manual/en/func
                 </tr>
                                         <tr>
                   <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"><p>if mcrypt extension is not installed.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-exception.html">yii\base\Exception</a></td>
                   <td class="param-desc-col"><p>on failure.</p>
 </td>
@@ -1355,8 +1362,8 @@ might increase in future versions of PHP (<a href="http://php.net/manual/en/func
     <div class="detail-header h3" id="generateRandomString()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-security.html#generateRandomString()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L481" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L481" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L483" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L483" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generateRandomString()
         <span class="detail-header-tag small">
@@ -1387,8 +1394,14 @@ might increase in future versions of PHP (<a href="http://php.net/manual/en/func
                 </tr>
                                         <tr>
                   <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"><p>if mcrypt extension is not installed.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-exception.html">yii\base\Exception</a></td>
-                  <td class="param-desc-col"><p>Exception on failure.</p>
+                  <td class="param-desc-col"><p>on failure.</p>
 </td>
                 </tr>
                         </table>
@@ -1398,8 +1411,8 @@ might increase in future versions of PHP (<a href="http://php.net/manual/en/func
     <div class="detail-header h3" id="generateSalt()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-security.html#generateSalt()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L594" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L594" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L596" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L596" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generateSalt()
         <span class="detail-header-tag small">
@@ -1434,7 +1447,7 @@ from the alphabet "./0-9A-Za-z".</p>
                                         <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-invalidparamexception.html">yii\base\InvalidParamException</a></td>
-                  <td class="param-desc-col"><p>if the cost parameter is not between 4 and 31</p>
+                  <td class="param-desc-col"><p>if the cost parameter is out of the range of 4 to 31.</p>
 </td>
                 </tr>
                         </table>
@@ -1534,7 +1547,8 @@ hex digits will be generated.</p>
                                         <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-desc-col"><p>when HMAC generation fails.</p>
+</td>
                 </tr>
                         </table>
 
@@ -1590,7 +1604,7 @@ and context-specific information, e.g. a user ID or API version, see
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$length</span></td>
-                  <td class="param-type-col">int</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
                   <td class="param-desc-col"><p>Length of the output key in bytes. If 0, the output key is
 the length of the hash algorithm output.</p>
 </td>
@@ -1604,7 +1618,8 @@ the length of the hash algorithm output.</p>
                                         <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-invalidparamexception.html">yii\base\InvalidParamException</a></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-desc-col"><p>when HMAC generation fails.</p>
+</td>
                 </tr>
                         </table>
 
@@ -1652,14 +1667,14 @@ Recommend use one of the SHA-2 hash algorithms: sha224, sha256, sha384 or sha512
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$iterations</span></td>
-                  <td class="param-type-col">int</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
                   <td class="param-desc-col"><p>The number of iterations of the hash algorithm. Set as high as
 possible to hinder dictionary password attacks.</p>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$length</span></td>
-                  <td class="param-type-col">int</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
                   <td class="param-desc-col"><p>Length of the output key in bytes. If 0, the output key is
 the length of the hash algorithm output.</p>
 </td>
@@ -1673,7 +1688,8 @@ the length of the hash algorithm output.</p>
                                         <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-invalidparamexception.html">yii\base\InvalidParamException</a></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-desc-col"><p>when hash generation fails due to invalid params given.</p>
+</td>
                 </tr>
                         </table>
 
@@ -1768,7 +1784,8 @@ hex digits will be generated.</p>
                                         <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-desc-col"><p>when HMAC generation fails.</p>
+</td>
                 </tr>
                         </table>
 
@@ -1777,8 +1794,8 @@ hex digits will be generated.</p>
     <div class="detail-header h3" id="validatePassword()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-security.html#validatePassword()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L554" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L554" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Security.php#L556" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Security.php#L556" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         validatePassword()
         <span class="detail-header-tag small">
@@ -1821,7 +1838,7 @@ hex digits will be generated.</p>
                             <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
-                  <td class="param-desc-col"><p>on unsupported password hash strategy is configured.</p>
+                  <td class="param-desc-col"><p>when an unsupported password hash strategy is configured.</p>
 </td>
                 </tr>
                         </table>
@@ -1866,7 +1883,7 @@ hex digits will be generated.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:05:54 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:21 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

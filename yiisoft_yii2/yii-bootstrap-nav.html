@@ -383,7 +383,7 @@ matches the currently requested route.</td>
         <td>Renders a view.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
-            <tr class="inherited" id="renderFile()">
+                <tr class="inherited" id="renderFile()">
         <td><a href="yii-base-widget.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
@@ -455,7 +455,12 @@ matches the currently requested route.</td>
         <td>Registers a specific Bootstrap plugin and the related events</td>
         <td><a href="yii-bootstrap-widget.html">yii\bootstrap\Widget</a></td>
     </tr>
-                                        </table>
+                <tr id="renderDropdown()">
+        <td><a href="yii-bootstrap-nav.html#renderDropdown()-detail">renderDropdown()</a></td>
+        <td>Renders the given items as a dropdown.</td>
+        <td><a href="yii-bootstrap-nav.html">yii\bootstrap\Nav</a></td>
+    </tr>
+                                    </table>
 </div>
 
 <a name="events"></a>
@@ -614,8 +619,8 @@ If not set, it will use the route of the current request.</p>
     <div class="detail-header h3" id="isChildActive()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-nav.html#isChildActive()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Nav.php#L196" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Nav.php#L196" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Nav.php#L209" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Nav.php#L209" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         isChildActive()
         <span class="detail-header-tag small">
@@ -656,8 +661,8 @@ If not set, it will use the route of the current request.</p>
     <div class="detail-header h3" id="isItemActive()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-nav.html#isItemActive()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Nav.php#L219" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Nav.php#L219" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Nav.php#L232" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Nav.php#L232" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         isItemActive()
         <span class="detail-header-tag small">
@@ -688,6 +693,50 @@ be considered active.</p>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
                   <td class="param-desc-col"><p>Whether the menu item is active</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderDropdown()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-nav.html#renderDropdown()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Nav.php#L193" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Nav.php#L193" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderDropdown()
+        <span class="detail-header-tag small">
+            protected            method
+                            (available since version 2.0.1)
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Renders the given items as a dropdown.</strong></p>
+
+        <p>This method is called to create sub-menus.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-bootstrap-nav.html#renderDropdown()-detail">renderDropdown</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$items</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$parentItem&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$items</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The given items. Please refer to <a href="yii-bootstrap-dropdown.html#$items-detail">yii\bootstrap\Dropdown::$items</a> for the array structure.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$parentItem</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The parent item information. Please refer to <a href="yii-bootstrap-nav.html#$items-detail">$items</a> for the structure of this array.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendering result.</p>
 </td>
                 </tr>
                                     </table>
@@ -821,7 +870,7 @@ be considered active.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:20 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:47 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

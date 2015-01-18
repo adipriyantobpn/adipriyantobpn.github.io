@@ -398,8 +398,13 @@
     </table>
 
 <div id="classDescription">
-    <p><strong></strong></p>
-    
+    <p><strong>ContentDecorator records all output between <a href="yii-base-widget.html#begin()-detail">begin()</a> and <a href="yii-base-widget.html#end()-detail">end()</a> calls, passes it to the given view file
+as <code>$content</code> and then echoes rendering result.</strong></p>
+    <pre><code class="language-php"><span style="color: #0000BB">&lt;?php&nbsp;ContentDecorator</span><span style="color: #007700">::</span><span style="color: #0000BB">begin</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'viewFile'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'@app/views/layouts/base.php'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'params'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[],<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'view'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">,<br />])&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span><br />some&nbsp;content&nbsp;here<br /><br /><span style="color: #0000BB">&lt;?php&nbsp;ContentDecorator</span><span style="color: #007700">::</span><span style="color: #0000BB">end</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;</span></code></pre>
+<p>There are <a href="yii-base-view.html#beginContent()-detail">yii\base\View::beginContent()</a> and <a href="yii-base-view.html#endContent()-detail">yii\base\View::endContent()</a> wrapper methods in the
+<a href="yii-base-view.html">yii\base\View</a> component to make syntax more friendly. In the view these could be used as follows:</p>
+<pre><code class="language-php"><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">beginContent</span><span style="color: #007700">(</span><span style="color: #DD0000">'@app/views/layouts/base.php'</span><span style="color: #007700">)&nbsp;</span><span style="color: #0000BB">?&gt;<br /></span><br />some&nbsp;content&nbsp;here<br /><br /><span style="color: #0000BB">&lt;?php&nbsp;$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">endContent</span><span style="color: #007700">()&nbsp;</span><span style="color: #0000BB">?&gt;</span></code></pre>
+
     </div>
 
 <a name="properties"></a>
@@ -686,8 +691,8 @@
     <div class="detail-header h3" id="$params-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-contentdecorator.html#$params-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/ContentDecorator.php#L27" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/ContentDecorator.php#L27" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/ContentDecorator.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/ContentDecorator.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $params        <span class="detailHeaderTag small">
             public                                    property
@@ -703,8 +708,8 @@
     <div class="detail-header h3" id="$viewFile-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-contentdecorator.html#$viewFile-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/ContentDecorator.php#L23" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/ContentDecorator.php#L23" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/ContentDecorator.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/ContentDecorator.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $viewFile        <span class="detailHeaderTag small">
             public                                    property
@@ -725,8 +730,8 @@ This can be specified as either the view file path or path alias.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-contentdecorator.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/ContentDecorator.php#L33" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/ContentDecorator.php#L33" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/ContentDecorator.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/ContentDecorator.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -749,8 +754,8 @@ This can be specified as either the view file path or path alias.</p>
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-contentdecorator.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/ContentDecorator.php#L46" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/ContentDecorator.php#L46" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/ContentDecorator.php#L72" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/ContentDecorator.php#L72" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -809,7 +814,7 @@ This can be specified as either the view file path or path alias.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:14 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

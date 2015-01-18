@@ -398,8 +398,11 @@
 
 <div id="classDescription">
     <p><strong>DbTarget stores log messages in a database table.</strong></p>
-    <p>By default, DbTarget stores the log messages in a DB table named 'log'. This table
-must be pre-created. The table name can be changed by setting the <a href="yii-log-dbtarget.html#$logTable-detail">$logTable</a> property.</p>
+    <p>The database connection is specified by <a href="yii-log-dbtarget.html#$db-detail">$db</a>. Database schema could be initialized by applying migration:</p>
+<pre><code>yii migrate --migrationPath=@yii/log/migrations/
+</code></pre>
+<p>If you don't want to use migration and need SQL instead, files for all databases are in migrations directory.</p>
+<p>You may change the name of the table used to store the data by setting <a href="yii-log-dbtarget.html#$logTable-detail">$logTable</a>.</p>
 
     </div>
 
@@ -701,8 +704,8 @@ must be pre-created. The table name can be changed by setting the <a href="yii-l
     <div class="detail-header h3" id="$db-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-log-dbtarget.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L32" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L32" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $db        <span class="detailHeaderTag small">
             public                                    property
@@ -720,8 +723,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="$logTable-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-log-dbtarget.html#$logTable-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L58" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L58" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $logTable        <span class="detailHeaderTag small">
             public                                    property
@@ -730,25 +733,7 @@ with a DB connection object.</p>
 
     <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-log-dbtarget.html#$logTable-detail">$logTable</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'{{%log}}'</span></div>
 
-    <p>Name of the DB table to store cache content.
-The table should be pre-created as follows:</p>
-<pre><code>CREATE TABLE log (
-    id       BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    level    INTEGER,
-    category VARCHAR(255),
-    log_time INTEGER,
-    prefix   TEXT,
-    message  TEXT,
-    INDEX idx_log_level (level),
-    INDEX idx_log_category (category)
-)
-</code></pre>
-<p>Note that the 'id' column must be created as an auto-incremental column.
-The above SQL uses the MySQL syntax. If you are using other DBMS, you need
-to adjust it accordingly. For example, in PostgreSQL, it should be <code>id SERIAL PRIMARY KEY</code>.</p>
-<p>The indexes declared above are not required. They are mainly used to improve the performance
-of some queries about message levels and categories. Depending on your actual needs, you may
-want to create additional indexes (e.g. index on <code>log_time</code>).</p>
+    <p>Name of the DB table to store cache content. Defaults to "log".</p>
 
     
 </div>
@@ -759,8 +744,8 @@ want to create additional indexes (e.g. index on <code>log_time</code>).</p>
     <div class="detail-header h3" id="export()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-log-dbtarget.html#export()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L75" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L75" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         export()
         <span class="detail-header-tag small">
@@ -783,8 +768,8 @@ want to create additional indexes (e.g. index on <code>log_time</code>).</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-log-dbtarget.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L66" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L66" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -849,7 +834,7 @@ want to create additional indexes (e.g. index on <code>log_time</code>).</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:06 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:33 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

@@ -171,6 +171,12 @@ in the request.</td>
         <td>Files to exclude.</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
+            <tr id="$guidePrefix">
+        <td><a href="yii-apidoc-commands-guidecontroller.html#$guidePrefix-detail">$guidePrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Prefix to prepend to all output file names generated for the guide.</td>
+        <td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a></td>
+    </tr>
             <tr class="inherited" id="$help">
         <td><a href="yii-console-controller.html#$help-detail">$help</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
@@ -504,6 +510,11 @@ name is the option name.</td>
         <td>Renders a view and applies layout if available.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
             <tr class="inherited" id="renderFile()">
         <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
@@ -511,7 +522,7 @@ name is the option name.</td>
     </tr>
             <tr class="inherited" id="renderPartial()">
         <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
-        <td>Renders a view.</td>
+        <td>Renders a view without applying layout.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
             <tr class="inherited" id="run()">
@@ -569,7 +580,7 @@ a list of options to choose from and their explanations.</td>
 </tr>
                                                                                                         <tr id="findFiles()">
         <td><a href="yii-apidoc-commands-guidecontroller.html#findFiles()-detail">findFiles()</a></td>
-        <td></td>
+        <td>Finds files</td>
         <td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a></td>
     </tr>
                 <tr id="findRenderer()">
@@ -584,12 +595,12 @@ a list of options to choose from and their explanations.</td>
     </tr>
                                                                         <tr class="inherited" id="loadContext()">
         <td><a href="yii-apidoc-components-basecontroller.html#loadContext()-detail">loadContext()</a></td>
-        <td></td>
+        <td>Loads context from cache</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
             <tr class="inherited" id="normalizeTargetDir()">
         <td><a href="yii-apidoc-components-basecontroller.html#normalizeTargetDir()-detail">normalizeTargetDir()</a></td>
-        <td></td>
+        <td>Checks that target directory is valid. Asks questions in tricky cases.</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
                         <tr class="inherited" id="parseDocCommentDetail()">
@@ -607,14 +618,14 @@ a list of options to choose from and their explanations.</td>
         <td>Parses the comment block into tags.</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-                                    <tr class="inherited" id="searchFiles()">
+                                        <tr class="inherited" id="searchFiles()">
         <td><a href="yii-apidoc-components-basecontroller.html#searchFiles()-detail">searchFiles()</a></td>
-        <td></td>
+        <td>Finds files to process</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
                             <tr class="inherited" id="storeContext()">
         <td><a href="yii-apidoc-components-basecontroller.html#storeContext()-detail">storeContext()</a></td>
-        <td></td>
+        <td>Writes context into cache file</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
                 <tr class="inherited" id="updateContext()">
@@ -711,6 +722,23 @@ a list of options to choose from and their explanations.</td>
     <p>Path or URL to the api docs to allow links to classes and properties/methods.</p>
 
     
+
+    <div class="detail-header h3" id="$guidePrefix-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#$guidePrefix-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L33" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L33" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $guidePrefix        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-apidoc-commands-guidecontroller.html#$guidePrefix-detail">$guidePrefix</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'guide-'</span></div>
+
+    <p>Prefix to prepend to all output file names generated for the guide.</p>
+
+    
 </div>
 <h2>Method Details</h2>
 
@@ -719,8 +747,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="actionIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#actionIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L38" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L38" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L42" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L42" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionIndex()
         <span class="detail-header-tag small">
@@ -753,8 +781,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="findFiles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#findFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L79" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L79" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L99" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L99" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findFiles()
         <span class="detail-header-tag small">
@@ -763,13 +791,13 @@ a list of options to choose from and their explanations.</td>
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Finds files</strong></p>
 
         
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-commands-guidecontroller.html#findFiles()-detail">findFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$path</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$except&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a> <strong><a href="yii-apidoc-commands-guidecontroller.html#findFiles()-detail">findFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$path</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$except&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$path</span></td>
                   <td class="param-type-col"></td>
@@ -777,18 +805,25 @@ a list of options to choose from and their explanations.</td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$except</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>List of names to exclude from search.</p>
+</td>
                 </tr>
-                                                </table>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Files found.</p>
+</td>
+                </tr>
+                                    </table>
 
 <!--	-->
 
     <div class="detail-header h3" id="findRenderer()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#findRenderer()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L94" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L94" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L114" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L114" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findRenderer()
         <span class="detail-header-tag small">
@@ -816,8 +851,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="options()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#options()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L109" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L109" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/commands/GuideController.php#L129" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/commands/GuideController.php#L129" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         options()
         <span class="detail-header-tag small">
@@ -892,7 +927,7 @@ until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:15 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:44 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
