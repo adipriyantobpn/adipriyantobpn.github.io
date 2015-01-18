@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7308" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7308-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11070" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11070-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7308-collapse" class="collapse navbar-collapse"><ul id="w7309" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7310" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11070-collapse" class="collapse navbar-collapse"><ul id="w11071" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11072" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,7 +48,9 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7307" data-toggle="collapse" data-parent="#navigation">yii\twig <b class="caret"></b></a><div id="navigation-7307" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-twig-viewrenderer.html">ViewRenderer</a></div></div>    </div>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11069" data-toggle="collapse" data-parent="#navigation">yii\twig <b class="caret"></b></a><div id="navigation-11069" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-twig-twigsimplefileloader.html">TwigSimpleFileLoader</a>
+<a class="list-group-item active" href="./yii-twig-viewrenderer.html">ViewRenderer</a>
+<a class="list-group-item" href="./yii-twig-viewrendererstaticclassproxy.html">ViewRendererStaticClassProxy</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Class yii\twig\ViewRenderer</h1>
 <div id="nav">
@@ -60,8 +68,7 @@
 <a href="yii-base-viewrenderer.html">yii\base\ViewRenderer</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a></td></tr>
-                                <tr><th>Available since version</th><td>2.0</td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
           <td><a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php">https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php</a></td>
@@ -102,16 +109,46 @@
         <td>The directory or path alias pointing to where Twig cache will be stored.</td>
         <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
     </tr>
+            <tr id="$extensions">
+        <td><a href="yii-twig-viewrenderer.html#$extensions-detail">$extensions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Custom extensions.</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
+    </tr>
+            <tr id="$filters">
+        <td><a href="yii-twig-viewrenderer.html#$filters-detail">$filters</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Custom filters.</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
+    </tr>
+            <tr id="$functions">
+        <td><a href="yii-twig-viewrenderer.html#$functions-detail">$functions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Custom functions.</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
+    </tr>
+            <tr id="$globals">
+        <td><a href="yii-twig-viewrenderer.html#$globals-detail">$globals</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Objects or static classes.</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
+    </tr>
+            <tr id="$lexerOptions">
+        <td><a href="yii-twig-viewrenderer.html#$lexerOptions-detail">$lexerOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Twig lexer options.</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
+    </tr>
             <tr id="$options">
         <td><a href="yii-twig-viewrenderer.html#$options-detail">$options</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
-        <td>Twig options</td>
+        <td>Twig options.</td>
         <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
     </tr>
             <tr id="$twig">
         <td><a href="yii-twig-viewrenderer.html#$twig-detail">$twig</a></td>
         <td>\Twig_Environment</td>
-        <td></td>
+        <td>Twig environment object that do all rendering twig templates</td>
         <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
     </tr>
     </table>
@@ -167,6 +204,26 @@
         <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
         <td>Sets a component property to be null.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="addExtensions()">
+        <td><a href="yii-twig-viewrenderer.html#addExtensions()-detail">addExtensions()</a></td>
+        <td>Adds custom extensions</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
+    </tr>
+            <tr id="addFilters()">
+        <td><a href="yii-twig-viewrenderer.html#addFilters()-detail">addFilters()</a></td>
+        <td>Adds custom filters</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
+    </tr>
+            <tr id="addFunctions()">
+        <td><a href="yii-twig-viewrenderer.html#addFunctions()-detail">addFunctions()</a></td>
+        <td>Adds custom functions</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
+    </tr>
+            <tr id="addGlobals()">
+        <td><a href="yii-twig-viewrenderer.html#addGlobals()-detail">addGlobals()</a></td>
+        <td>Adds global objects or static classes</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
     </tr>
             <tr class="inherited" id="attachBehavior()">
         <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
@@ -258,10 +315,10 @@
         <td>Renders a view file.</td>
         <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-arrayable.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-arrayable.html">yii\base\Arrayable</a></td>
+            <tr id="setLexerOptions()">
+        <td><a href="yii-twig-viewrenderer.html#setLexerOptions()-detail">setLexerOptions()</a></td>
+        <td>Sets Twig lexer options to change templates syntax</td>
+        <td><a href="yii-twig-viewrenderer.html">yii\twig\ViewRenderer</a></td>
     </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
@@ -296,11 +353,115 @@
 
     
 
+    <div class="detail-header h3" id="$extensions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#$extensions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $extensions        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-twig-viewrenderer.html#$extensions-detail">$extensions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>Custom extensions.
+Example: <code>['Twig_Extension_Sandbox', 'Twig_Extension_Text']</code></p>
+
+    
+
+    <div class="detail-header h3" id="$filters-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#$filters-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L54" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L54" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $filters        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-twig-viewrenderer.html#$filters-detail">$filters</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>Custom filters.
+Keys of the array are names to call in template, values are names of functions or static methods of some class.
+Example: <code>['rot13' =&gt; 'str_rot13', 'jsonEncode' =&gt; '\yii\helpers\Json::encode']</code>.
+In the template you can use it like this: <code>{{ 'test'|rot13 }}</code> or <code>{{ model|jsonEncode }}</code>.</p>
+
+    
+
+    <div class="detail-header h3" id="$functions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#$functions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $functions        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-twig-viewrenderer.html#$functions-detail">$functions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>Custom functions.
+Keys of the array are names to call in template, values are names of functions or static methods of some class.
+Example: <code>['rot13' =&gt; 'str_rot13', 'a' =&gt; '\yii\helpers\Html::a']</code>.
+In the template you can use it like this: <code>{{ rot13('test') }}</code> or <code>{{ a('Login', 'site/login') | raw }}</code>.</p>
+
+    
+
+    <div class="detail-header h3" id="$globals-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#$globals-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $globals        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-twig-viewrenderer.html#$globals-detail">$globals</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>Objects or static classes.
+Keys of the array are names to call in template, values are objects or names of static classes.
+Example: <code>['html' =&gt; '\yii\helpers\Html']</code>.
+In the template you can use it like this: <code>{{ html.a('Login', 'site/login') | raw }}</code>.</p>
+
+    
+
+    <div class="detail-header h3" id="$lexerOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#$lexerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L72" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L72" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $lexerOptions        <span class="detailHeaderTag small">
+            public                         <em>write-only</em>             property
+                    </span>
+    </div>
+
+    <div class="signature">void <strong><a href="yii-twig-viewrenderer.html#setLexerOptions()-detail">setLexerOptions</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">)</span></div>
+
+    <p>Twig lexer options.
+Example: Smarty-like syntax:
+<code>`</code>php
+[</p>
+<pre><code>'tag_comment'  =&gt; ['{*', '*}'],
+'tag_block'    =&gt; ['{', '}'],
+'tag_variable' =&gt; ['{$', '}']
+</code></pre>
+<p>]
+<code>`</code></p>
+
+    <p>See also <a href="http://twig.sensiolabs.org/doc/recipes.html#customizing-the-syntax">http://twig.sensiolabs.org/doc/recipes.html#customizing-the-syntax</a>.</p>
+
     <div class="detail-header h3" id="$options-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-twig-viewrenderer.html#$options-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L34" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L34" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L33" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L33" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $options        <span class="detailHeaderTag small">
             public                                    property
@@ -309,15 +470,15 @@
 
     <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-twig-viewrenderer.html#$options-detail">$options</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
 
-    <p>Twig options</p>
+    <p>Twig options.</p>
 
     <p>See also <a href="http://twig.sensiolabs.org/doc/api.html#environment-options">http://twig.sensiolabs.org/doc/api.html#environment-options</a>.</p>
 
     <div class="detail-header h3" id="$twig-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-twig-viewrenderer.html#$twig-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $twig        <span class="detailHeaderTag small">
             public                                    property
@@ -326,18 +487,139 @@
 
     <div class="signature">\Twig_Environment <a href="yii-twig-viewrenderer.html#$twig-detail">$twig</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
 
-    
+    <p>Twig environment object that do all rendering twig templates</p>
+
     
 </div>
 <h2>Method Details</h2>
 
 <div class="method-doc">
 
+    <div class="detail-header h3" id="addExtensions()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#addExtensions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L184" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L184" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addExtensions()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Adds custom extensions</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-twig-viewrenderer.html#addExtensions()-detail">addExtensions</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$extensions&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$extensions</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>@see self::$extensions</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="addFilters()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#addFilters()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L175" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L175" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addFilters()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Adds custom filters</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-twig-viewrenderer.html#addFilters()-detail">addFilters</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$filters&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$filters</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>@see self::$filters</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="addFunctions()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#addFunctions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L166" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L166" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addFunctions()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Adds custom functions</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-twig-viewrenderer.html#addFunctions()-detail">addFunctions</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$functions&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$functions</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>@see self::$functions</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="addGlobals()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#addGlobals()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L152" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L152" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addGlobals()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Adds global objects or static classes</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-twig-viewrenderer.html#addGlobals()-detail">addGlobals</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$globals&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$globals</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>@see self::$globals</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-twig-viewrenderer.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L78" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L78" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -360,8 +642,8 @@
     <div class="detail-header h3" id="render()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-twig-viewrenderer.html#render()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L140" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L140" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         render()
         <span class="detail-header-tag small">
@@ -406,6 +688,36 @@ Child classes must implement this method to render the given view file.</p>
                                     </table>
 
 <!--	-->
+
+    <div class="detail-header h3" id="setLexerOptions()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-twig-viewrenderer.html#setLexerOptions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/twig/ViewRenderer.php#L195" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/twig/ViewRenderer.php#L195" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setLexerOptions()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Sets Twig lexer options to change templates syntax</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-twig-viewrenderer.html#setLexerOptions()-detail">setLexerOptions</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>@see self::$lexerOptions</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
 </div>
         </div>
 </div>
@@ -445,7 +757,7 @@ Child classes must implement this method to render the given view file.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:09 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:43 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

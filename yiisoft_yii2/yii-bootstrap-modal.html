@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w6831" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w6831-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10330" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10330-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w6831-collapse" class="collapse navbar-collapse"><ul id="w6832" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w6833" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10330-collapse" class="collapse navbar-collapse"><ul id="w10331" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10332" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,7 +48,9 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-6830" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-6830" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10329" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-10329" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-bootstrap-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrapasset.html">BootstrapAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrappluginasset.html">BootstrapPluginAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrapthemeasset.html">BootstrapThemeAsset</a>
@@ -64,7 +72,8 @@
     <a href="index.html">All Classes</a>
             | <a href="#properties">Properties</a>
                 | <a href="#methods">Methods</a>
-            </div>
+                    | <a href="#constants">Constants</a>
+    </div>
 
 <table class="summaryTable docClass table table-bordered">
     <colgroup>
@@ -76,7 +85,7 @@
 <a href="yii-base-widget.html">yii\base\Widget</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
                                 <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
@@ -90,7 +99,7 @@
 and <a href="yii-base-widget.html#end()-detail">end()</a> calls within the modal window:</p>
 <pre><code class="language-php"><span style="color: #0000BB">Modal</span><span style="color: #007700">::</span><span style="color: #0000BB">begin</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'header'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'&lt;h2&gt;Hello&nbsp;world&lt;/h2&gt;'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'toggleButton'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'click&nbsp;me'</span><span style="color: #007700">],<br />]);<br /><br />echo&nbsp;</span><span style="color: #DD0000">'Say&nbsp;hello...'</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">Modal</span><span style="color: #007700">::</span><span style="color: #0000BB">end</span><span style="color: #007700">();</span></code></pre>
 
-    <p>See also <a href="http://twitter.github.io/bootstrap/javascript.html#modals">http://twitter.github.io/bootstrap/javascript.html#modals</a>.</p></div>
+    <p>See also <a href="http://getbootstrap.com/javascript/#modals">http://getbootstrap.com/javascript/#modals</a>.</p></div>
 
 <a name="properties"></a>
 
@@ -109,7 +118,13 @@ and <a href="yii-base-widget.html#end()-detail">end()</a> calls within the modal
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-        <tr class="inherited" id="$behaviors">
+        <tr class="inherited" id="$autoIdPrefix">
+        <td><a href="yii-base-widget.html#$autoIdPrefix-detail">$autoIdPrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The prefix to the automatically generated widget IDs.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
         <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
         <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
         <td>List of behaviors attached to this component</td>
@@ -162,6 +177,12 @@ and <a href="yii-base-widget.html#end()-detail">end()</a> calls within the modal
         <td><a href="http://www.php.net/language.types.array">array</a></td>
         <td>The HTML attributes for the widget container tag.</td>
         <td><a href="yii-bootstrap-widget.html">yii\bootstrap\Widget</a></td>
+    </tr>
+            <tr id="$size">
+        <td><a href="yii-bootstrap-modal.html#$size-detail">$size</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The modal size.</td>
+        <td><a href="yii-bootstrap-modal.html">yii\bootstrap\Modal</a></td>
     </tr>
             <tr class="inherited" id="$stack">
         <td><a href="yii-base-widget.html#$stack-detail">$stack</a></td>
@@ -296,11 +317,6 @@ and <a href="yii-base-widget.html#end()-detail">end()</a> calls within the modal
         <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="findViewFile()">
-        <td><a href="yii-base-widget.html#findViewFile()-detail">findViewFile()</a></td>
-        <td>Finds the view file based on the given view name.</td>
-        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
-    </tr>
             <tr class="inherited" id="getBehavior()">
         <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
         <td>Returns the named behavior object.</td>
@@ -381,11 +397,6 @@ and <a href="yii-base-widget.html#end()-detail">end()</a> calls within the modal
         <td>Sets the view object to be used by this widget.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
@@ -413,7 +424,7 @@ and <a href="yii-base-widget.html#end()-detail">end()</a> calls within the modal
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                                        <tr id="initOptions()">
+                                                                                                                    <tr id="initOptions()">
         <td><a href="yii-bootstrap-modal.html#initOptions()-detail">initOptions()</a></td>
         <td>Initializes the widget options.</td>
         <td><a href="yii-bootstrap-modal.html">yii\bootstrap\Modal</a></td>
@@ -453,12 +464,50 @@ and <a href="yii-base-widget.html#end()-detail">end()</a> calls within the modal
         <td>Renders the toggle button.</td>
         <td><a href="yii-bootstrap-modal.html">yii\bootstrap\Modal</a></td>
     </tr>
-                            </table>
+                        </table>
 </div>
 
 <a name="events"></a>
 
 <a name="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="SIZE_DEFAULT">
+          <td>SIZE_DEFAULT<a name="SIZE_DEFAULT-detail"></a></td>
+          <td>""</td>
+          <td>
+</td>
+          <td><a href="yii-bootstrap-modal.html">yii\bootstrap\Modal</a></td>
+        </tr>
+            <tr id="SIZE_LARGE">
+          <td>SIZE_LARGE<a name="SIZE_LARGE-detail"></a></td>
+          <td>"modal-lg"</td>
+          <td>
+</td>
+          <td><a href="yii-bootstrap-modal.html">yii\bootstrap\Modal</a></td>
+        </tr>
+            <tr id="SIZE_SMALL">
+          <td>SIZE_SMALL<a name="SIZE_SMALL-detail"></a></td>
+          <td>"modal-sm"</td>
+          <td>
+</td>
+          <td><a href="yii-bootstrap-modal.html">yii\bootstrap\Modal</a></td>
+        </tr>
+        </table>
+</div>
 
 <h2>Property Details</h2>
 
@@ -467,8 +516,8 @@ and <a href="yii-base-widget.html#end()-detail">end()</a> calls within the modal
     <div class="detail-header h3" id="$closeButton-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#$closeButton-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $closeButton        <span class="detailHeaderTag small">
             public                                    property
@@ -486,7 +535,7 @@ on the button will hide the modal window. If this is null, no close button will 
 <li>label: string, the label of the button. Defaults to '&times;'.</li>
 </ul>
 <p>The rest of the options will be rendered as the HTML attributes of the button tag.
-Please refer to the <a href="http://twitter.github.com/bootstrap/javascript.html#modals">Modal plugin help</a>
+Please refer to the <a href="http://getbootstrap.com/javascript/#modals">Modal plugin help</a>
 for the supported HTML attributes.</p>
 
     
@@ -494,8 +543,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="$footer-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#$footer-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L45" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L45" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $footer        <span class="detailHeaderTag small">
             public                                    property
@@ -511,8 +560,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="$header-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#$header-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L45" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L45" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $header        <span class="detailHeaderTag small">
             public                                    property
@@ -525,11 +574,28 @@ for the supported HTML attributes.</p>
 
     
 
+    <div class="detail-header h3" id="$size-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-modal.html#$size-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $size        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-bootstrap-modal.html#$size-detail">$size</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+    <p>The modal size. Can be MODAL_LG or MODAL_SM, or empty for default.</p>
+
+    
+
     <div class="detail-header h3" id="$toggleButton-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#$toggleButton-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L75" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L75" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L83" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L83" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $toggleButton        <span class="detailHeaderTag small">
             public                                    property
@@ -547,7 +613,7 @@ If this property is null, no toggle button will be rendered.</p>
 <li>label: string, the label of the button. Defaults to 'Show'.</li>
 </ul>
 <p>The rest of the options will be rendered as the HTML attributes of the button tag.
-Please refer to the <a href="http://twitter.github.com/bootstrap/javascript.html#modals">Modal plugin help</a>
+Please refer to the <a href="http://getbootstrap.com/javascript/#modals">Modal plugin help</a>
 for the supported HTML attributes.</p>
 
     
@@ -559,8 +625,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L88" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L88" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -583,8 +649,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="initOptions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#initOptions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L197" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L197" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L206" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L206" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         initOptions()
         <span class="detail-header-tag small">
@@ -608,8 +674,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="renderBodyBegin()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#renderBodyBegin()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L130" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L130" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L137" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L137" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderBodyBegin()
         <span class="detail-header-tag small">
@@ -638,8 +704,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="renderBodyEnd()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#renderBodyEnd()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L139" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L139" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderBodyEnd()
         <span class="detail-header-tag small">
@@ -668,8 +734,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="renderCloseButton()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#renderCloseButton()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L179" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L179" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L187" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L187" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderCloseButton()
         <span class="detail-header-tag small">
@@ -698,8 +764,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="renderFooter()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#renderFooter()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L148" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L148" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L155" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L155" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderFooter()
         <span class="detail-header-tag small">
@@ -728,8 +794,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="renderHeader()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#renderHeader()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L113" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L113" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L120" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L120" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderHeader()
         <span class="detail-header-tag small">
@@ -758,8 +824,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="renderToggleButton()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#renderToggleButton()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L161" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L161" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L168" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L168" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderToggleButton()
         <span class="detail-header-tag small">
@@ -788,8 +854,8 @@ for the supported HTML attributes.</p>
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-modal.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L98" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L98" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Modal.php#L105" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Modal.php#L105" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -847,7 +913,7 @@ for the supported HTML attributes.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:03 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:34 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

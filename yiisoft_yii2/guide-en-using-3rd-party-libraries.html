@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/4b76110e/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/710de68d/style.css" rel="stylesheet">
+<script src="./assets/75e46bf0/jquery.js"></script>
+<script src="./assets/4b76110e/js/bootstrap.js"></script>
+<script src="./assets/a44c75fa/jssearch.js"></script>    <title>Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w96" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w96-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w96-collapse" class="collapse navbar-collapse"><ul id="w97" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Using 3rd-Party Libraries <a href="#using-3rd-party-libraries" name="using-3rd-party-libraries" class="hashlink">&para;</a></h1><p>Yii is carefully designed so that third-party libraries can be
+easily integrated to further extend Yii's functionalities.</p>
+<p>TODO: namespaces and composer explanations</p>
+<h2>Using Yii in 3rd-Party Systems <a href="#using-yii-in-3rd-party-systems" name="using-yii-in-3rd-party-systems" class="hashlink">&para;</a></h2><p>Yii can also be used as a self-contained library to support developing and enhancing
+existing 3rd-party systems, such as WordPress, Joomla, etc. To do so, include
+the following code in the bootstrap code of the 3rd-party system:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$yiiConfig&nbsp;</span><span style="color: #007700">=&nbsp;require(</span><span style="color: #0000BB">__DIR__&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/../config/yii/web.php'</span><span style="color: #007700">);<br />new&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">web</span><span style="color: #007700">\</span><span style="color: #0000BB">Application</span><span style="color: #007700">(</span><span style="color: #0000BB">$yiiConfig</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;No&nbsp;'run()'&nbsp;invocation!</span></code></pre>
+<p>The above code is very similar to the bootstrap code used by a typical Yii application
+except one thing: it does not call the <code>run()</code> method after creating the Web application
+instance.</p>
+<p>Now we can use most features offered by Yii when developing 3rd-party enhancements. For example,
+we can use <code>Yii::$app</code> to access the application instance; we can use the database features
+such as ActiveRecord; we can use the model and validation feature; and so on.</p>
+<h2>Using Yii2 with Yii1 <a href="#using-yii2-with-yii1" name="using-yii2-with-yii1" class="hashlink">&para;</a></h2><p>Yii2 can be used along with Yii1 at the same project.
+Since Yii2 uses namespaced class names they will not conflict with any class from Yii1.
+However there is single class, which name is used both in Yii1 and Yii2, it named 'Yii'.
+In order to use both Yii1 and Yii2 you need to resolve this collision.
+To do so you need to define your own 'Yii' class, which will combine content of 'Yii' from 1.x
+and 'Yii' from 2.x.</p>
+<p>When using composer you add the following to your composer.json in order to add both versions of yii to your project:</p>
+<pre><code class="language-json">"require": {
+    "yiisoft/yii": "*",
+    "yiisoft/yii2": "*",
+},
+</code></pre>
+<p>Start from defining your own descendant of <span class="broken-link">yii\BaseYii</span>:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'/path/to/yii2'</span><span style="color: #007700">;<br />require(</span><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/BaseYii.php'</span><span style="color: #007700">);<br /><br />class&nbsp;</span><span style="color: #0000BB">Yii&nbsp;</span><span style="color: #007700">extends&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">BaseYii<br /></span><span style="color: #007700">{<br />}<br /><br /></span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$classMap&nbsp;</span><span style="color: #007700">=&nbsp;include(</span><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/classes.php'</span><span style="color: #007700">);</span></code></pre>
+<p>Now we have a class, which suites Yii2, but causes fatal errors for Yii1.
+So, first of all, we need to include <code>YiiBase</code> of Yii1 source code to our 'Yii' class
+definition file:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'/path/to/yii2'</span><span style="color: #007700">;<br />require(</span><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/BaseYii.php'</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;Yii&nbsp;2.x<br /></span><span style="color: #0000BB">$yii1path&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'/path/to/yii1'</span><span style="color: #007700">;<br />require(</span><span style="color: #0000BB">$yii1path&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/YiiBase.php'</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;Yii&nbsp;1.x<br /><br /></span><span style="color: #007700">class&nbsp;</span><span style="color: #0000BB">Yii&nbsp;</span><span style="color: #007700">extends&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">BaseYii<br /></span><span style="color: #007700">{<br />}<br /><br /></span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$classMap&nbsp;</span><span style="color: #007700">=&nbsp;include(</span><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/classes.php'</span><span style="color: #007700">);</span></code></pre>
+<p>Using this, defines all necessary constants and autoloader of Yii1.
+Now we need to add all fields and methods from <code>YiiBase</code> of Yii1 to our 'Yii' class.
+Unfortunally, there is no way to do so but copy-paste:</p>
+<pre><code class="language-php"><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'/path/to/yii2'</span><span style="color: #007700">;<br />require(</span><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/BaseYii.php'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">$yii1path&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'/path/to/yii1'</span><span style="color: #007700">;<br />require(</span><span style="color: #0000BB">$yii1path&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/YiiBase.php'</span><span style="color: #007700">);<br /><br />class&nbsp;</span><span style="color: #0000BB">Yii&nbsp;</span><span style="color: #007700">extends&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">BaseYii<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;</span><span style="color: #0000BB">$classMap&nbsp;</span><span style="color: #007700">=&nbsp;[];<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;</span><span style="color: #0000BB">$enableIncludePath&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;</span><span style="color: #0000BB">$_aliases&nbsp;</span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'system'</span><span style="color: #007700">=&gt;</span><span style="color: #0000BB">YII_PATH</span><span style="color: #007700">,</span><span style="color: #DD0000">'zii'</span><span style="color: #007700">=&gt;</span><span style="color: #0000BB">YII_ZII_PATH</span><span style="color: #007700">];<br />&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;</span><span style="color: #0000BB">$_imports&nbsp;</span><span style="color: #007700">=&nbsp;[];<br />&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;</span><span style="color: #0000BB">$_includePaths</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;</span><span style="color: #0000BB">$_app</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;</span><span style="color: #0000BB">$_logger</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">getVersion</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #DD0000">'1.1.15-dev'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">createWebApplication</span><span style="color: #007700">(</span><span style="color: #0000BB">$config</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">createApplication</span><span style="color: #007700">(</span><span style="color: #DD0000">'CWebApplication'</span><span style="color: #007700">,</span><span style="color: #0000BB">$config</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">$_app</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Rest&nbsp;of&nbsp;\YiiBase&nbsp;internal&nbsp;code&nbsp;placed&nbsp;here<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">...<br />}<br /><br /></span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$classMap&nbsp;</span><span style="color: #007700">=&nbsp;include(</span><span style="color: #0000BB">$yii2path&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/classes.php'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">registerAutoloader</span><span style="color: #007700">([</span><span style="color: #DD0000">'Yii'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'autoload'</span><span style="color: #007700">]);&nbsp;</span><span style="color: #FF8000">//&nbsp;Register&nbsp;Yii2&nbsp;autoloader&nbsp;via&nbsp;Yii1</span></code></pre>
+<p>Note: while copying methods you should NOT copy method "autoload()"!
+Also you may avoid copying "log()", "trace()", "beginProfile()", "endProfile()"
+in case you want to use Yii2 logging instead of Yii1 one.</p>
+<p>Now we have 'Yii' class, which suites both Yii 1.x and Yii 2.x.
+So bootstrap code used by your application will looks like following:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">require(</span><span style="color: #0000BB">__DIR__&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/../components/my/Yii.php'</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;include&nbsp;created&nbsp;'Yii'&nbsp;class<br /><br /></span><span style="color: #0000BB">$yii2Config&nbsp;</span><span style="color: #007700">=&nbsp;require(</span><span style="color: #0000BB">__DIR__&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/../config/yii2/web.php'</span><span style="color: #007700">);<br />new&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">web</span><span style="color: #007700">\</span><span style="color: #0000BB">Application</span><span style="color: #007700">(</span><span style="color: #0000BB">$yii2Config</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;create&nbsp;Yii&nbsp;2.x&nbsp;application<br /><br /></span><span style="color: #0000BB">$yii1Config&nbsp;</span><span style="color: #007700">=&nbsp;require(</span><span style="color: #0000BB">__DIR__&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/../config/yii1/main.php'</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">createWebApplication</span><span style="color: #007700">(</span><span style="color: #0000BB">$yii1Config</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">run</span><span style="color: #007700">();&nbsp;</span><span style="color: #FF8000">//&nbsp;create&nbsp;Yii&nbsp;1.x&nbsp;application</span></code></pre>
+<p>Then in any part of your program <code>`</code>Yii::$app<code>refers to Yii 2.x application,
+while</code>Yii::app()<code>`</code> refers to Yii 1.x application:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">get_class</span><span style="color: #007700">(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">());&nbsp;</span><span style="color: #FF8000">//&nbsp;outputs&nbsp;'CWebApplication'<br /></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">get_class</span><span style="color: #007700">(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;outputs&nbsp;'yii\web\Application'</span></code></pre>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:03:05 +0700</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7260" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7260-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11022" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11022-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7260-collapse" class="collapse navbar-collapse"><ul id="w7261" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7262" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11022-collapse" class="collapse navbar-collapse"><ul id="w11023" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11024" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,9 +48,8 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7259" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-7259" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-sphinx-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11021" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11021" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-sphinx-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-sphinx-activerecord.html">ActiveRecord</a>
-<a class="list-group-item" href="./yii-sphinx-activerelation.html">ActiveRelation</a>
 <a class="list-group-item" href="./yii-sphinx-columnschema.html">ColumnSchema</a>
 <a class="list-group-item" href="./yii-sphinx-command.html">Command</a>
 <a class="list-group-item" href="./yii-sphinx-connection.html">Connection</a>
@@ -69,10 +74,9 @@
 <a href="yii-sphinx-query.html">yii\sphinx\Query</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-db-activequeryinterface.html">yii\db\ActiveQueryInterface</a>, <a href="yii-db-queryinterface.html">yii\db\QueryInterface</a></td></tr>
-                <tr><th>Uses Traits</th><td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a>, <a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td></tr>
-                <tr><th>Subclasses</th><td><a href="yii-sphinx-activerelation.html">yii\sphinx\ActiveRelation</a></td></tr>
-                        <tr><th>Available since version</th><td>2.0</td></tr>
+                <tr><th>Implements</th><td><a href="yii-db-activequeryinterface.html">yii\db\ActiveQueryInterface</a>, <a href="yii-db-queryinterface.html">yii\db\QueryInterface</a></td></tr>
+                <tr><th>Uses Traits</th><td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a>, <a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a>, <a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td></tr>
+                            <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
           <td><a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php">https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php</a></td>
@@ -81,8 +85,10 @@
 
 <div id="classDescription">
     <p><strong>ActiveQuery represents a Sphinx query associated with an Active Record class.</strong></p>
-    <p>ActiveQuery instances are usually created by <a href="yii-sphinx-activerecord.html#find()-detail">yii\sphinx\ActiveRecord::find()</a> and <a href="yii-sphinx-activerecord.html#findBySql()-detail">yii\sphinx\ActiveRecord::findBySql()</a>.</p>
-<p>Because ActiveQuery extends from <a href="yii-sphinx-query.html">yii\sphinx\Query</a>, one can use query methods, such as <a href="yii-db-querytrait.html#where()-detail">where()</a>,
+    <p>An ActiveQuery can be a normal query or be used in a relational context.</p>
+<p>ActiveQuery instances are usually created by <a href="yii-sphinx-activerecord.html#find()-detail">yii\sphinx\ActiveRecord::find()</a> and <a href="yii-sphinx-activerecord.html#findBySql()-detail">yii\sphinx\ActiveRecord::findBySql()</a>.
+Relational queries are created by <a href="yii-db-baseactiverecord.html#hasOne()-detail">yii\sphinx\ActiveRecord::hasOne()</a> and <a href="yii-db-baseactiverecord.html#hasMany()-detail">yii\sphinx\ActiveRecord::hasMany()</a>.</p>
+<h2>Normal Query <a href="#normal-query" name="normal-query" class="hashlink">&para;</a></h2><p>Because ActiveQuery extends from <a href="yii-sphinx-query.html">yii\sphinx\Query</a>, one can use query methods, such as <a href="yii-db-querytrait.html#where()-detail">where()</a>,
 <a href="yii-db-querytrait.html#orderBy()-detail">orderBy()</a> to customize the query options.</p>
 <p>ActiveQuery also provides the following additional query options:</p>
 <ul>
@@ -113,6 +119,15 @@ For example:</p>
 
 $articles = Article::find()-&gt;with('source')-&gt;snippetByModel()-&gt;all();
 </code></pre>
+<h2>Relational query <a href="#relational-query" name="relational-query" class="hashlink">&para;</a></h2><p>In relational context ActiveQuery represents a relation between two Active Record classes.</p>
+<p>Relational ActiveQuery instances are usually created by calling <a href="yii-db-baseactiverecord.html#hasOne()-detail">yii\sphinx\ActiveRecord::hasOne()</a> and
+<a href="yii-db-baseactiverecord.html#hasMany()-detail">yii\sphinx\ActiveRecord::hasMany()</a>. An Active Record class declares a relation by defining
+a getter method which calls one of the above methods and returns the created ActiveQuery object.</p>
+<p>A relation is specified by <a href="yii-db-activerelationtrait.html#$link-detail">$link</a> which represents the association between columns
+of different tables; and the multiplicity of the relation is indicated by <a href="yii-db-activerelationtrait.html#$multiple-detail">$multiple</a>.</p>
+<p>If a relation involves a pivot table, it may be specified by <a href="yii-db-activerelationtrait.html#via()-detail">via()</a>.
+This methods may only be called in a relational context. Same is true for <a href="yii-db-activerelationtrait.html#inverseOf()-detail">inverseOf()</a>, which
+marks a relation as inverse of another relation.</p>
 
     </div>
 
@@ -175,11 +190,23 @@ $articles = Article::find()-&gt;with('source')-&gt;snippetByModel()-&gt;all();
         <td>The name of the column by which the query results should be indexed by.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
+            <tr class="inherited" id="$inverseOf">
+        <td><a href="yii-db-activerelationtrait.html#$inverseOf-detail">$inverseOf</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The name of the relation that is the inverse of this relation.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
             <tr class="inherited" id="$limit">
         <td><a href="yii-db-querytrait.html#$limit-detail">$limit</a></td>
         <td><a href="http://www.php.net/language.types.integer">integer</a></td>
         <td>Maximum number of records to be returned.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+            <tr class="inherited" id="$link">
+        <td><a href="yii-db-activerelationtrait.html#$link-detail">$link</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The columns of the primary and foreign tables that establish a relation.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr class="inherited" id="$match">
         <td><a href="yii-sphinx-query.html#$match-detail">$match</a></td>
@@ -192,6 +219,12 @@ $articles = Article::find()-&gt;with('source')-&gt;snippetByModel()-&gt;all();
         <td><a href="http://www.php.net/language.types.string">string</a></td>
         <td>The name of the ActiveRecord class.</td>
         <td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a></td>
+    </tr>
+            <tr class="inherited" id="$multiple">
+        <td><a href="yii-db-activerelationtrait.html#$multiple-detail">$multiple</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether this query represents a relation to more than one record.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr class="inherited" id="$offset">
         <td><a href="yii-db-querytrait.html#$offset-detail">$offset</a></td>
@@ -218,6 +251,12 @@ They will compose OPTION clause.</td>
         <td>List of query parameter values indexed by parameter placeholders.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
+            <tr class="inherited" id="$primaryModel">
+        <td><a href="yii-db-activerelationtrait.html#$primaryModel-detail">$primaryModel</a></td>
+        <td><a href="yii-db-activerecord.html">yii\db\ActiveRecord</a></td>
+        <td>The primary model of a relational query.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
             <tr class="inherited" id="$select">
         <td><a href="yii-sphinx-query.html#$select-detail">$select</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
@@ -232,7 +271,7 @@ They will compose OPTION clause.</td>
     </tr>
             <tr class="inherited" id="$snippetCallback">
         <td><a href="yii-sphinx-query.html#$snippetCallback-detail">$snippetCallback</a></td>
-        <td>callback</td>
+        <td><a href="http://www.php.net/language.types.callable">callable</a></td>
         <td>PHP callback, which should be used to fetch source data for the snippets.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
@@ -247,6 +286,12 @@ They will compose OPTION clause.</td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
         <td>The SQL statement to be executed for retrieving AR records.</td>
         <td><a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a></td>
+    </tr>
+            <tr class="inherited" id="$via">
+        <td><a href="yii-db-activerelationtrait.html#$via-detail">$via</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The query associated with the pivot table.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr class="inherited" id="$where">
         <td><a href="yii-db-querytrait.html#$where-detail">$where</a></td>
@@ -286,19 +331,19 @@ They will compose OPTION clause.</td>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
         <tr class="inherited" id="__call()">
-        <td><a href="yii-db-activequerytrait.html#__call()-detail">__call()</a></td>
-        <td>PHP magic method.</td>
-        <td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a></td>
-    </tr>
-            <tr class="inherited" id="__clone()">
-        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
-        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="__construct()">
-        <td><a href="yii-base-object.html#__construct()-detail">__construct()</a></td>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-db-activerelationtrait.html#__clone()-detail">__clone()</a></td>
+        <td>Clones internal objects.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
+            <tr id="__construct()">
+        <td><a href="yii-sphinx-activequery.html#__construct()-detail">__construct()</a></td>
         <td>Constructor.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
+        <td><a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a></td>
     </tr>
             <tr class="inherited" id="__get()">
         <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
@@ -350,6 +395,11 @@ They will compose OPTION clause.</td>
         <td>Executes query and returns all results as an array.</td>
         <td><a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a></td>
     </tr>
+            <tr class="inherited" id="andFilterWhere()">
+        <td><a href="yii-db-querytrait.html#andFilterWhere()-detail">andFilterWhere()</a></td>
+        <td>Adds an additional WHERE condition to the existing one but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
             <tr class="inherited" id="andWhere()">
         <td><a href="yii-db-querytrait.html#andWhere()-detail">andWhere()</a></td>
         <td>Adds an additional WHERE condition to the existing one.</td>
@@ -380,7 +430,7 @@ They will compose OPTION clause.</td>
         <td>Returns a list of behaviors that this component should behave as.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-                <tr class="inherited" id="canGetProperty()">
+                    <tr class="inherited" id="canGetProperty()">
         <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
         <td>Returns a value indicating whether a property can be read.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
@@ -435,7 +485,17 @@ They will compose OPTION clause.</td>
         <td>Returns a value indicating whether the query result contains any row of data.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
-                    <tr class="inherited" id="findWith()">
+                        <tr class="inherited" id="filterWhere()">
+        <td><a href="yii-db-querytrait.html#filterWhere()-detail">filterWhere()</a></td>
+        <td>Sets the WHERE part of the query but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+            <tr class="inherited" id="findFor()">
+        <td><a href="yii-db-activerelationtrait.html#findFor()-detail">findFor()</a></td>
+        <td>Finds the related records for the specified primary record.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
+            <tr class="inherited" id="findWith()">
         <td><a href="yii-db-activequerytrait.html#findWith()-detail">findWith()</a></td>
         <td>Finds records corresponding to one or multiple relations and populates them into the primary models.</td>
         <td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a></td>
@@ -490,7 +550,12 @@ They will compose OPTION clause.</td>
         <td>Initializes the object.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
-            <tr class="inherited" id="limit()">
+            <tr class="inherited" id="inverseOf()">
+        <td><a href="yii-db-activerelationtrait.html#inverseOf()-detail">inverseOf()</a></td>
+        <td>Sets the name of the relation that is the inverse of this relation.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
+                <tr class="inherited" id="limit()">
         <td><a href="yii-db-querytrait.html#limit()-detail">limit()</a></td>
         <td>Sets the LIMIT part of the query.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
@@ -536,6 +601,11 @@ MATCH operator inside the WHERE clause.</td>
         <td>Sets the query options.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
+            <tr class="inherited" id="orFilterWhere()">
+        <td><a href="yii-db-querytrait.html#orFilterWhere()-detail">orFilterWhere()</a></td>
+        <td>Adds an additional WHERE condition to the existing one but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
             <tr class="inherited" id="orWhere()">
         <td><a href="yii-db-querytrait.html#orWhere()-detail">orWhere()</a></td>
         <td>Adds an additional WHERE condition to the existing one.</td>
@@ -550,6 +620,11 @@ MATCH operator inside the WHERE clause.</td>
         <td><a href="yii-sphinx-query.html#params()-detail">params()</a></td>
         <td>Sets the parameters to be bound to the query.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
+    </tr>
+            <tr class="inherited" id="populateRelation()">
+        <td><a href="yii-db-activerelationtrait.html#populateRelation()-detail">populateRelation()</a></td>
+        <td>Finds the related records and populates them into the primary models.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr class="inherited" id="scalar()">
         <td><a href="yii-sphinx-query.html#scalar()-detail">scalar()</a></td>
@@ -589,15 +664,15 @@ for the snippets building.</td>
         <td>Returns the sum of the specified column values.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="via()">
+        <td><a href="yii-db-activerelationtrait.html#via()-detail">via()</a></td>
+        <td>Specifies the relation associated with the pivot table.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr class="inherited" id="where()">
         <td><a href="yii-db-querytrait.html#where()-detail">where()</a></td>
@@ -631,9 +706,14 @@ for the snippets building.</td>
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                    <tr class="inherited" id="callSnippets()">
-        <td><a href="yii-sphinx-query.html#callSnippets()-detail">callSnippets()</a></td>
+                                                                                        <tr id="callSnippets()">
+        <td><a href="yii-sphinx-activequery.html#callSnippets()-detail">callSnippets()</a></td>
         <td>Builds a snippets from provided source data.</td>
+        <td><a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a></td>
+    </tr>
+            <tr class="inherited" id="callSnippetsInternal()">
+        <td><a href="yii-sphinx-query.html#callSnippetsInternal()-detail">callSnippetsInternal()</a></td>
+        <td>Builds a snippets from provided source data by the given index.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
                                     <tr id="defaultConnection()">
@@ -652,12 +732,22 @@ for the snippets building.</td>
 <a href="yii-sphinx-query.html#snippetCallback()-detail">snippetCallback()</a> result.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
-                                                                        <tr class="inherited" id="normalizeOrderBy()">
+            <tr class="inherited" id="filterCondition()">
+        <td><a href="yii-db-querytrait.html#filterCondition()-detail">filterCondition()</a></td>
+        <td>Removes <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a> from the given query condition.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+                                                                    <tr class="inherited" id="isEmpty()">
+        <td><a href="yii-db-querytrait.html#isEmpty()-detail">isEmpty()</a></td>
+        <td>Returns a value indicating whether the give value is "empty".</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+                            <tr class="inherited" id="normalizeOrderBy()">
         <td><a href="yii-db-querytrait.html#normalizeOrderBy()-detail">normalizeOrderBy()</a></td>
         <td></td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
-                                                                                    </table>
+                                                                                            </table>
 </div>
 
 <a name="events"></a>
@@ -671,8 +761,8 @@ for the snippets building.</td>
     <div class="detail-header h3" id="$sql-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activequery.html#$sql-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L92" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L92" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $sql        <span class="detailHeaderTag small">
             public                                    property
@@ -690,11 +780,47 @@ This is set by <a href="yii-sphinx-activerecord.html#findBySql()-detail">yii\sph
 
 <div class="method-doc">
 
+    <div class="detail-header h3" id="__construct()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-sphinx-activequery.html#__construct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L100" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L100" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        __construct()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Constructor.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-sphinx-activequery.html#__construct()-detail">__construct</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$modelClass</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$config&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$modelClass</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The model class associated with this query</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$config</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Configurations to be applied to the newly created query object</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="all()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activequery.html#all()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L103" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L103" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L140" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L140" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         all()
         <span class="detail-header-tag small">
@@ -713,8 +839,9 @@ This is set by <a href="yii-sphinx-activerecord.html#findBySql()-detail">yii\sph
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The DB connection used to create the DB command.
-If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$modelClass-detail">$modelClass</a> will be used.</p>
+                  <td class="param-desc-col"><p>The DB connection used to create the DB command.</p>
+<pre><code>                   If null, the DB connection returned by [[modelClass]] will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -727,11 +854,53 @@ If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$mo
 
 <!--	-->
 
+    <div class="detail-header h3" id="callSnippets()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-sphinx-activequery.html#callSnippets()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L274" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L274" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        callSnippets()
+        <span class="detail-header-tag small">
+            protected            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Builds a snippets from provided source data.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a> <strong><a href="yii-sphinx-activequery.html#callSnippets()-detail">callSnippets</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;array&nbsp;</span><span style="color: #0000BB">$source&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$source</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The source data to extract a snippet from.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Snippets list.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidcallexception.html">yii\base\InvalidCallException</a></td>
+                  <td class="param-desc-col"><p>in case <a href="yii-sphinx-query.html#match()-detail">match()</a> is not specified.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="createCommand()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activequery.html#createCommand()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L157" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L157" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L205" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L205" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createCommand()
         <span class="detail-header-tag small">
@@ -750,8 +919,9 @@ If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$mo
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The DB connection used to create the DB command.
-If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$modelClass-detail">$modelClass</a> will be used.</p>
+                  <td class="param-desc-col"><p>The DB connection used to create the DB command.</p>
+<pre><code>                   If null, the DB connection returned by [[modelClass]] will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -767,8 +937,8 @@ If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$mo
     <div class="detail-header h3" id="defaultConnection()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activequery.html#defaultConnection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L181" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L181" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L245" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L245" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         defaultConnection()
         <span class="detail-header-tag small">
@@ -797,8 +967,8 @@ If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$mo
     <div class="detail-header h3" id="fetchSnippetSourceFromModels()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activequery.html#fetchSnippetSourceFromModels()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L193" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L193" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L258" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L258" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         fetchSnippetSourceFromModels()
         <span class="detail-header-tag small">
@@ -839,8 +1009,8 @@ If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$mo
     <div class="detail-header h3" id="one()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activequery.html#one()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L127" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L127" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L170" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L170" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         one()
         <span class="detail-header-tag small">
@@ -859,16 +1029,18 @@ If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$mo
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The DB connection used to create the DB command.
-If null, the DB connection returned by <a href="yii-db-activequerytrait.html#$modelClass-detail">$modelClass</a> will be used.</p>
+                  <td class="param-desc-col"><p>The DB connection used to create the DB command.</p>
+<pre><code>                                If null, the DB connection returned by [[modelClass]] will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="yii-sphinx-activerecord.html">yii\sphinx\ActiveRecord</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></td>
-                  <td class="param-desc-col"><p>A single row of query result. Depending on the setting of <a href="yii-db-activequerytrait.html#asArray()-detail">asArray()</a>,
-the query result may be either an array or an ActiveRecord object. Null will be returned
-if the query results in nothing.</p>
+                  <td class="param-desc-col"><p>A single row of query result. Depending on the setting of <a href="yii-db-activequerytrait.html#asArray()-detail">asArray()</a>,</p>
+<pre><code>                               the query result may be either an array or an ActiveRecord object. Null will be returned
+                               if the query results in nothing.
+</code></pre>
 </td>
                 </tr>
                                     </table>
@@ -878,8 +1050,8 @@ if the query results in nothing.</p>
     <div class="detail-header h3" id="snippetByModel()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-activequery.html#snippetByModel()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/ActiveQuery.php#L127" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/ActiveQuery.php#L127" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         snippetByModel()
         <span class="detail-header-tag small">
@@ -957,7 +1129,7 @@ $articles = Article::find()-&gt;snippetByModel()-&gt;all();
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:08 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:41 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

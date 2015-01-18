@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7288" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7288-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11046" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11046-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7288-collapse" class="collapse navbar-collapse"><ul id="w7289" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7290" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11046-collapse" class="collapse navbar-collapse"><ul id="w11047" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11048" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,9 +48,8 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7287" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-7287" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11045" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11045" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-sphinx-activerecord.html">ActiveRecord</a>
-<a class="list-group-item" href="./yii-sphinx-activerelation.html">ActiveRelation</a>
 <a class="list-group-item" href="./yii-sphinx-columnschema.html">ColumnSchema</a>
 <a class="list-group-item" href="./yii-sphinx-command.html">Command</a>
 <a class="list-group-item" href="./yii-sphinx-connection.html">Connection</a>
@@ -68,9 +73,9 @@
             <tr><th>Inheritance</th><td><a href="yii-sphinx-query.html">yii\sphinx\Query</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-db-queryinterface.html">yii\db\QueryInterface</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-db-queryinterface.html">yii\db\QueryInterface</a></td></tr>
                 <tr><th>Uses Traits</th><td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td></tr>
-                <tr><th>Subclasses</th><td><a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a>, <a href="yii-sphinx-activerelation.html">yii\sphinx\ActiveRelation</a></td></tr>
+                <tr><th>Subclasses</th><td><a href="yii-sphinx-activequery.html">yii\sphinx\ActiveQuery</a></td></tr>
                         <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
@@ -204,7 +209,7 @@ They will compose OPTION clause.</td>
     </tr>
             <tr id="$snippetCallback">
         <td><a href="yii-sphinx-query.html#$snippetCallback-detail">$snippetCallback</a></td>
-        <td>callback</td>
+        <td><a href="http://www.php.net/language.types.callable">callable</a></td>
         <td>PHP callback, which should be used to fetch source data for the snippets.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
@@ -310,6 +315,11 @@ They will compose OPTION clause.</td>
         <td>Executes the query and returns all results as an array.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
+            <tr class="inherited" id="andFilterWhere()">
+        <td><a href="yii-db-querytrait.html#andFilterWhere()-detail">andFilterWhere()</a></td>
+        <td>Adds an additional WHERE condition to the existing one but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
             <tr id="andWhere()">
         <td><a href="yii-sphinx-query.html#andWhere()-detail">andWhere()</a></td>
         <td>Adds an additional WHERE condition to the existing one.</td>
@@ -335,7 +345,7 @@ They will compose OPTION clause.</td>
         <td>Returns a list of behaviors that this component should behave as.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-                <tr class="inherited" id="canGetProperty()">
+                    <tr class="inherited" id="canGetProperty()">
         <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
         <td>Returns a value indicating whether a property can be read.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
@@ -390,7 +400,12 @@ They will compose OPTION clause.</td>
         <td>Returns a value indicating whether the query result contains any row of data.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
-                <tr id="from()">
+                    <tr class="inherited" id="filterWhere()">
+        <td><a href="yii-db-querytrait.html#filterWhere()-detail">filterWhere()</a></td>
+        <td>Sets the WHERE part of the query but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+            <tr id="from()">
         <td><a href="yii-sphinx-query.html#from()-detail">from()</a></td>
         <td>Sets the FROM part of the query.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
@@ -440,7 +455,7 @@ They will compose OPTION clause.</td>
         <td>Initializes the object.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
-            <tr class="inherited" id="limit()">
+                <tr class="inherited" id="limit()">
         <td><a href="yii-db-querytrait.html#limit()-detail">limit()</a></td>
         <td>Sets the LIMIT part of the query.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
@@ -485,6 +500,11 @@ MATCH operator inside the WHERE clause.</td>
         <td><a href="yii-sphinx-query.html#options()-detail">options()</a></td>
         <td>Sets the query options.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
+    </tr>
+            <tr class="inherited" id="orFilterWhere()">
+        <td><a href="yii-db-querytrait.html#orFilterWhere()-detail">orFilterWhere()</a></td>
+        <td>Adds an additional WHERE condition to the existing one but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
             <tr id="orWhere()">
         <td><a href="yii-sphinx-query.html#orWhere()-detail">orWhere()</a></td>
@@ -532,11 +552,6 @@ for the snippets building.</td>
         <td>Returns the sum of the specified column values.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
@@ -569,9 +584,14 @@ for the snippets building.</td>
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                <tr id="callSnippets()">
+                                                                                    <tr id="callSnippets()">
         <td><a href="yii-sphinx-query.html#callSnippets()-detail">callSnippets()</a></td>
         <td>Builds a snippets from provided source data.</td>
+        <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
+    </tr>
+            <tr id="callSnippetsInternal()">
+        <td><a href="yii-sphinx-query.html#callSnippetsInternal()-detail">callSnippetsInternal()</a></td>
+        <td>Builds a snippets from provided source data by the given index.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
                                     <tr id="defaultConnection()">
@@ -585,7 +605,17 @@ for the snippets building.</td>
 <a href="yii-sphinx-query.html#snippetCallback()-detail">snippetCallback()</a> result.</td>
         <td><a href="yii-sphinx-query.html">yii\sphinx\Query</a></td>
     </tr>
-                                                                    <tr class="inherited" id="normalizeOrderBy()">
+            <tr class="inherited" id="filterCondition()">
+        <td><a href="yii-db-querytrait.html#filterCondition()-detail">filterCondition()</a></td>
+        <td>Removes <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a> from the given query condition.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+                                                        <tr class="inherited" id="isEmpty()">
+        <td><a href="yii-db-querytrait.html#isEmpty()-detail">isEmpty()</a></td>
+        <td>Returns a value indicating whether the give value is "empty".</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+                            <tr class="inherited" id="normalizeOrderBy()">
         <td><a href="yii-db-querytrait.html#normalizeOrderBy()-detail">normalizeOrderBy()</a></td>
         <td></td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
@@ -720,7 +750,7 @@ that lets you control a number of per-query options.</p>
                     </span>
     </div>
 
-    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-sphinx-query.html#$params-detail">$params</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-sphinx-query.html#$params-detail">$params</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
 
     <p>List of query parameter values indexed by parameter placeholders.
 For example, <code>[':name' =&gt; 'Dan', ':age' =&gt; 31]</code>.</p>
@@ -773,7 +803,7 @@ This is used to construct the SELECT clause in a SQL statement. If not set, if m
                     </span>
     </div>
 
-    <div class="signature">callback <a href="yii-sphinx-query.html#$snippetCallback-detail">$snippetCallback</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.callable">callable</a> <a href="yii-sphinx-query.html#$snippetCallback-detail">$snippetCallback</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
 
     <p>PHP callback, which should be used to fetch source data for the snippets.
 Such callback will receive array of query result rows as an argument and must return the
@@ -840,8 +870,8 @@ The possible value matches the <a href="yii-db-querytrait.html#orderBy()-detail"
     <div class="detail-header h3" id="addGroupBy()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#addGroupBy()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L524" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L524" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L542" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L542" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addGroupBy()
         <span class="detail-header-tag small">
@@ -860,10 +890,11 @@ The possible value matches the <a href="yii-db-querytrait.html#orderBy()-detail"
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Additional columns to be grouped by.
-Columns can be specified in either a string (e.g. "id, name") or an array (e.g. ['id', 'name']).
-The method will automatically quote the column names unless a column contains some parenthesis
-(which means the column contains a DB expression).</p>
+                  <td class="param-desc-col"><p>Additional columns to be grouped by.</p>
+<pre><code>                          Columns can be specified in either a string (e.g. "id, name") or an array (e.g. ['id', 'name']).
+                          The method will automatically quote the column names unless a column contains some parenthesis
+                          (which means the column contains a DB expression).
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -879,8 +910,8 @@ The method will automatically quote the column names unless a column contains so
     <div class="detail-header h3" id="addOptions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#addOptions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L593" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L593" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L615" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L615" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addOptions()
         <span class="detail-header-tag small">
@@ -915,8 +946,8 @@ The method will automatically quote the column names unless a column contains so
     <div class="detail-header h3" id="addParams()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#addParams()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L557" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L557" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L577" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L577" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addParams()
         <span class="detail-header-tag small">
@@ -935,8 +966,9 @@ The method will automatically quote the column names unless a column contains so
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>List of query parameter values indexed by parameter placeholders.
-For example, <code>[':name' =&gt; 'Dan', ':age' =&gt; 31]</code>.</p>
+                  <td class="param-desc-col"><p>List of query parameter values indexed by parameter placeholders.</p>
+<pre><code>                   For example, `[':name' =&gt; 'Dan', ':age' =&gt; 31]`.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -952,8 +984,8 @@ For example, <code>[':name' =&gt; 'Dan', ':age' =&gt; 31]</code>.</p>
     <div class="detail-header h3" id="addWithin()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#addWithin()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L629" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L629" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L653" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L653" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addWithin()
         <span class="detail-header-tag small">
@@ -972,11 +1004,12 @@ For example, <code>[':name' =&gt; 'Dan', ':age' =&gt; 31]</code>.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The columns (and the directions) to find best row within a group.
-Columns can be specified in either a string (e.g. "id ASC, name DESC") or an array
-(e.g. <code>['id' =&gt; Query::SORT_ASC, 'name' =&gt; Query::SORT_DESC]</code>).
-The method will automatically quote the column names unless a column contains some parenthesis
-(which means the column contains a DB expression).</p>
+                  <td class="param-desc-col"><p>The columns (and the directions) to find best row within a group.</p>
+<pre><code>                          Columns can be specified in either a string (e.g. "id ASC, name DESC") or an array
+                          (e.g. `['id' =&gt; Query::SORT_ASC, 'name' =&gt; Query::SORT_DESC]`).
+                          The method will automatically quote the column names unless a column contains some parenthesis
+                          (which means the column contains a DB expression).
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -992,8 +1025,8 @@ The method will automatically quote the column names unless a column contains so
     <div class="detail-header h3" id="all()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#all()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L179" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L179" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L182" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L182" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         all()
         <span class="detail-header-tag small">
@@ -1012,8 +1045,9 @@ The method will automatically quote the column names unless a column contains so
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                   If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1029,8 +1063,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="andWhere()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#andWhere()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L465" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L465" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L482" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L482" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         andWhere()
         <span class="detail-header-tag small">
@@ -1050,8 +1084,9 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The new WHERE condition. Please refer to <a href="yii-sphinx-query.html#where()-detail">where()</a>
-on how to specify this parameter.</p>
+                  <td class="param-desc-col"><p>The new WHERE condition. Please refer to <a href="yii-sphinx-query.html#where()-detail">where()</a></p>
+<pre><code>                            on how to specify this parameter.
+</code></pre>
 </td>
                 </tr>
                             <tr>
@@ -1073,8 +1108,8 @@ on how to specify this parameter.</p>
     <div class="detail-header h3" id="average()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#average()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L274" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L274" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L281" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L281" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         average()
         <span class="detail-header-tag small">
@@ -1093,15 +1128,17 @@ on how to specify this parameter.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The column name or expression.
-Make sure you properly quote column names in the expression.</p>
+                  <td class="param-desc-col"><p>The column name or expression.</p>
+<pre><code>                   Make sure you properly quote column names in the expression.
+</code></pre>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                   If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1117,8 +1154,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="callSnippets()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#callSnippets()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L692" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L692" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L720" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L720" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         callSnippets()
         <span class="detail-header-tag small">
@@ -1156,11 +1193,59 @@ If this parameter is not given, the <code>sphinx</code> application component wi
 
 <!--	-->
 
+    <div class="detail-header h3" id="callSnippetsInternal()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-sphinx-query.html#callSnippetsInternal()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L732" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L732" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        callSnippetsInternal()
+        <span class="detail-header-tag small">
+            protected            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Builds a snippets from provided source data by the given index.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a> <strong><a href="yii-sphinx-query.html#callSnippetsInternal()-detail">callSnippetsInternal</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;array&nbsp;</span><span style="color: #0000BB">$source</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$from&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$source</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The source data to extract a snippet from.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$from</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Name of the source index.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Snippets list.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidcallexception.html">yii\base\InvalidCallException</a></td>
+                  <td class="param-desc-col"><p>in case <a href="yii-sphinx-query.html#match()-detail">match()</a> is not specified.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="column()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#column()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L233" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L233" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L238" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L238" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         column()
         <span class="detail-header-tag small">
@@ -1179,8 +1264,9 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                   If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1196,8 +1282,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="count()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#count()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L246" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L246" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L251" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L251" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         count()
         <span class="detail-header-tag small">
@@ -1216,15 +1302,17 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The COUNT expression. Defaults to '*'.
-Make sure you properly quote column names in the expression.</p>
+                  <td class="param-desc-col"><p>The COUNT expression. Defaults to '*'.</p>
+<pre><code>                   Make sure you properly quote column names in the expression.
+</code></pre>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                   If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1240,8 +1328,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="createCommand()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#createCommand()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L165" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L165" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L167" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L167" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createCommand()
         <span class="detail-header-tag small">
@@ -1260,8 +1348,9 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$connection</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                           If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1277,8 +1366,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="defaultConnection()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#defaultConnection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L154" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L154" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L156" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L156" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         defaultConnection()
         <span class="detail-header-tag small">
@@ -1307,8 +1396,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="distinct()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#distinct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L344" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L344" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L356" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L356" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         distinct()
         <span class="detail-header-tag small">
@@ -1326,7 +1415,7 @@ If this parameter is not given, the <code>sphinx</code> application component wi
         <tr><td colspan="3" class="signature">static <strong><a href="yii-sphinx-query.html#distinct()-detail">distinct</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$value</span></td>
-                  <td class="param-type-col">bool</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
                   <td class="param-desc-col"><p>Whether to SELECT DISTINCT or not.</p>
 </td>
                 </tr>
@@ -1343,8 +1432,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="exists()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#exists()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L314" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L314" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L324" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L324" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         exists()
         <span class="detail-header-tag small">
@@ -1363,8 +1452,9 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                   If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1380,8 +1470,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="fillUpSnippets()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#fillUpSnippets()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L671" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L671" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L698" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L698" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         fillUpSnippets()
         <span class="detail-header-tag small">
@@ -1397,7 +1487,7 @@ If this parameter is not given, the <code>sphinx</code> application component wi
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a> <strong><a href="yii-sphinx-query.html#fillUpSnippets()-detail">fillUpSnippets</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$rows&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a>|<a href="yii-sphinx-activerecord.html">yii\sphinx\ActiveRecord</a>[] <strong><a href="yii-sphinx-query.html#fillUpSnippets()-detail">fillUpSnippets</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$rows&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$rows</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
@@ -1406,7 +1496,7 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="yii-sphinx-activerecord.html">yii\sphinx\ActiveRecord</a>[]</td>
                   <td class="param-desc-col"><p>Query result rows with filled up snippets.</p>
 </td>
                 </tr>
@@ -1417,8 +1507,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="from()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#from()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L358" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L358" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L371" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L371" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         from()
         <span class="detail-header-tag small">
@@ -1437,10 +1527,11 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$tables</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The table(s) to be selected from. This can be either a string (e.g. <code>'idx_user'</code>)
-or an array (e.g. <code>['idx_user', 'idx_user_delta']</code>) specifying one or several index names.
-The method will automatically quote the table names unless it contains some parenthesis
-(which means the table is given as a sub-query or Sphinx expression).</p>
+                  <td class="param-desc-col"><p>The table(s) to be selected from. This can be either a string (e.g. <code>'idx_user'</code>)</p>
+<pre><code>                         or an array (e.g. `['idx_user', 'idx_user_delta']`) specifying one or several index names.
+                         The method will automatically quote the table names unless it contains some parenthesis
+                         (which means the table is given as a sub-query or Sphinx expression).
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1456,8 +1547,8 @@ The method will automatically quote the table names unless it contains some pare
     <div class="detail-header h3" id="getConnection()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#getConnection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L143" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L143" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L144" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L144" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getConnection()
         <span class="detail-header-tag small">
@@ -1486,8 +1577,8 @@ The method will automatically quote the table names unless it contains some pare
     <div class="detail-header h3" id="groupBy()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#groupBy()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L506" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L506" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L523" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L523" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         groupBy()
         <span class="detail-header-tag small">
@@ -1506,10 +1597,11 @@ The method will automatically quote the table names unless it contains some pare
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The columns to be grouped by.
-Columns can be specified in either a string (e.g. "id, name") or an array (e.g. ['id', 'name']).
-The method will automatically quote the column names unless a column contains some parenthesis
-(which means the column contains a DB expression).</p>
+                  <td class="param-desc-col"><p>The columns to be grouped by.</p>
+<pre><code>                          Columns can be specified in either a string (e.g. "id, name") or an array (e.g. ['id', 'name']).
+                          The method will automatically quote the column names unless a column contains some parenthesis
+                          (which means the column contains a DB expression).
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1525,8 +1617,8 @@ The method will automatically quote the column names unless a column contains so
     <div class="detail-header h3" id="match()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#match()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L373" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L373" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L387" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L387" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         match()
         <span class="detail-header-tag small">
@@ -1562,8 +1654,8 @@ MATCH operator inside the WHERE clause.</strong></p>
     <div class="detail-header h3" id="max()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#max()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L302" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L302" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L311" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L311" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         max()
         <span class="detail-header-tag small">
@@ -1582,15 +1674,17 @@ MATCH operator inside the WHERE clause.</strong></p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The column name or expression.
-Make sure you properly quote column names in the expression.</p>
+                  <td class="param-desc-col"><p>The column name or expression.</p>
+<pre><code>                   Make sure you properly quote column names in the expression.
+</code></pre>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                   If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1606,8 +1700,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="min()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#min()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L288" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L288" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L296" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L296" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         min()
         <span class="detail-header-tag small">
@@ -1626,15 +1720,17 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The column name or expression.
-Make sure you properly quote column names in the expression.</p>
+                  <td class="param-desc-col"><p>The column name or expression.</p>
+<pre><code>                   Make sure you properly quote column names in the expression.
+</code></pre>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                   If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1650,8 +1746,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="one()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#one()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L205" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L205" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L209" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L209" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         one()
         <span class="detail-header-tag small">
@@ -1670,15 +1766,17 @@ If this parameter is not given, the <code>sphinx</code> application component wi
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                      If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>The first row (in terms of an array) of the query result. False is returned if the query
-results in nothing.</p>
+                  <td class="param-desc-col"><p>The first row (in terms of an array) of the query result. False is returned if the query</p>
+<pre><code>                     results in nothing.
+</code></pre>
 </td>
                 </tr>
                                     </table>
@@ -1688,8 +1786,8 @@ results in nothing.</p>
     <div class="detail-header h3" id="options()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#options()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L581" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L581" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L602" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L602" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         options()
         <span class="detail-header-tag small">
@@ -1724,8 +1822,8 @@ results in nothing.</p>
     <div class="detail-header h3" id="orWhere()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#orWhere()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L486" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L486" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L503" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L503" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         orWhere()
         <span class="detail-header-tag small">
@@ -1745,8 +1843,9 @@ results in nothing.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The new WHERE condition. Please refer to <a href="yii-sphinx-query.html#where()-detail">where()</a>
-on how to specify this parameter.</p>
+                  <td class="param-desc-col"><p>The new WHERE condition. Please refer to <a href="yii-sphinx-query.html#where()-detail">where()</a></p>
+<pre><code>                            on how to specify this parameter.
+</code></pre>
 </td>
                 </tr>
                             <tr>
@@ -1768,8 +1867,8 @@ on how to specify this parameter.</p>
     <div class="detail-header h3" id="params()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#params()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L544" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L544" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L563" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L563" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         params()
         <span class="detail-header-tag small">
@@ -1788,8 +1887,9 @@ on how to specify this parameter.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>List of query parameter values indexed by parameter placeholders.
-For example, <code>[':name' =&gt; 'Dan', ':age' =&gt; 31]</code>.</p>
+                  <td class="param-desc-col"><p>List of query parameter values indexed by parameter placeholders.</p>
+<pre><code>                   For example, `[':name' =&gt; 'Dan', ':age' =&gt; 31]`.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -1805,8 +1905,8 @@ For example, <code>[':name' =&gt; 'Dan', ':age' =&gt; 31]</code>.</p>
     <div class="detail-header h3" id="scalar()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#scalar()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L222" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L222" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L227" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L227" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         scalar()
         <span class="detail-header-tag small">
@@ -1826,15 +1926,17 @@ For example, <code>[':name' =&gt; 'Dan', ':age' =&gt; 31]</code>.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                       If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>The value of the first column in the first row of the query result.
-False is returned if the query result is empty.</p>
+                  <td class="param-desc-col"><p>The value of the first column in the first row of the query result.</p>
+<pre><code>                      False is returned if the query result is empty.
+</code></pre>
 </td>
                 </tr>
                                     </table>
@@ -1844,8 +1946,8 @@ False is returned if the query result is empty.</p>
     <div class="detail-header h3" id="select()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#select()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L329" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L329" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L340" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L340" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         select()
         <span class="detail-header-tag small">
@@ -1864,10 +1966,11 @@ False is returned if the query result is empty.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The columns to be selected.
-Columns can be specified in either a string (e.g. "id, name") or an array (e.g. ['id', 'name']).
-The method will automatically quote the column names unless a column contains some parenthesis
-(which means the column contains a Sphinx expression).</p>
+                  <td class="param-desc-col"><p>The columns to be selected.</p>
+<pre><code>                          Columns can be specified in either a string (e.g. "id, name") or an array (e.g. ['id', 'name']).
+                          The method will automatically quote the column names unless a column contains some parenthesis
+                          (which means the column contains a Sphinx expression).
+</code></pre>
 </td>
                 </tr>
                             <tr>
@@ -1925,8 +2028,8 @@ The method will automatically quote the column names unless a column contains so
     <div class="detail-header h3" id="snippetCallback()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#snippetCallback()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L647" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L647" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L672" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L672" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         snippetCallback()
         <span class="detail-header-tag small">
@@ -1945,7 +2048,7 @@ for the snippets building.</strong></p>
         <tr><td colspan="3" class="signature">static <strong><a href="yii-sphinx-query.html#snippetCallback()-detail">snippetCallback</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$callback&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$callback</span></td>
-                  <td class="param-type-col">callback</td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.callable">callable</a></td>
                   <td class="param-desc-col"><p>PHP callback, which should be used to fetch source data for the snippets.</p>
 </td>
                 </tr>
@@ -1962,8 +2065,8 @@ for the snippets building.</strong></p>
     <div class="detail-header h3" id="snippetOptions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#snippetOptions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L659" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L659" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L685" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L685" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         snippetOptions()
         <span class="detail-header-tag small">
@@ -1998,8 +2101,8 @@ for the snippets building.</strong></p>
     <div class="detail-header h3" id="sum()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#sum()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L260" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L260" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L266" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L266" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         sum()
         <span class="detail-header-tag small">
@@ -2018,15 +2121,17 @@ for the snippets building.</strong></p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$q</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The column name or expression.
-Make sure you properly quote column names in the expression.</p>
+                  <td class="param-desc-col"><p>The column name or expression.</p>
+<pre><code>                   Make sure you properly quote column names in the expression.
+</code></pre>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-sphinx-connection.html">yii\sphinx\Connection</a></td>
-                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.
-If this parameter is not given, the <code>sphinx</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The Sphinx connection used to generate the SQL statement.</p>
+<pre><code>                   If this parameter is not given, the `sphinx` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -2042,8 +2147,8 @@ If this parameter is not given, the <code>sphinx</code> application component wi
     <div class="detail-header h3" id="where()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#where()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L448" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L448" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L465" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L465" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         where()
         <span class="detail-header-tag small">
@@ -2102,7 +2207,9 @@ For example, <code>['like', 'name', '%tester%']</code> will generate <code>name 
 When the value range is given as an array, multiple <code>LIKE</code> predicates will be generated and concatenated
 using <code>AND</code>. For example, <code>['like', 'name', ['%test%', '%sample%']]</code> will generate
 <code>name LIKE '%test%' AND name LIKE '%sample%'</code>.
-The method will properly quote the column name and escape values in the range.</p>
+The method will properly quote the column name and escape values in the range.
+Sometimes, you may want to add the percentage characters to the matching value by yourself, you may supply
+a third operand <code>false</code> to do so. For example, <code>['like', 'name', '%tester', false]</code> will generate <code>name LIKE '%tester'</code>.</p>
 </li>
 <li><p><code>or like</code>: similar to the <code>like</code> operator except that <code>OR</code> is used to concatenate the <code>LIKE</code>
 predicates when operand 2 is an array.</p>
@@ -2144,8 +2251,8 @@ the <code>NOT LIKE</code> predicates.</p>
     <div class="detail-header h3" id="within()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-query.html#within()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L613" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L613" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Query.php#L636" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Query.php#L636" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         within()
         <span class="detail-header-tag small">
@@ -2164,11 +2271,12 @@ the <code>NOT LIKE</code> predicates.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The columns (and the directions) to find best row within a group.
-Columns can be specified in either a string (e.g. "id ASC, name DESC") or an array
-(e.g. <code>['id' =&gt; Query::SORT_ASC, 'name' =&gt; Query::SORT_DESC]</code>).
-The method will automatically quote the column names unless a column contains some parenthesis
-(which means the column contains a DB expression).</p>
+                  <td class="param-desc-col"><p>The columns (and the directions) to find best row within a group.</p>
+<pre><code>                          Columns can be specified in either a string (e.g. "id ASC, name DESC") or an array
+                          (e.g. `['id' =&gt; Query::SORT_ASC, 'name' =&gt; Query::SORT_DESC]`).
+                          The method will automatically quote the column names unless a column contains some parenthesis
+                          (which means the column contains a DB expression).
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -2219,7 +2327,7 @@ The method will automatically quote the column names unless a column contains so
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:09 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

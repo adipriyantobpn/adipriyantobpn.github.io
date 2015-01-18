@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7180" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7180-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10876" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10876-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7180-collapse" class="collapse navbar-collapse"><ul id="w7181" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7182" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10876-collapse" class="collapse navbar-collapse"><ul id="w10877" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10878" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7179" data-toggle="collapse" data-parent="#navigation">yii\jui <b class="caret"></b></a><div id="navigation-7179" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-jui-accordion.html">Accordion</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10875" data-toggle="collapse" data-parent="#navigation">yii\jui <b class="caret"></b></a><div id="navigation-10875" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-jui-accordion.html">Accordion</a>
 <a class="list-group-item" href="./yii-jui-accordionasset.html">AccordionAsset</a>
 <a class="list-group-item" href="./yii-jui-autocomplete.html">AutoComplete</a>
 <a class="list-group-item" href="./yii-jui-autocompleteasset.html">AutoCompleteAsset</a>
@@ -97,7 +103,7 @@
 <a href="yii-base-widget.html">yii\base\Widget</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
                                 <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
@@ -135,19 +141,25 @@
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-        <tr class="inherited" id="$behaviors">
+        <tr class="inherited" id="$autoIdPrefix">
+        <td><a href="yii-base-widget.html#$autoIdPrefix-detail">$autoIdPrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The prefix to the automatically generated widget IDs.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
         <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
         <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
         <td>List of behaviors attached to this component</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="$clientEvents">
+                <tr class="inherited" id="$clientEvents">
         <td><a href="yii-jui-widget.html#$clientEvents-detail">$clientEvents</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
         <td>The event handlers for the underlying jQuery UI widget.</td>
         <td><a href="yii-jui-widget.html">yii\jui\Widget</a></td>
     </tr>
-                <tr class="inherited" id="$clientOptions">
+            <tr class="inherited" id="$clientOptions">
         <td><a href="yii-jui-widget.html#$clientOptions-detail">$clientOptions</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
         <td>The options for the underlying jQuery UI widget.</td>
@@ -213,13 +225,13 @@
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-                <tr id="$clientEventsMap">
-        <td><a href="yii-jui-slider.html#$clientEventsMap-detail">$clientEventsMap</a></td>
+                <tr id="$clientEventMap">
+        <td><a href="yii-jui-slider.html#$clientEventMap-detail">$clientEventMap</a></td>
         <td></td>
         <td></td>
         <td><a href="yii-jui-slider.html">yii\jui\Slider</a></td>
     </tr>
-                                    </table>
+                                        </table>
 </div>
 
 <a name="methods"></a>
@@ -328,11 +340,6 @@
         <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="findViewFile()">
-        <td><a href="yii-base-widget.html#findViewFile()-detail">findViewFile()</a></td>
-        <td>Finds the view file based on the given view name.</td>
-        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
-    </tr>
             <tr class="inherited" id="getBehavior()">
         <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
         <td>Returns the named behavior object.</td>
@@ -413,11 +420,6 @@
         <td>Sets the view object to be used by this widget.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
@@ -445,7 +447,7 @@
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                                                <tr class="inherited" id="registerAssets()">
+                                                                                                                            <tr class="inherited" id="registerAssets()">
         <td><a href="yii-jui-widget.html#registerAssets()-detail">registerAssets()</a></td>
         <td>Registers a specific jQuery UI widget assets</td>
         <td><a href="yii-jui-widget.html">yii\jui\Widget</a></td>
@@ -465,7 +467,7 @@
         <td>Registers a specific jQuery UI widget asset bundle, initializes it with client options and registers related events</td>
         <td><a href="yii-jui-widget.html">yii\jui\Widget</a></td>
     </tr>
-                                    </table>
+                                </table>
 </div>
 
 <a name="events"></a>
@@ -476,18 +478,18 @@
 
 <div class="property-doc">
 
-    <div class="detail-header h3" id="$clientEventsMap-detail">
+    <div class="detail-header h3" id="$clientEventMap-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-jui-slider.html#$clientEventsMap-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Slider.php#L29" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Slider.php#L29" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        <a class="tool-link hash" href="yii-jui-slider.html#$clientEventMap-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Slider.php#L32" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Slider.php#L32" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
-        $clientEventsMap        <span class="detailHeaderTag small">
+        $clientEventMap        <span class="detailHeaderTag small">
             protected                                    property
                     </span>
     </div>
 
-    <div class="signature"> <a href="yii-jui-slider.html#$clientEventsMap-detail">$clientEventsMap</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'change'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slidechange'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'create'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slidecreate'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'slide'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slide'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'start'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slidestart'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'stop'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slidestop'</span><span style="color: #007700">]</span></div>
+    <div class="signature"> <a href="yii-jui-slider.html#$clientEventMap-detail">$clientEventMap</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'change'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slidechange'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'create'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slidecreate'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'slide'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slide'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'start'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slidestart'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'stop'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'slidestop'</span><span style="color: #007700">]</span></div>
 
     
     
@@ -499,8 +501,8 @@
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-jui-slider.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Slider.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Slider.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Slider.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Slider.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -558,7 +560,7 @@
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:07 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:39 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

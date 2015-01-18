@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7244" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7244-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11006" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11006-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7244-collapse" class="collapse navbar-collapse"><ul id="w7245" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7246" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11006-collapse" class="collapse navbar-collapse"><ul id="w11007" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11008" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,9 +48,8 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7243" data-toggle="collapse" data-parent="#navigation">yii\redis <b class="caret"></b></a><div id="navigation-7243" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-redis-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11005" data-toggle="collapse" data-parent="#navigation">yii\redis <b class="caret"></b></a><div id="navigation-11005" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-redis-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-redis-activerecord.html">ActiveRecord</a>
-<a class="list-group-item" href="./yii-redis-activerelation.html">ActiveRelation</a>
 <a class="list-group-item" href="./yii-redis-cache.html">Cache</a>
 <a class="list-group-item active" href="./yii-redis-connection.html">Connection</a>
 <a class="list-group-item" href="./yii-redis-luascriptbuilder.html">LuaScriptBuilder</a>
@@ -66,8 +71,7 @@
             <tr><th>Inheritance</th><td><a href="yii-redis-connection.html">yii\redis\Connection</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a></td></tr>
-                                <tr><th>Available since version</th><td>2.0</td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
           <td><a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php">https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php</a></td>
@@ -121,7 +125,7 @@ authenticate with the server after connect.</p>
     </tr>
             <tr id="$database">
         <td><a href="yii-redis-connection.html#$database-detail">$database</a></td>
-        <td>int</td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
         <td>The redis database to use.</td>
         <td><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
     </tr>
@@ -157,7 +161,7 @@ authenticate with the server after connect.</p>
     </tr>
             <tr id="$port">
         <td><a href="yii-redis-connection.html#$port-detail">$port</a></td>
-        <td>int</td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
         <td>The port to use for connecting to the redis server.</td>
         <td><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
     </tr>
@@ -341,11 +345,6 @@ authenticate with the server after connect.</p>
         <td>Establishes a DB connection.</td>
         <td><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
@@ -373,7 +372,7 @@ authenticate with the server after connect.</p>
         <td>Initializes the DB connection.</td>
         <td><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
     </tr>
-                        </table>
+                    </table>
 </div>
 
 <a name="events"></a>
@@ -411,8 +410,8 @@ authenticate with the server after connect.</p>
     <div class="detail-header h3" id="$connectionTimeout-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#$connectionTimeout-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L64" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L64" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L63" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L63" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $connectionTimeout        <span class="detailHeaderTag small">
             public                                    property
@@ -428,8 +427,8 @@ authenticate with the server after connect.</p>
     <div class="detail-header h3" id="$dataTimeout-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#$dataTimeout-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $dataTimeout        <span class="detailHeaderTag small">
             public                                    property
@@ -445,15 +444,15 @@ authenticate with the server after connect.</p>
     <div class="detail-header h3" id="$database-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#$database-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $database        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature">int <a href="yii-redis-connection.html#$database-detail">$database</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.integer">integer</a> <a href="yii-redis-connection.html#$database-detail">$database</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span></div>
 
     <p>The redis database to use. This is an integer value starting from 0. Defaults to 0.</p>
 
@@ -479,8 +478,8 @@ authenticate with the server after connect.</p>
     <div class="detail-header h3" id="$hostname-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#$hostname-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L46" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L46" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $hostname        <span class="detailHeaderTag small">
             public                                    property
@@ -529,8 +528,8 @@ authenticate with the server after connect.</p>
     <div class="detail-header h3" id="$password-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#$password-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $password        <span class="detailHeaderTag small">
             public                                    property
@@ -547,15 +546,15 @@ See <a href="http://redis.io/commands/auth">http://redis.io/commands/auth</a></p
     <div class="detail-header h3" id="$port-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#$port-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L50" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L50" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $port        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature">int <a href="yii-redis-connection.html#$port-detail">$port</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">6379</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.integer">integer</a> <a href="yii-redis-connection.html#$port-detail">$port</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">6379</span></div>
 
     <p>The port to use for connecting to the redis server. Default port is 6379.</p>
 
@@ -564,8 +563,8 @@ See <a href="http://redis.io/commands/auth">http://redis.io/commands/auth</a></p
     <div class="detail-header h3" id="$redisCommands-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#$redisCommands-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L73" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L73" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L71" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L71" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $redisCommands        <span class="detailHeaderTag small">
             public                                    property
@@ -619,8 +618,8 @@ See <a href="http://redis.io/commands/auth">http://redis.io/commands/auth</a></p
     <div class="detail-header h3" id="__sleep()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#__sleep()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L223" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L223" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L222" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L222" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         __sleep()
         <span class="detail-header-tag small">
@@ -701,8 +700,9 @@ See <a href="http://redis.io/commands/auth">http://redis.io/commands/auth</a></p
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|bool|<a href="http://www.php.net/language.types.null">null</a>|<a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>Dependend on the executed command this method
-will return different data types:</p>
+                  <td class="param-desc-col"><p>Dependend on the executed command this method</p>
+<pre><code>                                  will return different data types:
+</code></pre>
 <ul>
 <li><code>true</code> for commands that return "status reply".</li>
 <li><code>string</code> for commands that return "integer reply"
@@ -865,8 +865,8 @@ The default implementation triggers an <a href="yii-redis-connection.html#EVENT_
     <div class="detail-header h3" id="EVENT_AFTER_OPEN-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-connection.html#EVENT_AFTER_OPEN-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L42" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L42" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Connection.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Connection.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         EVENT_AFTER_OPEN        <span class="detail-header-tag small">
         event
@@ -917,7 +917,7 @@ The default implementation triggers an <a href="yii-redis-connection.html#EVENT_
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:08 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:41 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

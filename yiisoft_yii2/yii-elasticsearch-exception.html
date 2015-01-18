@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w6947" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w6947-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10596" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10596-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w6947-collapse" class="collapse navbar-collapse"><ul id="w6948" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w6949" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10596-collapse" class="collapse navbar-collapse"><ul id="w10597" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10598" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,11 +48,11 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-6946" data-toggle="collapse" data-parent="#navigation">yii\elasticsearch <b class="caret"></b></a><div id="navigation-6946" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-elasticsearch-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10595" data-toggle="collapse" data-parent="#navigation">yii\elasticsearch <b class="caret"></b></a><div id="navigation-10595" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-elasticsearch-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-elasticsearch-activerecord.html">ActiveRecord</a>
-<a class="list-group-item" href="./yii-elasticsearch-activerelation.html">ActiveRelation</a>
 <a class="list-group-item" href="./yii-elasticsearch-command.html">Command</a>
 <a class="list-group-item" href="./yii-elasticsearch-connection.html">Connection</a>
+<a class="list-group-item" href="./yii-elasticsearch-debugaction.html">DebugAction</a>
 <a class="list-group-item" href="./yii-elasticsearch-debugpanel.html">DebugPanel</a>
 <a class="list-group-item active" href="./yii-elasticsearch-exception.html">Exception</a>
 <a class="list-group-item" href="./yii-elasticsearch-query.html">Query</a>
@@ -68,8 +74,7 @@
 <a href="yii-db-exception.html">yii\db\Exception</a> &raquo;
 <a href="yii-base-exception.html">yii\base\Exception</a> &raquo;
 <a href="http://www.php.net/class.exception">Exception</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a></td></tr>
-                                <tr><th>Available since version</th><td>2.0</td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
           <td><a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/Exception.php">https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/Exception.php</a></td>
@@ -98,11 +103,11 @@
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-        <tr id="$errorInfo">
-        <td><a href="yii-elasticsearch-exception.html#$errorInfo-detail">$errorInfo</a></td>
+        <tr class="inherited" id="$errorInfo">
+        <td><a href="yii-db-exception.html#$errorInfo-detail">$errorInfo</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
-        <td>Additional information about the http request that caused the error.</td>
-        <td><a href="yii-elasticsearch-exception.html">yii\elasticsearch\Exception</a></td>
+        <td>The error info provided by a PDO exception.</td>
+        <td><a href="yii-db-exception.html">yii\db\Exception</a></td>
     </tr>
     </table>
 </div>
@@ -123,42 +128,20 @@
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-        <tr id="__construct()">
-        <td><a href="yii-elasticsearch-exception.html#__construct()-detail">__construct()</a></td>
+        <tr class="inherited" id="__construct()">
+        <td><a href="yii-db-exception.html#__construct()-detail">__construct()</a></td>
         <td>Constructor.</td>
-        <td><a href="yii-elasticsearch-exception.html">yii\elasticsearch\Exception</a></td>
+        <td><a href="yii-db-exception.html">yii\db\Exception</a></td>
+    </tr>
+            <tr class="inherited" id="__toString()">
+        <td><a href="yii-db-exception.html#__toString()-detail">__toString()</a></td>
+        <td></td>
+        <td><a href="yii-db-exception.html">yii\db\Exception</a></td>
     </tr>
             <tr id="getName()">
         <td><a href="yii-elasticsearch-exception.html#getName()-detail">getName()</a></td>
         <td></td>
         <td><a href="yii-elasticsearch-exception.html">yii\elasticsearch\Exception</a></td>
-    </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-exception.html#toArray()-detail">toArray()</a></td>
-        <td>Returns the array representation of this object.</td>
-        <td><a href="yii-base-exception.html">yii\base\Exception</a></td>
-    </tr>
-        </table>
-</div>
-
-<div class="summary doc-method">
-<h2>Protected Methods</h2>
-
-<p><a href="#" class="toggle">Hide inherited methods</a></p>
-
-<table class="summary-table table table-striped table-bordered table-hover">
-<colgroup>
-    <col class="col-method" />
-    <col class="col-description" />
-    <col class="col-defined" />
-</colgroup>
-<tr>
-  <th>Method</th><th>Description</th><th>Defined By</th>
-</tr>
-                    <tr class="inherited" id="toArrayRecursive()">
-        <td><a href="yii-base-exception.html#toArrayRecursive()-detail">toArrayRecursive()</a></td>
-        <td>Returns the array representation of the exception and all previous exceptions recursively.</td>
-        <td><a href="yii-base-exception.html">yii\base\Exception</a></td>
     </tr>
     </table>
 </div>
@@ -167,84 +150,15 @@
 
 <a name="constants"></a>
 
-<h2>Property Details</h2>
-
-<div class="property-doc">
-
-    <div class="detail-header h3" id="$errorInfo-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-elasticsearch-exception.html#$errorInfo-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/Exception.php#L21" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/Exception.php#L21" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        $errorInfo        <span class="detailHeaderTag small">
-            public                                    property
-                    </span>
-    </div>
-
-    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-elasticsearch-exception.html#$errorInfo-detail">$errorInfo</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
-
-    <p>Additional information about the http request that caused the error.</p>
-
-    
-</div>
 <h2>Method Details</h2>
 
 <div class="method-doc">
 
-    <div class="detail-header h3" id="__construct()-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-elasticsearch-exception.html#__construct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/Exception.php#L30" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/Exception.php#L30" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        __construct()
-        <span class="detail-header-tag small">
-            public            method
-                    </span>
-    </div>
-
-    <div class="doc-description">
-        <p><strong>Constructor.</strong></p>
-
-        
-            </div>
-
-    <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-elasticsearch-exception.html#__construct()-detail">__construct</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$message</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$errorInfo&nbsp;</span><span style="color: #007700">=&nbsp;[],&nbsp;</span><span style="color: #0000BB">$code&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">Exception&nbsp;$previous&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
-                                    <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$message</span></td>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>Error message</p>
-</td>
-                </tr>
-                            <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$errorInfo</span></td>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Error info</p>
-</td>
-                </tr>
-                            <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$code</span></td>
-                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
-                  <td class="param-desc-col"><p>Error code</p>
-</td>
-                </tr>
-                            <tr>
-                  <td class="param-name-col"><span style="color: #0000BB">$previous</span></td>
-                  <td class="param-type-col"><a href="http://www.php.net/class.exception">Exception</a></td>
-                  <td class="param-desc-col"><p>The previous exception used for the exception chaining.</p>
-</td>
-                </tr>
-                                                </table>
-
-<!--	-->
-
     <div class="detail-header h3" id="getName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-exception.html#getName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/Exception.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/Exception.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/Exception.php#L21" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/Exception.php#L21" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getName()
         <span class="detail-header-tag small">
@@ -308,7 +222,7 @@
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:05 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:37 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

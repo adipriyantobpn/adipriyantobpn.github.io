@@ -13,10 +13,10 @@
 <body>
 
 <div class="wrap">
-    <nav id="w48" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w48-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w60" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w60-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w48-collapse" class="collapse navbar-collapse"><ul id="w49" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w60-collapse" class="collapse navbar-collapse"><ul id="w61" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
 <li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input id="searchbox" type="text" class="form-control" placeholder="Search">
@@ -35,13 +35,14 @@
     <div class="col-md-9 guide-content" role="main">
         <h1>Installation <a href="#installation" name="installation" class="hashlink">&para;</a></h1><p>There are two ways you can install the Yii framework:</p>
 <ul>
-<li>Installation via <a href="http://getcomposer.org/">Composer</a> (recommended)</li>
-<li>Download an application template packed with all requirements including the Yii Framework</li>
+<li>Via <a href="http://getcomposer.org/">Composer</a> (recommended)</li>
+<li>Download an application template containing all site requirements, including the Yii framework itself</li>
 </ul>
 <h2>Installing via Composer <a href="#installing-via-composer" name="installing-via-composer" class="hashlink">&para;</a></h2><p>The recommended way to install Yii is to use the <a href="http://getcomposer.org/">Composer</a> package manager. If you do not already
 have Composer installed, you may download it from <a href="http://getcomposer.org/">http://getcomposer.org/</a> or run the following command:</p>
 <pre><code>curl -s http://getcomposer.org/installer | php
 </code></pre>
+<p>We strongly recommend a global composer installation.</p>
 <p>For problems or more information, see the official Composer guide:</p>
 <ul>
 <li><a href="http://getcomposer.org/doc/00-intro.md#installation-nix">Linux</a></li>
@@ -83,9 +84,10 @@ base directory of your application.</p>
 </code></pre>
 <p>In order to run this script in your browser, you should ensure it is accessable by the webserver and
 access <code>http://hostname/path/to/yii-app/requirements.php</code> in your browser.
-If you are using Linux you can create a hard link to make it accessable, using the following command:</p>
-<pre><code>ln requirements.php ../requirements.php
+If you are using Linux you can create a soft link to make it accessable, using the following command:</p>
+<pre><code>ln -s requirements.php ../requirements.php
 </code></pre>
+<p>For the advanded app the <code>requirements.php</code> is two levels up so you have to use <code>ln -s requirements.php ../../requirements.php</code>.</p>
 <p>Yii 2 requires PHP 5.4.0 or higher. Yii has been tested with the <a href="http://httpd.apache.org/">Apache HTTP server</a> and
 <a href="http://nginx.org/">Nginx HTTP server</a> on Windows and Linux.
 Yii may also be usable on other web servers and platforms, provided that PHP 5.4 or higher is supported.</p>
@@ -94,7 +96,8 @@ files in the Yii framework folder to deny access to those restricted resources.<
 <p>By default, requests for pages in a Yii-based site go through the bootstrap file, usually named <code>index.php</code>, and placed
 in the application's <code>web</code> directory. The result will be URLs in the format <code>http://hostname/index.php/controller/action/param/value</code>.</p>
 <p>To hide the bootstrap file in your URLs, add <code>mod_rewrite</code> instructions to the <code>.htaccess</code> file in your web document root
-(or add the instructions to the virtual host configuration in Apache's <code>httpd.conf</code> file). The applicable instructions are:</p>
+(or add the instructions to the virtual host configuration in Apache's <code>httpd.conf</code> file, <code>Directory</code> section for your webroot).
+The applicable instructions are:</p>
 <pre><code>RewriteEngine on
 
 # If a directory or a file exists, use it directly
@@ -145,6 +148,8 @@ resulting in "prettier" URLs without the need for <code>index.php</code> referen
 }
 </code></pre>
 <p>When using this configuration, you should set <code>cgi.fix_pathinfo=0</code> in the <code>php.ini</code> file in order to avoid many unnecessary system <code>stat()</code> calls.</p>
+<p>Note that when running a HTTPS server you need to add <code>fastcgi_param HTTPS on;</code> in order for Yii to properly detect if
+connection is secure.</p>
         <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
     </div>
 </div>
@@ -153,7 +158,7 @@ resulting in "prettier" URLs without the need for <code>index.php</code> referen
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:32:13 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:03:04 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

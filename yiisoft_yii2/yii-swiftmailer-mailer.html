@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7300" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7300-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11058" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11058-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7300-collapse" class="collapse navbar-collapse"><ul id="w7301" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7302" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11058-collapse" class="collapse navbar-collapse"><ul id="w11059" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11060" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7299" data-toggle="collapse" data-parent="#navigation">yii\swiftmailer <b class="caret"></b></a><div id="navigation-7299" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-swiftmailer-mailer.html">Mailer</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11057" data-toggle="collapse" data-parent="#navigation">yii\swiftmailer <b class="caret"></b></a><div id="navigation-11057" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-swiftmailer-mailer.html">Mailer</a>
 <a class="list-group-item" href="./yii-swiftmailer-message.html">Message</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Class yii\swiftmailer\Mailer</h1>
@@ -50,7 +56,8 @@
     <a href="index.html">All Classes</a>
             | <a href="#properties">Properties</a>
                 | <a href="#methods">Methods</a>
-            </div>
+                | <a href="#events">Events</a>
+        </div>
 
 <table class="summaryTable docClass table table-bordered">
     <colgroup>
@@ -61,7 +68,7 @@
 <a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a>, <a href="yii-mail-mailerinterface.html">yii\mail\MailerInterface</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a>, <a href="yii-mail-mailerinterface.html">yii\mail\MailerInterface</a></td></tr>
                                 <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
@@ -74,7 +81,7 @@
     <p>To use Mailer, you should configure it in the application configuration like the following,</p>
 <pre><code>'components' =&gt; [
     ...
-    'email' =&gt; [
+    'mail' =&gt; [
         'class' =&gt; 'yii\swiftmailer\Mailer',
         'transport' =&gt; [
             'class' =&gt; 'Swift_SmtpTransport',
@@ -139,7 +146,7 @@ You can also specify the list of plugins, which should be registered to the tran
     </tr>
             <tr class="inherited" id="$fileTransportCallback">
         <td><a href="yii-mail-basemailer.html#$fileTransportCallback-detail">$fileTransportCallback</a></td>
-        <td>callback</td>
+        <td><a href="http://www.php.net/language.types.callable">callable</a></td>
         <td>A PHP callback that will be called by <a href="yii-mail-basemailer.html#send()-detail">send()</a> when <a href="yii-mail-basemailer.html#$useFileTransport-detail">$useFileTransport</a> is true.</td>
         <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
     </tr>
@@ -203,7 +210,8 @@ render message bodies.</td>
             <tr class="inherited" id="$viewPath">
         <td><a href="yii-mail-basemailer.html#$viewPath-detail">$viewPath</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
-        <td>Directory containing view files for this email messages.</td>
+        <td>The directory that contains the view files for composing mail messages
+Defaults to '@app/mail'.</td>
         <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
     </tr>
     </table>
@@ -260,6 +268,11 @@ render message bodies.</td>
         <td>Sets a component property to be null.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
+            <tr class="inherited" id="afterSend()">
+        <td><a href="yii-mail-basemailer.html#afterSend()-detail">afterSend()</a></td>
+        <td>This method is invoked right after mail was send.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
             <tr class="inherited" id="attachBehavior()">
         <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
         <td>Attaches a behavior to this component.</td>
@@ -269,6 +282,11 @@ render message bodies.</td>
         <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
         <td>Attaches a list of behaviors to the component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="beforeSend()">
+        <td><a href="yii-mail-basemailer.html#beforeSend()-detail">beforeSend()</a></td>
+        <td>This method is invoked right before mail send.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
     </tr>
             <tr class="inherited" id="behaviors()">
         <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
@@ -310,9 +328,9 @@ render message bodies.</td>
         <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="findViewFile()">
-        <td><a href="yii-mail-basemailer.html#findViewFile()-detail">findViewFile()</a></td>
-        <td>Finds the view file corresponding to the specified relative view name.</td>
+            <tr class="inherited" id="generateMessageFileName()">
+        <td><a href="yii-mail-basemailer.html#generateMessageFileName()-detail">generateMessageFileName()</a></td>
+        <td></td>
         <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
     </tr>
             <tr class="inherited" id="getBehavior()">
@@ -337,6 +355,11 @@ render message bodies.</td>
     </tr>
             <tr class="inherited" id="getView()">
         <td><a href="yii-mail-basemailer.html#getView()-detail">getView()</a></td>
+        <td></td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="getViewPath()">
+        <td><a href="yii-mail-basemailer.html#getViewPath()-detail">getViewPath()</a></td>
         <td></td>
         <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
     </tr>
@@ -395,10 +418,10 @@ render message bodies.</td>
         <td></td>
         <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-arrayable.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-arrayable.html">yii\base\Arrayable</a></td>
+            <tr class="inherited" id="setViewPath()">
+        <td><a href="yii-mail-basemailer.html#setViewPath()-detail">setViewPath()</a></td>
+        <td></td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
     </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
@@ -422,7 +445,7 @@ render message bodies.</td>
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                <tr class="inherited" id="createMessage()">
+                                                                        <tr class="inherited" id="createMessage()">
         <td><a href="yii-mail-basemailer.html#createMessage()-detail">createMessage()</a></td>
         <td>Creates a new message instance.</td>
         <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
@@ -447,7 +470,7 @@ render message bodies.</td>
         <td>Creates view instance from given configuration.</td>
         <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
     </tr>
-                                                                            <tr class="inherited" id="saveMessage()">
+                                                                                <tr class="inherited" id="saveMessage()">
         <td><a href="yii-mail-basemailer.html#saveMessage()-detail">saveMessage()</a></td>
         <td>Saves the message as a file under <a href="yii-mail-basemailer.html#$fileTransportPath-detail">$fileTransportPath</a>.</td>
         <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
@@ -461,6 +484,37 @@ render message bodies.</td>
 </div>
 
 <a name="events"></a>
+<div class="summary doc-event">
+    <h2>Events</h2>
+
+    <p><a href="#" class="toggle">Hide inherited events</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-event" />
+        <col class="col-type" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Event</th><th>Type</th><th>Description</th><th>Defined By</th>
+    </tr>
+        <tr class="inherited" id="EVENT_AFTER_SEND">
+        <td><a href="yii-mail-basemailer.html#EVENT_AFTER_SEND-detail">EVENT_AFTER_SEND</a></td>
+        <td><a href="yii-base-mailevent.html">yii\base\MailEvent</a></td>
+        <td>
+            An event raised right after send.                    </td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEFORE_SEND">
+        <td><a href="yii-mail-basemailer.html#EVENT_BEFORE_SEND-detail">EVENT_BEFORE_SEND</a></td>
+        <td><a href="yii-base-mailevent.html">yii\base\MailEvent</a></td>
+        <td>
+            An event raised right before send.                    </td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+        </table>
+</div>
 
 <a name="constants"></a>
 
@@ -525,8 +579,8 @@ render message bodies.</td>
     <div class="detail-header h3" id="createSwiftMailer()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-swiftmailer-mailer.html#createSwiftMailer()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L142" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L142" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L145" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L145" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createSwiftMailer()
         <span class="detail-header-tag small">
@@ -555,8 +609,8 @@ render message bodies.</td>
     <div class="detail-header h3" id="createSwiftObject()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-swiftmailer-mailer.html#createSwiftObject()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L181" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L181" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L185" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L185" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createSwiftObject()
         <span class="detail-header-tag small">
@@ -597,8 +651,8 @@ render message bodies.</td>
     <div class="detail-header h3" id="createTransport()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-swiftmailer-mailer.html#createTransport()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L153" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L153" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L156" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L156" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createTransport()
         <span class="detail-header-tag small">
@@ -669,8 +723,8 @@ render message bodies.</td>
     <div class="detail-header h3" id="getTransport()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-swiftmailer-mailer.html#getTransport()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L117" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L117" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L118" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L118" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getTransport()
         <span class="detail-header-tag small">
@@ -693,8 +747,8 @@ render message bodies.</td>
     <div class="detail-header h3" id="sendMessage()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-swiftmailer-mailer.html#sendMessage()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L128" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L128" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L130" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L130" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         sendMessage()
         <span class="detail-header-tag small">
@@ -730,8 +784,8 @@ render message bodies.</td>
     <div class="detail-header h3" id="setTransport()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-swiftmailer-mailer.html#setTransport()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L106" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L106" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/swiftmailer/Mailer.php#L107" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/swiftmailer/Mailer.php#L107" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setTransport()
         <span class="detail-header-tag small">
@@ -800,7 +854,7 @@ render message bodies.</td>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:09 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:43 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

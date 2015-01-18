@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w6847" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w6847-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10346" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10346-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w6847-collapse" class="collapse navbar-collapse"><ul id="w6848" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w6849" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10346-collapse" class="collapse navbar-collapse"><ul id="w10347" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10348" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,7 +48,9 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-6846" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-6846" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10345" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-10345" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-bootstrap-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrapasset.html">BootstrapAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrappluginasset.html">BootstrapPluginAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrapthemeasset.html">BootstrapThemeAsset</a>
@@ -76,7 +84,7 @@
 <a href="yii-base-widget.html">yii\base\Widget</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
                                 <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
@@ -89,7 +97,7 @@
     <p>For example:</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">Tabs</span><span style="color: #007700">::</span><span style="color: #0000BB">widget</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'items'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'One'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'content'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Anim&nbsp;pariatur&nbsp;cliche...'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'active'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">true<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Two'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'content'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Anim&nbsp;pariatur&nbsp;cliche...'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'headerOptions'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[...],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'options'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'id'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'myveryownID'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Dropdown'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'items'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'DropdownA'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'content'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'DropdownA,&nbsp;Anim&nbsp;pariatur&nbsp;cliche...'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'DropdownB'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'content'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'DropdownB,&nbsp;Anim&nbsp;pariatur&nbsp;cliche...'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],<br />&nbsp;&nbsp;&nbsp;&nbsp;],<br />]);</span></code></pre>
 
-    <p>See also <a href="http://twitter.github.io/bootstrap/javascript.html#tabs">http://twitter.github.io/bootstrap/javascript.html#tabs</a>.</p></div>
+    <p>See also <a href="http://getbootstrap.com/javascript/#tabs">http://getbootstrap.com/javascript/#tabs</a>.</p></div>
 
 <a name="properties"></a>
 
@@ -108,7 +116,13 @@
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-        <tr class="inherited" id="$behaviors">
+        <tr class="inherited" id="$autoIdPrefix">
+        <td><a href="yii-base-widget.html#$autoIdPrefix-detail">$autoIdPrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The prefix to the automatically generated widget IDs.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
         <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
         <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
         <td>List of behaviors attached to this component</td>
@@ -162,9 +176,15 @@
         <td>List of tabs in the tabs widget.</td>
         <td><a href="yii-bootstrap-tabs.html">yii\bootstrap\Tabs</a></td>
     </tr>
+            <tr id="$linkOptions">
+        <td><a href="yii-bootstrap-tabs.html#$linkOptions-detail">$linkOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of HTML attributes for the tab header link tags.</td>
+        <td><a href="yii-bootstrap-tabs.html">yii\bootstrap\Tabs</a></td>
+    </tr>
             <tr id="$navType">
         <td><a href="yii-bootstrap-tabs.html#$navType-detail">$navType</a></td>
-        <td>\yii\bootstrap\string,</td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
         <td>Specifies the Bootstrap tab styling.</td>
         <td><a href="yii-bootstrap-tabs.html">yii\bootstrap\Tabs</a></td>
     </tr>
@@ -301,11 +321,6 @@
         <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="findViewFile()">
-        <td><a href="yii-base-widget.html#findViewFile()-detail">findViewFile()</a></td>
-        <td>Finds the view file based on the given view name.</td>
-        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
-    </tr>
             <tr class="inherited" id="getBehavior()">
         <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
         <td>Returns the named behavior object.</td>
@@ -331,7 +346,7 @@
         <td>Returns the directory containing the view files for this widget.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
-            <tr class="inherited" id="hasEventHandlers()">
+                <tr class="inherited" id="hasEventHandlers()">
         <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
         <td>Returns a value indicating whether there is any handler attached to the named event.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
@@ -386,11 +401,6 @@
         <td>Sets the view object to be used by this widget.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
@@ -418,7 +428,12 @@
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                                                <tr class="inherited" id="registerPlugin()">
+                                                                                                    <tr id="hasActiveTab()">
+        <td><a href="yii-bootstrap-tabs.html#hasActiveTab()-detail">hasActiveTab()</a></td>
+        <td></td>
+        <td><a href="yii-bootstrap-tabs.html">yii\bootstrap\Tabs</a></td>
+    </tr>
+                                    <tr class="inherited" id="registerPlugin()">
         <td><a href="yii-bootstrap-widget.html#registerPlugin()-detail">registerPlugin()</a></td>
         <td>Registers a specific Bootstrap plugin and the related events</td>
         <td><a href="yii-bootstrap-widget.html">yii\bootstrap\Widget</a></td>
@@ -434,7 +449,7 @@ configure <code>panes</code> accordingly.</td>
         <td>Renders tab items as specified on <a href="yii-bootstrap-tabs.html#$items-detail">$items</a>.</td>
         <td><a href="yii-bootstrap-tabs.html">yii\bootstrap\Tabs</a></td>
     </tr>
-                            </table>
+                        </table>
 </div>
 
 <a name="events"></a>
@@ -448,8 +463,8 @@ configure <code>panes</code> accordingly.</td>
     <div class="detail-header h3" id="$encodeLabels-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#$encodeLabels-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L87" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L87" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L97" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L97" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $encodeLabels        <span class="detailHeaderTag small">
             public                                    property
@@ -465,8 +480,8 @@ configure <code>panes</code> accordingly.</td>
     <div class="detail-header h3" id="$headerOptions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#$headerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L83" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L83" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L87" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L87" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $headerOptions        <span class="detailHeaderTag small">
             public                                    property
@@ -478,13 +493,13 @@ configure <code>panes</code> accordingly.</td>
     <p>List of HTML attributes for the header container tags. This will be overwritten
 by the "headerOptions" set in individual <a href="yii-bootstrap-tabs.html#$items-detail">$items</a>.</p>
 
-    
+    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
 
     <div class="detail-header h3" id="$itemOptions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#$itemOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L78" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L78" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $itemOptions        <span class="detailHeaderTag small">
             public                                    property
@@ -499,13 +514,13 @@ by the "options" set in individual <a href="yii-bootstrap-tabs.html#$items-detai
 <li>tag: string, defaults to "div", the tag name of the item container tags.</li>
 </ul>
 
-    
+    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
 
     <div class="detail-header h3" id="$items-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#$items-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L71" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L71" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L72" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L72" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $items        <span class="detailHeaderTag small">
             public                                    property
@@ -519,6 +534,7 @@ tab with the following structure:</p>
 <ul>
 <li>label: string, required, the tab header label.</li>
 <li>headerOptions: array, optional, the HTML attributes of the tab header.</li>
+<li>linkOptions: array, optional, the HTML attributes of the tab header link tags.</li>
 <li>content: array, required if <code>items</code> is not set. The content (HTML) of the tab pane.</li>
 <li>options: array, optional, the HTML attributes of the tab pane container.</li>
 <li>active: boolean, optional, whether the item tab header and pane should be visible or not.</li>
@@ -533,18 +549,36 @@ configuration array. Each item can hold two extra keys, besides the above ones:<
 
     
 
+    <div class="detail-header h3" id="$linkOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-tabs.html#$linkOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L93" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L93" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $linkOptions        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-bootstrap-tabs.html#$linkOptions-detail">$linkOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>List of HTML attributes for the tab header link tags. This will be overwritten
+by the "linkOptions" set in individual <a href="yii-bootstrap-tabs.html#$items-detail">$items</a>.</p>
+
+    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
+
     <div class="detail-header h3" id="$navType-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#$navType-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L101" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L101" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $navType        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature">\yii\bootstrap\string, <a href="yii-bootstrap-tabs.html#$navType-detail">$navType</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'nav-tabs'</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-bootstrap-tabs.html#$navType-detail">$navType</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'nav-tabs'</span></div>
 
     <p>Specifies the Bootstrap tab styling.</p>
 
@@ -554,11 +588,41 @@ configuration array. Each item can hold two extra keys, besides the above ones:<
 
 <div class="method-doc">
 
+    <div class="detail-header h3" id="hasActiveTab()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-tabs.html#hasActiveTab()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L181" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L181" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        hasActiveTab()
+        <span class="detail-header-tag small">
+            protected            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-bootstrap-tabs.html#hasActiveTab()-detail">hasActiveTab</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>If there's active tab defined</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L97" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L97" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L106" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L106" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -581,8 +645,8 @@ configuration array. Each item can hold two extra keys, besides the above ones:<
     <div class="detail-header h3" id="renderDropdown()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#renderDropdown()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L168" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L168" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L200" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L200" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderDropdown()
         <span class="detail-header-tag small">
@@ -629,8 +693,8 @@ configure <code>panes</code> accordingly.</strong></p>
     <div class="detail-header h3" id="renderItems()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#renderItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L117" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L117" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderItems()
         <span class="detail-header-tag small">
@@ -664,8 +728,8 @@ configure <code>panes</code> accordingly.</strong></p>
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-tabs.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L106" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L106" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Tabs.php#L115" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Tabs.php#L115" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -723,7 +787,7 @@ configure <code>panes</code> accordingly.</strong></p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:04 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:34 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

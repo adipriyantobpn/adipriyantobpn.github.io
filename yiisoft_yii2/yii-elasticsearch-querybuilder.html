@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w6955" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w6955-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10604" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10604-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w6955-collapse" class="collapse navbar-collapse"><ul id="w6956" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w6957" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10604-collapse" class="collapse navbar-collapse"><ul id="w10605" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10606" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,11 +48,11 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-6954" data-toggle="collapse" data-parent="#navigation">yii\elasticsearch <b class="caret"></b></a><div id="navigation-6954" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-elasticsearch-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10603" data-toggle="collapse" data-parent="#navigation">yii\elasticsearch <b class="caret"></b></a><div id="navigation-10603" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-elasticsearch-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-elasticsearch-activerecord.html">ActiveRecord</a>
-<a class="list-group-item" href="./yii-elasticsearch-activerelation.html">ActiveRelation</a>
 <a class="list-group-item" href="./yii-elasticsearch-command.html">Command</a>
 <a class="list-group-item" href="./yii-elasticsearch-connection.html">Connection</a>
+<a class="list-group-item" href="./yii-elasticsearch-debugaction.html">DebugAction</a>
 <a class="list-group-item" href="./yii-elasticsearch-debugpanel.html">DebugPanel</a>
 <a class="list-group-item" href="./yii-elasticsearch-exception.html">Exception</a>
 <a class="list-group-item" href="./yii-elasticsearch-query.html">Query</a>
@@ -66,8 +72,7 @@
     </colgroup>
             <tr><th>Inheritance</th><td><a href="yii-elasticsearch-querybuilder.html">yii\elasticsearch\QueryBuilder</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a></td></tr>
-                                <tr><th>Available since version</th><td>2.0</td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
           <td><a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/QueryBuilder.php">https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/QueryBuilder.php</a></td>
@@ -196,11 +201,6 @@
         <td>Initializes the object.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
     </table>
 </div>
 
@@ -223,7 +223,7 @@
         <td></td>
         <td><a href="yii-elasticsearch-querybuilder.html">yii\elasticsearch\QueryBuilder</a></td>
     </tr>
-                                        </table>
+                                    </table>
 </div>
 
 <a name="events"></a>
@@ -320,8 +320,9 @@
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The generated SQL statement (the first array element) and the corresponding
-parameters to be bound to the SQL statement (the second array element).</p>
+                  <td class="param-desc-col"><p>The generated SQL statement (the first array element) and the corresponding</p>
+<pre><code>                parameters to be bound to the SQL statement (the second array element).
+</code></pre>
 </td>
                 </tr>
                                     </table>
@@ -331,8 +332,8 @@ parameters to be bound to the SQL statement (the second array element).</p>
     <div class="detail-header h3" id="buildCompositeInCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-querybuilder.html#buildCompositeInCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/QueryBuilder.php#L288" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/QueryBuilder.php#L288" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/QueryBuilder.php#L311" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/QueryBuilder.php#L311" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildCompositeInCondition()
         <span class="detail-header-tag small">
@@ -370,8 +371,8 @@ parameters to be bound to the SQL statement (the second array element).</p>
     <div class="detail-header h3" id="buildCondition()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-querybuilder.html#buildCondition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/QueryBuilder.php#L139" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/QueryBuilder.php#L139" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/QueryBuilder.php#L142" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/QueryBuilder.php#L142" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildCondition()
         <span class="detail-header-tag small">
@@ -390,8 +391,9 @@ parameters to be bound to the SQL statement (the second array element).</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>The condition specification. Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\elasticsearch\Query::where()</a>
-on how to specify a condition.</p>
+                  <td class="param-desc-col"><p>The condition specification. Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\elasticsearch\Query::where()</a></p>
+<pre><code>                                 on how to specify a condition.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -413,8 +415,8 @@ on how to specify a condition.</p>
     <div class="detail-header h3" id="buildOrderBy()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-querybuilder.html#buildOrderBy()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/QueryBuilder.php#L104" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/QueryBuilder.php#L104" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/QueryBuilder.php#L106" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/QueryBuilder.php#L106" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildOrderBy()
         <span class="detail-header-tag small">
@@ -477,7 +479,7 @@ on how to specify a condition.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:05 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:37 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

@@ -13,10 +13,10 @@
 <body>
 
 <div class="wrap">
-    <nav id="w42" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w42-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w52" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w52-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w42-collapse" class="collapse navbar-collapse"><ul id="w43" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w52-collapse" class="collapse navbar-collapse"><ul id="w53" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
 <li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input id="searchbox" type="text" class="form-control" placeholder="Search">
@@ -33,11 +33,68 @@
     <div class="col-md-2">
                 <div id="navigation" class="list-group"></div>    </div>
     <div class="col-md-9 guide-content" role="main">
-        <h1>The Gii code generation tool <a href="#the-gii-code-generation-tool" name="the-gii-code-generation-tool" class="hashlink">&para;</a></h1><p>Yii2 includes a handy tool that allows rapid prototyping by generating commonly used code snippets
+        <h1>The Gii code generation tool <a href="#the-gii-code-generation-tool" name="the-gii-code-generation-tool" class="hashlink">&para;</a></h1><p>Yii includes a handy tool, named Gii, that provides rapid prototyping by generating commonly used code snippets
 as well as complete CRUD controllers.</p>
-<h2>Installing and configuring <a href="#installing-and-configuring" name="installing-and-configuring" class="hashlink">&para;</a></h2><p>Add these lines to your config file:</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'modules'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'gii'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'yii\gii\Module'</span><span style="color: #007700">]<br />]</span></code></pre>
-<h2>How to use it <a href="#how-to-use-it" name="how-to-use-it" class="hashlink">&para;</a></h2><h2>Creating your own templates <a href="#creating-your-own-templates" name="creating-your-own-templates" class="hashlink">&para;</a></h2><p>TDB</p>
+<h2>Installing and configuring <a href="#installing-and-configuring" name="installing-and-configuring" class="hashlink">&para;</a></h2><p>Gii is an offical Yii extension. The preferred way to install this extension is through
+<a href="http://getcomposer.org/download/">composer</a>.</p>
+<p>You can either run this command:</p>
+<pre><code>php composer.phar require --prefer-dist yiisoft/yii2-gii "*"
+</code></pre>
+<p>Or you can add this code to the require section of your <code>composer.json</code> file:</p>
+<pre><code>"yiisoft/yii2-gii": "*"
+</code></pre>
+<p>Once the Gii extension has been installed, you enable it by adding these lines to your application configuration file:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'modules'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'gii'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\gii\Module'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;],<br />]</span></code></pre>
+<p>You can then access Gii through the following URL:</p>
+<pre><code>http://localhost/path/to/index.php?r=gii
+</code></pre>
+<blockquote><p>Note: if you are accessing gii from an IP address other than localhost, access will be denied by default. To circumvent that default, add the allowed IP addressess to the configuration:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'gii'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\gii\Module'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'allowedIPs'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'127.0.0.1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'::1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'192.168.0.*'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'192.168.178.20'</span><span style="color: #007700">]&nbsp;</span><span style="color: #FF8000">//&nbsp;adjust&nbsp;this&nbsp;to&nbsp;your&nbsp;needs<br /></span><span style="color: #007700">],</span></code></pre>
+</blockquote>
+<h3>Basic application <a href="#basic-application" name="basic-application" class="hashlink">&para;</a></h3><p>In basic application template configuration structure is a bit different so Gii should be configured in
+<code>config/web.php</code>:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;...<br /></span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">YII_ENV_DEV</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;configuration&nbsp;adjustments&nbsp;for&nbsp;'dev'&nbsp;environment<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$config</span><span style="color: #007700">[</span><span style="color: #DD0000">'bootstrap'</span><span style="color: #007700">][]&nbsp;=&nbsp;</span><span style="color: #DD0000">'debug'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$config</span><span style="color: #007700">[</span><span style="color: #DD0000">'modules'</span><span style="color: #007700">][</span><span style="color: #DD0000">'debug'</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #DD0000">'yii\debug\Module'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$config</span><span style="color: #007700">[</span><span style="color: #DD0000">'modules'</span><span style="color: #007700">][</span><span style="color: #DD0000">'gii'</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #DD0000">'yii\gii\Module'</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;&lt;---&nbsp;here<br /></span><span style="color: #007700">}</span></code></pre>
+<p>So in order to adjust IP address you need to do it like the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">YII_ENV_DEV</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;configuration&nbsp;adjustments&nbsp;for&nbsp;'dev'&nbsp;environment<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$config</span><span style="color: #007700">[</span><span style="color: #DD0000">'bootstrap'</span><span style="color: #007700">][]&nbsp;=&nbsp;</span><span style="color: #DD0000">'debug'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$config</span><span style="color: #007700">[</span><span style="color: #DD0000">'modules'</span><span style="color: #007700">][</span><span style="color: #DD0000">'debug'</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #DD0000">'yii\debug\Module'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$config</span><span style="color: #007700">[</span><span style="color: #DD0000">'modules'</span><span style="color: #007700">][</span><span style="color: #DD0000">'gii'</span><span style="color: #007700">]&nbsp;=&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\gii\Module'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'allowedIPs'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'127.0.0.1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'::1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'192.168.0.*'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'192.168.178.20'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;];<br />}</span></code></pre>
+<h2>How to use it <a href="#how-to-use-it" name="how-to-use-it" class="hashlink">&para;</a></h2><p>When you open Gii you first see the entry page that lets you choose a generator.</p>
+<p><img src="images/gii-entry.png" alt="Gii entry page" /></p>
+<p>By default there are the following generators available:</p>
+<ul>
+<li><strong>Model Generator</strong> - This generator generates an ActiveRecord class for the specified database table.</li>
+<li><strong>CRUD Generator</strong> - This generator generates a controller and views that implement CRUD (Create, Read, Update, Delete)
+operations for the specified data model.</li>
+<li><strong>Controller Generator</strong> - This generator helps you to quickly generate a new controller class, one or several
+controller actions and their corresponding views.</li>
+<li><strong>Form Generator</strong> - This generator generates a view script file that displays a form to collect input for the
+specified model class.</li>
+<li><strong>Module Generator</strong> - This generator helps you to generate the skeleton code needed by a Yii module.</li>
+</ul>
+<p>After choosing a generator by clicking on the "Start" button you will see a form that allows you to configure the
+parameters of the generator. Fill out the form according to your needs and press the "Preview" button to get a
+preview of the code that gii is about to generated. Dependend on the generator you chose and whether the files
+already existed or not you will get an ouput similar to what you see in the following picuture:</p>
+<p><img src="images/gii-preview.png" alt="Gii preview" /></p>
+<p>Clicking on the file name you can view a preview of the code that will be generated for that file.
+When the file already exists, gii also provides a diff view that shows what is different between the code that exists
+and the one that will be generated. In this case you can also choose which files should be overridden and which not.</p>
+<blockquote><p>Tip: When using the Model Generator to update models after database change, you can copy the code from gii preview
+  and merge the changes with your own code. You can use IDE features like PHPStorms
+  <a href="http://www.jetbrains.com/phpstorm/webhelp/comparing-files.html">compare with clipboard</a> for this,
+  which allows you to merge in relevant changes and leave out others that may revert your own code.</p>
+</blockquote>
+<p>After you have reviewed the code and selected the files to be generated you can click the "Generate" button to create
+the files. If all went fine you are done. When you see errors that gii is not able to generate the files you have to
+adjust directory permissions so that your webserver is able to write to the directories and create the files.</p>
+<blockquote><p>Note: The code generated by gii is only a template that has to be adjusted to your needs. It is there
+  to help you create new things quickly but it is not something that creates ready to use code.
+  We often see people using the models generated by gii without change and just extend them to adjust
+  some parts of it. This is not how it is meant to be used. Code generated by gii may be incomplete or incorrect
+  and has to be changed to fit your needs before you can use it.</p>
+</blockquote>
+<h2>Creating your own templates <a href="#creating-your-own-templates" name="creating-your-own-templates" class="hashlink">&para;</a></h2><p>Every generator has a form field that lets you choose a template to use for code generation.
+By default gii only provides one template but you can create your own templates that are adjusted to your needs.</p>
+<p>TBD</p>
+<h2>Creating your own generators <a href="#creating-your-own-generators" name="creating-your-own-generators" class="hashlink">&para;</a></h2><p>TBD</p>
         <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
     </div>
 </div>
@@ -46,7 +103,7 @@ as well as complete CRUD controllers.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:32:13 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:03:04 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

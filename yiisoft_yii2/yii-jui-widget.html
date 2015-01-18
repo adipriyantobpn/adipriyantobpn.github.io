@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7224" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7224-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10920" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10920-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7224-collapse" class="collapse navbar-collapse"><ul id="w7225" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7226" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10920-collapse" class="collapse navbar-collapse"><ul id="w10921" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10922" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7223" data-toggle="collapse" data-parent="#navigation">yii\jui <b class="caret"></b></a><div id="navigation-7223" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-jui-accordion.html">Accordion</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10919" data-toggle="collapse" data-parent="#navigation">yii\jui <b class="caret"></b></a><div id="navigation-10919" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-jui-accordion.html">Accordion</a>
 <a class="list-group-item" href="./yii-jui-accordionasset.html">AccordionAsset</a>
 <a class="list-group-item" href="./yii-jui-autocomplete.html">AutoComplete</a>
 <a class="list-group-item" href="./yii-jui-autocompleteasset.html">AutoCompleteAsset</a>
@@ -96,7 +102,7 @@
 <a href="yii-base-widget.html">yii\base\Widget</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
                     <tr><th>Subclasses</th><td><a href="yii-jui-accordion.html">yii\jui\Accordion</a>, <a href="yii-jui-autocomplete.html">yii\jui\AutoComplete</a>, <a href="yii-jui-datepicker.html">yii\jui\DatePicker</a>, <a href="yii-jui-dialog.html">yii\jui\Dialog</a>, <a href="yii-jui-draggable.html">yii\jui\Draggable</a>, <a href="yii-jui-droppable.html">yii\jui\Droppable</a>, <a href="yii-jui-inputwidget.html">yii\jui\InputWidget</a>, <a href="yii-jui-progressbar.html">yii\jui\ProgressBar</a>, <a href="yii-jui-resizable.html">yii\jui\Resizable</a>, <a href="yii-jui-selectable.html">yii\jui\Selectable</a>, <a href="yii-jui-slider.html">yii\jui\Slider</a>, <a href="yii-jui-sliderinput.html">yii\jui\SliderInput</a>, <a href="yii-jui-sortable.html">yii\jui\Sortable</a>, <a href="yii-jui-spinner.html">yii\jui\Spinner</a>, <a href="yii-jui-tabs.html">yii\jui\Tabs</a></td></tr>
                         <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
@@ -127,19 +133,25 @@
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-        <tr class="inherited" id="$behaviors">
+        <tr class="inherited" id="$autoIdPrefix">
+        <td><a href="yii-base-widget.html#$autoIdPrefix-detail">$autoIdPrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The prefix to the automatically generated widget IDs.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
         <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
         <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
         <td>List of behaviors attached to this component</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr id="$clientEvents">
+                <tr id="$clientEvents">
         <td><a href="yii-jui-widget.html#$clientEvents-detail">$clientEvents</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
         <td>The event handlers for the underlying jQuery UI widget.</td>
         <td><a href="yii-jui-widget.html">yii\jui\Widget</a></td>
     </tr>
-                <tr id="$clientOptions">
+            <tr id="$clientOptions">
         <td><a href="yii-jui-widget.html#$clientOptions-detail">$clientOptions</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
         <td>The options for the underlying jQuery UI widget.</td>
@@ -205,13 +217,13 @@
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-                <tr id="$clientEventsMap">
-        <td><a href="yii-jui-widget.html#$clientEventsMap-detail">$clientEventsMap</a></td>
+                <tr id="$clientEventMap">
+        <td><a href="yii-jui-widget.html#$clientEventMap-detail">$clientEventMap</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
         <td>Event names mapped to what should be specified in .</td>
         <td><a href="yii-jui-widget.html">yii\jui\Widget</a></td>
     </tr>
-                                    </table>
+                                        </table>
 </div>
 
 <a name="methods"></a>
@@ -320,11 +332,6 @@
         <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="findViewFile()">
-        <td><a href="yii-base-widget.html#findViewFile()-detail">findViewFile()</a></td>
-        <td>Finds the view file based on the given view name.</td>
-        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
-    </tr>
             <tr class="inherited" id="getBehavior()">
         <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
         <td>Returns the named behavior object.</td>
@@ -405,11 +412,6 @@
         <td>Sets the view object to be used by this widget.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
@@ -437,7 +439,7 @@
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                                                <tr id="registerAssets()">
+                                                                                                                            <tr id="registerAssets()">
         <td><a href="yii-jui-widget.html#registerAssets()-detail">registerAssets()</a></td>
         <td>Registers a specific jQuery UI widget assets</td>
         <td><a href="yii-jui-widget.html">yii\jui\Widget</a></td>
@@ -457,7 +459,7 @@
         <td>Registers a specific jQuery UI widget asset bundle, initializes it with client options and registers related events</td>
         <td><a href="yii-jui-widget.html">yii\jui\Widget</a></td>
     </tr>
-                                    </table>
+                                </table>
 </div>
 
 <a name="events"></a>
@@ -468,11 +470,29 @@
 
 <div class="property-doc">
 
+    <div class="detail-header h3" id="$clientEventMap-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-jui-widget.html#$clientEventMap-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $clientEventMap        <span class="detailHeaderTag small">
+            protected                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-jui-widget.html#$clientEventMap-detail">$clientEventMap</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>Event names mapped to what should be specified in .on(
+If empty, it is assumed that event passed to clientEvents is prefixed with widget name.</p>
+
+    
+
     <div class="detail-header h3" id="$clientEvents-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-jui-widget.html#$clientEvents-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $clientEvents        <span class="detailHeaderTag small">
             public                                    property
@@ -484,25 +504,11 @@
     <p>The event handlers for the underlying jQuery UI widget.
 Please refer to the corresponding jQuery UI widget Web page for possible events.
 For example, <a href="http://api.jqueryui.com/accordion/">this page</a> shows
-how to use the "Accordion" widget and the supported events (e.g. "create").</p>
-
-    
-
-    <div class="detail-header h3" id="$clientEventsMap-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-jui-widget.html#$clientEventsMap-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        $clientEventsMap        <span class="detailHeaderTag small">
-            protected                                    property
-                    </span>
-    </div>
-
-    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-jui-widget.html#$clientEventsMap-detail">$clientEventsMap</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
-
-    <p>Event names mapped to what should be specified in .on(
-If empty, it is assumed that event passed to clientEvents is prefixed with widget name.</p>
+how to use the "Accordion" widget and the supported events (e.g. "create").
+Keys are the event names and values are javascript code that is passed to the <code>.on()</code> function
+as the event handler.</p>
+<p>For example you could write the following in your widget configuration:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'clientEvents'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'change'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'function&nbsp;()&nbsp;{&nbsp;alert('</span><span style="color: #0000BB">event&nbsp;</span><span style="color: #DD0000">"change"&nbsp;</span><span style="color: #0000BB">occured</span><span style="color: #007700">.</span><span style="color: #DD0000">');&nbsp;}'<br /></span><span style="color: #007700">],</span></code></pre>
 
     
 
@@ -541,13 +547,13 @@ how to use the "Accordion" widget and the supported options (e.g. "header").</p>
 
     <p>The HTML attributes for the widget container tag.</p>
 
-    
+    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
 
     <div class="detail-header h3" id="$theme-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-jui-widget.html#$theme-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L25" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L25" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L24" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L24" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $theme        <span class="detailHeaderTag small">
             public                                    property
@@ -568,8 +574,8 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-jui-widget.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L65" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L65" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -593,8 +599,8 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
     <div class="detail-header h3" id="registerAssets()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-jui-widget.html#registerAssets()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         registerAssets()
         <span class="detail-header-tag small">
@@ -623,8 +629,8 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
     <div class="detail-header h3" id="registerClientEvents()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-jui-widget.html#registerClientEvents()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L94" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L94" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L105" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L105" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         registerClientEvents()
         <span class="detail-header-tag small">
@@ -639,11 +645,17 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-jui-widget.html#registerClientEvents()-detail">registerClientEvents</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$name&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-jui-widget.html#registerClientEvents()-detail">registerClientEvents</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$name</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"><p>The name of the jQuery UI widget</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$id</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The ID of the widget</p>
 </td>
                 </tr>
                                                 </table>
@@ -653,8 +665,8 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
     <div class="detail-header h3" id="registerClientOptions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-jui-widget.html#registerClientOptions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L80" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L80" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         registerClientOptions()
         <span class="detail-header-tag small">
@@ -669,11 +681,17 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-jui-widget.html#registerClientOptions()-detail">registerClientOptions</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$name&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-jui-widget.html#registerClientOptions()-detail">registerClientOptions</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$name</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"><p>The name of the jQuery UI widget</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$id</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The ID of the widget</p>
 </td>
                 </tr>
                                                 </table>
@@ -683,8 +701,8 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
     <div class="detail-header h3" id="registerWidget()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-jui-widget.html#registerWidget()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L116" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L116" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/jui/Widget.php#L127" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/jui/Widget.php#L127" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         registerWidget()
         <span class="detail-header-tag small">
@@ -699,7 +717,7 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-jui-widget.html#registerWidget()-detail">registerWidget</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$name</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$assetBundle&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-jui-widget.html#registerWidget()-detail">registerWidget</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$name</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$assetBundle</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
@@ -710,6 +728,12 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
                   <td class="param-name-col"><span style="color: #0000BB">$assetBundle</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"><p>The asset bundle for the widget</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$id</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The ID of the widget. If null, it will use the <code>id</code> value of <a href="yii-jui-widget.html#$options-detail">$options</a>.</p>
 </td>
                 </tr>
                                                 </table>
@@ -754,7 +778,7 @@ representing the JUI theme. The default theme is the official "Smoothness" theme
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:07 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:40 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

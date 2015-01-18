@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7296" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7296-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11054" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11054-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7296-collapse" class="collapse navbar-collapse"><ul id="w7297" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7298" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11054-collapse" class="collapse navbar-collapse"><ul id="w11055" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11056" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,9 +48,8 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7295" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-7295" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11053" data-toggle="collapse" data-parent="#navigation">yii\sphinx <b class="caret"></b></a><div id="navigation-11053" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-sphinx-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-sphinx-activerecord.html">ActiveRecord</a>
-<a class="list-group-item" href="./yii-sphinx-activerelation.html">ActiveRelation</a>
 <a class="list-group-item" href="./yii-sphinx-columnschema.html">ColumnSchema</a>
 <a class="list-group-item" href="./yii-sphinx-command.html">Command</a>
 <a class="list-group-item" href="./yii-sphinx-connection.html">Connection</a>
@@ -68,8 +73,7 @@
     </colgroup>
             <tr><th>Inheritance</th><td><a href="yii-sphinx-schema.html">yii\sphinx\Schema</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a></td></tr>
-                                <tr><th>Available since version</th><td>2.0</td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
           <td><a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php">https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php</a></td>
@@ -283,12 +287,7 @@
         <td>Refreshes the schema.</td>
         <td><a href="yii-sphinx-schema.html">yii\sphinx\Schema</a></td>
     </tr>
-                    <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
-    </table>
+            </table>
 </div>
 
 <div class="summary doc-method">
@@ -355,7 +354,7 @@
         <td>Resolves the index name.</td>
         <td><a href="yii-sphinx-schema.html">yii\sphinx\Schema</a></td>
     </tr>
-        </table>
+    </table>
 </div>
 
 <a name="events"></a>
@@ -479,8 +478,9 @@
 
     <div class="signature"><a href="yii-sphinx-indexschema.html">yii\sphinx\IndexSchema</a>[] <strong><a href="yii-sphinx-schema.html#getIndexSchemas()-detail">getIndexSchemas</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$refresh&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false&nbsp;</span><span style="color: #007700">)</span></div>
 
-    <p>The metadata for all indexes in the Sphinx.
-Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\sphinx\IndexSchema</a> or its child class.</p>
+    <p>The metadata for all indexes in the Sphinx.</p>
+<pre><code>                          Each array element is an instance of [[IndexSchema]] or its child class.
+</code></pre>
 
     
 
@@ -542,8 +542,8 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
     <div class="detail-header h3" id="createQueryBuilder()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#createQueryBuilder()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L303" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L303" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L311" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L311" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createQueryBuilder()
         <span class="detail-header-tag small">
@@ -572,8 +572,8 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
     <div class="detail-header h3" id="findColumns()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#findColumns()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L436" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L436" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L448" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L448" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findColumns()
         <span class="detail-header-tag small">
@@ -614,8 +614,8 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
     <div class="detail-header h3" id="findIndexes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#findIndexes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L246" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L246" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L251" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L251" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findIndexes()
         <span class="detail-header-tag small">
@@ -644,8 +644,8 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
     <div class="detail-header h3" id="getCacheGroup()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getCacheGroup()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L172" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L172" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L174" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L174" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getCacheGroup()
         <span class="detail-header-tag small">
@@ -675,8 +675,8 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
     <div class="detail-header h3" id="getCacheKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getCacheKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L157" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L157" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L159" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L159" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getCacheKey()
         <span class="detail-header-tag small">
@@ -711,8 +711,8 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
     <div class="detail-header h3" id="getColumnPhpType()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getColumnPhpType()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L408" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L408" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L420" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L420" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getColumnPhpType()
         <span class="detail-header-tag small">
@@ -747,8 +747,8 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
     <div class="detail-header h3" id="getIndexNames()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getIndexNames()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L205" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L205" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L208" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L208" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getIndexNames()
         <span class="detail-header-tag small">
@@ -767,8 +767,9 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$refresh</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>Whether to fetch the latest available index names. If this is false,
-index names fetched previously (if available) will be returned.</p>
+                  <td class="param-desc-col"><p>Whether to fetch the latest available index names. If this is false,</p>
+<pre><code>                      index names fetched previously (if available) will be returned.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -826,8 +827,8 @@ index names fetched previously (if available) will be returned.</p>
     <div class="detail-header h3" id="getIndexSchemas()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getIndexSchemas()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L188" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L188" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L190" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L190" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getIndexSchemas()
         <span class="detail-header-tag small">
@@ -846,15 +847,17 @@ index names fetched previously (if available) will be returned.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$refresh</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>Whether to fetch the latest available index schemas. If this is false,
-cached data may be returned if available.</p>
+                  <td class="param-desc-col"><p>Whether to fetch the latest available index schemas. If this is false,</p>
+<pre><code>                           cached data may be returned if available.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="yii-sphinx-indexschema.html">yii\sphinx\IndexSchema</a>[]</td>
-                  <td class="param-desc-col"><p>The metadata for all indexes in the Sphinx.
-Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\sphinx\IndexSchema</a> or its child class.</p>
+                  <td class="param-desc-col"><p>The metadata for all indexes in the Sphinx.</p>
+<pre><code>                          Each array element is an instance of [[IndexSchema]] or its child class.
+</code></pre>
 </td>
                 </tr>
                                     </table>
@@ -864,8 +867,8 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
     <div class="detail-header h3" id="getIndexTypes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getIndexTypes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L219" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L219" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L223" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L223" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getIndexTypes()
         <span class="detail-header-tag small">
@@ -884,8 +887,9 @@ Each array element is an instance of <a href="yii-sphinx-indexschema.html">yii\s
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$refresh</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>Whether to fetch the latest available index types. If this is false,
-index types fetched previously (if available) will be returned.</p>
+                  <td class="param-desc-col"><p>Whether to fetch the latest available index types. If this is false,</p>
+<pre><code>                     index types fetched previously (if available) will be returned.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -901,8 +905,8 @@ index types fetched previously (if available) will be returned.</p>
     <div class="detail-header h3" id="getPdoType()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getPdoType()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L269" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L269" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L276" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L276" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getPdoType()
         <span class="detail-header-tag small">
@@ -937,8 +941,8 @@ index types fetched previously (if available) will be returned.</p>
     <div class="detail-header h3" id="getQueryBuilder()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getQueryBuilder()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L255" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L255" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L261" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L261" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getQueryBuilder()
         <span class="detail-header-tag small">
@@ -967,8 +971,8 @@ index types fetched previously (if available) will be returned.</p>
     <div class="detail-header h3" id="getRawIndexName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#getRawIndexName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L393" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L393" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L404" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L404" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getRawIndexName()
         <span class="detail-header-tag small">
@@ -1005,8 +1009,8 @@ and replace the percentage character '%' with <span class="broken-link">yii\sphi
     <div class="detail-header h3" id="initIndexesInfo()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#initIndexesInfo()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L230" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L230" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L235" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L235" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         initIndexesInfo()
         <span class="detail-header-tag small">
@@ -1029,8 +1033,8 @@ and replace the percentage character '%' with <span class="broken-link">yii\sphi
     <div class="detail-header h3" id="loadColumnSchema()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#loadColumnSchema()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L464" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L464" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L477" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L477" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadColumnSchema()
         <span class="detail-header-tag small">
@@ -1101,8 +1105,8 @@ and replace the percentage character '%' with <span class="broken-link">yii\sphi
     <div class="detail-header h3" id="quoteColumnName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#quoteColumnName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L350" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L350" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L360" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L360" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         quoteColumnName()
         <span class="detail-header-tag small">
@@ -1140,8 +1144,8 @@ then this method will do nothing.</p>
     <div class="detail-header h3" id="quoteIndexName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#quoteIndexName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L333" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L333" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L342" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L342" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         quoteIndexName()
         <span class="detail-header-tag small">
@@ -1179,8 +1183,8 @@ then this method will do nothing.</p>
     <div class="detail-header h3" id="quoteSimpleColumnName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#quoteSimpleColumnName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L381" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L381" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L392" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L392" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         quoteSimpleColumnName()
         <span class="detail-header-tag small">
@@ -1216,8 +1220,8 @@ then this method will do nothing.</p>
     <div class="detail-header h3" id="quoteSimpleIndexName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#quoteSimpleIndexName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L370" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L370" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L381" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L381" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         quoteSimpleIndexName()
         <span class="detail-header-tag small">
@@ -1253,8 +1257,8 @@ then this method will do nothing.</p>
     <div class="detail-header h3" id="quoteValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#quoteValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L315" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L315" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L323" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L323" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         quoteValue()
         <span class="detail-header-tag small">
@@ -1290,8 +1294,8 @@ then this method will do nothing.</p>
     <div class="detail-header h3" id="refresh()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-sphinx-schema.html#refresh()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L288" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L288" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/sphinx/Schema.php#L296" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/sphinx/Schema.php#L296" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         refresh()
         <span class="detail-header-tag small">
@@ -1417,7 +1421,7 @@ to reflect the Sphinx schema change.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:09 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
