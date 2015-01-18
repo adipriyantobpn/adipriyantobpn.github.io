@@ -1,0 +1,39 @@
+#install yii2
+C:\>	composer global require "fxp/composer-asset-plugin:1.0.0-beta4"
+C:\>	composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+C:\>	composer create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic D:\sourceCode\web\htdocs\w\00_labs\yii2-basic
+C:\>	cd D:\sourceCode\web\htdocs\w\00_labs\yii2-basic
+
+#install yii2-apidoc by adding "yiisoft/yii2-apidoc": "*" in composer.json require array content, then run
+C:\>	composer update
+
+#generating docs
+
+#-- guide
+C:\>	D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc 
+		guide 
+		D:\installer\~gitrepo\yiisoft_yii2\docs\guide 
+		D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 
+		--apiDocs="." 
+		--guidePrefix="guide-en-" 
+		--interactive=0
+		
+		
+#-- api
+C:\>	D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc 
+		api 
+		D:\installer\~gitrepo\yiisoft_yii2\framework 
+		D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 
+		--guide="." 
+		--guidePrefix="guide-en-" 
+		--interactive=0
+		
+
+#-- extension apis : change {EXTENSIONS} into extension name like bootstrap, composer, etc
+C:\>	D:\sourceCode\web\htdocs\w\00_labs\yii2-basic\vendor\bin\apidoc 
+		api 
+		D:\installer\~gitrepo\yiisoft_yii2\extensions
+		D:\installer\~gitrepo\adipriyantobpn_adipriyantobpn.github.io\yiisoft_yii2 
+		--guide="." 
+		--guidePrefix="guide-en-" 
+		--interactive=0
