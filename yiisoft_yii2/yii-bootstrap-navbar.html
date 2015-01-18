@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w6839" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w6839-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10338" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10338-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w6839-collapse" class="collapse navbar-collapse"><ul id="w6840" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w6841" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10338-collapse" class="collapse navbar-collapse"><ul id="w10339" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10340" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,7 +48,9 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-6838" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-6838" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10337" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-10337" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-bootstrap-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrapasset.html">BootstrapAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrappluginasset.html">BootstrapPluginAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrapthemeasset.html">BootstrapThemeAsset</a>
@@ -76,7 +84,7 @@
 <a href="yii-base-widget.html">yii\base\Widget</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
                                 <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
@@ -91,7 +99,7 @@ is treated as the content of the navbar. You may use widgets such as <a href="yi
 or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content. For example,</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">bootstrap</span><span style="color: #007700">\</span><span style="color: #0000BB">NavBar</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">widgets</span><span style="color: #007700">\</span><span style="color: #0000BB">Menu</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">NavBar</span><span style="color: #007700">::</span><span style="color: #0000BB">begin</span><span style="color: #007700">([</span><span style="color: #DD0000">'brandLabel'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'NavBar&nbsp;Test'</span><span style="color: #007700">]);<br />echo&nbsp;</span><span style="color: #0000BB">Nav</span><span style="color: #007700">::</span><span style="color: #0000BB">widget</span><span style="color: #007700">([<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'items'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Home'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'url'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'/site/index'</span><span style="color: #007700">]],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'About'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'url'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'/site/about'</span><span style="color: #007700">]],<br />&nbsp;&nbsp;&nbsp;&nbsp;],<br />]);<br /></span><span style="color: #0000BB">NavBar</span><span style="color: #007700">::</span><span style="color: #0000BB">end</span><span style="color: #007700">();</span></code></pre>
 
-    <p>See also <a href="http://twitter.github.io/bootstrap/components.html#navbar">http://twitter.github.io/bootstrap/components.html#navbar</a>.</p></div>
+    <p>See also <a href="http://getbootstrap.com/components/#navbar">http://getbootstrap.com/components/#navbar</a>.</p></div>
 
 <a name="properties"></a>
 
@@ -110,7 +118,13 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-        <tr class="inherited" id="$behaviors">
+        <tr class="inherited" id="$autoIdPrefix">
+        <td><a href="yii-base-widget.html#$autoIdPrefix-detail">$autoIdPrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The prefix to the automatically generated widget IDs.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
         <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
         <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
         <td>List of behaviors attached to this component</td>
@@ -146,6 +160,12 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
         <td>The options for the underlying Bootstrap JS plugin.</td>
         <td><a href="yii-bootstrap-widget.html">yii\bootstrap\Widget</a></td>
     </tr>
+            <tr id="$containerOptions">
+        <td><a href="yii-bootstrap-navbar.html#$containerOptions-detail">$containerOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The HTML attributes for the container tag.</td>
+        <td><a href="yii-bootstrap-navbar.html">yii\bootstrap\NavBar</a></td>
+    </tr>
             <tr class="inherited" id="$counter">
         <td><a href="yii-base-widget.html#$counter-detail">$counter</a></td>
         <td><a href="http://www.php.net/language.types.integer">integer</a></td>
@@ -158,16 +178,29 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
         <td>ID of the widget.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
-            <tr class="inherited" id="$options">
-        <td><a href="yii-bootstrap-widget.html#$options-detail">$options</a></td>
+            <tr id="$innerContainerOptions">
+        <td><a href="yii-bootstrap-navbar.html#$innerContainerOptions-detail">$innerContainerOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The HTML attributes of the inner container.</td>
+        <td><a href="yii-bootstrap-navbar.html">yii\bootstrap\NavBar</a></td>
+    </tr>
+            <tr id="$options">
+        <td><a href="yii-bootstrap-navbar.html#$options-detail">$options</a></td>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
         <td>The HTML attributes for the widget container tag.</td>
-        <td><a href="yii-bootstrap-widget.html">yii\bootstrap\Widget</a></td>
+        <td><a href="yii-bootstrap-navbar.html">yii\bootstrap\NavBar</a></td>
+    </tr>
+            <tr id="$renderInnerContainer">
+        <td><a href="yii-bootstrap-navbar.html#$renderInnerContainer-detail">$renderInnerContainer</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether the navbar content should be included in an inner div container which by default
+adds left and right padding.</td>
+        <td><a href="yii-bootstrap-navbar.html">yii\bootstrap\NavBar</a></td>
     </tr>
             <tr id="$screenReaderToggleText">
         <td><a href="yii-bootstrap-navbar.html#$screenReaderToggleText-detail">$screenReaderToggleText</a></td>
-        <td></td>
-        <td></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Text to show for screen readers for the button to toggle the navbar.</td>
         <td><a href="yii-bootstrap-navbar.html">yii\bootstrap\NavBar</a></td>
     </tr>
             <tr class="inherited" id="$stack">
@@ -297,11 +330,6 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
         <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="findViewFile()">
-        <td><a href="yii-base-widget.html#findViewFile()-detail">findViewFile()</a></td>
-        <td>Finds the view file based on the given view name.</td>
-        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
-    </tr>
             <tr class="inherited" id="getBehavior()">
         <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
         <td>Returns the named behavior object.</td>
@@ -382,11 +410,6 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
         <td>Sets the view object to be used by this widget.</td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
@@ -414,7 +437,7 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                                                <tr class="inherited" id="registerPlugin()">
+                                                                                                                            <tr class="inherited" id="registerPlugin()">
         <td><a href="yii-bootstrap-widget.html#registerPlugin()-detail">registerPlugin()</a></td>
         <td>Registers a specific Bootstrap plugin and the related events</td>
         <td><a href="yii-bootstrap-widget.html">yii\bootstrap\Widget</a></td>
@@ -424,7 +447,7 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
         <td>Renders collapsible toggle button.</td>
         <td><a href="yii-bootstrap-navbar.html">yii\bootstrap\NavBar</a></td>
     </tr>
-                            </table>
+                        </table>
 </div>
 
 <a name="events"></a>
@@ -438,8 +461,8 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
     <div class="detail-header h3" id="$brandLabel-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$brandLabel-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L62" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L62" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $brandLabel        <span class="detailHeaderTag small">
             public                                    property
@@ -450,13 +473,13 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
 
     <p>The text of the brand. Note that this is not HTML-encoded.</p>
 
-    <p>See also <a href="http://twitter.github.io/bootstrap/components.html#navbar">http://twitter.github.io/bootstrap/components.html#navbar</a>.</p>
+    <p>See also <a href="http://getbootstrap.com/components/#navbar">http://getbootstrap.com/components/#navbar</a>.</p>
 
     <div class="detail-header h3" id="$brandOptions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$brandOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L52" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L52" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L72" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L72" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $brandOptions        <span class="detailHeaderTag small">
             public                                    property
@@ -467,38 +490,114 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
 
     <p>The HTML attributes of the brand link.</p>
 
-    
+    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
 
     <div class="detail-header h3" id="$brandUrl-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$brandUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L48" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L48" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $brandUrl        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"> <a href="yii-bootstrap-navbar.html#$brandUrl-detail">$brandUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'/'</span></div>
+    <div class="signature"> <a href="yii-bootstrap-navbar.html#$brandUrl-detail">$brandUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
 
     
+    
+
+    <div class="detail-header h3" id="$containerOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-navbar.html#$containerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L57" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L57" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $containerOptions        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-bootstrap-navbar.html#$containerOptions-detail">$containerOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>The HTML attributes for the container tag. The following special options are recognized:</p>
+<ul>
+<li>tag: string, defaults to "div", the name of the container tag.</li>
+</ul>
+
+    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
+
+    <div class="detail-header h3" id="$innerContainerOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-navbar.html#$innerContainerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L86" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L86" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $innerContainerOptions        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-bootstrap-navbar.html#$innerContainerOptions-detail">$innerContainerOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>The HTML attributes of the inner container.</p>
+
+    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
+
+    <div class="detail-header h3" id="$options-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-navbar.html#$options-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $options        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.array">array</a> <a href="yii-bootstrap-navbar.html#$options-detail">$options</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+    <p>The HTML attributes for the widget container tag. The following special options are recognized:</p>
+<ul>
+<li>tag: string, defaults to "nav", the name of the container tag.</li>
+</ul>
+
+    <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
+
+    <div class="detail-header h3" id="$renderInnerContainer-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-navbar.html#$renderInnerContainer-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $renderInnerContainer        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <a href="yii-bootstrap-navbar.html#$renderInnerContainer-detail">$renderInnerContainer</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+    <p>Whether the navbar content should be included in an inner div container which by default
+adds left and right padding. Set this to false for a 100% width navbar.</p>
+
     
 
     <div class="detail-header h3" id="$screenReaderToggleText-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$screenReaderToggleText-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L54" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L54" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $screenReaderToggleText        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"> <a href="yii-bootstrap-navbar.html#$screenReaderToggleText-detail">$screenReaderToggleText</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'Toggle&nbsp;navigation'</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-bootstrap-navbar.html#$screenReaderToggleText-detail">$screenReaderToggleText</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'Toggle&nbsp;navigation'</span></div>
 
-    
+    <p>Text to show for screen readers for the button to toggle the navbar.</p>
+
     
 </div>
 <h2>Method Details</h2>
@@ -508,8 +607,8 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -532,8 +631,8 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
     <div class="detail-header h3" id="renderToggleButton()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#renderToggleButton()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L98" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L98" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L148" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L148" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderToggleButton()
         <span class="detail-header-tag small">
@@ -562,8 +661,8 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L85" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L85" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L132" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L132" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -621,7 +720,7 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:03 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:34 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

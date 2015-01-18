@@ -13,10 +13,10 @@
 <body>
 
 <div class="wrap">
-    <nav id="w60" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w60-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w72" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w72-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w60-collapse" class="collapse navbar-collapse"><ul id="w61" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w72-collapse" class="collapse navbar-collapse"><ul id="w73" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
 <li><a href="./guide-en-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <input id="searchbox" type="text" class="form-control" placeholder="Search">
@@ -38,6 +38,13 @@ and the second is the application itself. Yii has a pretty low performance impac
 on your application out of the box and can be fine-tuned further for production
 environment. As for the application, we'll provide some of the best practices
 along with examples on how to apply them to Yii.</p>
+<h2>Preparing environment <a href="#preparing-environment" name="preparing-environment" class="hashlink">&para;</a></h2><p>A well configured environment to run PHP application really matters. In order to get maximum performance:</p>
+<ul>
+<li>Always use latest stable PHP version. Each major release brings significant performance improvements and reduced
+memory usage.</li>
+<li>Use <a href="http://ru2.php.net/apc">APC</a> for PHP 5.4 and less or <a href="http://php.net/opcache">Opcache</a> for PHP 5.5 and more. It
+gives a very good performance boost.</li>
+</ul>
 <h2>Preparing framework for production <a href="#preparing-framework-for-production" name="preparing-framework-for-production" class="hashlink">&para;</a></h2><h3>Disabling Debug Mode <a href="#disabling-debug-mode" name="disabling-debug-mode" class="hashlink">&para;</a></h3><p>First thing you should do before deploying your application to production environment
 is to disable debug mode. A Yii application runs in debug mode if the constant
 <code>YII_DEBUG</code> is defined as <code>true</code> in <code>index.php</code> so to disable debug the following
@@ -81,15 +88,16 @@ save the rendering cost for the whole page.</p>
 sending either <code>ETag</code> or <code>Last-Modified</code> header in your application response. If browser is implemented according to
 HTTP specification (most browsers are), content will be fetched only if it is different from what it was prevously.</p>
 <p>Forming proper headers is time consuming task so Yii provides a shortcut in form of controller filter
-<span class="broken-link">\yii\web\HttpCache</span>. Using it is very easy. In a controller you need to implement <code>behaviors</code> method like
+<span class="broken-link">yii\filters\HttpCache</span>. Using it is very easy. In a controller you need to implement <code>behaviors</code> method like
 the following:</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">behaviors</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'httpCache'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">web</span><span style="color: #007700">\</span><span style="color: #0000BB">HttpCache</span><span style="color: #007700">::</span><span style="color: #0000BB">className</span><span style="color: #007700">(),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'only'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'list'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'lastModified'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;function&nbsp;(</span><span style="color: #0000BB">$action</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$q&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Query</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">strtotime</span><span style="color: #007700">(</span><span style="color: #0000BB">$q</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">from</span><span style="color: #007700">(</span><span style="color: #DD0000">'users'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">max</span><span style="color: #007700">(</span><span style="color: #DD0000">'updated_timestamp'</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;'etagSeed'&nbsp;=&gt;&nbsp;function&nbsp;($action,&nbsp;$params)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;return&nbsp;//&nbsp;generate&nbsp;etag&nbsp;seed&nbsp;here<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;];<br />}</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">behaviors</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'httpCache'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">filters</span><span style="color: #007700">\</span><span style="color: #0000BB">HttpCache</span><span style="color: #007700">::</span><span style="color: #0000BB">className</span><span style="color: #007700">(),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'only'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'list'</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'lastModified'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;function&nbsp;(</span><span style="color: #0000BB">$action</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$q&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Query</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">strtotime</span><span style="color: #007700">(</span><span style="color: #0000BB">$q</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">from</span><span style="color: #007700">(</span><span style="color: #DD0000">'users'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">max</span><span style="color: #007700">(</span><span style="color: #DD0000">'updated_timestamp'</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;'etagSeed'&nbsp;=&gt;&nbsp;function&nbsp;($action,&nbsp;$params)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;return&nbsp;//&nbsp;generate&nbsp;etag&nbsp;seed&nbsp;here<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />&nbsp;&nbsp;&nbsp;&nbsp;];<br />}</span></code></pre>
 <p>In the code above one can use either <code>etagSeed</code> or <code>lastModified</code>. Implementing both isn't necessary. The goal is to
 determine if content was modified in a way that is cheaper than fetching and rendering that content. <code>lastModified</code>
 should return unix timestamp of the last content modification while <code>etagSeed</code> should return a string that is then
 used to generate <code>ETag</code> header value.</p>
 <h3>Database Optimization <a href="#database-optimization" name="database-optimization" class="hashlink">&para;</a></h3><p>Fetching data from database is often the main performance bottleneck in
-a Web application. Although using caching may alleviate the performance hit,
+a Web application.
+Although using <a href="guide-en-caching.html#Query-Caching">caching</a> may alleviate the performance hit,
 it does not fully solve the problem. When the database contains enormous data
 and the cached data is invalid, fetching the latest data could be prohibitively
 expensive without proper database and query design.</p>
@@ -118,6 +126,13 @@ request later if there's no need for immediate response.</p>
 <li>queues + handlers.</li>
 </ul>
 <p>TBD</p>
+<h3>If nothing helps <a href="#if-nothing-helps" name="if-nothing-helps" class="hashlink">&para;</a></h3><p>If nothing helps, never assume what may fix performance problem. Always profile your code instead before changing
+anything. The following tools may be helpful:</p>
+<ul>
+<li><a href="guide-en-module-debug.html">Yii debug toolbar and debugger</a></li>
+<li><a href="http://xdebug.org/docs/profiler">XDebug profiler</a></li>
+<li><a href="http://www.php.net/manual/en/book.xhprof.php">XHProf</a></li>
+</ul>
         <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
     </div>
 </div>
@@ -126,7 +141,7 @@ request later if there's no need for immediate response.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:32:13 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:03:04 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

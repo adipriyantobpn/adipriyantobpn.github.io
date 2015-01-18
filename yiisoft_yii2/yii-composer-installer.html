@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w6855" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w6855-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10366" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10366-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w6855-collapse" class="collapse navbar-collapse"><ul id="w6856" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w6857" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10366-collapse" class="collapse navbar-collapse"><ul id="w10367" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10368" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-6854" data-toggle="collapse" data-parent="#navigation">yii\composer <b class="caret"></b></a><div id="navigation-6854" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-composer-installer.html">Installer</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10365" data-toggle="collapse" data-parent="#navigation">yii\composer <b class="caret"></b></a><div id="navigation-10365" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-composer-installer.html">Installer</a>
 <a class="list-group-item" href="./yii-composer-plugin.html">Plugin</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Class yii\composer\Installer</h1>
@@ -141,8 +147,8 @@ Composer\Installer\LibraryInstaller</td></tr>
         <td></td>
         <td><a href="yii-composer-installer.html">yii\composer\Installer</a></td>
     </tr>
-                <tr id="linkYiiBaseFiles()">
-        <td><a href="yii-composer-installer.html#linkYiiBaseFiles()-detail">linkYiiBaseFiles()</a></td>
+                <tr id="linkBaseYiiFiles()">
+        <td><a href="yii-composer-installer.html#linkBaseYiiFiles()-detail">linkBaseYiiFiles()</a></td>
         <td></td>
         <td><a href="yii-composer-installer.html">yii\composer\Installer</a></td>
     </tr>
@@ -151,13 +157,13 @@ Composer\Installer\LibraryInstaller</td></tr>
         <td></td>
         <td><a href="yii-composer-installer.html">yii\composer\Installer</a></td>
     </tr>
-            <tr id="removePackage()">
-        <td><a href="yii-composer-installer.html#removePackage()-detail">removePackage()</a></td>
+            <tr id="removeBaseYiiFiles()">
+        <td><a href="yii-composer-installer.html#removeBaseYiiFiles()-detail">removeBaseYiiFiles()</a></td>
         <td></td>
         <td><a href="yii-composer-installer.html">yii\composer\Installer</a></td>
     </tr>
-            <tr id="removeYiiBaseFiles()">
-        <td><a href="yii-composer-installer.html#removeYiiBaseFiles()-detail">removeYiiBaseFiles()</a></td>
+            <tr id="removePackage()">
+        <td><a href="yii-composer-installer.html#removePackage()-detail">removePackage()</a></td>
         <td></td>
         <td><a href="yii-composer-installer.html">yii\composer\Installer</a></td>
     </tr>
@@ -314,13 +320,13 @@ Composer\Installer\LibraryInstaller</td></tr>
 
 <!--	-->
 
-    <div class="detail-header h3" id="linkYiiBaseFiles()-detail">
+    <div class="detail-header h3" id="linkBaseYiiFiles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-composer-installer.html#linkYiiBaseFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L164" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L164" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        <a class="tool-link hash" href="yii-composer-installer.html#linkBaseYiiFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L189" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L189" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
-        linkYiiBaseFiles()
+        linkBaseYiiFiles()
         <span class="detail-header-tag small">
             protected            method
                     </span>
@@ -333,7 +339,7 @@ Composer\Installer\LibraryInstaller</td></tr>
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-composer-installer.html#linkYiiBaseFiles()-detail">linkYiiBaseFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-composer-installer.html#linkBaseYiiFiles()-detail">linkBaseYiiFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
             </table>
 
 <!--	-->
@@ -341,8 +347,8 @@ Composer\Installer\LibraryInstaller</td></tr>
     <div class="detail-header h3" id="loadExtensions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-composer-installer.html#loadExtensions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L132" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L132" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L149" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L149" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadExtensions()
         <span class="detail-header-tag small">
@@ -362,11 +368,35 @@ Composer\Installer\LibraryInstaller</td></tr>
 
 <!--	-->
 
+    <div class="detail-header h3" id="removeBaseYiiFiles()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-composer-installer.html#removeBaseYiiFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L213" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L213" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        removeBaseYiiFiles()
+        <span class="detail-header-tag small">
+            protected            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-composer-installer.html#removeBaseYiiFiles()-detail">removeBaseYiiFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+            </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="removePackage()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-composer-installer.html#removePackage()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L125" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L125" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L142" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L142" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removePackage()
         <span class="detail-header-tag small">
@@ -391,35 +421,11 @@ Composer\Installer\LibraryInstaller</td></tr>
 
 <!--	-->
 
-    <div class="detail-header h3" id="removeYiiBaseFiles()-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-composer-installer.html#removeYiiBaseFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L188" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L188" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        removeYiiBaseFiles()
-        <span class="detail-header-tag small">
-            protected            method
-                    </span>
-    </div>
-
-    <div class="doc-description">
-        <p><strong></strong></p>
-
-        
-            </div>
-
-    <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-composer-installer.html#removeYiiBaseFiles()-detail">removeYiiBaseFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
-            </table>
-
-<!--	-->
-
     <div class="detail-header h3" id="saveExtensions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-composer-installer.html#saveExtensions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L157" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L157" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L178" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L178" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         saveExtensions()
         <span class="detail-header-tag small">
@@ -447,8 +453,8 @@ Composer\Installer\LibraryInstaller</td></tr>
     <div class="detail-header h3" id="setPermission()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-composer-installer.html#setPermission()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L205" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L205" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/composer/Installer.php#L230" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/composer/Installer.php#L230" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setPermission()
         <span class="detail-header-tag small">
@@ -613,7 +619,7 @@ Composer\Installer\LibraryInstaller</td></tr>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:04 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:35 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

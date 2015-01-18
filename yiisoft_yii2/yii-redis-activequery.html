@@ -13,16 +13,22 @@
 <body>
 
 <div class="wrap">
-    <nav id="w7228" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w7228-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10994" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10994-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w7228-collapse" class="collapse navbar-collapse"><ul id="w7229" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w7230" class="dropdown-menu"><li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10994-collapse" class="collapse navbar-collapse"><ul id="w10995" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10996" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
 <li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
 <li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
 <li><a href="./ext-elasticsearch-index.html" tabindex="-1">elasticsearch</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
 <li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-imagine-index.html" tabindex="-1">imagine</a></li>
 <li><a href="./ext-jui-index.html" tabindex="-1">jui</a></li>
+<li><a href="./ext-mongodb-index.html" tabindex="-1">mongodb</a></li>
 <li><a href="./ext-redis-index.html" tabindex="-1">redis</a></li>
 <li><a href="./ext-smarty-index.html" tabindex="-1">smarty</a></li>
 <li><a href="./ext-sphinx-index.html" tabindex="-1">sphinx</a></li>
@@ -42,9 +48,8 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-7227" data-toggle="collapse" data-parent="#navigation">yii\redis <b class="caret"></b></a><div id="navigation-7227" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-redis-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10993" data-toggle="collapse" data-parent="#navigation">yii\redis <b class="caret"></b></a><div id="navigation-10993" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-redis-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-redis-activerecord.html">ActiveRecord</a>
-<a class="list-group-item" href="./yii-redis-activerelation.html">ActiveRelation</a>
 <a class="list-group-item" href="./yii-redis-cache.html">Cache</a>
 <a class="list-group-item" href="./yii-redis-connection.html">Connection</a>
 <a class="list-group-item" href="./yii-redis-luascriptbuilder.html">LuaScriptBuilder</a>
@@ -65,10 +70,9 @@
             <tr><th>Inheritance</th><td><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a> &raquo;
 <a href="yii-base-component.html">yii\base\Component</a> &raquo;
 <a href="yii-base-object.html">yii\base\Object</a></td></tr>
-                <tr><th>Implements</th><td><a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-db-activequeryinterface.html">yii\db\ActiveQueryInterface</a></td></tr>
-                <tr><th>Uses Traits</th><td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a>, <a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td></tr>
-                <tr><th>Subclasses</th><td><a href="yii-redis-activerelation.html">yii\redis\ActiveRelation</a></td></tr>
-                        <tr><th>Available since version</th><td>2.0</td></tr>
+                <tr><th>Implements</th><td><a href="yii-db-activequeryinterface.html">yii\db\ActiveQueryInterface</a></td></tr>
+                <tr><th>Uses Traits</th><td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a>, <a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a>, <a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td></tr>
+                            <tr><th>Available since version</th><td>2.0</td></tr>
                 <tr>
           <th>Source Code</th>
           <td><a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php">https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php</a></td>
@@ -77,9 +81,10 @@
 
 <div id="classDescription">
     <p><strong>ActiveQuery represents a query associated with an Active Record class.</strong></p>
-    <p>ActiveQuery instances are usually created by <a href="yii-db-baseactiverecord.html#find()-detail">yii\redis\ActiveRecord::find()</a>
-and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
-<p>ActiveQuery mainly provides the following methods to retrieve the query results:</p>
+    <p>An ActiveQuery can be a normal query or be used in a relational context.</p>
+<p>ActiveQuery instances are usually created by <a href="yii-redis-activerecord.html#find()-detail">yii\redis\ActiveRecord::find()</a>.
+Relational queries are created by <a href="yii-db-baseactiverecord.html#hasOne()-detail">yii\redis\ActiveRecord::hasOne()</a> and <a href="yii-db-baseactiverecord.html#hasMany()-detail">yii\redis\ActiveRecord::hasMany()</a>.</p>
+<h2>Normal Query <a href="#normal-query" name="normal-query" class="hashlink">&para;</a></h2><p>ActiveQuery mainly provides the following methods to retrieve the query results:</p>
 <ul>
 <li><a href="yii-redis-activequery.html#one()-detail">one()</a>: returns a single record populated with the first row of data.</li>
 <li><a href="yii-redis-activequery.html#all()-detail">all()</a>: returns all records based on the query results.</li>
@@ -99,8 +104,16 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
 <li><a href="yii-db-activequerytrait.html#asArray()-detail">asArray()</a>: whether to return each record as an array.</li>
 </ul>
 <p>These options can be configured using methods of the same name. For example:</p>
-<pre><code>$customers = Customer::find()-&gt;with('orders')-&gt;asArray()-&gt;all();
-</code></pre>
+<pre><code class="language-php"><span style="color: #0000BB">$customers&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Customer</span><span style="color: #007700">::</span><span style="color: #0000BB">find</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">with</span><span style="color: #007700">(</span><span style="color: #DD0000">'orders'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">asArray</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">all</span><span style="color: #007700">();</span></code></pre>
+<h2>Relational query <a href="#relational-query" name="relational-query" class="hashlink">&para;</a></h2><p>In relational context ActiveQuery represents a relation between two Active Record classes.</p>
+<p>Relational ActiveQuery instances are usually created by calling <a href="yii-db-baseactiverecord.html#hasOne()-detail">yii\redis\ActiveRecord::hasOne()</a> and
+<a href="yii-db-baseactiverecord.html#hasMany()-detail">yii\redis\ActiveRecord::hasMany()</a>. An Active Record class declares a relation by defining
+a getter method which calls one of the above methods and returns the created ActiveQuery object.</p>
+<p>A relation is specified by <a href="yii-db-activerelationtrait.html#$link-detail">$link</a> which represents the association between columns
+of different tables; and the multiplicity of the relation is indicated by <a href="yii-db-activerelationtrait.html#$multiple-detail">$multiple</a>.</p>
+<p>If a relation involves a pivot table, it may be specified by <a href="yii-db-activerelationtrait.html#via()-detail">via()</a>.
+This methods may only be called in a relational context. Same is true for <a href="yii-db-activerelationtrait.html#inverseOf()-detail">inverseOf()</a>, which
+marks a relation as inverse of another relation.</p>
 
     </div>
 
@@ -139,17 +152,35 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
         <td>The name of the column by which the query results should be indexed by.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
+            <tr class="inherited" id="$inverseOf">
+        <td><a href="yii-db-activerelationtrait.html#$inverseOf-detail">$inverseOf</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The name of the relation that is the inverse of this relation.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
             <tr class="inherited" id="$limit">
         <td><a href="yii-db-querytrait.html#$limit-detail">$limit</a></td>
         <td><a href="http://www.php.net/language.types.integer">integer</a></td>
         <td>Maximum number of records to be returned.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
+            <tr class="inherited" id="$link">
+        <td><a href="yii-db-activerelationtrait.html#$link-detail">$link</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The columns of the primary and foreign tables that establish a relation.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
             <tr class="inherited" id="$modelClass">
         <td><a href="yii-db-activequerytrait.html#$modelClass-detail">$modelClass</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
         <td>The name of the ActiveRecord class.</td>
         <td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a></td>
+    </tr>
+            <tr class="inherited" id="$multiple">
+        <td><a href="yii-db-activerelationtrait.html#$multiple-detail">$multiple</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether this query represents a relation to more than one record.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr class="inherited" id="$offset">
         <td><a href="yii-db-querytrait.html#$offset-detail">$offset</a></td>
@@ -162,6 +193,18 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
         <td><a href="http://www.php.net/language.types.array">array</a></td>
         <td>How to sort the query results.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+            <tr class="inherited" id="$primaryModel">
+        <td><a href="yii-db-activerelationtrait.html#$primaryModel-detail">$primaryModel</a></td>
+        <td><a href="yii-db-activerecord.html">yii\db\ActiveRecord</a></td>
+        <td>The primary model of a relational query.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
+            <tr class="inherited" id="$via">
+        <td><a href="yii-db-activerelationtrait.html#$via-detail">$via</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The query associated with the pivot table.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr class="inherited" id="$where">
         <td><a href="yii-db-querytrait.html#$where-detail">$where</a></td>
@@ -195,19 +238,19 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
         <tr class="inherited" id="__call()">
-        <td><a href="yii-db-activequerytrait.html#__call()-detail">__call()</a></td>
-        <td>PHP magic method.</td>
-        <td><a href="yii-db-activequerytrait.html">yii\db\ActiveQueryTrait</a></td>
-    </tr>
-            <tr class="inherited" id="__clone()">
-        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
-        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-            <tr class="inherited" id="__construct()">
-        <td><a href="yii-base-object.html#__construct()-detail">__construct()</a></td>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-db-activerelationtrait.html#__clone()-detail">__clone()</a></td>
+        <td>Clones internal objects.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
+            <tr id="__construct()">
+        <td><a href="yii-redis-activequery.html#__construct()-detail">__construct()</a></td>
         <td>Constructor.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
+        <td><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a></td>
     </tr>
             <tr class="inherited" id="__get()">
         <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
@@ -238,6 +281,11 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
         <td><a href="yii-redis-activequery.html#all()-detail">all()</a></td>
         <td>Executes the query and returns all results as an array.</td>
         <td><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a></td>
+    </tr>
+            <tr class="inherited" id="andFilterWhere()">
+        <td><a href="yii-db-querytrait.html#andFilterWhere()-detail">andFilterWhere()</a></td>
+        <td>Adds an additional WHERE condition to the existing one but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
             <tr class="inherited" id="andWhere()">
         <td><a href="yii-db-querytrait.html#andWhere()-detail">andWhere()</a></td>
@@ -314,6 +362,16 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
         <td>Returns a value indicating whether the query result contains any row of data.</td>
         <td><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a></td>
     </tr>
+                <tr class="inherited" id="filterWhere()">
+        <td><a href="yii-db-querytrait.html#filterWhere()-detail">filterWhere()</a></td>
+        <td>Sets the WHERE part of the query but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+            <tr class="inherited" id="findFor()">
+        <td><a href="yii-db-activerelationtrait.html#findFor()-detail">findFor()</a></td>
+        <td>Finds the related records for the specified primary record.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
             <tr class="inherited" id="findWith()">
         <td><a href="yii-db-activequerytrait.html#findWith()-detail">findWith()</a></td>
         <td>Finds records corresponding to one or multiple relations and populates them into the primary models.</td>
@@ -354,7 +412,12 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
         <td>Initializes the object.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
-            <tr class="inherited" id="limit()">
+            <tr class="inherited" id="inverseOf()">
+        <td><a href="yii-db-activerelationtrait.html#inverseOf()-detail">inverseOf()</a></td>
+        <td>Sets the name of the relation that is the inverse of this relation.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
+    </tr>
+                <tr class="inherited" id="limit()">
         <td><a href="yii-db-querytrait.html#limit()-detail">limit()</a></td>
         <td>Sets the LIMIT part of the query.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
@@ -389,6 +452,11 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
         <td>Executes the query and returns a single row of result.</td>
         <td><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a></td>
     </tr>
+            <tr class="inherited" id="orFilterWhere()">
+        <td><a href="yii-db-querytrait.html#orFilterWhere()-detail">orFilterWhere()</a></td>
+        <td>Adds an additional WHERE condition to the existing one but ignores <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a>.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
             <tr class="inherited" id="orWhere()">
         <td><a href="yii-db-querytrait.html#orWhere()-detail">orWhere()</a></td>
         <td>Adds an additional WHERE condition to the existing one.</td>
@@ -398,6 +466,11 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
         <td><a href="yii-db-querytrait.html#orderBy()-detail">orderBy()</a></td>
         <td>Sets the ORDER BY part of the query.</td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+            <tr class="inherited" id="populateRelation()">
+        <td><a href="yii-db-activerelationtrait.html#populateRelation()-detail">populateRelation()</a></td>
+        <td>Finds the related records and populates them into the primary models.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr id="scalar()">
         <td><a href="yii-redis-activequery.html#scalar()-detail">scalar()</a></td>
@@ -409,15 +482,15 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
         <td>Returns the number of records.</td>
         <td><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a></td>
     </tr>
-            <tr class="inherited" id="toArray()">
-        <td><a href="yii-base-object.html#toArray()-detail">toArray()</a></td>
-        <td>Converts the object into an array.</td>
-        <td><a href="yii-base-object.html">yii\base\Object</a></td>
-    </tr>
             <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="via()">
+        <td><a href="yii-db-activerelationtrait.html#via()-detail">via()</a></td>
+        <td>Specifies the relation associated with the pivot table.</td>
+        <td><a href="yii-db-activerelationtrait.html">yii\db\ActiveRelationTrait</a></td>
     </tr>
             <tr class="inherited" id="where()">
         <td><a href="yii-db-querytrait.html#where()-detail">where()</a></td>
@@ -446,17 +519,27 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
 <tr>
   <th>Method</th><th>Description</th><th>Defined By</th>
 </tr>
-                                                                                                    <tr id="executeScript()">
+                                                                                                        <tr id="executeScript()">
         <td><a href="yii-redis-activequery.html#executeScript()-detail">executeScript()</a></td>
         <td>Executes a script created by <a href="yii-redis-luascriptbuilder.html">yii\redis\LuaScriptBuilder</a></td>
         <td><a href="yii-redis-activequery.html">yii\redis\ActiveQuery</a></td>
     </tr>
-                                                            <tr class="inherited" id="normalizeOrderBy()">
+                <tr class="inherited" id="filterCondition()">
+        <td><a href="yii-db-querytrait.html#filterCondition()-detail">filterCondition()</a></td>
+        <td>Removes <a href="yii-db-querytrait.html#isEmpty()-detail">empty operands</a> from the given query condition.</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+                                                        <tr class="inherited" id="isEmpty()">
+        <td><a href="yii-db-querytrait.html#isEmpty()-detail">isEmpty()</a></td>
+        <td>Returns a value indicating whether the give value is "empty".</td>
+        <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
+    </tr>
+                        <tr class="inherited" id="normalizeOrderBy()">
         <td><a href="yii-db-querytrait.html#normalizeOrderBy()-detail">normalizeOrderBy()</a></td>
         <td></td>
         <td><a href="yii-db-querytrait.html">yii\db\QueryTrait</a></td>
     </tr>
-                                                    </table>
+                                                            </table>
 </div>
 
 <a name="events"></a>
@@ -467,11 +550,47 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
 
 <div class="method-doc">
 
+    <div class="detail-header h3" id="__construct()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-redis-activequery.html#__construct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L86" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L86" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        __construct()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Constructor.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-redis-activequery.html#__construct()-detail">__construct</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$modelClass</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$config&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$modelClass</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The model class associated with this query</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$config</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Configurations to be applied to the newly created query object</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="all()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#all()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L98" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L98" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         all()
         <span class="detail-header-tag small">
@@ -490,8 +609,9 @@ and <span class="broken-link">yii\redis\ActiveRecord::count()</span>.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                             If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -507,8 +627,8 @@ If this parameter is not given, the <code>db</code> application component will b
     <div class="detail-header h3" id="average()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#average()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L185" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L185" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L234" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L234" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         average()
         <span class="detail-header-tag small">
@@ -527,15 +647,17 @@ If this parameter is not given, the <code>db</code> application component will b
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$column</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The column name or expression.
-Make sure you properly quote column names in the expression.</p>
+                  <td class="param-desc-col"><p>The column name or expression.</p>
+<pre><code>                       Make sure you properly quote column names in the expression.
+</code></pre>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                       If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -551,8 +673,8 @@ If this parameter is not given, the <code>db</code> application component will b
     <div class="detail-header h3" id="column()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#column()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L159" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L159" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L208" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L208" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         column()
         <span class="detail-header-tag small">
@@ -577,8 +699,9 @@ If this parameter is not given, the <code>db</code> application component will b
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                       If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -594,8 +717,8 @@ If this parameter is not given, the <code>db</code> application component will b
     <div class="detail-header h3" id="count()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#count()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L127" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L127" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L175" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L175" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         count()
         <span class="detail-header-tag small">
@@ -620,8 +743,9 @@ If this parameter is not given, the <code>db</code> application component will b
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                   If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -637,8 +761,8 @@ If this parameter is not given, the <code>db</code> application component will b
     <div class="detail-header h3" id="executeScript()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#executeScript()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L244" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L244" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L292" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L292" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         executeScript()
         <span class="detail-header-tag small">
@@ -656,9 +780,10 @@ If this parameter is not given, the <code>db</code> application component will b
         <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a>|bool|<a href="http://www.php.net/language.types.null">null</a>|<a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-redis-activequery.html#executeScript()-detail">executeScript</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$db</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$type</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$columnName&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
-                  <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                                       If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                             <tr>
@@ -679,8 +804,8 @@ If this parameter is not given, the <code>db</code> application component will b
     <div class="detail-header h3" id="exists()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#exists()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L147" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L147" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L196" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L196" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         exists()
         <span class="detail-header-tag small">
@@ -699,8 +824,9 @@ If this parameter is not given, the <code>db</code> application component will b
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                   If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -716,8 +842,8 @@ If this parameter is not given, the <code>db</code> application component will b
     <div class="detail-header h3" id="max()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#max()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L211" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L211" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L260" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L260" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         max()
         <span class="detail-header-tag small">
@@ -736,15 +862,17 @@ If this parameter is not given, the <code>db</code> application component will b
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$column</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The column name or expression.
-Make sure you properly quote column names in the expression.</p>
+                  <td class="param-desc-col"><p>The column name or expression.</p>
+<pre><code>                       Make sure you properly quote column names in the expression.
+</code></pre>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                       If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -760,8 +888,8 @@ If this parameter is not given, the <code>db</code> application component will b
     <div class="detail-header h3" id="min()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#min()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L198" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L198" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L247" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L247" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         min()
         <span class="detail-header-tag small">
@@ -780,15 +908,17 @@ If this parameter is not given, the <code>db</code> application component will b
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$column</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The column name or expression.
-Make sure you properly quote column names in the expression.</p>
+                  <td class="param-desc-col"><p>The column name or expression.</p>
+<pre><code>                       Make sure you properly quote column names in the expression.
+</code></pre>
 </td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                       If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -804,8 +934,8 @@ If this parameter is not given, the <code>db</code> application component will b
     <div class="detail-header h3" id="one()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#one()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L93" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L93" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L136" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L136" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         one()
         <span class="detail-header-tag small">
@@ -824,16 +954,18 @@ If this parameter is not given, the <code>db</code> application component will b
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                                If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="yii-redis-activerecord.html">yii\redis\ActiveRecord</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></td>
-                  <td class="param-desc-col"><p>A single row of query result. Depending on the setting of <a href="yii-db-activequerytrait.html#asArray()-detail">asArray()</a>,
-the query result may be either an array or an ActiveRecord object. Null will be returned
-if the query results in nothing.</p>
+                  <td class="param-desc-col"><p>A single row of query result. Depending on the setting of <a href="yii-db-activequerytrait.html#asArray()-detail">asArray()</a>,</p>
+<pre><code>                               the query result may be either an array or an ActiveRecord object. Null will be returned
+                               if the query results in nothing.
+</code></pre>
 </td>
                 </tr>
                                     </table>
@@ -843,8 +975,8 @@ if the query results in nothing.</p>
     <div class="detail-header h3" id="scalar()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#scalar()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L225" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L225" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L274" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L274" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         scalar()
         <span class="detail-header-tag small">
@@ -870,15 +1002,17 @@ if the query results in nothing.</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                          If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
-                  <td class="param-desc-col"><p>The value of the specified attribute in the first record of the query result.
-Null is returned if the query result is empty.</p>
+                  <td class="param-desc-col"><p>The value of the specified attribute in the first record of the query result.</p>
+<pre><code>                         Null is returned if the query result is empty.
+</code></pre>
 </td>
                 </tr>
                                     </table>
@@ -888,8 +1022,8 @@ Null is returned if the query result is empty.</p>
     <div class="detail-header h3" id="sum()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-activequery.html#sum()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L172" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L172" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/ActiveQuery.php#L221" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/ActiveQuery.php#L221" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         sum()
         <span class="detail-header-tag small">
@@ -914,8 +1048,9 @@ Null is returned if the query result is empty.</p>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$db</span></td>
                   <td class="param-type-col"><a href="yii-redis-connection.html">yii\redis\Connection</a></td>
-                  <td class="param-desc-col"><p>The database connection used to execute the query.
-If this parameter is not given, the <code>db</code> application component will be used.</p>
+                  <td class="param-desc-col"><p>The database connection used to execute the query.</p>
+<pre><code>                       If this parameter is not given, the `db` application component will be used.
+</code></pre>
 </td>
                 </tr>
                                         <tr>
@@ -966,7 +1101,7 @@ If this parameter is not given, the <code>db</code> application component will b
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 02:41:07 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:41 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
