@@ -1317,8 +1317,8 @@ If false is returned, the validation will stop and the model is considered inval
     <div class="detail-header h3" id="fields()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-model.html#fields()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L859" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L859" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L866" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L866" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         fields()
         <span class="detail-header-tag small">
@@ -1344,7 +1344,7 @@ values are obtained from the <code>first_name</code> and <code>last_name</code> 
 <li><code>fullName</code>: the field name is <code>fullName</code>. Its value is obtained by concatenating <code>first_name</code>
 and <code>last_name</code>.</li>
 </ul>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'email'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'firstName'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'first_name'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'lastName'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'last_name'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'fullName'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;function&nbsp;()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">first_name&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'&nbsp;'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">last_name</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;},<br />];</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'email'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'firstName'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'first_name'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'lastName'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'last_name'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'fullName'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;function&nbsp;(</span><span style="color: #0000BB">$model</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">first_name&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'&nbsp;'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">last_name</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;},<br />];</span></code></pre>
 <p>In this method, you may also want to return different lists of fields based on some context
 information. For example, depending on <a href="yii-base-model.html#$scenario-detail">$scenario</a> or the privilege of the current application user,
 you may return different sets of visible fields or filter out some fields.</p>
@@ -1673,8 +1673,8 @@ values are the corresponding error messages. An empty array will be returned if 
     <div class="detail-header h3" id="getIterator()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-model.html#getIterator()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L871" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L871" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L878" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L878" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getIterator()
         <span class="detail-header-tag small">
@@ -1971,8 +1971,8 @@ If not set, <a href="yii-base-model.html#formName()-detail">formName()</a> will 
     <div class="detail-header h3" id="loadMultiple()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-model.html#loadMultiple()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L768" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L768" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L771" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L771" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadMultiple()
         <span class="detail-header-tag small">
@@ -1992,7 +1992,7 @@ The data being populated to each model is subject to the safety check by <a href
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-base-model.html#loadMultiple()-detail">loadMultiple</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$models</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-base-model.html#loadMultiple()-detail">loadMultiple</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$models</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$data</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$formName&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$models</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
@@ -2006,10 +2006,18 @@ The data being populated to each model is subject to the safety check by <a href
 supplied by end user.</p>
 </td>
                 </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$formName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The form name to be used for loading the data into the models.
+If not set, it will use the <a href="yii-base-model.html#formName()-detail">formName()</a> value of the first model in <code>$models</code>.
+This parameter is available since version 2.0.1.</p>
+</td>
+                </tr>
                                         <tr>
                   <th class="param-name-col">return</th>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
-                  <td class="param-desc-col"><p>Whether the model is successfully populated with some data.</p>
+                  <td class="param-desc-col"><p>Whether at least one of the models is successfully populated.</p>
 </td>
                 </tr>
                                     </table>
@@ -2019,8 +2027,8 @@ supplied by end user.</p>
     <div class="detail-header h3" id="offsetExists()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-model.html#offsetExists()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L884" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L884" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L891" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L891" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         offsetExists()
         <span class="detail-header-tag small">
@@ -2051,8 +2059,8 @@ It is implicitly called when you use something like <code>isset($model[$offset])
     <div class="detail-header h3" id="offsetGet()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-model.html#offsetGet()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L896" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L896" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L903" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L903" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         offsetGet()
         <span class="detail-header-tag small">
@@ -2089,8 +2097,8 @@ It is implicitly called when you use something like <code>$value = $model[$offse
     <div class="detail-header h3" id="offsetSet()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-model.html#offsetSet()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L908" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L908" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L915" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L915" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         offsetSet()
         <span class="detail-header-tag small">
@@ -2127,8 +2135,8 @@ It is implicitly called when you use something like <code>$model[$offset] = $ite
     <div class="detail-header h3" id="offsetUnset()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-model.html#offsetUnset()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L919" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L919" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L926" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L926" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         offsetUnset()
         <span class="detail-header-tag small">
@@ -2478,8 +2486,8 @@ validation rules should be validated.</p>
     <div class="detail-header h3" id="validateMultiple()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-model.html#validateMultiple()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L803" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L803" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Model.php#L810" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Model.php#L810" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         validateMultiple()
         <span class="detail-header-tag small">
@@ -2597,7 +2605,7 @@ or multiple models have validation error.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:05:54 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:21 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

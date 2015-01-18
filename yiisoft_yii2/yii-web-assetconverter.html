@@ -431,6 +431,12 @@
         <td>The commands that are used to perform the asset conversion.</td>
         <td><a href="yii-web-assetconverter.html">yii\web\AssetConverter</a></td>
     </tr>
+            <tr id="$forceConvert">
+        <td><a href="yii-web-assetconverter.html#$forceConvert-detail">$forceConvert</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether the source asset file should be converted even if its result already exists.</td>
+        <td><a href="yii-web-assetconverter.html">yii\web\AssetConverter</a></td>
+    </tr>
     </table>
 </div>
 
@@ -633,6 +639,26 @@ target script types (either "css" or "js") and the commands used for the convers
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'styl'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[</span><span style="color: #DD0000">'css'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'@app/node_modules/bin/stylus&nbsp;&lt;&nbsp;{from}&nbsp;&gt;&nbsp;{to}'</span><span style="color: #007700">],<br />]</span></code></pre>
 
     
+
+    <div class="detail-header h3" id="$forceConvert-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-assetconverter.html#$forceConvert-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/AssetConverter.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/AssetConverter.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $forceConvert        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <a href="yii-web-assetconverter.html#$forceConvert-detail">$forceConvert</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+    <p>Whether the source asset file should be converted even if its result already exists.
+You may want to set this to be <code>true</code> during the development stage to make sure the converted
+assets are always up-to-date. Do not set this to true on production servers as it will
+significantly degrade the performance.</p>
+
+    
 </div>
 <h2>Method Details</h2>
 
@@ -641,8 +667,8 @@ target script types (either "css" or "js") and the commands used for the convers
     <div class="detail-header h3" id="convert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-web-assetconverter.html#convert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/AssetConverter.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/AssetConverter.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/AssetConverter.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/AssetConverter.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         convert()
         <span class="detail-header-tag small">
@@ -683,8 +709,8 @@ target script types (either "css" or "js") and the commands used for the convers
     <div class="detail-header h3" id="runCommand()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-web-assetconverter.html#runCommand()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/AssetConverter.php#L82" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/AssetConverter.php#L82" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/AssetConverter.php#L89" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/AssetConverter.php#L89" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         runCommand()
         <span class="detail-header-tag small">
@@ -779,7 +805,7 @@ In production mode the error will be logged.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:10 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:38 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

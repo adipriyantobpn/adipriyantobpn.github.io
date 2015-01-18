@@ -178,7 +178,7 @@ cebe\markdown\GithubMarkdown</td></tr>
 </tr>
         <tr id="highlight()">
         <td><a href="yii-apidoc-helpers-apimarkdown.html#highlight()-detail">highlight()</a></td>
-        <td></td>
+        <td>Highlights code</td>
         <td><a href="yii-apidoc-helpers-apimarkdown.html">yii\apidoc\helpers\ApiMarkdown</a></td>
     </tr>
                 <tr id="process()">
@@ -186,7 +186,7 @@ cebe\markdown\GithubMarkdown</td></tr>
         <td>Converts markdown into HTML</td>
         <td><a href="yii-apidoc-helpers-apimarkdown.html">yii\apidoc\helpers\ApiMarkdown</a></td>
     </tr>
-                    </table>
+                        </table>
 </div>
 
 <div class="summary doc-method">
@@ -210,12 +210,17 @@ cebe\markdown\GithubMarkdown</td></tr>
     </tr>
                 <tr class="inherited" id="renderApiLink()">
         <td><a href="yii-apidoc-helpers-apimarkdowntrait.html#renderApiLink()-detail">renderApiLink()</a></td>
-        <td></td>
+        <td>Renders API link</td>
+        <td><a href="yii-apidoc-helpers-apimarkdowntrait.html">yii\apidoc\helpers\ApiMarkdownTrait</a></td>
+    </tr>
+            <tr class="inherited" id="renderBrokenApiLink()">
+        <td><a href="yii-apidoc-helpers-apimarkdowntrait.html#renderBrokenApiLink()-detail">renderBrokenApiLink()</a></td>
+        <td>Renders API link that is broken i.e. points nowhere</td>
         <td><a href="yii-apidoc-helpers-apimarkdowntrait.html">yii\apidoc\helpers\ApiMarkdownTrait</a></td>
     </tr>
             <tr id="renderCode()">
         <td><a href="yii-apidoc-helpers-apimarkdown.html#renderCode()-detail">renderCode()</a></td>
-        <td>Renders a code block</td>
+        <td></td>
         <td><a href="yii-apidoc-helpers-apimarkdown.html">yii\apidoc\helpers\ApiMarkdown</a></td>
     </tr>
             <tr id="renderHeadline()">
@@ -278,8 +283,8 @@ cebe\markdown\GithubMarkdown</td></tr>
     <div class="detail-header h3" id="highlight()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-helpers-apimarkdown.html#highlight()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/helpers/ApiMarkdown.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/helpers/ApiMarkdown.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/helpers/ApiMarkdown.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/helpers/ApiMarkdown.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         highlight()
         <span class="detail-header-tag small">
@@ -288,32 +293,40 @@ cebe\markdown\GithubMarkdown</td></tr>
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Highlights code</strong></p>
 
         
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-helpers-apimarkdown.html#highlight()-detail">highlight</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$code</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$language&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-apidoc-helpers-apimarkdown.html#highlight()-detail">highlight</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$code</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$language&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$code</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Code to highlight</p>
+</td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$language</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Language of the code to highlight</p>
+</td>
                 </tr>
-                                                </table>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>HTML of highlighted code</p>
+</td>
+                </tr>
+                                    </table>
 
 <!--	-->
 
     <div class="detail-header h3" id="process()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-helpers-apimarkdown.html#process()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/helpers/ApiMarkdown.php#L107" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/helpers/ApiMarkdown.php#L107" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/helpers/ApiMarkdown.php#L114" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/helpers/ApiMarkdown.php#L114" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         process()
         <span class="detail-header-tag small">
@@ -361,7 +374,7 @@ cebe\markdown\GithubMarkdown</td></tr>
     </div>
 
     <div class="doc-description">
-        <p><strong>Renders a code block</strong></p>
+        <p><strong></strong></p>
 
         
             </div>
@@ -380,8 +393,8 @@ cebe\markdown\GithubMarkdown</td></tr>
     <div class="detail-header h3" id="renderHeadline()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-helpers-apimarkdown.html#renderHeadline()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/helpers/ApiMarkdown.php#L74" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/helpers/ApiMarkdown.php#L74" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/helpers/ApiMarkdown.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/helpers/ApiMarkdown.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderHeadline()
         <span class="detail-header-tag small">
@@ -409,8 +422,8 @@ cebe\markdown\GithubMarkdown</td></tr>
     <div class="detail-header h3" id="renderLink()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-helpers-apimarkdown.html#renderLink()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/helpers/ApiMarkdown.php#L87" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/helpers/ApiMarkdown.php#L87" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/helpers/ApiMarkdown.php#L94" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/helpers/ApiMarkdown.php#L94" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderLink()
         <span class="detail-header-tag small">
@@ -473,7 +486,7 @@ cebe\markdown\GithubMarkdown</td></tr>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:15 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:44 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

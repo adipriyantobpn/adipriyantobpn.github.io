@@ -80,21 +80,21 @@
     </table>
 
 <div id="classDescription">
-    <p><strong>This command manage fixtures creations based on given template.</strong></p>
+    <p><strong>This command creates fixtures based on a given template.</strong></p>
     <p>Fixtures are one of the important paths in unit testing. To speed up developers
 work these fixtures can be generated automatically, based on prepared template.
-This command is a simple wrapper for the fixtures library <a href="https://github.com/fzaninotto/Faker">Faker</a>.</p>
-<p>You should configure this command as follows (you can use any alias, not only "fixture"):</p>
+This command is a simple wrapper for the <a href="https://github.com/fzaninotto/Faker">Faker</a> library.</p>
+<p>You should configure your application as follows (you can use any alias, not only "fixture"):</p>
 <pre><code>'controllerMap' =&gt; [
     'fixture' =&gt; [
         'class' =&gt; 'yii\faker\FixtureController',
     ],
 ],
 </code></pre>
-<p>To start using this command you need to be familiar (read guide) for the Faker library and
+<p>To start using the command you need to be familiar (read guide) with the Faker library and
 generate fixtures template files, according to the given format:</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;users.php&nbsp;file&nbsp;under&nbsp;template&nbsp;path&nbsp;(by&nbsp;default&nbsp;@tests/unit/templates/fixtures)<br /></span><span style="color: #007700">return&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'name'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$faker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">firstName</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'phone'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$faker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">phoneNumber</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'city'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$faker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">city</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'password'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getSecurity</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">generatePasswordHash</span><span style="color: #007700">(</span><span style="color: #DD0000">'password_'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$index</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'auth_key'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getSecurity</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">generateRandomString</span><span style="color: #007700">(),<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'intro'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$faker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">sentence</span><span style="color: #007700">(</span><span style="color: #0000BB">7</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">),&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;generate&nbsp;a&nbsp;sentence&nbsp;with&nbsp;7&nbsp;words<br /></span><span style="color: #007700">];</span></code></pre>
-<p>If you use callback as a attribute value, then it will be called as shown with three parameters:</p>
+<p>If you use callback as an attribute value it will be called with the following three parameters:</p>
 <ul>
 <li><code>$faker</code>: the Faker generator instance</li>
 <li><code>$index</code>: the current fixture index. For example if user need to generate 3 fixtures for user table, it will be 0..2.</li>
@@ -182,12 +182,6 @@ After you created custom provider, for example:</p>
         <td><a href="yii-base-action.html">yii\base\Action</a></td>
         <td>The action that is currently being executed.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
-    </tr>
-            <tr class="inherited" id="$append">
-        <td><a href="yii-console-controllers-fixturecontroller.html#$append-detail">$append</a></td>
-        <td>bool</td>
-        <td>Whether to append new fixture data to the existing ones.</td>
-        <td><a href="yii-console-controllers-fixturecontroller.html">yii\console\controllers\FixtureController</a></td>
     </tr>
             <tr class="inherited" id="$behaviors">
         <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
@@ -683,6 +677,11 @@ name is the option name.</td>
         <td>Renders a view and applies layout if available.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
             <tr class="inherited" id="renderFile()">
         <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
@@ -690,7 +689,7 @@ name is the option name.</td>
     </tr>
             <tr class="inherited" id="renderPartial()">
         <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
-        <td>Renders a view.</td>
+        <td>Renders a view without applying layout.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
             <tr class="inherited" id="run()">
@@ -776,7 +775,7 @@ a list of options to choose from and their explanations.</td>
         <td>Parses the comment block into tags.</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-                                                    </table>
+                                                        </table>
 </div>
 
 <a name="events"></a>
@@ -852,8 +851,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="$count-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#$count-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L157" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L157" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L156" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L156" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $count        <span class="detailHeaderTag small">
             public                                    property
@@ -869,8 +868,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="$fixtureDataPath-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#$fixtureDataPath-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L149" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L149" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L148" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L148" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $fixtureDataPath        <span class="detailHeaderTag small">
             public                                    property
@@ -902,8 +901,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="$language-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#$language-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L153" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L153" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L152" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L152" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $language        <span class="detailHeaderTag small">
             public                                    property
@@ -919,8 +918,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="$providers-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#$providers-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L162" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L162" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L161" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L161" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $providers        <span class="detailHeaderTag small">
             public                                    property
@@ -937,8 +936,8 @@ More info in <a href="https://github.com/fzaninotto/Faker.">Faker</a> library do
     <div class="detail-header h3" id="$templatePath-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#$templatePath-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L145" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L145" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L144" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L144" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $templatePath        <span class="detailHeaderTag small">
             public                                    property
@@ -958,8 +957,8 @@ More info in <a href="https://github.com/fzaninotto/Faker.">Faker</a> library do
     <div class="detail-header h3" id="actionGenerate()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#actionGenerate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L220" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L220" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L219" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L219" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionGenerate()
         <span class="detail-header-tag small">
@@ -999,8 +998,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="actionGenerateAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#actionGenerateAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L263" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L263" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L262" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L262" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionGenerateAll()
         <span class="detail-header-tag small">
@@ -1023,8 +1022,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="actionTemplates()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#actionTemplates()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L194" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L194" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L193" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L193" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionTemplates()
         <span class="detail-header-tag small">
@@ -1047,8 +1046,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="addProviders()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#addProviders()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L401" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L401" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L400" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L400" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addProviders()
         <span class="detail-header-tag small">
@@ -1071,8 +1070,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="beforeAction()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#beforeAction()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L180" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L180" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L179" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L179" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         beforeAction()
         <span class="detail-header-tag small">
@@ -1100,8 +1099,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="checkPaths()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#checkPaths()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L389" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L389" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L388" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L388" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         checkPaths()
         <span class="detail-header-tag small">
@@ -1124,8 +1123,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="confirmGeneration()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#confirmGeneration()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L455" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L455" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L454" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L454" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         confirmGeneration()
         <span class="detail-header-tag small">
@@ -1153,8 +1152,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="exportFixtures()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#exportFixtures()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L413" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L413" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L412" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L412" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         exportFixtures()
         <span class="detail-header-tag small">
@@ -1188,8 +1187,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="generateFixture()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#generateFixture()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L424" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L424" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L423" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L423" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generateFixture()
         <span class="detail-header-tag small">
@@ -1230,8 +1229,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="generateFixtureFile()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#generateFixtureFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L437" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L437" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L436" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L436" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         generateFixtureFile()
         <span class="detail-header-tag small">
@@ -1272,8 +1271,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="getGenerator()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#getGenerator()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L377" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L377" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L376" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L376" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getGenerator()
         <span class="detail-header-tag small">
@@ -1296,8 +1295,8 @@ yii fixture/generate user profile team
     <div class="detail-header h3" id="options()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-faker-fixturecontroller.html#options()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L173" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L173" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/faker/FixtureController.php#L172" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/faker/FixtureController.php#L172" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         options()
         <span class="detail-header-tag small">
@@ -1372,7 +1371,7 @@ until <a href="yii-faker-fixturecontroller.html#beforeAction()-detail">beforeAct
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:22 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:50 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

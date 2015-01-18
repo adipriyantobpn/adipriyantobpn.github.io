@@ -514,10 +514,10 @@
         <td>Builds a SQL statement for adding a new DB column.</td>
         <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
     </tr>
-            <tr class="inherited" id="addForeignKey()">
-        <td><a href="yii-db-querybuilder.html#addForeignKey()-detail">addForeignKey()</a></td>
+            <tr id="addForeignKey()">
+        <td><a href="yii-db-oci-querybuilder.html#addForeignKey()-detail">addForeignKey()</a></td>
         <td>Builds a SQL statement for adding a foreign key constraint to an existing table.</td>
-        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+        <td><a href="yii-db-oci-querybuilder.html">yii\db\oci\QueryBuilder</a></td>
     </tr>
             <tr class="inherited" id="addPrimaryKey()">
         <td><a href="yii-db-querybuilder.html#addPrimaryKey()-detail">addPrimaryKey()</a></td>
@@ -819,8 +819,8 @@
     <div class="detail-header h3" id="$typeMap-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-db-oci-querybuilder.html#$typeMap-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L24" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L24" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L25" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L25" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $typeMap        <span class="detailHeaderTag small">
             public                                    property
@@ -837,11 +837,86 @@
 
 <div class="method-doc">
 
+    <div class="detail-header h3" id="addForeignKey()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-oci-querybuilder.html#addForeignKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addForeignKey()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Builds a SQL statement for adding a foreign key constraint to an existing table.</strong></p>
+
+        <p>The method will properly quote the table and column names.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-db-oci-querybuilder.html#addForeignKey()-detail">addForeignKey</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$name</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$table</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$columns</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$refTable</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$refColumns</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$delete&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$update&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the foreign key constraint.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table that the foreign key constraint will be added to.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The name of the column to that the constraint will be added on.
+If there are multiple columns, separate them with commas or use an array to represent them.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$refTable</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table that the foreign key references to.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$refColumns</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The name of the column that the foreign key references to.
+If there are multiple columns, separate them with commas or use an array to represent them.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$delete</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The ON DELETE option. Most DBMS support these options: RESTRICT, CASCADE, NO ACTION, SET DEFAULT, SET NULL</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$update</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The ON UPDATE option. Most DBMS support these options: RESTRICT, CASCADE, NO ACTION, SET DEFAULT, SET NULL</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for adding a foreign key constraint to an existing table.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="alterColumn()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-db-oci-querybuilder.html#alterColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L97" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L97" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L98" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L98" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         alterColumn()
         <span class="detail-header-tag small">
@@ -890,8 +965,8 @@ For example, 'string' will be turned into 'varchar(255)', while 'string not null
     <div class="detail-header h3" id="buildOrderByAndLimit()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-db-oci-querybuilder.html#buildOrderByAndLimit()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L48" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L48" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         buildOrderByAndLimit()
         <span class="detail-header-tag small">
@@ -944,8 +1019,8 @@ For example, 'string' will be turned into 'varchar(255)', while 'string not null
     <div class="detail-header h3" id="dropIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-db-oci-querybuilder.html#dropIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L111" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L111" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L112" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L112" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropIndex()
         <span class="detail-header-tag small">
@@ -986,8 +1061,8 @@ For example, 'string' will be turned into 'varchar(255)', while 'string not null
     <div class="detail-header h3" id="renameTable()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-db-oci-querybuilder.html#renameTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L82" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L82" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L83" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L83" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renameTable()
         <span class="detail-header-tag small">
@@ -1028,8 +1103,8 @@ For example, 'string' will be turned into 'varchar(255)', while 'string not null
     <div class="detail-header h3" id="resetSequence()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-db-oci-querybuilder.html#resetSequence()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L119" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L119" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/oci/QueryBuilder.php#L120" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/oci/QueryBuilder.php#L120" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         resetSequence()
         <span class="detail-header-tag small">
@@ -1114,7 +1189,7 @@ the next new row's primary key will have a value 1.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:00 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:28 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

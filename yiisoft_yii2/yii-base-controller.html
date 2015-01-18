@@ -686,6 +686,11 @@ in the request.</td>
         <td>Renders a view and applies layout if available.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
+            <tr id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
             <tr id="renderFile()">
         <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
@@ -693,7 +698,7 @@ in the request.</td>
     </tr>
             <tr id="renderPartial()">
         <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
-        <td>Renders a view.</td>
+        <td>Renders a view without applying layout.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
             <tr id="run()">
@@ -1190,8 +1195,8 @@ method will be created and returned.</p>
     <div class="detail-header h3" id="findLayoutFile()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-controller.html#findLayoutFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L443" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L443" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L455" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L455" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findLayoutFile()
         <span class="detail-header-tag small">
@@ -1325,8 +1330,8 @@ while the last is the innermost one.</p>
     <div class="detail-header h3" id="getView()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-controller.html#getView()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L408" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L408" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L420" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L420" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getView()
         <span class="detail-header-tag small">
@@ -1358,8 +1363,8 @@ If not set, it will default to the "view" application component.</p>
     <div class="detail-header h3" id="getViewPath()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-controller.html#getViewPath()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L431" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L431" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L443" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L443" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getViewPath()
         <span class="detail-header-tag small">
@@ -1468,11 +1473,49 @@ These parameters will not be available in the layout.</p>
 
 <!--	-->
 
+    <div class="detail-header h3" id="renderContent()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-base-controller.html#renderContent()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L378" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L378" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderContent()
+        <span class="detail-header-tag small">
+            public            method
+                            (available since version 2.0.1)
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Renders a static string by applying a layout.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-base-controller.html#renderContent()-detail">renderContent</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$content&nbsp;</span><span style="color: #007700">)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$content</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The static string being rendered</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendering result of the layout with the given static string as the <code>$content</code> variable.
+If the layout is disabled, the string will be returned back.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="renderFile()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-controller.html#renderFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L396" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L396" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L408" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L408" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderFile()
         <span class="detail-header-tag small">
@@ -1519,8 +1562,8 @@ These parameters will not be available in the layout.</p>
     <div class="detail-header h3" id="renderPartial()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-controller.html#renderPartial()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L384" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L384" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L396" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L396" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderPartial()
         <span class="detail-header-tag small">
@@ -1529,7 +1572,7 @@ These parameters will not be available in the layout.</p>
     </div>
 
     <div class="doc-description">
-        <p><strong>Renders a view.</strong></p>
+        <p><strong>Renders a view without applying layout.</strong></p>
 
         <p>This method differs from <a href="yii-base-controller.html#render()-detail">render()</a> in that it does not apply any layout.</p>
 
@@ -1662,8 +1705,8 @@ the route will start from the application; otherwise, it will start from the par
     <div class="detail-header h3" id="setView()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-controller.html#setView()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L420" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L420" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/Controller.php#L432" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/Controller.php#L432" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setView()
         <span class="detail-header-tag small">
@@ -1764,7 +1807,7 @@ You may set <a href="yii-base-actionevent.html#$isValid-detail">yii\base\ActionE
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:05:53 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:20 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

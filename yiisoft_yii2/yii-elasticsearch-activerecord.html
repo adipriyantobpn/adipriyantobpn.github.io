@@ -367,10 +367,10 @@ The primary key is not part of the attributes.</p>
         <td>Creates validator objects based on the validation rules specified in <a href="yii-base-model.html#rules()-detail">rules()</a>.</td>
         <td><a href="yii-base-model.html">yii\base\Model</a></td>
     </tr>
-            <tr class="inherited" id="delete()">
-        <td><a href="yii-db-baseactiverecord.html#delete()-detail">delete()</a></td>
+            <tr id="delete()">
+        <td><a href="yii-elasticsearch-activerecord.html#delete()-detail">delete()</a></td>
         <td>Deletes the table row corresponding to this active record.</td>
-        <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
+        <td><a href="yii-elasticsearch-activerecord.html">yii\elasticsearch\ActiveRecord</a></td>
     </tr>
             <tr id="deleteAll()">
         <td><a href="yii-elasticsearch-activerecord.html#deleteAll()-detail">deleteAll()</a></td>
@@ -697,10 +697,10 @@ The primary key is not part of the attributes.</p>
         <td>This method is invoked when an unsafe attribute is being massively assigned.</td>
         <td><a href="yii-base-model.html">yii\base\Model</a></td>
     </tr>
-            <tr class="inherited" id="optimisticLock()">
-        <td><a href="yii-db-baseactiverecord.html#optimisticLock()-detail">optimisticLock()</a></td>
-        <td>Returns the name of the column that stores the lock version for implementing optimistic locking.</td>
-        <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
+            <tr id="optimisticLock()">
+        <td><a href="yii-elasticsearch-activerecord.html#optimisticLock()-detail">optimisticLock()</a></td>
+        <td>This method has no effect in Elasticsearch ActiveRecord.</td>
+        <td><a href="yii-elasticsearch-activerecord.html">yii\elasticsearch\ActiveRecord</a></td>
     </tr>
             <tr id="populateRecord()">
         <td><a href="yii-elasticsearch-activerecord.html#populateRecord()-detail">populateRecord()</a></td>
@@ -802,10 +802,10 @@ The primary key is not part of the attributes.</p>
         <td>Destroys the relationship in current model.</td>
         <td><a href="yii-elasticsearch-activerecord.html">yii\elasticsearch\ActiveRecord</a></td>
     </tr>
-            <tr class="inherited" id="update()">
-        <td><a href="yii-db-baseactiverecord.html#update()-detail">update()</a></td>
+            <tr id="update()">
+        <td><a href="yii-elasticsearch-activerecord.html#update()-detail">update()</a></td>
         <td>Saves the changes to this active record into the associated database table.</td>
-        <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
+        <td><a href="yii-elasticsearch-activerecord.html">yii\elasticsearch\ActiveRecord</a></td>
     </tr>
             <tr id="updateAll()">
         <td><a href="yii-elasticsearch-activerecord.html#updateAll()-detail">updateAll()</a></td>
@@ -864,10 +864,10 @@ The primary key is not part of the attributes.</p>
         <td>Determines which fields can be returned by <a href="yii-base-arrayabletrait.html#toArray()-detail">toArray()</a>.</td>
         <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
     </tr>
-                                                                                                <tr class="inherited" id="updateInternal()">
-        <td><a href="yii-db-baseactiverecord.html#updateInternal()-detail">updateInternal()</a></td>
+                                                                                                <tr id="updateInternal()">
+        <td><a href="yii-elasticsearch-activerecord.html#updateInternal()-detail">updateInternal()</a></td>
         <td></td>
-        <td><a href="yii-db-baseactiverecord.html">yii\db\BaseActiveRecord</a></td>
+        <td><a href="yii-elasticsearch-activerecord.html">yii\elasticsearch\ActiveRecord</a></td>
     </tr>
             </table>
 </div>
@@ -1070,8 +1070,8 @@ the key value is null).</p>
     <div class="detail-header h3" id="arrayAttributes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#arrayAttributes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L288" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L288" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L290" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L290" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         arrayAttributes()
         <span class="detail-header-tag small">
@@ -1102,8 +1102,8 @@ when the result array contains only one value.</p>
     <div class="detail-header h3" id="attributes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#attributes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L275" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L275" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L277" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L277" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         attributes()
         <span class="detail-header-tag small">
@@ -1140,11 +1140,89 @@ for the <code>_id</code> field so that it is part of the <code>_source</code> fi
 
 <!--	-->
 
+    <div class="detail-header h3" id="delete()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#delete()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L715" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L715" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        delete()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Deletes the table row corresponding to this active record.</strong></p>
+
+        <p>This method performs the following steps in order:</p>
+<ol>
+<li>call <a href="yii-db-baseactiverecord.html#beforeDelete()-detail">beforeDelete()</a>. If the method returns false, it will skip the
+rest of the steps;</li>
+<li>delete the record from the database;</li>
+<li>call <a href="yii-db-baseactiverecord.html#afterDelete()-detail">afterDelete()</a>.</li>
+</ol>
+<p>In the above step 1 and 3, events named <a href="yii-db-baseactiverecord.html#EVENT_BEFORE_DELETE-detail">EVENT_BEFORE_DELETE</a> and <a href="yii-db-baseactiverecord.html#EVENT_AFTER_DELETE-detail">EVENT_AFTER_DELETE</a>
+will be raised by the corresponding methods.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-elasticsearch-activerecord.html#delete()-detail">delete</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Options given in this parameter are passed to elasticsearch
+as request URI parameters. These are among others:</p>
+<ul>
+<li><code>routing</code> define shard placement of this record.</li>
+<li><code>parent</code> by giving the primaryKey of another record this defines a parent-child relation</li>
+<li><code>timeout</code> timeout waiting for a shard to become available.</li>
+<li><code>replication</code> the replication type for the delete/index operation (sync or async).</li>
+<li><code>consistency</code> the write consistency of the index/delete operation.</li>
+<li><code>refresh</code> refresh the relevant primary and replica shards (not the whole index) immediately after the operation occurs, so that the updated document appears in search results immediately.</li>
+</ul>
+<p>Please refer to the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-delete.html">elasticsearch documentation</a>
+for more details on these options.</p>
+<p>The following parameters are Yii specific:</p>
+<ul>
+<li><p><code>optimistic_locking</code> set this to <code>true</code> to enable optimistic locking, avoid updating when the record has changed since it
+has been loaded from the database. Yii will set the <code>version</code> parameter to the value stored in <span class="broken-link">\yii\elasticsearch\version</span>.
+See the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-delete.html#delete-versioning">elasticsearch documentation</a> for details.</p>
+<p>Make sure the record has been fetched with a <span class="broken-link">\yii\elasticsearch\version</span> before. This is only the case
+for records fetched via <a href="yii-elasticsearch-activerecord.html#get()-detail">get()</a> and <a href="yii-elasticsearch-activerecord.html#mget()-detail">mget()</a> by default. For normal queries, the <code>_version</code> field has to be fetched explicitly.</p>
+</li>
+</ul>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>The number of rows deleted, or false if the deletion is unsuccessful for some reason.
+Note that it is possible the number of rows deleted is 0, even though the deletion execution is successful.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-db-staleobjectexception.html">yii\db\StaleObjectException</a></td>
+                  <td class="param-desc-col"><p>if optimistic locking is enabled and the data being deleted is outdated.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-elasticsearch-exception.html">yii\elasticsearch\Exception</a></td>
+                  <td class="param-desc-col"><p>in case delete failed.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="deleteAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#deleteAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L588" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L588" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L770" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L770" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         deleteAll()
         <span class="detail-header-tag small">
@@ -1190,8 +1268,8 @@ Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\elasticsearc
     <div class="detail-header h3" id="find()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#find()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L78" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L78" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         find()
         <span class="detail-header-tag small">
@@ -1230,8 +1308,8 @@ create a relational query.</p>
     <div class="detail-header h3" id="findAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#findAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L97" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L97" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L99" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L99" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findAll()
         <span class="detail-header-tag small">
@@ -1280,8 +1358,8 @@ matching all of them (or an empty array if none was found).</li>
     <div class="detail-header h3" id="findOne()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#findOne()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L84" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L84" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L86" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L86" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findOne()
         <span class="detail-header-tag small">
@@ -1326,8 +1404,8 @@ matching all of them (or null if not found).</li>
     <div class="detail-header h3" id="get()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#get()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L117" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L117" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L119" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L119" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         get()
         <span class="detail-header-tag small">
@@ -1371,8 +1449,8 @@ for more details on these options.</p>
     <div class="detail-header h3" id="getDb()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#getDb()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L69" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L69" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getDb()
         <span class="detail-header-tag small">
@@ -1403,8 +1481,8 @@ You may override this method if you want to use a different database connection.
     <div class="detail-header h3" id="getHighlight()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#getHighlight()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L188" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L188" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L190" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L190" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getHighlight()
         <span class="detail-header-tag small">
@@ -1433,8 +1511,8 @@ You may override this method if you want to use a different database connection.
     <div class="detail-header h3" id="getOldPrimaryKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#getOldPrimaryKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L224" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L224" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L226" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L226" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getOldPrimaryKey()
         <span class="detail-header-tag small">
@@ -1482,8 +1560,8 @@ the key value is null).</p>
     <div class="detail-header h3" id="getPrimaryKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#getPrimaryKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L211" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L211" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L213" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L213" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getPrimaryKey()
         <span class="detail-header-tag small">
@@ -1522,8 +1600,8 @@ the key value is null).</p>
     <div class="detail-header h3" id="getScore()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#getScore()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L180" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L180" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L182" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L182" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getScore()
         <span class="detail-header-tag small">
@@ -1552,8 +1630,8 @@ the key value is null).</p>
     <div class="detail-header h3" id="index()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#index()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L296" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L296" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L298" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L298" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         index()
         <span class="detail-header-tag small">
@@ -1582,8 +1660,8 @@ the key value is null).</p>
     <div class="detail-header h3" id="insert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#insert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L416" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L416" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L418" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L418" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         insert()
         <span class="detail-header-tag small">
@@ -1665,8 +1743,8 @@ for more details on these options.</p>
     <div class="detail-header h3" id="instantiate()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#instantiate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L361" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L361" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L363" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L363" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         instantiate()
         <span class="detail-header-tag small">
@@ -1713,8 +1791,8 @@ This array consists of the following keys:</p>
     <div class="detail-header h3" id="mget()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#mget()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L148" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L148" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         mget()
         <span class="detail-header-tag small">
@@ -1755,11 +1833,37 @@ for more details on these options.</p>
 
 <!--	-->
 
+    <div class="detail-header h3" id="optimisticLock()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#optimisticLock()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L819" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L819" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        optimisticLock()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>This method has no effect in Elasticsearch ActiveRecord.</strong></p>
+
+        <p>Elasticsearch ActiveRecord uses <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/optimistic-concurrency-control.html">native Optimistic locking</a>.
+See <a href="yii-elasticsearch-activerecord.html#update()-detail">update()</a> for more details.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-elasticsearch-activerecord.html#optimisticLock()-detail">optimisticLock</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+            </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="populateRecord()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#populateRecord()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L316" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L316" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L318" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L318" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         populateRecord()
         <span class="detail-header-tag small">
@@ -1800,8 +1904,8 @@ created by <a href="yii-elasticsearch-activerecord.html#instantiate()-detail">in
     <div class="detail-header h3" id="primaryKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#primaryKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L257" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L257" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L259" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L259" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         primaryKey()
         <span class="detail-header-tag small">
@@ -1814,7 +1918,7 @@ created by <a href="yii-elasticsearch-activerecord.html#instantiate()-detail">in
 
         <p>The primaryKey for elasticsearch documents is the <code>_id</code> field by default. This field is not part of the
 ActiveRecord attributes so you should never add <code>_id</code> to the list of <a href="yii-elasticsearch-activerecord.html#attributes()-detail">attributes</a>.</p>
-<p>You may overide this method to define the primary key name when you have defined
+<p>You may override this method to define the primary key name when you have defined
 <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping-id-field.html">path mapping</a>
 for the <code>_id</code> field so that it is part of the <code>_source</code> and thus part of the <a href="yii-elasticsearch-activerecord.html#attributes()-detail">attributes</a>.</p>
 <p>Note that elasticsearch only supports <em>one</em> attribute to be the primary key. However to match the signature
@@ -1838,8 +1942,8 @@ single string.</p>
     <div class="detail-header h3" id="setPrimaryKey()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#setPrimaryKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L198" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L198" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L200" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L200" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setPrimaryKey()
         <span class="detail-header-tag small">
@@ -1873,8 +1977,8 @@ single string.</p>
     <div class="detail-header h3" id="type()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#type()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L304" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L304" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L306" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L306" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         type()
         <span class="detail-header-tag small">
@@ -1903,8 +2007,8 @@ single string.</p>
     <div class="detail-header h3" id="unlinkAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#unlinkAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L636" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L636" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L829" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L829" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         unlinkAll()
         <span class="detail-header-tag small">
@@ -1935,11 +2039,130 @@ single string.</p>
 
 <!--	-->
 
+    <div class="detail-header h3" id="update()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#update()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L487" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L487" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        update()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Saves the changes to this active record into the associated database table.</strong></p>
+
+        <p>This method performs the following steps in order:</p>
+<ol>
+<li>call <a href="yii-base-model.html#beforeValidate()-detail">beforeValidate()</a> when <code>$runValidation</code> is true. If validation
+fails, it will skip the rest of the steps;</li>
+<li>call <a href="yii-base-model.html#afterValidate()-detail">afterValidate()</a> when <code>$runValidation</code> is true.</li>
+<li>call <a href="yii-db-baseactiverecord.html#beforeSave()-detail">beforeSave()</a>. If the method returns false, it will skip the
+rest of the steps;</li>
+<li>save the record into database. If this fails, it will skip the rest of the steps;</li>
+<li>call <a href="yii-db-baseactiverecord.html#afterSave()-detail">afterSave()</a>;</li>
+</ol>
+<p>In the above step 1, 2, 3 and 5, events <a href="yii-base-model.html#EVENT_BEFORE_VALIDATE-detail">EVENT_BEFORE_VALIDATE</a>,
+<a href="yii-db-baseactiverecord.html#EVENT_BEFORE_UPDATE-detail">EVENT_BEFORE_UPDATE</a>, <a href="yii-db-baseactiverecord.html#EVENT_AFTER_UPDATE-detail">EVENT_AFTER_UPDATE</a> and <a href="yii-base-model.html#EVENT_AFTER_VALIDATE-detail">EVENT_AFTER_VALIDATE</a>
+will be raised by the corresponding methods.</p>
+<p>Only the <a href="yii-db-baseactiverecord.html#$dirtyAttributes-detail">changed attribute values</a> will be saved into database.</p>
+<p>For example, to update a customer record:</p>
+<pre><code>$customer = Customer::findOne($id);
+$customer-&gt;name = $name;
+$customer-&gt;email = $email;
+$customer-&gt;update();
+</code></pre>
+<p>Note that it is possible the update does not affect any row in the table.
+In this case, this method will return 0. For this reason, you should use the following
+code to check if update() is successful or not:</p>
+<pre><code>if ($this-&gt;update() !== false) {
+    // update successful
+} else {
+    // update failed
+}
+</code></pre>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-elasticsearch-activerecord.html#update()-detail">update</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$runValidation&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attributeNames&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$runValidation</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to perform validation before saving the record.
+If the validation fails, the record will not be inserted into the database.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$attributeNames</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>List of attribute names that need to be saved. Defaults to null,
+meaning all attributes that are loaded from DB will be saved.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Options given in this parameter are passed to elasticsearch
+as request URI parameters. These are among others:</p>
+<ul>
+<li><code>routing</code> define shard placement of this record.</li>
+<li><code>parent</code> by giving the primaryKey of another record this defines a parent-child relation</li>
+<li><code>timeout</code> timeout waiting for a shard to become available.</li>
+<li><code>replication</code> the replication type for the delete/index operation (sync or async).</li>
+<li><code>consistency</code> the write consistency of the index/delete operation.</li>
+<li><code>refresh</code> refresh the relevant primary and replica shards (not the whole index) immediately after the operation occurs, so that the updated document appears in search results immediately.</li>
+<li><code>detect_noop</code> this parameter will become part of the request body and will prevent the index from getting updated when nothing has changed.</li>
+</ul>
+<p>Please refer to the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-update.html#_parameters_3">elasticsearch documentation</a>
+for more details on these options.</p>
+<p>The following parameters are Yii specific:</p>
+<ul>
+<li><p><code>optimistic_locking</code> set this to <code>true</code> to enable optimistic locking, avoid updating when the record has changed since it
+has been loaded from the database. Yii will set the <code>version</code> parameter to the value stored in <span class="broken-link">\yii\elasticsearch\version</span>.
+See the <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/optimistic-concurrency-control.html">elasticsearch documentation</a> for details.</p>
+<p>Make sure the record has been fetched with a <span class="broken-link">\yii\elasticsearch\version</span> before. This is only the case
+for records fetched via <a href="yii-elasticsearch-activerecord.html#get()-detail">get()</a> and <a href="yii-elasticsearch-activerecord.html#mget()-detail">mget()</a> by default. For normal queries, the <code>_version</code> field has to be fetched explicitly.</p>
+</li>
+</ul>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>The number of rows affected, or false if validation fails
+or <a href="yii-db-baseactiverecord.html#beforeSave()-detail">beforeSave()</a> stops the updating process.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-db-staleobjectexception.html">yii\db\StaleObjectException</a></td>
+                  <td class="param-desc-col"><p>if optimistic locking is enabled and the data being updated is outdated.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidparamexception.html">yii\base\InvalidParamException</a></td>
+                  <td class="param-desc-col"><p>if no <span class="broken-link">\yii\elasticsearch\version</span> is available and optimistic locking is enabled.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-elasticsearch-exception.html">yii\elasticsearch\Exception</a></td>
+                  <td class="param-desc-col"><p>in case update failed.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
     <div class="detail-header h3" id="updateAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#updateAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L463" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L463" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L574" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L574" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateAll()
         <span class="detail-header-tag small">
@@ -1990,8 +2213,8 @@ Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\elasticsearc
     <div class="detail-header h3" id="updateAllCounters()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#updateAllCounters()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L523" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L523" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L634" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L634" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateAllCounters()
         <span class="detail-header-tag small">
@@ -2039,6 +2262,68 @@ Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\elasticsearc
                         </table>
 
 <!--	-->
+
+    <div class="detail-header h3" id="updateInternal()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-elasticsearch-activerecord.html#updateInternal()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/elasticsearch/ActiveRecord.php#L506" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/elasticsearch/ActiveRecord.php#L506" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        updateInternal()
+        <span class="detail-header-tag small">
+            protected            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+        <p>See also <a href="yii-elasticsearch-activerecord.html#update()-detail">update()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-elasticsearch-activerecord.html#updateInternal()-detail">updateInternal</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$attributes</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Attributes to update</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Options given in this parameter are passed to elasticsearch
+as request URI parameters. See <a href="yii-elasticsearch-activerecord.html#update()-detail">update()</a> for details.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>The number of rows affected, or false if validation fails
+or <a href="yii-db-baseactiverecord.html#beforeSave()-detail">beforeSave()</a> stops the updating process.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-db-staleobjectexception.html">yii\db\StaleObjectException</a></td>
+                  <td class="param-desc-col"><p>if optimistic locking is enabled and the data being updated is outdated.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidparamexception.html">yii\base\InvalidParamException</a></td>
+                  <td class="param-desc-col"><p>if no <span class="broken-link">\yii\elasticsearch\version</span> is available and optimistic locking is enabled.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-elasticsearch-exception.html">yii\elasticsearch\Exception</a></td>
+                  <td class="param-desc-col"><p>in case update failed.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
 </div>
         </div>
 </div>
@@ -2078,7 +2363,7 @@ Please refer to <a href="yii-db-querytrait.html#where()-detail">yii\elasticsearc
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:22 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:49 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

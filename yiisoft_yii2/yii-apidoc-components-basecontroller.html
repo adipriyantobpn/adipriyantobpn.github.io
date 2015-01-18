@@ -492,6 +492,11 @@ name is the option name.</td>
         <td>Renders a view and applies layout if available.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
             <tr class="inherited" id="renderFile()">
         <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
@@ -499,7 +504,7 @@ name is the option name.</td>
     </tr>
             <tr class="inherited" id="renderPartial()">
         <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
-        <td>Renders a view.</td>
+        <td>Renders a view without applying layout.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
             <tr class="inherited" id="run()">
@@ -557,7 +562,7 @@ a list of options to choose from and their explanations.</td>
 </tr>
                                                                                                     <tr id="findFiles()">
         <td><a href="yii-apidoc-components-basecontroller.html#findFiles()-detail">findFiles()</a></td>
-        <td></td>
+        <td>Finds files</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
                 <tr id="findRenderer()">
@@ -572,12 +577,12 @@ a list of options to choose from and their explanations.</td>
     </tr>
                                                                         <tr id="loadContext()">
         <td><a href="yii-apidoc-components-basecontroller.html#loadContext()-detail">loadContext()</a></td>
-        <td></td>
+        <td>Loads context from cache</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
             <tr id="normalizeTargetDir()">
         <td><a href="yii-apidoc-components-basecontroller.html#normalizeTargetDir()-detail">normalizeTargetDir()</a></td>
-        <td></td>
+        <td>Checks that target directory is valid. Asks questions in tricky cases.</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
                         <tr class="inherited" id="parseDocCommentDetail()">
@@ -595,14 +600,14 @@ a list of options to choose from and their explanations.</td>
         <td>Parses the comment block into tags.</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-                                    <tr id="searchFiles()">
+                                        <tr id="searchFiles()">
         <td><a href="yii-apidoc-components-basecontroller.html#searchFiles()-detail">searchFiles()</a></td>
-        <td></td>
+        <td>Finds files to process</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
                             <tr id="storeContext()">
         <td><a href="yii-apidoc-components-basecontroller.html#storeContext()-detail">storeContext()</a></td>
-        <td></td>
+        <td>Writes context into cache file</td>
         <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
     </tr>
                 <tr id="updateContext()">
@@ -724,8 +729,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="findFiles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-components-basecontroller.html#findFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L84" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L84" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L101" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L101" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findFiles()
         <span class="detail-header-tag small">
@@ -734,32 +739,40 @@ a list of options to choose from and their explanations.</td>
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Finds files</strong></p>
 
         
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-components-basecontroller.html#findFiles()-detail">findFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$dir</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$except&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a> <strong><a href="yii-apidoc-components-basecontroller.html#findFiles()-detail">findFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$dir</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$except&nbsp;</span><span style="color: #007700">=&nbsp;[]&nbsp;)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$dir</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Directory to search files in.</p>
+</td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$except</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>List of names to exclude from search.</p>
+</td>
                 </tr>
-                                                </table>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Files found.</p>
+</td>
+                </tr>
+                                    </table>
 
 <!--	-->
 
     <div class="detail-header h3" id="findRenderer()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-components-basecontroller.html#findRenderer()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L125" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L125" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L152" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L152" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         findRenderer()
         <span class="detail-header-tag small">
@@ -787,8 +800,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="loadContext()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-components-basecontroller.html#loadContext()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L86" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L86" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L108" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L108" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         loadContext()
         <span class="detail-header-tag small">
@@ -797,16 +810,16 @@ a list of options to choose from and their explanations.</td>
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Loads context from cache</strong></p>
 
         
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-components-basecontroller.html#loadContext()-detail">loadContext</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$location&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="yii-apidoc-models-context.html">yii\apidoc\models\Context</a> <strong><a href="yii-apidoc-components-basecontroller.html#loadContext()-detail">loadContext</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$location&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$location</span></td>
-                  <td class="param-type-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"></td>
                 </tr>
                                                 </table>
@@ -816,8 +829,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="normalizeTargetDir()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-components-basecontroller.html#normalizeTargetDir()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L34" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L34" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         normalizeTargetDir()
         <span class="detail-header-tag small">
@@ -826,16 +839,16 @@ a list of options to choose from and their explanations.</td>
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Checks that target directory is valid. Asks questions in tricky cases.</strong></p>
 
         
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-components-basecontroller.html#normalizeTargetDir()-detail">normalizeTargetDir</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$target&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a>|<a href="http://www.php.net/language.types.string">string</a> <strong><a href="yii-apidoc-components-basecontroller.html#normalizeTargetDir()-detail">normalizeTargetDir</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$target&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$target</span></td>
-                  <td class="param-type-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"></td>
                 </tr>
                                                 </table>
@@ -845,8 +858,8 @@ a list of options to choose from and their explanations.</td>
     <div class="detail-header h3" id="options()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-components-basecontroller.html#options()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L130" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L130" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L157" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L157" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         options()
         <span class="detail-header-tag small">
@@ -886,8 +899,8 @@ until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a
     <div class="detail-header h3" id="searchFiles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-components-basecontroller.html#searchFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L65" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L65" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         searchFiles()
         <span class="detail-header-tag small">
@@ -896,27 +909,33 @@ until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Finds files to process</strong></p>
 
         
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-components-basecontroller.html#searchFiles()-detail">searchFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$sourceDirs&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-apidoc-components-basecontroller.html#searchFiles()-detail">searchFiles</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$sourceDirs&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$sourceDirs</span></td>
-                  <td class="param-type-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
                   <td class="param-desc-col"></td>
                 </tr>
-                                                </table>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>List of files to process or false on failure</p>
+</td>
+                </tr>
+                                    </table>
 
 <!--	-->
 
     <div class="detail-header h3" id="storeContext()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-components-basecontroller.html#storeContext()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L102" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L102" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L129" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L129" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         storeContext()
         <span class="detail-header-tag small">
@@ -925,7 +944,7 @@ until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a
     </div>
 
     <div class="doc-description">
-        <p><strong></strong></p>
+        <p><strong>Writes context into cache file</strong></p>
 
         
             </div>
@@ -934,12 +953,12 @@ until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a
         <tr><td colspan="3" class="signature">void <strong><a href="yii-apidoc-components-basecontroller.html#storeContext()-detail">storeContext</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$context</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$location&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$context</span></td>
-                  <td class="param-type-col"></td>
+                  <td class="param-type-col"><a href="yii-apidoc-models-context.html">yii\apidoc\models\Context</a></td>
                   <td class="param-desc-col"></td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$location</span></td>
-                  <td class="param-type-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
                   <td class="param-desc-col"></td>
                 </tr>
                                                 </table>
@@ -949,8 +968,8 @@ until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a
     <div class="detail-header h3" id="updateContext()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-apidoc-components-basecontroller.html#updateContext()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L114" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L114" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/apidoc/components/BaseController.php#L141" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/apidoc/components/BaseController.php#L141" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateContext()
         <span class="detail-header-tag small">
@@ -1013,7 +1032,7 @@ until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:15 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:44 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

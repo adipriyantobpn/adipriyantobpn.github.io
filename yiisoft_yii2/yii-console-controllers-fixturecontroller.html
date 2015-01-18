@@ -416,9 +416,6 @@ yii fixture "*"
 #load all fixtures except User
 yii fixture "*" -User
 
-#append fixtures to already loaded
-yii fixture User --append
-
 #load fixtures with different namespace.
 yii fixture/load User --namespace=alias\my\custom\namespace\goes\here
 </code></pre>
@@ -448,12 +445,6 @@ yii fixture/load User --namespace=alias\my\custom\namespace\goes\here
         <td><a href="yii-base-action.html">yii\base\Action</a></td>
         <td>The action that is currently being executed.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
-    </tr>
-            <tr id="$append">
-        <td><a href="yii-console-controllers-fixturecontroller.html#$append-detail">$append</a></td>
-        <td>bool</td>
-        <td>Whether to append new fixture data to the existing ones.</td>
-        <td><a href="yii-console-controllers-fixturecontroller.html">yii\console\controllers\FixtureController</a></td>
     </tr>
             <tr class="inherited" id="$behaviors">
         <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
@@ -863,6 +854,11 @@ name is the option name.</td>
         <td>Renders a view and applies layout if available.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
             <tr class="inherited" id="renderFile()">
         <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
         <td>Renders a view file.</td>
@@ -870,7 +866,7 @@ name is the option name.</td>
     </tr>
             <tr class="inherited" id="renderPartial()">
         <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
-        <td>Renders a view.</td>
+        <td>Renders a view without applying layout.</td>
         <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
     </tr>
             <tr class="inherited" id="run()">
@@ -956,7 +952,7 @@ a list of options to choose from and their explanations.</td>
         <td>Parses the comment block into tags.</td>
         <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
     </tr>
-                                                    </table>
+                                                        </table>
 </div>
 
 <a name="events"></a>
@@ -1029,29 +1025,11 @@ a list of options to choose from and their explanations.</td>
 
 <div class="property-doc">
 
-    <div class="detail-header h3" id="$append-detail">
-        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
-        <a class="tool-link hash" href="yii-console-controllers-fixturecontroller.html#$append-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
-        
-        $append        <span class="detailHeaderTag small">
-            public                                    property
-                    </span>
-    </div>
-
-    <div class="signature">bool <a href="yii-console-controllers-fixturecontroller.html#$append-detail">$append</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
-
-    <p>Whether to append new fixture data to the existing ones.
-Defaults to false, meaning if there is any existing fixture data, it will be removed.</p>
-
-    
-
     <div class="detail-header h3" id="$defaultAction-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-fixturecontroller.html#$defaultAction-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L52" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L52" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $defaultAction        <span class="detailHeaderTag small">
             public                                    property
@@ -1067,8 +1045,8 @@ Defaults to false, meaning if there is any existing fixture data, it will be rem
     <div class="detail-header h3" id="$globalFixtures-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-fixturecontroller.html#$globalFixtures-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L66" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L66" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L58" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L58" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $globalFixtures        <span class="detailHeaderTag small">
             public                                    property
@@ -1085,8 +1063,8 @@ that disables and enables integrity check, so your data can be safely loaded.</p
     <div class="detail-header h3" id="$namespace-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-fixturecontroller.html#$namespace-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $namespace        <span class="detailHeaderTag small">
             public                                    property
@@ -1106,8 +1084,8 @@ that disables and enables integrity check, so your data can be safely loaded.</p
     <div class="detail-header h3" id="actionLoad()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-fixturecontroller.html#actionLoad()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L103" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L103" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionLoad()
         <span class="detail-header-tag small">
@@ -1122,10 +1100,6 @@ that disables and enables integrity check, so your data can be safely loaded.</p
 <pre><code># load the fixture data specified by User and UserProfile.
 # any existing fixture data will be removed first
 yii fixture/load User UserProfile
-
-# load the fixture data specified by User and UserProfile.
-# the new fixture data will be appended to the existing one
-yii fixture/load --append User UserProfile
 
 # load all available fixtures found under 'tests\unit\fixtures'
 yii fixture/load "*"
@@ -1151,8 +1125,8 @@ yii fixture/load "*" -User -UserProfile
     <div class="detail-header h3" id="actionUnload()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-fixturecontroller.html#actionUnload()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L175" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L175" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L171" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L171" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         actionUnload()
         <span class="detail-header-tag small">
@@ -1220,8 +1194,8 @@ yii fixture/unload "*" -User -UserProfile
     <div class="detail-header h3" id="notifyNothingToLoad()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-fixturecontroller.html#notifyNothingToLoad()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L238" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L238" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L236" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L236" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         notifyNothingToLoad()
         <span class="detail-header-tag small">
@@ -1239,13 +1213,15 @@ yii fixture/unload "*" -User -UserProfile
         <tr><td colspan="3" class="signature">void <strong><a href="yii-console-controllers-fixturecontroller.html#notifyNothingToLoad()-detail">notifyNothingToLoad</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$foundFixtures</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$except&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$foundFixtures</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Array of found fixtures</p>
+</td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$except</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Array of names of fixtures that should not be loaded</p>
+</td>
                 </tr>
                                                 </table>
 
@@ -1273,13 +1249,15 @@ yii fixture/unload "*" -User -UserProfile
         <tr><td colspan="3" class="signature">void <strong><a href="yii-console-controllers-fixturecontroller.html#notifyNothingToUnload()-detail">notifyNothingToUnload</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$foundFixtures</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$except&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$foundFixtures</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Array of found fixtures</p>
+</td>
                 </tr>
                             <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$except</span></td>
-                  <td class="param-type-col"></td>
-                  <td class="param-desc-col"></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Array of names of fixtures that should not be loaded</p>
+</td>
                 </tr>
                                                 </table>
 
@@ -1288,8 +1266,8 @@ yii fixture/unload "*" -User -UserProfile
     <div class="detail-header h3" id="options()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-console-controllers-fixturecontroller.html#options()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L74" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L74" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/console/controllers/FixtureController.php#L66" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/console/controllers/FixtureController.php#L66" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         options()
         <span class="detail-header-tag small">
@@ -1364,7 +1342,7 @@ until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:05:57 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:24 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

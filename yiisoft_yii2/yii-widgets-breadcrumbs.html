@@ -410,7 +410,7 @@ echo Breadcrumbs::widget([
         [
             'label' =&gt; 'Post Category',
             'url' =&gt; ['post-category/view', 'id' =&gt; 10],
-            'template' =&gt; '&lt;li&gt;&lt;b&gt;{link}&lt;/b&gt;&lt;/li&gt;\n', // template for this link only
+            'template' =&gt; "&lt;li&gt;&lt;b&gt;{link}&lt;/b&gt;&lt;/li&gt;\n", // template for this link only
         ],
         ['label' =&gt; 'Sample Post', 'url' =&gt; ['post/edit', 'id' =&gt; 1]],
         'Edit',
@@ -764,8 +764,8 @@ echo Breadcrumbs::widget([
     <div class="detail-header h3" id="$activeItemTemplate-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-breadcrumbs.html#$activeItemTemplate-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L102" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L102" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L115" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L115" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $activeItemTemplate        <span class="detailHeaderTag small">
             public                                    property
@@ -819,8 +819,8 @@ with the label 'Home'. If this property is false, the home link will not be rend
     <div class="detail-header h3" id="$itemTemplate-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-breadcrumbs.html#$itemTemplate-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L97" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L97" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L110" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L110" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $itemTemplate        <span class="detailHeaderTag small">
             public                                    property
@@ -837,8 +837,8 @@ will be replaced with the actual HTML link for each inactive item.</p>
     <div class="detail-header h3" id="$links-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-breadcrumbs.html#$links-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L92" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L92" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L105" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L105" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $links        <span class="detailHeaderTag small">
             public                                    property
@@ -850,14 +850,13 @@ will be replaced with the actual HTML link for each inactive item.</p>
     <p>List of links to appear in the breadcrumbs. If this property is empty,
 the widget will not render anything. Each array element represents a single link in the breadcrumbs
 with the following structure:</p>
-<pre><code>[
-    'label' =&gt; 'label of the link',  // required
-    'url' =&gt; 'url of the link',      // optional, will be processed by Url::to()
-    'template' =&gt; 'own template of the item', // optional, if not set $this-&gt;itemTemplate will be used
-]
-</code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'label&nbsp;of&nbsp;the&nbsp;link'</span><span style="color: #007700">,&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;required<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'url'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'url&nbsp;of&nbsp;the&nbsp;link'</span><span style="color: #007700">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;optional,&nbsp;will&nbsp;be&nbsp;processed&nbsp;by&nbsp;Url::to()<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'template'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'own&nbsp;template&nbsp;of&nbsp;the&nbsp;item'</span><span style="color: #007700">,&nbsp;</span><span style="color: #FF8000">//&nbsp;optional,&nbsp;if&nbsp;not&nbsp;set&nbsp;$this-&gt;itemTemplate&nbsp;will&nbsp;be&nbsp;used<br /></span><span style="color: #007700">]</span></code></pre>
 <p>If a link is active, you only need to specify its "label", and instead of writing <code>['label' =&gt; $label]</code>,
-you should simply use <code>$label</code>.</p>
+you may simply use <code>$label</code>.</p>
+<p>Since version 2.0.1, any additional array elements for each link will be treated as the HTML attributes
+for the hyperlink tag. For example, the following link specification will generate a hyperlink
+with CSS class <code>external</code>:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'label'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'demo'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'url'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'http://example.com'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'external'</span><span style="color: #007700">,<br />]</span></code></pre>
 
     
 
@@ -902,8 +901,8 @@ you should simply use <code>$label</code>.</p>
     <div class="detail-header h3" id="renderItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-breadcrumbs.html#renderItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L138" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L138" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L151" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L151" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderItem()
         <span class="detail-header-tag small">
@@ -950,8 +949,8 @@ you should simply use <code>$label</code>.</p>
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-widgets-breadcrumbs.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L108" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L108" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/widgets/Breadcrumbs.php#L121" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/widgets/Breadcrumbs.php#L121" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -1009,7 +1008,7 @@ you should simply use <code>$label</code>.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:06:14 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:42 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
