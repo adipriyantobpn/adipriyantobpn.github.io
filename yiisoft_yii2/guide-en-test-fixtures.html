@@ -144,19 +144,16 @@
 <a class="list-group-item" href="./guide-en-tutorial-template-engines.html">Template Engines</a>
 <a class="list-group-item" href="./guide-en-tutorial-yii-integration.html">Working with Third-Party Code</a></div>
 <a class="list-group-item" href="#navigation-1610" data-toggle="collapse" data-parent="#navigation">Widgets <b class="caret"></b></a><div id="navigation-1610" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-widget-bootstrap.html">Bootstrap Widgets</a>
-<a class="list-group-item" href="./guide-en-widget-jui.html">Jquery UI Widgets</a></div>
+<a class="list-group-item" href="./guide-en-widget-jui.html">jQuery UI Widgets</a></div>
 <a class="list-group-item" href="#navigation-1611" data-toggle="collapse" data-parent="#navigation">Helpers <b class="caret"></b></a><div id="navigation-1611" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-helper-overview.html">Overview</a>
 <a class="list-group-item" href="./guide-en-helper-array.html">ArrayHelper</a>
 <a class="list-group-item" href="./guide-en-helper-html.html">Html</a>
-<a class="list-group-item" href="./guide-en-helper-url.html">Url</a>
-<a class="list-group-item" href="./guide-en-helper-security.html">Security</a></div></div>    </div>
+<a class="list-group-item" href="./guide-en-helper-url.html">Url</a></div></div>    </div>
     <div class="col-md-9 guide-content" role="main">
-        <h1>Fixtures <a href="#fixtures" name="fixtures" class="hashlink">&para;</a></h1><blockquote><p>Note: This section is under development.</p>
-</blockquote>
-<p>Fixtures are important part of testing. Their main purpose is to set up the environment in a fixed/known state
+        <h1>Fixtures <a href="#fixtures" name="fixtures" class="hashlink">&para;</a></h1><p>Fixtures are an important part of testing. Their main purpose is to set up the environment in a fixed/known state
 so that your tests are repeatable and run in an expected way. Yii provides a fixture framework that allows
 you to define your fixtures precisely and use them easily.</p>
-<p>A key concept in the Yii fixture framework is the so-called <em>fixture objects</em>. A fixture object represents
+<p>A key concept in the Yii fixture framework is the so-called <em>fixture object</em>. A fixture object represents
 a particular aspect of a test environment and is an instance of <a href="./yii-test-fixture.html">yii\test\Fixture</a> or its child class. For example,
 you may use <code>UserFixture</code> to make sure the user DB table contains a fixed set of data. You load one or multiple
 fixture objects before running a test and unload them when finishing.</p>
@@ -172,6 +169,13 @@ designed to work with database and ActiveRecord.</p>
 by setting either the <a href="./yii-test-activefixture.html#$tableName-detail">yii\test\ActiveFixture::$tableName</a> property or the <a href="./yii-test-baseactivefixture.html#$modelClass-detail">yii\test\ActiveFixture::$modelClass</a>
 property. If the latter, the table name will be taken from the <code>ActiveRecord</code> class specified by <code>modelClass</code>.</p>
 </blockquote>
+<blockquote><p>Note: <a href="./yii-test-activefixture.html">yii\test\ActiveFixture</a> is only suited for SQL databases. For NoSQL databases, Yii provides the following
+<code>ActiveFixture</code> classes:</p>
+<ul>
+<li>Mongo DB: <a href="./yii-mongodb-activefixture.html">yii\mongodb\ActiveFixture</a></li>
+<li>Elasticsearch: <span class="broken-link">yii\elasticsearch\ActiveFixture</span> (since version 2.0.2)</li>
+</ul>
+</blockquote>
 <p>The fixture data for an <code>ActiveFixture</code> fixture is usually provided in a file located at <code>FixturePath/data/TableName.php</code>,
 where <code>FixturePath</code> stands for the directory containing the fixture class file, and <code>TableName</code>
 is the name of the table associated with the fixture. In the example above, the file should be
@@ -185,15 +189,18 @@ values into the rows when the fixture is being loaded.</p>
 <blockquote><p>Tip: You may customize the location of the data file by setting the <a href="./yii-test-activefixture.html#$dataFile-detail">yii\test\ActiveFixture::$dataFile</a> property.
 You may also override <a href="./yii-test-activefixture.html#getData()-detail">yii\test\ActiveFixture::getData()</a> to provide the data.</p>
 </blockquote>
-<p>As we described earlier, a fixture may depend on other fixtures. For example, <code>UserProfileFixture</code> depends on <code>UserFixture</code>
+<p>As we described earlier, a fixture may depend on other fixtures. For example, a <code>UserProfileFixture</code> may need to depends on <code>UserFixture</code>
 because the user profile table contains a foreign key pointing to the user table.
 The dependency is specified via the <a href="./yii-test-fixture.html#$depends-detail">yii\test\Fixture::$depends</a> property, like the following,</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">\</span><span style="color: #0000BB">tests</span><span style="color: #007700">\</span><span style="color: #0000BB">fixtures</span><span style="color: #007700">;<br /><br />use&nbsp;</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">test</span><span style="color: #007700">\</span><span style="color: #0000BB">ActiveFixture</span><span style="color: #007700">;<br /><br />class&nbsp;</span><span style="color: #0000BB">UserProfileFixture&nbsp;</span><span style="color: #007700">extends&nbsp;</span><span style="color: #0000BB">ActiveFixture<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000BB">$modelClass&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'app\models\UserProfile'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;</span><span style="color: #0000BB">$depends&nbsp;</span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'app\tests\fixtures\UserFixture'</span><span style="color: #007700">];<br />}</span></code></pre>
+<p>The dependency also ensures, that the fixtures are loaded and unloaded in a well defined order. In the above example <code>UserFixture</code> will
+always be loaded before <code>UserProfileFixture</code> to ensure all foreign key references exist and will be unloaded after <code>UserProfileFixture</code>
+has been unloaded for the same reason.</p>
 <p>In the above, we have shown how to define a fixture about a DB table. To define a fixture not related with DB
 (e.g. a fixture about certain files and directories), you may extend from the more general base class
 <a href="./yii-test-fixture.html">yii\test\Fixture</a> and override the <a href="./yii-test-fixture.html#load()-detail">load()</a> and <a href="./yii-test-fixture.html#unload()-detail">unload()</a> methods.</p>
 <h2>Using Fixtures <a href="#using-fixtures" name="using-fixtures" class="hashlink">&para;</a></h2><p>If you are using <a href="http://codeception.com/">CodeCeption</a> to test your code, you should consider using
-the <code>yii2-codeception</code> extension which has the built-in support for loading and accessing fixtures.
+the <code>yii2-codeception</code> extension which has built-in support for loading and accessing fixtures.
 If you are using other testing frameworks, you may use <a href="./yii-test-fixturetrait.html">yii\test\FixtureTrait</a> in your test cases
 to achieve the same goal.</p>
 <p>In the following we will describe how to write a <code>UserProfile</code> unit test class using <code>yii2-codeception</code>.</p>
@@ -253,11 +260,13 @@ data\
 <blockquote><p>Note: In the example above fixture files are named only for example purpose. In real life you should name them
 according to which fixture class your fixture classes are extending from. For example, if you are extending
 from <a href="./yii-test-activefixture.html">yii\test\ActiveFixture</a> for DB fixtures, you should use DB table names as the fixture data file names;
-If you are extending for <a href="./yii-mongodb-activefixture.html">yii\mongodb\ActiveFixture</a> for MongoDB fixtures, you should use collection names as the file names.</p>
+If you are extending from <a href="./yii-mongodb-activefixture.html">yii\mongodb\ActiveFixture</a> for MongoDB fixtures, you should use collection names as the file names.</p>
 </blockquote>
 <p>The similar hierarchy can be used to organize fixture class files. Instead of using <code>data</code> as the root directory, you may
 want to use <code>fixtures</code> as the root directory to avoid conflict with the data files.</p>
-<h2>Summary <a href="#summary" name="summary" class="hashlink">&para;</a></h2><p>In the above, we have described how to define and use fixtures. Below we summarize the typical workflow
+<h2>Summary <a href="#summary" name="summary" class="hashlink">&para;</a></h2><blockquote><p>Note: This section is under development.</p>
+</blockquote>
+<p>In the above, we have described how to define and use fixtures. Below we summarize the typical workflow
 of running unit tests related with DB:</p>
 <ol>
 <li>Use <code>yii migrate</code> tool to upgrade your test database to the latest version;</li>
@@ -270,7 +279,9 @@ of running unit tests related with DB:</p>
 <li>Repeat Step 2 until all tests finish.</li>
 </ol>
 <p><strong>To be cleaned up below</strong></p>
-<h1>Managing Fixtures <a href="#managing-fixtures" name="managing-fixtures" class="hashlink">&para;</a></h1><p>// todo: this tutorial may be merged into test-fixture.md</p>
+<h1>Managing Fixtures <a href="#managing-fixtures" name="managing-fixtures" class="hashlink">&para;</a></h1><blockquote><p>Note: This section is under development.</p>
+<p>todo: this tutorial may be merged with the above part of test-fixtures.md</p>
+</blockquote>
 <p>Fixtures are important part of testing. Their main purpose is to populate you with data that needed by testing
 different cases. With this data using your tests becoming more efficient and useful.</p>
 <p>Yii supports fixtures via the <code>yii fixture</code> command line tool. This tool supports:</p>
@@ -377,7 +388,7 @@ See extension <a href="https://github.com/yiisoft/yii2/tree/master/extensions/fa
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:18:14 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:33:27 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

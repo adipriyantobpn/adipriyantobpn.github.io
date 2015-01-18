@@ -144,12 +144,11 @@
 <a class="list-group-item" href="./guide-en-tutorial-template-engines.html">Template Engines</a>
 <a class="list-group-item" href="./guide-en-tutorial-yii-integration.html">Working with Third-Party Code</a></div>
 <a class="list-group-item" href="#navigation-280" data-toggle="collapse" data-parent="#navigation">Widgets <b class="caret"></b></a><div id="navigation-280" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-widget-bootstrap.html">Bootstrap Widgets</a>
-<a class="list-group-item" href="./guide-en-widget-jui.html">Jquery UI Widgets</a></div>
+<a class="list-group-item" href="./guide-en-widget-jui.html">jQuery UI Widgets</a></div>
 <a class="list-group-item" href="#navigation-281" data-toggle="collapse" data-parent="#navigation">Helpers <b class="caret"></b></a><div id="navigation-281" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-helper-overview.html">Overview</a>
 <a class="list-group-item" href="./guide-en-helper-array.html">ArrayHelper</a>
 <a class="list-group-item" href="./guide-en-helper-html.html">Html</a>
-<a class="list-group-item" href="./guide-en-helper-url.html">Url</a>
-<a class="list-group-item" href="./guide-en-helper-security.html">Security</a></div></div>    </div>
+<a class="list-group-item" href="./guide-en-helper-url.html">Url</a></div></div>    </div>
     <div class="col-md-9 guide-content" role="main">
         <h1>Active Record <a href="#active-record" name="active-record" class="hashlink">&para;</a></h1><blockquote><p>Note: This section is under development.</p>
 </blockquote>
@@ -158,7 +157,7 @@ for accessing data stored in a database. An Active Record class is associated wi
 an Active Record instance corresponds to a row of that table, and an attribute of an Active Record
 instance represents the value of a column in that row. Instead of writing raw SQL statements,
 you can work with Active Record in an object-oriented fashion to manipulate the data in database tables.</p>
-<p>For example, assume <code>Customer</code> is an Active Record class is associated with the <code>customer</code> table
+<p>For example, assume <code>Customer</code> is an Active Record class which is associated with the <code>customer</code> table
 and <code>name</code> is a column of the <code>customer</code> table. You can write the following code to insert a new
 row into the <code>customer</code> table:</p>
 <pre><code class="language-php"><span style="color: #0000BB">$customer&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Customer</span><span style="color: #007700">();<br /></span><span style="color: #0000BB">$customer</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">name&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'Qiang'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$customer</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">save</span><span style="color: #007700">();</span></code></pre>
@@ -170,7 +169,7 @@ intuitive, more error prone, and may have compatibility problems for different D
 <li>MySQL 4.1 or later: via <a href="./yii-db-activerecord.html">yii\db\ActiveRecord</a></li>
 <li>PostgreSQL 7.3 or later: via <a href="./yii-db-activerecord.html">yii\db\ActiveRecord</a></li>
 <li>SQLite 2 and 3: via <a href="./yii-db-activerecord.html">yii\db\ActiveRecord</a></li>
-<li>Microsoft SQL Server 2010 or later: via <a href="./yii-db-activerecord.html">yii\db\ActiveRecord</a></li>
+<li>Microsoft SQL Server 2008 or later: via <a href="./yii-db-activerecord.html">yii\db\ActiveRecord</a></li>
 <li>Oracle: via <a href="./yii-db-activerecord.html">yii\db\ActiveRecord</a></li>
 <li>CUBRID 9.3 or later: via <a href="./yii-db-activerecord.html">yii\db\ActiveRecord</a> (Note that due to a <a href="http://jira.cubrid.org/browse/APIS-658">bug</a> in
 the cubrid PDO extension, quoting of values will not work, so you need CUBRID 9.3 as the client as well as the server)</li>
@@ -192,6 +191,12 @@ as the corresponding column name and is case-sensitive.</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;"id"&nbsp;and&nbsp;"email"&nbsp;are&nbsp;the&nbsp;names&nbsp;of&nbsp;columns&nbsp;in&nbsp;the&nbsp;table&nbsp;associated&nbsp;with&nbsp;the&nbsp;$customer&nbsp;ActiveRecord&nbsp;object<br /></span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$customer</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">id</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$email&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$customer</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">email</span><span style="color: #007700">;</span></code></pre>
 <p>To change the value of a column, assign a new value to the associated property and save the object:</p>
 <pre><code class="language-php"><span style="color: #0000BB">$customer</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">email&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'jane@example.com'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$customer</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">save</span><span style="color: #007700">();</span></code></pre>
+<blockquote><p>Note: Obviously, because column names become attribute names of the active record class directly, you
+get attribute names with underscores if you have that kind of naming schema in your database. For example
+a column <code>user_name</code> will be accessed as <code>$user-&gt;user_name</code> on the active record object. If you are concerned about code style
+you should adopt your database naming schema to use camelCase too. However, camelCase is not a requirement, Yii can work
+well with any other naming style.</p>
+</blockquote>
 <h2>Connecting to Database <a href="#connecting-to-database" name="connecting-to-database" class="hashlink">&para;</a></h2><p>Active Record uses a <a href="./yii-db-connection.html">DB connection</a> to exchange data with the database. By default,
 it uses the <code>db</code> <a href="guide-en-structure-application-components.html">application component</a> as the connection. As explained in <a href="guide-en-db-dao.html">Database basics</a>,
 you may configure the <code>db</code> component in the application configuration file as follows,</p>
@@ -271,7 +276,7 @@ Web form for an Active Record with these values. To do so, call the
 <pre><code class="language-php"><span style="color: #0000BB">$customer&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Customer</span><span style="color: #007700">();<br /></span><span style="color: #0000BB">$customer</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">loadDefaultValues</span><span style="color: #007700">();<br /></span><span style="color: #FF8000">//&nbsp;...&nbsp;render&nbsp;HTML&nbsp;form&nbsp;for&nbsp;$customer&nbsp;...</span></code></pre>
 <p>If you want to set some initial values for the attributes yourself you can override the <code>init()</code> method
 of the active record class and set the values there. For example to set the default value for the <code>status</code> attribute:</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">init</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">init</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">status&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'active'</span><span style="color: #007700">;<br />}</span></code></pre>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">init</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">init</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">status&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">STATUS_ACTIVE</span><span style="color: #007700">;<br />}</span></code></pre>
 <h2>Active Record Life Cycles <a href="#active-record-life-cycles" name="active-record-life-cycles" class="hashlink">&para;</a></h2><p>It is important to understand the life cycles of Active Record when it is used to manipulate data in database.
 These life cycles are typically associated with corresponding events which allow you to inject code
 to intercept or respond to these events. They are especially useful for developing Active Record <a href="guide-en-concept-behaviors.html">behaviors</a>.</p>
@@ -401,7 +406,7 @@ eager loading:</p>
 That is, if your relation is defined with <a href="./yii-db-activerelationtrait.html#via()-detail">via()</a> or <a href="./yii-db-activequery.html#viaTable()-detail">viaTable()</a>,
 you cannot call <a href="./yii-db-activerelationtrait.html#inverseOf()-detail">yii\db\ActiveQuery::inverseOf()</a> further.</p>
 </blockquote>
-<h2>Joining with Relations <a href="#joining-with-relations" name="joining-with-relations" class="hashlink">&para;</a></h2><p>When working with relational databases, a common task is to join multiple tables and apply various
+<h2>Joining with Relations <a name="joining-with-relations"></a> <a href="#joining-with-relations" name="joining-with-relations" class="hashlink">&para;</a></h2><p>When working with relational databases, a common task is to join multiple tables and apply various
 query conditions and parameters to the JOIN SQL statement. Instead of calling <a href="./yii-db-query.html#join()-detail">yii\db\ActiveQuery::join()</a>
 explicitly to build up the JOIN query, you may reuse the existing relation definitions and call
 <a href="./yii-db-activequery.html#joinWith()-detail">yii\db\ActiveQuery::joinWith()</a> to achieve this goal. For example,</p>
@@ -512,9 +517,9 @@ and the update or deletion is skipped.</p>
 <li>Create a column to store the version number of each row. The column type should be <code>BIGINT DEFAULT 0</code>.
 Override the <code>optimisticLock()</code> method to return the name of this column.</li>
 <li>In the Web form that collects the user input, add a hidden field that stores
-the lock version of the recording being updated.</li>
+the lock version of the record being updated.</li>
 <li>In the controller action that does the data updating, try to catch the <a href="./yii-db-staleobjectexception.html">yii\db\StaleObjectException</a>
-and implement necessary business logic (e.g. merging the changes, prompting stated data)
+and implement necessary business logic (e.g. merging the changes, prompting staled data)
 to resolve the conflict.</li>
 </ol>
 <h2>Dirty Attributes <a href="#dirty-attributes" name="dirty-attributes" class="hashlink">&para;</a></h2><p>An attribute is considered dirty if its value was modified after the model was loaded from database or since the most recent data save. When saving record data by calling <code>save()</code>, <code>update()</code>, <code>insert()</code> etc. only dirty attributes are saved into the database. If there are no dirty attributes then there is nothing to be saved so no query will be issued at all.</p>
@@ -530,7 +535,7 @@ to resolve the conflict.</li>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:18:13 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:33:25 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

@@ -131,7 +131,7 @@ applying migrations.</p>
     </tr>
             <tr id="$db">
         <td><a href="yii-mongodb-migration.html#$db-detail">$db</a></td>
-        <td><a href="yii-mongodb-connection.html">yii\mongodb\Connection</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+        <td><a href="yii-mongodb-connection.html">yii\mongodb\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
         <td>The MongoDB connection object or the application component ID of the MongoDB connection
 that this migration should work with.</td>
         <td><a href="yii-mongodb-migration.html">yii\mongodb\Migration</a></td>
@@ -376,18 +376,19 @@ that this migration should work with.</td>
     <div class="detail-header h3" id="$db-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $db        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"><a href="yii-mongodb-connection.html">yii\mongodb\Connection</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-mongodb-migration.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'mongodb'</span></div>
+    <div class="signature"><a href="yii-mongodb-connection.html">yii\mongodb\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-mongodb-migration.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'mongodb'</span></div>
 
     <p>The MongoDB connection object or the application component ID of the MongoDB connection
-that this migration should work with.</p>
+that this migration should work with.
+Starting from version 2.0.2, this can also be a configuration array for creating the object.</p>
 
     
 </div>
@@ -398,8 +399,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="batchInsert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#batchInsert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L147" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L147" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         batchInsert()
         <span class="detail-header-tag small">
@@ -446,8 +447,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="composeCollectionLogName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#composeCollectionLogName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L211" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L211" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L212" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L212" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         composeCollectionLogName()
         <span class="detail-header-tag small">
@@ -482,8 +483,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="createCollection()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#createCollection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L58" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L58" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createCollection()
         <span class="detail-header-tag small">
@@ -518,8 +519,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="createIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#createIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L90" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L90" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         createIndex()
         <span class="detail-header-tag small">
@@ -560,8 +561,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="dropAllIndexes()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#dropAllIndexes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L115" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L115" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L116" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L116" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropAllIndexes()
         <span class="detail-header-tag small">
@@ -590,8 +591,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="dropCollection()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#dropCollection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropCollection()
         <span class="detail-header-tag small">
@@ -620,8 +621,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="dropIndex()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#dropIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L103" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L103" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L104" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L104" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         dropIndex()
         <span class="detail-header-tag small">
@@ -656,8 +657,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L48" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L48" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -681,8 +682,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="insert()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#insert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L130" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L130" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L131" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L131" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         insert()
         <span class="detail-header-tag small">
@@ -729,8 +730,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="remove()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#remove()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L197" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L197" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L198" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L198" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         remove()
         <span class="detail-header-tag small">
@@ -777,8 +778,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="save()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#save()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L181" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L181" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L182" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L182" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         save()
         <span class="detail-header-tag small">
@@ -825,8 +826,8 @@ that this migration should work with.</p>
     <div class="detail-header h3" id="update()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-migration.html#update()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L165" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L165" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Migration.php#L166" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Migration.php#L166" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         update()
         <span class="detail-header-tag small">
@@ -916,7 +917,7 @@ to be specified for the "newData". If no strategy is passed "$set" will be used.
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:53 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:36 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

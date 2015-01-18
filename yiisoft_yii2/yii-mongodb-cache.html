@@ -96,7 +96,7 @@
     <p><strong>Cache implements a cache application component by storing cached data in a MongoDB.</strong></p>
     <p>By default, Cache stores session data in a MongoDB collection named 'cache' inside the default database.
 This collection is better to be pre-created with fields 'id' and 'expire' indexed.
-The table name can be changed by setting <a href="yii-mongodb-cache.html#$cacheCollection-detail">$cacheCollection</a>.</p>
+The collection name can be changed by setting <a href="yii-mongodb-cache.html#$cacheCollection-detail">$cacheCollection</a>.</p>
 <p>Please refer to <a href="yii-caching-cache.html">yii\caching\Cache</a> for common cache operations that are supported by Cache.</p>
 <p>The following example shows how you can configure the application to use Cache:</p>
 <pre><code>'cache' =&gt; [
@@ -139,7 +139,7 @@ The table name can be changed by setting <a href="yii-mongodb-cache.html#$cacheC
     </tr>
             <tr id="$db">
         <td><a href="yii-mongodb-cache.html#$db-detail">$db</a></td>
-        <td><a href="yii-mongodb-connection.html">yii\mongodb\Connection</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+        <td><a href="yii-mongodb-connection.html">yii\mongodb\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
         <td>The MongoDB connection object or the application component ID of the MongoDB connection.</td>
         <td><a href="yii-mongodb-cache.html">yii\mongodb\Cache</a></td>
     </tr>
@@ -454,8 +454,8 @@ This method should be implemented by child classes to delete the data from actua
     <div class="detail-header h3" id="$cacheCollection-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#$cacheCollection-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L50" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L50" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $cacheCollection        <span class="detailHeaderTag small">
             public                                    property
@@ -473,27 +473,28 @@ This collection is better to be pre-created with fields 'id' and 'expire' indexe
     <div class="detail-header h3" id="$db-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L44" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L44" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $db        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"><a href="yii-mongodb-connection.html">yii\mongodb\Connection</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-mongodb-cache.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'mongodb'</span></div>
+    <div class="signature"><a href="yii-mongodb-connection.html">yii\mongodb\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-mongodb-cache.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'mongodb'</span></div>
 
     <p>The MongoDB connection object or the application component ID of the MongoDB connection.
 After the Cache object is created, if you want to change this property, you should only assign it
-with a MongoDB connection object.</p>
+with a MongoDB connection object.
+Starting from version 2.0.2, this can also be a configuration array for creating the object.</p>
 
     
 
     <div class="detail-header h3" id="$gcProbability-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#$gcProbability-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $gcProbability        <span class="detailHeaderTag small">
             public                                    property
@@ -515,8 +516,8 @@ This number should be between 0 and 1000000. A value 0 meaning no GC will be per
     <div class="detail-header h3" id="addValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#addValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L135" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L135" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L136" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L136" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addValue()
         <span class="detail-header-tag small">
@@ -565,8 +566,8 @@ in specific cache storage.</p>
     <div class="detail-header h3" id="deleteValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#deleteValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L165" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L165" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L166" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L166" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         deleteValue()
         <span class="detail-header-tag small">
@@ -602,8 +603,8 @@ This method should be implemented by child classes to delete the data from actua
     <div class="detail-header h3" id="flushValues()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#flushValues()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L178" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L178" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L179" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L179" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         flushValues()
         <span class="detail-header-tag small">
@@ -633,8 +634,8 @@ This method should be implemented by child classes to delete the data from actua
     <div class="detail-header h3" id="gc()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#gc()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L191" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L191" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L192" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L192" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         gc()
         <span class="detail-header-tag small">
@@ -664,8 +665,8 @@ Defaults to false, meaning the actual deletion happens with the probability as s
     <div class="detail-header h3" id="getValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#getValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getValue()
         <span class="detail-header-tag small">
@@ -702,8 +703,8 @@ from specific cache storage.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L63" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L63" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L64" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L64" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -733,8 +734,8 @@ from specific cache storage.</p>
     <div class="detail-header h3" id="setValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-cache.html#setValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L109" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L109" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Cache.php#L110" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Cache.php#L110" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setValue()
         <span class="detail-header-tag small">
@@ -818,7 +819,7 @@ in specific cache storage.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:52 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:35 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

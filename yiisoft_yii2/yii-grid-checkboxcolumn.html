@@ -401,7 +401,7 @@
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'columns'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;...<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'yii\grid\CheckboxColumn'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;you&nbsp;may&nbsp;configure&nbsp;additional&nbsp;properties&nbsp;here<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">],<br />]</span></code></pre>
 <p>Users may click on the checkboxes to select rows of the grid. The selected rows may be
 obtained by calling the following JavaScript code:</p>
-<pre><code>var keys = $('#grid').yiiGridView('getSelectedRows');
+<pre><code class="language-javascript">var keys = $('#grid').yiiGridView('getSelectedRows');
 // keys is an array consisting of the keys associated with the selected rows
 </code></pre>
 
@@ -652,8 +652,8 @@ obtained by calling the following JavaScript code:</p>
     <div class="detail-header h3" id="$checkboxOptions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-checkboxcolumn.html#$checkboxOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L64" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L64" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $checkboxOptions        <span class="detailHeaderTag small">
             public                                    property
@@ -663,15 +663,22 @@ obtained by calling the following JavaScript code:</p>
     <div class="signature"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/class.closure">Closure</a> <a href="yii-grid-checkboxcolumn.html#$checkboxOptions-detail">$checkboxOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
 
     <p>The HTML attributes for checkboxes. This can either be an array of
-attributes or an anonymous function (<a href="http://www.php.net/class.closure">Closure</a>) that returns such an array.</p>
+attributes or an anonymous function (<a href="http://www.php.net/class.closure">Closure</a>) that returns such an array.
+The signature of the function should be the following: <code>function ($model, $key, $index, $column)</code>.
+Where <code>$model</code>, <code>$key</code>, and <code>$index</code> refer to the model, key and index of the row currently being rendered
+and <code>$column</code> is a reference to the <a href="yii-grid-checkboxcolumn.html">yii\grid\CheckboxColumn</a> object.
+A function may be used to assign different attributes to different rows based on the data in that row.
+Specifically if you want to set a different value for the checkbox
+you can use this option in the following way (in this example using the <code>name</code> attribute of the model):</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'checkboxOptions'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;function(</span><span style="color: #0000BB">$model</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$key</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$index</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$column</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;[</span><span style="color: #DD0000">'value'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$model</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">name</span><span style="color: #007700">];<br />}</span></code></pre>
 
     <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>
 
     <div class="detail-header h3" id="$multiple-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-checkboxcolumn.html#$multiple-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $multiple        <span class="detailHeaderTag small">
             public                                    property
@@ -708,8 +715,8 @@ attributes or an anonymous function (<a href="http://www.php.net/class.closure">
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-checkboxcolumn.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L62" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L62" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L75" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L75" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -740,8 +747,8 @@ given configuration.</p>
     <div class="detail-header h3" id="renderDataCellContent()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-checkboxcolumn.html#renderDataCellContent()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L100" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L100" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L113" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L113" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderDataCellContent()
         <span class="detail-header-tag small">
@@ -788,8 +795,8 @@ given configuration.</p>
     <div class="detail-header h3" id="renderHeaderCellContent()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-grid-checkboxcolumn.html#renderHeaderCellContent()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L79" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L79" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/grid/CheckboxColumn.php#L92" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/grid/CheckboxColumn.php#L92" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderHeaderCellContent()
         <span class="detail-header-tag small">
@@ -855,7 +862,7 @@ This method may be overridden to customize the rendering of the header cell.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:30 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:14 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

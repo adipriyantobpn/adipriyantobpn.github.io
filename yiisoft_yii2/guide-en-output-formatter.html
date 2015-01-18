@@ -144,12 +144,11 @@
 <a class="list-group-item" href="./guide-en-tutorial-template-engines.html">Template Engines</a>
 <a class="list-group-item" href="./guide-en-tutorial-yii-integration.html">Working with Third-Party Code</a></div>
 <a class="list-group-item" href="#navigation-698" data-toggle="collapse" data-parent="#navigation">Widgets <b class="caret"></b></a><div id="navigation-698" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-widget-bootstrap.html">Bootstrap Widgets</a>
-<a class="list-group-item" href="./guide-en-widget-jui.html">Jquery UI Widgets</a></div>
+<a class="list-group-item" href="./guide-en-widget-jui.html">jQuery UI Widgets</a></div>
 <a class="list-group-item" href="#navigation-699" data-toggle="collapse" data-parent="#navigation">Helpers <b class="caret"></b></a><div id="navigation-699" class="submenu panel-collapse collapse"><a class="list-group-item" href="./guide-en-helper-overview.html">Overview</a>
 <a class="list-group-item" href="./guide-en-helper-array.html">ArrayHelper</a>
 <a class="list-group-item" href="./guide-en-helper-html.html">Html</a>
-<a class="list-group-item" href="./guide-en-helper-url.html">Url</a>
-<a class="list-group-item" href="./guide-en-helper-security.html">Security</a></div></div>    </div>
+<a class="list-group-item" href="./guide-en-helper-url.html">Url</a></div></div>    </div>
     <div class="col-md-9 guide-content" role="main">
         <h1>Data Formatter <a href="#data-formatter" name="data-formatter" class="hashlink">&para;</a></h1><p>For formatting of outputs Yii provides a formatter class to make data more readable for users.
 <a href="./yii-i18n-formatter.html">yii\i18n\Formatter</a> is a helper class that is registered as an <a href="guide-en-structure-application-components.html">application component</a> named <code>formatter</code> by default.</p>
@@ -177,6 +176,9 @@ which will also be taken from the application <a href="./yii-base-application.ht
 <a href="http://php.net/manual/en/book.intl.php">PHP intl extension</a> is installed or not. So to ensure your website works with the same output
 in all environments it is recommended to install the PHP intl extension in all environments and verify that the version of the ICU library
 is the same. See also: <a href="guide-en-tutorial-i18n.html#setup-environment">Setting up your PHP environment for internationalization</a>.</p>
+<p>Note also that even if the intl extension is installed, formatting date and time values for years &gt;=2038 or &lt;=1901
+on 32bit systems will fall back to the PHP implementation, which does not provide localized month and day names,
+because intl uses a 32bit UNIX timestamp internally. On a 64bit system the intl formatter is used in all cases if installed.</p>
 </blockquote>
 <h2>Configuring the formatter <a name="configuring-format"></a> <a href="#configuring-the-formatter" name="configuring-the-formatter" class="hashlink">&para;</a></h2><p>The default formats used by the formatter methods can be adjusted using the properties of the <a href="./yii-i18n-formatter.html">formatter class</a>.
 You can adjust these values application wide by configuring the <code>formatter</code> component in your <a href="guide-en-concept-configurations.html#application-configurations">application config</a>.
@@ -216,7 +218,7 @@ it is recommended to store all date and time values in UTC, preferably as a UNIX
 If the input value is in a time zone different from UTC, the time zone has to be stated explicitly like in the following example:</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;assuming&nbsp;Yii::$app-&gt;timeZone&nbsp;=&nbsp;'Europe/Berlin';<br /></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">formatter</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">asTime</span><span style="color: #007700">(</span><span style="color: #0000BB">1412599260</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;14:41:00<br /></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">formatter</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">asTime</span><span style="color: #007700">(</span><span style="color: #DD0000">'2014-10-06&nbsp;12:41:00'</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;14:41:00<br /></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">$app</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">formatter</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">asTime</span><span style="color: #007700">(</span><span style="color: #DD0000">'2014-10-06&nbsp;14:41:00&nbsp;CEST'</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;14:41:00</span></code></pre>
 <p>Since version 2.0.1 it is also possible to configure the time zone that is assumed for timestamps that do not include a time zone
-identifier like the second example in the code above. You can set <span class="broken-link">yii\i18n\Formatter::defaultTimeZone</span> to the time zone you use for data storage.</p>
+identifier like the second example in the code above. You can set <a href="./yii-i18n-formatter.html#$defaultTimeZone-detail">yii\i18n\Formatter::$defaultTimeZone</a> to the time zone you use for data storage.</p>
 <blockquote><p>Note: As time zones are subject to rules made by the governments around the world and may change frequently, it is
 likely that you do not have the latest information in the time zone database installed on your system.
 You may refer to the <a href="http://userguide.icu-project.org/datetime/timezone#TOC-Updating-the-Time-Zone-Data">ICU manual</a>
@@ -238,8 +240,8 @@ separators e.g. <code>2,542.123</code> or <code>2.542,123</code>.</li>
 <a href="./yii-i18n-formatter.html#$thousandSeparator-detail">thousandSeparator</a> which are set by default according to the locale.</p>
 <p>For more advanced configuration, <a href="./yii-i18n-formatter.html#$numberFormatterOptions-detail">yii\i18n\Formatter::$numberFormatterOptions</a> and <a href="./yii-i18n-formatter.html#$numberFormatterTextOptions-detail">yii\i18n\Formatter::$numberFormatterTextOptions</a>
 can be used to configure the internally used <a href="http://php.net/manual/en/class.numberformatter.php">NumberFormatter class</a></p>
-<p>For example to adjust the maximum and minimum value of fraction digits you can configure this property like the following:</p>
-<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">NumberFormatter</span><span style="color: #007700">::</span><span style="color: #0000BB">MIN_FRACTION_DIGITS&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">NumberFormatter</span><span style="color: #007700">::</span><span style="color: #0000BB">MAX_FRACTION_DIGITS&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">2</span><span style="color: #007700">,<br />]</span></code></pre>
+<p>For example, to adjust the maximum and minimum value of fraction digits, you can configure <a href="./yii-i18n-formatter.html#$numberFormatterOptions-detail">yii\i18n\Formatter::$numberFormatterOptions</a> property like the following:</p>
+<pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #DD0000">'numberFormatterOptions'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">NumberFormatter</span><span style="color: #007700">::</span><span style="color: #0000BB">MIN_FRACTION_DIGITS&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">NumberFormatter</span><span style="color: #007700">::</span><span style="color: #0000BB">MAX_FRACTION_DIGITS&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">2</span><span style="color: #007700">,<br />]</span></code></pre>
 <h2>Other formatters  <a name="other"></a> <a href="#other-formatters" name="other-formatters" class="hashlink">&para;</a></h2><p>In addition to date, time and number formatting, Yii provides a set of other useful formatters for different situations:</p>
 <ul>
 <li><a href="./yii-i18n-formatter.html#asRaw()-detail">raw</a> - the value is outputted as is, this is a pseudo-formatter that has no effect except that
@@ -262,7 +264,7 @@ the <a href="./yii-i18n-formatter.html#$booleanFormat-detail">yii\i18n\Formatter
 <h2><code>null</code>-values <a name="null-values"></a> <a href="#null-values" name="null-values" class="hashlink">&para;</a></h2><p>For values that are <code>null</code> in PHP, the formatter class will print a placeholder instead of an empty string which
 defaults to <code>(not set)</code> translated to the current application language. You can configure the
 <a href="./yii-i18n-formatter.html#$nullDisplay-detail">nullDisplay</a> property to set a custom placeholder.
-If you do not you want special handling for <code>null</code> values, you can set <a href="./yii-i18n-formatter.html#$nullDisplay-detail">nullDisplay</a> to <code>null</code>.</p>
+If you do not want special handling for <code>null</code> values, you can set <a href="./yii-i18n-formatter.html#$nullDisplay-detail">nullDisplay</a> to <code>null</code>.</p>
         <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
     </div>
 </div>
@@ -271,7 +273,7 @@ If you do not you want special handling for <code>null</code> values, you can se
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:18:13 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:33:26 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

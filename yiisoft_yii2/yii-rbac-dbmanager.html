@@ -439,7 +439,7 @@
     </tr>
             <tr id="$db">
         <td><a href="yii-rbac-dbmanager.html#$db-detail">$db</a></td>
-        <td><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
         <td>The DB connection object or the application component ID of the DB connection.</td>
         <td><a href="yii-rbac-dbmanager.html">yii\rbac\DbManager</a></td>
     </tr>
@@ -890,8 +890,8 @@
     <div class="detail-header h3" id="$assignmentTable-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#$assignmentTable-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $assignmentTable        <span class="detailHeaderTag small">
             public                                    property
@@ -907,27 +907,28 @@
     <div class="detail-header h3" id="$db-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L44" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L44" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $db        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-rbac-dbmanager.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'db'</span></div>
+    <div class="signature"><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-rbac-dbmanager.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'db'</span></div>
 
     <p>The DB connection object or the application component ID of the DB connection.
 After the DbManager object is created, if you want to change this property, you should only assign it
-with a DB connection object.</p>
+with a DB connection object.
+Starting from version 2.0.2, this can also be a configuration array for creating the object.</p>
 
     
 
     <div class="detail-header h3" id="$itemChildTable-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#$itemChildTable-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L52" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L52" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $itemChildTable        <span class="detailHeaderTag small">
             public                                    property
@@ -943,8 +944,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="$itemTable-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#$itemTable-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L48" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L48" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $itemTable        <span class="detailHeaderTag small">
             public                                    property
@@ -960,8 +961,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="$ruleTable-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#$ruleTable-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $ruleTable        <span class="detailHeaderTag small">
             public                                    property
@@ -998,8 +999,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="addChild()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#addChild()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L527" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L527" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L528" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L528" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addChild()
         <span class="detail-header-tag small">
@@ -1038,8 +1039,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="addItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#addItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L156" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L156" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L157" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L157" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addItem()
         <span class="detail-header-tag small">
@@ -1079,8 +1080,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="addRule()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#addRule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L236" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L236" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L237" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L237" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addRule()
         <span class="detail-header-tag small">
@@ -1120,8 +1121,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="assign()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#assign()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L619" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L619" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L620" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L620" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         assign()
         <span class="detail-header-tag small">
@@ -1167,8 +1168,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="checkAccess()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#checkAccess()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L75" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L75" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         checkAccess()
         <span class="detail-header-tag small">
@@ -1223,8 +1224,8 @@ with the roles and permissions assigned to the user.</p>
     <div class="detail-header h3" id="checkAccessRecursive()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#checkAccessRecursive()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L93" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L93" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L94" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L94" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         checkAccessRecursive()
         <span class="detail-header-tag small">
@@ -1281,8 +1282,8 @@ which holds the value of <code>$userId</code>.</p>
     <div class="detail-header h3" id="detectLoop()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#detectLoop()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L603" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L603" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L604" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L604" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         detectLoop()
         <span class="detail-header-tag small">
@@ -1323,8 +1324,8 @@ which holds the value of <code>$userId</code>.</p>
     <div class="detail-header h3" id="getAssignment()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getAssignment()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L478" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L478" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L479" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L479" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getAssignment()
         <span class="detail-header-tag small">
@@ -1366,8 +1367,8 @@ the role is not assigned to the user.</p>
     <div class="detail-header h3" id="getAssignments()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getAssignments()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L502" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L502" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L503" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L503" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getAssignments()
         <span class="detail-header-tag small">
@@ -1403,8 +1404,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getChildren()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getChildren()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L582" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L582" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L583" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L583" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getChildren()
         <span class="detail-header-tag small">
@@ -1439,8 +1440,8 @@ returned if there is no role assigned to the user.</p>
     <div class="detail-header h3" id="getChildrenList()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getChildrenList()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L422" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L422" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L423" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L423" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getChildrenList()
         <span class="detail-header-tag small">
@@ -1470,8 +1471,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="getChildrenRecursive()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getChildrenRecursive()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L438" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L438" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L439" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L439" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getChildrenRecursive()
         <span class="detail-header-tag small">
@@ -1512,8 +1513,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="getItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L127" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L127" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getItem()
         <span class="detail-header-tag small">
@@ -1548,8 +1549,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="getItems()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L302" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L302" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L303" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L303" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getItems()
         <span class="detail-header-tag small">
@@ -1584,8 +1585,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="getPermissionsByRole()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getPermissionsByRole()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L364" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L364" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L365" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L365" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getPermissionsByRole()
         <span class="detail-header-tag small">
@@ -1620,8 +1621,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="getPermissionsByUser()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getPermissionsByUser()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L386" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L386" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L387" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L387" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getPermissionsByUser()
         <span class="detail-header-tag small">
@@ -1656,8 +1657,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="getRolesByUser()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getRolesByUser()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L343" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L343" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L344" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L344" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getRolesByUser()
         <span class="detail-header-tag small">
@@ -1693,8 +1694,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="getRule()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getRule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L451" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L451" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L452" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L452" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getRule()
         <span class="detail-header-tag small">
@@ -1729,8 +1730,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="getRules()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#getRules()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L463" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L463" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L464" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L464" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getRules()
         <span class="detail-header-tag small">
@@ -1759,8 +1760,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="hasChild()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#hasChild()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L571" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L571" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L572" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L572" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         hasChild()
         <span class="detail-header-tag small">
@@ -1799,8 +1800,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L66" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L66" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -1824,8 +1825,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="populateItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#populateItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L321" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L321" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L322" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L322" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         populateItem()
         <span class="detail-header-tag small">
@@ -1860,8 +1861,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L668" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L668" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L669" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L669" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAll()
         <span class="detail-header-tag small">
@@ -1884,8 +1885,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeAllAssignments()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeAllAssignments()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L737" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L737" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L738" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L738" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllAssignments()
         <span class="detail-header-tag small">
@@ -1908,8 +1909,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeAllItems()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeAllItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L696" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L696" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L697" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L697" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllItems()
         <span class="detail-header-tag small">
@@ -1938,8 +1939,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeAllPermissions()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeAllPermissions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L679" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L679" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L680" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L680" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllPermissions()
         <span class="detail-header-tag small">
@@ -1963,8 +1964,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeAllRoles()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeAllRoles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L687" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L687" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L688" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L688" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllRoles()
         <span class="detail-header-tag small">
@@ -1988,8 +1989,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeAllRules()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeAllRules()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L723" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L723" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L724" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L724" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeAllRules()
         <span class="detail-header-tag small">
@@ -2013,8 +2014,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeChild()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeChild()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L551" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L551" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L552" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L552" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeChild()
         <span class="detail-header-tag small">
@@ -2054,8 +2055,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeChildren()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeChildren()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L561" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L561" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L562" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L562" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeChildren()
         <span class="detail-header-tag small">
@@ -2090,8 +2091,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L182" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L182" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L183" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L183" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeItem()
         <span class="detail-header-tag small">
@@ -2131,8 +2132,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="removeRule()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#removeRule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L284" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L284" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L285" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L285" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         removeRule()
         <span class="detail-header-tag small">
@@ -2172,8 +2173,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="revoke()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#revoke()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L640" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L640" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L641" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L641" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         revoke()
         <span class="detail-header-tag small">
@@ -2213,8 +2214,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="revokeAll()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#revokeAll()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L654" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L654" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L655" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L655" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         revokeAll()
         <span class="detail-header-tag small">
@@ -2249,8 +2250,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="supportsCascadeUpdate()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#supportsCascadeUpdate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L148" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L148" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L149" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L149" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         supportsCascadeUpdate()
         <span class="detail-header-tag small">
@@ -2280,8 +2281,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="updateItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#updateItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L203" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L203" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L204" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L204" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateItem()
         <span class="detail-header-tag small">
@@ -2327,8 +2328,8 @@ and the corresponding array value is a list of child item names.</p>
     <div class="detail-header h3" id="updateRule()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-rbac-dbmanager.html#updateRule()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L259" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L259" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/rbac/DbManager.php#L260" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/rbac/DbManager.php#L260" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         updateRule()
         <span class="detail-header-tag small">
@@ -2409,7 +2410,7 @@ and the corresponding array value is a list of child item names.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:34 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:18 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

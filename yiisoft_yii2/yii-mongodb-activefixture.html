@@ -100,7 +100,7 @@
     <p>Either <a href="yii-test-baseactivefixture.html#$modelClass-detail">$modelClass</a> or <a href="yii-mongodb-activefixture.html#$collectionName-detail">$collectionName</a> must be set. You should also provide fixture data in the file
 specified by <a href="yii-test-baseactivefixture.html#$dataFile-detail">$dataFile</a> or overriding <a href="yii-mongodb-activefixture.html#getData()-detail">getData()</a> if you want to use code to generate the fixture data.</p>
 <p>When the fixture is being loaded, it will first call <a href="yii-mongodb-activefixture.html#resetCollection()-detail">resetCollection()</a> to remove any existing data in the collection.
-It will then populate the table with the data returned by <a href="yii-mongodb-activefixture.html#getData()-detail">getData()</a>.</p>
+It will then populate the collection with the data returned by <a href="yii-mongodb-activefixture.html#getData()-detail">getData()</a>.</p>
 <p>After the fixture is loaded, you can access the loaded data via the <a href="yii-test-baseactivefixture.html#$data-detail">$data</a> property. If you set <a href="yii-test-baseactivefixture.html#$modelClass-detail">$modelClass</a>,
 you will also be able to retrieve an instance of <a href="yii-test-baseactivefixture.html#$modelClass-detail">$modelClass</a> with the populated data via <a href="yii-test-baseactivefixture.html#getModel()-detail">getModel()</a>.</p>
 
@@ -443,7 +443,7 @@ to be returned by <a href="yii-test-baseactivefixture.html#getData()-detail">get
     <div class="signature"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a> <a href="yii-mongodb-activefixture.html#$collectionName-detail">$collectionName</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
 
     <p>The collection name that this fixture is about. If this property is not set,
-the table name will be determined via <a href="yii-test-baseactivefixture.html#$modelClass-detail">$modelClass</a>.</p>
+the collection name will be determined via <a href="yii-test-baseactivefixture.html#$modelClass-detail">$modelClass</a>.</p>
 
     <p>See also <a href="yii-mongodb-connection.html#getCollection()-detail">yii\mongodb\Connection::getCollection()</a>.</p>
 
@@ -533,7 +533,7 @@ the table name will be determined via <a href="yii-test-baseactivefixture.html#$
 
         <p>This method is called by <span class="broken-link">\yii\mongodb\loadData()</span> to get the needed fixture data.</p>
 <p>The default implementation will try to return the fixture data by including the external file specified by <a href="yii-test-baseactivefixture.html#$dataFile-detail">$dataFile</a>.
-The file should return an array of data rows (column name =&gt; column value), each corresponding to a row in the table.</p>
+The file should return an array of data rows (column name =&gt; column value), each corresponding to a row in the collection.</p>
 <p>If the data file does not exist, an empty array will be returned.</p>
 
             </div>
@@ -591,7 +591,7 @@ given configuration.</p>
     <div class="doc-description">
         <p><strong>Loads the fixture data.</strong></p>
 
-        <p>The default implementation will first reset the DB table and then populate it with the data
+        <p>The default implementation will first reset the MongoDB collection and then populate it with the data
 returned by <a href="yii-mongodb-activefixture.html#getData()-detail">getData()</a>.</p>
 
             </div>
@@ -665,7 +665,7 @@ returned by <a href="yii-mongodb-activefixture.html#getData()-detail">getData()<
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:52 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:35 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

@@ -437,7 +437,7 @@
     </tr>
             <tr id="$db">
         <td><a href="yii-log-dbtarget.html#$db-detail">$db</a></td>
-        <td><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
         <td>The DB connection object or the application component ID of the DB connection.</td>
         <td><a href="yii-log-dbtarget.html">yii\log\DbTarget</a></td>
     </tr>
@@ -704,27 +704,28 @@
     <div class="detail-header h3" id="$db-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-log-dbtarget.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $db        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-log-dbtarget.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'db'</span></div>
+    <div class="signature"><a href="yii-db-connection.html">yii\db\Connection</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a> <a href="yii-log-dbtarget.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'db'</span></div>
 
     <p>The DB connection object or the application component ID of the DB connection.
 After the DbTarget object is created, if you want to change this property, you should only assign it
-with a DB connection object.</p>
+with a DB connection object.
+Starting from version 2.0.2, this can also be a configuration array for creating the object.</p>
 
     
 
     <div class="detail-header h3" id="$logTable-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-log-dbtarget.html#$logTable-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L44" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L44" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $logTable        <span class="detailHeaderTag small">
             public                                    property
@@ -744,8 +745,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="export()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-log-dbtarget.html#export()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         export()
         <span class="detail-header-tag small">
@@ -768,8 +769,8 @@ with a DB connection object.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-log-dbtarget.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/log/DbTarget.php#L52" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/log/DbTarget.php#L52" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -834,7 +835,7 @@ with a DB connection object.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:21:33 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 04:38:17 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
