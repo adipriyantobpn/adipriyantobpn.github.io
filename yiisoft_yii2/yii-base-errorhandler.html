@@ -67,13 +67,12 @@
 <a class="list-group-item" href="./yii-base-event.html">Event</a>
 <a class="list-group-item" href="./yii-base-exception.html">Exception</a>
 <a class="list-group-item" href="./yii-base-exitexception.html">ExitException</a>
-<a class="list-group-item" href="./yii-base-formatter.html">Formatter</a>
 <a class="list-group-item" href="./yii-base-inlineaction.html">InlineAction</a>
 <a class="list-group-item" href="./yii-base-invalidcallexception.html">InvalidCallException</a>
 <a class="list-group-item" href="./yii-base-invalidconfigexception.html">InvalidConfigException</a>
 <a class="list-group-item" href="./yii-base-invalidparamexception.html">InvalidParamException</a>
 <a class="list-group-item" href="./yii-base-invalidrouteexception.html">InvalidRouteException</a>
-<a class="list-group-item" href="./yii-base-mailevent.html">MailEvent</a>
+<a class="list-group-item" href="./yii-base-invalidvalueexception.html">InvalidValueException</a>
 <a class="list-group-item" href="./yii-base-model.html">Model</a>
 <a class="list-group-item" href="./yii-base-modelevent.html">ModelEvent</a>
 <a class="list-group-item" href="./yii-base-module.html">Module</a>
@@ -81,6 +80,7 @@
 <a class="list-group-item" href="./yii-base-object.html">Object</a>
 <a class="list-group-item" href="./yii-base-request.html">Request</a>
 <a class="list-group-item" href="./yii-base-response.html">Response</a>
+<a class="list-group-item" href="./yii-base-security.html">Security</a>
 <a class="list-group-item" href="./yii-base-theme.html">Theme</a>
 <a class="list-group-item" href="./yii-base-unknownclassexception.html">UnknownClassException</a>
 <a class="list-group-item" href="./yii-base-unknownmethodexception.html">UnknownMethodException</a>
@@ -93,8 +93,10 @@
 <a class="list-group-item" href="./yii-base-widget.html">Widget</a></div>
 <a class="list-group-item" href="#navigation-309" data-toggle="collapse" data-parent="#navigation">yii\behaviors <b class="caret"></b></a><div id="navigation-309" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-behaviors-attributebehavior.html">AttributeBehavior</a>
 <a class="list-group-item" href="./yii-behaviors-blameablebehavior.html">BlameableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-sluggablebehavior.html">SluggableBehavior</a>
 <a class="list-group-item" href="./yii-behaviors-timestampbehavior.html">TimestampBehavior</a></div>
 <a class="list-group-item" href="#navigation-310" data-toggle="collapse" data-parent="#navigation">yii\caching <b class="caret"></b></a><div id="navigation-310" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-caching-apccache.html">ApcCache</a>
+<a class="list-group-item" href="./yii-caching-arraycache.html">ArrayCache</a>
 <a class="list-group-item" href="./yii-caching-cache.html">Cache</a>
 <a class="list-group-item" href="./yii-caching-chaineddependency.html">ChainedDependency</a>
 <a class="list-group-item" href="./yii-caching-dbcache.html">DbCache</a>
@@ -104,9 +106,9 @@
 <a class="list-group-item" href="./yii-caching-expressiondependency.html">ExpressionDependency</a>
 <a class="list-group-item" href="./yii-caching-filecache.html">FileCache</a>
 <a class="list-group-item" href="./yii-caching-filedependency.html">FileDependency</a>
-<a class="list-group-item" href="./yii-caching-groupdependency.html">GroupDependency</a>
 <a class="list-group-item" href="./yii-caching-memcache.html">MemCache</a>
 <a class="list-group-item" href="./yii-caching-memcacheserver.html">MemCacheServer</a>
+<a class="list-group-item" href="./yii-caching-tagdependency.html">TagDependency</a>
 <a class="list-group-item" href="./yii-caching-wincache.html">WinCache</a>
 <a class="list-group-item" href="./yii-caching-xcache.html">XCache</a>
 <a class="list-group-item" href="./yii-caching-zenddatacache.html">ZendDataCache</a></div>
@@ -118,9 +120,11 @@
 <a class="list-group-item" href="./yii-console-controller.html">Controller</a>
 <a class="list-group-item" href="./yii-console-errorhandler.html">ErrorHandler</a>
 <a class="list-group-item" href="./yii-console-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-console-markdown.html">Markdown</a>
 <a class="list-group-item" href="./yii-console-request.html">Request</a>
 <a class="list-group-item" href="./yii-console-response.html">Response</a></div>
 <a class="list-group-item" href="#navigation-313" data-toggle="collapse" data-parent="#navigation">yii\console\controllers <b class="caret"></b></a><div id="navigation-313" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-controllers-assetcontroller.html">AssetController</a>
+<a class="list-group-item" href="./yii-console-controllers-basemigratecontroller.html">BaseMigrateController</a>
 <a class="list-group-item" href="./yii-console-controllers-cachecontroller.html">CacheController</a>
 <a class="list-group-item" href="./yii-console-controllers-fixturecontroller.html">FixtureController</a>
 <a class="list-group-item" href="./yii-console-controllers-helpcontroller.html">HelpController</a>
@@ -139,6 +143,7 @@
 <a class="list-group-item" href="./yii-db-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-db-activerecordinterface.html">ActiveRecordInterface</a>
 <a class="list-group-item" href="./yii-db-activerelationtrait.html">ActiveRelationTrait</a>
+<a class="list-group-item" href="./yii-db-aftersaveevent.html">AfterSaveEvent</a>
 <a class="list-group-item" href="./yii-db-baseactiverecord.html">BaseActiveRecord</a>
 <a class="list-group-item" href="./yii-db-batchqueryresult.html">BatchQueryResult</a>
 <a class="list-group-item" href="./yii-db-columnschema.html">ColumnSchema</a>
@@ -147,7 +152,9 @@
 <a class="list-group-item" href="./yii-db-datareader.html">DataReader</a>
 <a class="list-group-item" href="./yii-db-exception.html">Exception</a>
 <a class="list-group-item" href="./yii-db-expression.html">Expression</a>
+<a class="list-group-item" href="./yii-db-integrityexception.html">IntegrityException</a>
 <a class="list-group-item" href="./yii-db-migration.html">Migration</a>
+<a class="list-group-item" href="./yii-db-migrationinterface.html">MigrationInterface</a>
 <a class="list-group-item" href="./yii-db-query.html">Query</a>
 <a class="list-group-item" href="./yii-db-querybuilder.html">QueryBuilder</a>
 <a class="list-group-item" href="./yii-db-queryinterface.html">QueryInterface</a>
@@ -177,6 +184,7 @@
 <a class="list-group-item" href="#navigation-323" data-toggle="collapse" data-parent="#navigation">yii\filters <b class="caret"></b></a><div id="navigation-323" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-accesscontrol.html">AccessControl</a>
 <a class="list-group-item" href="./yii-filters-accessrule.html">AccessRule</a>
 <a class="list-group-item" href="./yii-filters-contentnegotiator.html">ContentNegotiator</a>
+<a class="list-group-item" href="./yii-filters-cors.html">Cors</a>
 <a class="list-group-item" href="./yii-filters-httpcache.html">HttpCache</a>
 <a class="list-group-item" href="./yii-filters-pagecache.html">PageCache</a>
 <a class="list-group-item" href="./yii-filters-ratelimitinterface.html">RateLimitInterface</a>
@@ -199,23 +207,23 @@
 <a class="list-group-item" href="./yii-helpers-basearrayhelper.html">BaseArrayHelper</a>
 <a class="list-group-item" href="./yii-helpers-baseconsole.html">BaseConsole</a>
 <a class="list-group-item" href="./yii-helpers-basefilehelper.html">BaseFileHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseformatconverter.html">BaseFormatConverter</a>
 <a class="list-group-item" href="./yii-helpers-basehtml.html">BaseHtml</a>
 <a class="list-group-item" href="./yii-helpers-basehtmlpurifier.html">BaseHtmlPurifier</a>
 <a class="list-group-item" href="./yii-helpers-baseinflector.html">BaseInflector</a>
 <a class="list-group-item" href="./yii-helpers-basejson.html">BaseJson</a>
 <a class="list-group-item" href="./yii-helpers-basemarkdown.html">BaseMarkdown</a>
-<a class="list-group-item" href="./yii-helpers-basesecurity.html">BaseSecurity</a>
 <a class="list-group-item" href="./yii-helpers-basestringhelper.html">BaseStringHelper</a>
 <a class="list-group-item" href="./yii-helpers-baseurl.html">BaseUrl</a>
 <a class="list-group-item" href="./yii-helpers-basevardumper.html">BaseVarDumper</a>
 <a class="list-group-item" href="./yii-helpers-console.html">Console</a>
 <a class="list-group-item" href="./yii-helpers-filehelper.html">FileHelper</a>
+<a class="list-group-item" href="./yii-helpers-formatconverter.html">FormatConverter</a>
 <a class="list-group-item" href="./yii-helpers-html.html">Html</a>
 <a class="list-group-item" href="./yii-helpers-htmlpurifier.html">HtmlPurifier</a>
 <a class="list-group-item" href="./yii-helpers-inflector.html">Inflector</a>
 <a class="list-group-item" href="./yii-helpers-json.html">Json</a>
 <a class="list-group-item" href="./yii-helpers-markdown.html">Markdown</a>
-<a class="list-group-item" href="./yii-helpers-security.html">Security</a>
 <a class="list-group-item" href="./yii-helpers-stringhelper.html">StringHelper</a>
 <a class="list-group-item" href="./yii-helpers-url.html">Url</a>
 <a class="list-group-item" href="./yii-helpers-vardumper.html">VarDumper</a></div>
@@ -239,6 +247,7 @@
 <a class="list-group-item" href="./yii-log-target.html">Target</a></div>
 <a class="list-group-item" href="#navigation-329" data-toggle="collapse" data-parent="#navigation">yii\mail <b class="caret"></b></a><div id="navigation-329" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mail-basemailer.html">BaseMailer</a>
 <a class="list-group-item" href="./yii-mail-basemessage.html">BaseMessage</a>
+<a class="list-group-item" href="./yii-mail-mailevent.html">MailEvent</a>
 <a class="list-group-item" href="./yii-mail-mailerinterface.html">MailerInterface</a>
 <a class="list-group-item" href="./yii-mail-messageinterface.html">MessageInterface</a></div>
 <a class="list-group-item" href="#navigation-330" data-toggle="collapse" data-parent="#navigation">yii\mutex <b class="caret"></b></a><div id="navigation-330" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mutex-dbmutex.html">DbMutex</a>
@@ -251,6 +260,7 @@
 <a class="list-group-item" href="./yii-rbac-item.html">Item</a>
 <a class="list-group-item" href="./yii-rbac-managerinterface.html">ManagerInterface</a>
 <a class="list-group-item" href="./yii-rbac-permission.html">Permission</a>
+<a class="list-group-item" href="./yii-rbac-phpmanager.html">PhpManager</a>
 <a class="list-group-item" href="./yii-rbac-role.html">Role</a>
 <a class="list-group-item" href="./yii-rbac-rule.html">Rule</a></div>
 <a class="list-group-item" href="#navigation-332" data-toggle="collapse" data-parent="#navigation">yii\rest <b class="caret"></b></a><div id="navigation-332" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rest-action.html">Action</a>
@@ -265,6 +275,7 @@
 <a class="list-group-item" href="./yii-rest-urlrule.html">UrlRule</a>
 <a class="list-group-item" href="./yii-rest-viewaction.html">ViewAction</a></div>
 <a class="list-group-item" href="#navigation-333" data-toggle="collapse" data-parent="#navigation">yii\test <b class="caret"></b></a><div id="navigation-333" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-test-activefixture.html">ActiveFixture</a>
+<a class="list-group-item" href="./yii-test-arrayfixture.html">ArrayFixture</a>
 <a class="list-group-item" href="./yii-test-baseactivefixture.html">BaseActiveFixture</a>
 <a class="list-group-item" href="./yii-test-dbfixture.html">DbFixture</a>
 <a class="list-group-item" href="./yii-test-fixture.html">Fixture</a>
@@ -326,6 +337,7 @@
 <a class="list-group-item" href="./yii-web-requestparserinterface.html">RequestParserInterface</a>
 <a class="list-group-item" href="./yii-web-response.html">Response</a>
 <a class="list-group-item" href="./yii-web-responseformatterinterface.html">ResponseFormatterInterface</a>
+<a class="list-group-item" href="./yii-web-servererrorhttpexception.html">ServerErrorHttpException</a>
 <a class="list-group-item" href="./yii-web-session.html">Session</a>
 <a class="list-group-item" href="./yii-web-sessioniterator.html">SessionIterator</a>
 <a class="list-group-item" href="./yii-web-toomanyrequestshttpexception.html">TooManyRequestsHttpException</a>
@@ -513,7 +525,7 @@ You can access that instance via <code>Yii::$app-&gt;errorHandler</code>.</p>
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr id="clearOutput()">
@@ -603,13 +615,18 @@ You can access that instance via <code>Yii::$app-&gt;errorHandler</code>.</p>
     </tr>
             <tr id="register()">
         <td><a href="yii-base-errorhandler.html#register()-detail">register()</a></td>
-        <td>Register this errorhandler</td>
+        <td>Register this error handler</td>
         <td><a href="yii-base-errorhandler.html">yii\base\ErrorHandler</a></td>
     </tr>
                 <tr class="inherited" id="trigger()">
         <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
         <td>Triggers an event.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="unregister()">
+        <td><a href="yii-base-errorhandler.html#unregister()-detail">unregister()</a></td>
+        <td>Unregisters this error handler by restoring the PHP error and exception handlers.</td>
+        <td><a href="yii-base-errorhandler.html">yii\base\ErrorHandler</a></td>
     </tr>
     </table>
 </div>
@@ -638,7 +655,7 @@ You can access that instance via <code>Yii::$app-&gt;errorHandler</code>.</p>
         <td>Renders the exception.</td>
         <td><a href="yii-base-errorhandler.html">yii\base\ErrorHandler</a></td>
     </tr>
-        </table>
+            </table>
 </div>
 
 <a name="events"></a>
@@ -652,8 +669,8 @@ You can access that instance via <code>Yii::$app-&gt;errorHandler</code>.</p>
     <div class="detail-header h3" id="$discardExistingOutput-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#$discardExistingOutput-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L29" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L29" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L30" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L30" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $discardExistingOutput        <span class="detailHeaderTag small">
             public                                    property
@@ -669,8 +686,8 @@ You can access that instance via <code>Yii::$app-&gt;errorHandler</code>.</p>
     <div class="detail-header h3" id="$exception-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#$exception-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $exception        <span class="detailHeaderTag small">
             public                                    property
@@ -686,8 +703,8 @@ You can access that instance via <code>Yii::$app-&gt;errorHandler</code>.</p>
     <div class="detail-header h3" id="$memoryReserveSize-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#$memoryReserveSize-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L36" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L36" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L37" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L37" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $memoryReserveSize        <span class="detailHeaderTag small">
             public                                    property
@@ -710,8 +727,8 @@ Defaults to 256KB.</p>
     <div class="detail-header h3" id="clearOutput()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#clearOutput()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L199" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L199" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L214" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L214" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         clearOutput()
         <span class="detail-header-tag small">
@@ -734,8 +751,8 @@ Defaults to 256KB.</p>
     <div class="detail-header h3" id="convertExceptionToError()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#convertExceptionToError()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L216" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L216" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L231" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L231" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         convertExceptionToError()
         <span class="detail-header-tag small">
@@ -766,8 +783,8 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
     <div class="detail-header h3" id="convertExceptionToString()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#convertExceptionToString()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L226" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L226" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L241" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L241" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         convertExceptionToString()
         <span class="detail-header-tag small">
@@ -802,8 +819,8 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
     <div class="detail-header h3" id="handleError()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#handleError()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L121" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L121" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L132" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L132" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         handleError()
         <span class="detail-header-tag small">
@@ -819,7 +836,7 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
             </div>
 
     <table class="detail-table table table-striped table-bordered table-hover">
-        <tr><td colspan="3" class="signature">void <strong><a href="yii-base-errorhandler.html#handleError()-detail">handleError</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$code</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$message</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$file</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$line&nbsp;</span><span style="color: #007700">)</span></td></tr>
+        <tr><td colspan="3" class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <strong><a href="yii-base-errorhandler.html#handleError()-detail">handleError</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$code</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$message</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$file</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$line&nbsp;</span><span style="color: #007700">)</span></td></tr>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$code</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
@@ -844,7 +861,13 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
                   <td class="param-desc-col"><p>The line number the error was raised at.</p>
 </td>
                 </tr>
-                                                    <tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the normal error handler continues.</p>
+</td>
+                </tr>
+                                        <tr>
                   <th class="param-name-col">throws</th>
                   <td class="param-type-col"><a href="yii-base-errorexception.html">yii\base\ErrorException</a></td>
                   <td class="param-desc-col"></td>
@@ -856,8 +879,8 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
     <div class="detail-header h3" id="handleException()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#handleException()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L69" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L69" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L79" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L79" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         handleException()
         <span class="detail-header-tag small">
@@ -887,8 +910,8 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
     <div class="detail-header h3" id="handleFatalError()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#handleFatalError()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L148" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L148" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L160" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L160" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         handleFatalError()
         <span class="detail-header-tag small">
@@ -911,8 +934,8 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
     <div class="detail-header h3" id="logException()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#logException()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L185" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L185" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L200" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L200" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         logException()
         <span class="detail-header-tag small">
@@ -941,8 +964,8 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
     <div class="detail-header h3" id="register()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#register()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L52" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L52" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         register()
         <span class="detail-header-tag small">
@@ -951,7 +974,7 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
     </div>
 
     <div class="doc-description">
-        <p><strong>Register this errorhandler</strong></p>
+        <p><strong>Register this error handler</strong></p>
 
         
             </div>
@@ -965,8 +988,8 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
     <div class="detail-header h3" id="renderException()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-base-errorhandler.html#renderException()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L179" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L179" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L194" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L194" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderException()
         <span class="detail-header-tag small">
@@ -989,6 +1012,30 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
 </td>
                 </tr>
                                                 </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="unregister()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-base-errorhandler.html#unregister()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/base/ErrorHandler.php#L66" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/base/ErrorHandler.php#L66" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        unregister()
+        <span class="detail-header-tag small">
+            public            method
+                    </span>
+    </div>
+
+    <div class="doc-description">
+        <p><strong>Unregisters this error handler by restoring the PHP error and exception handlers.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature">void <strong><a href="yii-base-errorhandler.html#unregister()-detail">unregister</a></strong><span style="color: #0000BB"></span><span style="color: #007700">(&nbsp;)</span></td></tr>
+            </table>
 
 <!--	-->
 </div>
@@ -1030,7 +1077,7 @@ to PHP errors because exceptions cannot be thrown inside of them.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:10 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:42:28 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

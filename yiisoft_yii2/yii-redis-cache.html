@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w11002" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11002-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11541" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11541-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11002-collapse" class="collapse navbar-collapse"><ul id="w11003" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11004" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11541-collapse" class="collapse navbar-collapse"><ul id="w11542" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11543" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11001" data-toggle="collapse" data-parent="#navigation">yii\redis <b class="caret"></b></a><div id="navigation-11001" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-redis-activequery.html">ActiveQuery</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11540" data-toggle="collapse" data-parent="#navigation">yii\redis <b class="caret"></b></a><div id="navigation-11540" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-redis-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-redis-activerecord.html">ActiveRecord</a>
 <a class="list-group-item active" href="./yii-redis-cache.html">Cache</a>
 <a class="list-group-item" href="./yii-redis-connection.html">Connection</a>
@@ -140,7 +140,7 @@ be a floating point number, so you may specify the time in milliseconds (e.g. 0.
             <tr class="inherited" id="$keyPrefix">
         <td><a href="yii-caching-cache.html#$keyPrefix-detail">$keyPrefix</a></td>
         <td><a href="http://www.php.net/language.types.string">string</a></td>
-        <td>A string prefixed to every cache key so that it is unique.</td>
+        <td>A string prefixed to every cache key so that it is unique globally in the whole cache storage.</td>
         <td><a href="yii-caching-cache.html">yii\caching\Cache</a></td>
     </tr>
             <tr id="$redis">
@@ -229,7 +229,12 @@ be a floating point number, so you may specify the time in milliseconds (e.g. 0.
         <td>Returns a list of behaviors that this component should behave as.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
     </tr>
-                <tr class="inherited" id="canGetProperty()">
+            <tr class="inherited" id="buildKey()">
+        <td><a href="yii-caching-cache.html#buildKey()-detail">buildKey()</a></td>
+        <td>Builds a normalized cache key from a given key.</td>
+        <td><a href="yii-caching-cache.html">yii\caching\Cache</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
         <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
         <td>Returns a value indicating whether a property can be read.</td>
         <td><a href="yii-base-component.html">yii\base\Component</a></td>
@@ -241,7 +246,7 @@ be a floating point number, so you may specify the time in milliseconds (e.g. 0.
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr class="inherited" id="delete()">
@@ -392,12 +397,7 @@ This method is required by the interface ArrayAccess.</td>
         <td>Adds multiple key-value pairs to cache.</td>
         <td><a href="yii-caching-cache.html">yii\caching\Cache</a></td>
     </tr>
-                        <tr class="inherited" id="buildKey()">
-        <td><a href="yii-caching-cache.html#buildKey()-detail">buildKey()</a></td>
-        <td>Builds a normalized cache key from a given key.</td>
-        <td><a href="yii-caching-cache.html">yii\caching\Cache</a></td>
-    </tr>
-                            <tr id="deleteValue()">
+                                            <tr id="deleteValue()">
         <td><a href="yii-redis-cache.html#deleteValue()-detail">deleteValue()</a></td>
         <td>Deletes a value with the specified key from cache
 This method should be implemented by child classes to delete the data from actual cache storage.</td>
@@ -467,8 +467,8 @@ with a Redis <a href="yii-redis-connection.html">yii\redis\Connection</a> object
     <div class="detail-header h3" id="addValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#addValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L181" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L181" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L182" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L182" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         addValue()
         <span class="detail-header-tag small">
@@ -516,8 +516,8 @@ in specific cache storage.</p>
     <div class="detail-header h3" id="deleteValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#deleteValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L195" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L195" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L196" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L196" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         deleteValue()
         <span class="detail-header-tag small">
@@ -553,8 +553,8 @@ This method should be implemented by child classes to delete the data from actua
     <div class="detail-header h3" id="exists()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#exists()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L101" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L101" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L102" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L102" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         exists()
         <span class="detail-header-tag small">
@@ -577,9 +577,8 @@ may return false while exists returns true.</p>
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$key</span></td>
                   <td class="param-type-col">mixed</td>
-                  <td class="param-desc-col"><p>A key identifying the cached value. This can be a simple string or</p>
-<pre><code>                 a complex data structure consisting of factors representing the key.
-</code></pre>
+                  <td class="param-desc-col"><p>A key identifying the cached value. This can be a simple string or
+a complex data structure consisting of factors representing the key.</p>
 </td>
                 </tr>
                                         <tr>
@@ -595,8 +594,8 @@ may return false while exists returns true.</p>
     <div class="detail-header h3" id="flushValues()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#flushValues()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L203" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L203" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L204" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L204" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         flushValues()
         <span class="detail-header-tag small">
@@ -626,8 +625,8 @@ may return false while exists returns true.</p>
     <div class="detail-header h3" id="getValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#getValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L109" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L109" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L110" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L110" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getValue()
         <span class="detail-header-tag small">
@@ -664,8 +663,8 @@ from specific cache storage.</p>
     <div class="detail-header h3" id="getValues()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#getValues()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L117" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L117" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L118" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L118" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getValues()
         <span class="detail-header-tag small">
@@ -703,8 +702,8 @@ this method should be overridden to exploit that feature.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L75" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L75" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -734,8 +733,8 @@ this method should be overridden to exploit that feature.</p>
     <div class="detail-header h3" id="setValue()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#setValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L132" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L132" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L133" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L133" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setValue()
         <span class="detail-header-tag small">
@@ -783,8 +782,8 @@ in specific cache storage.</p>
     <div class="detail-header h3" id="setValues()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-redis-cache.html#setValues()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/redis/Cache.php#L147" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/redis/Cache.php#L147" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         setValues()
         <span class="detail-header-tag small">
@@ -861,7 +860,7 @@ storage supports multi-set, this method should be overridden to exploit that fea
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:41 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:43:03 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

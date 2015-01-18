@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w10950" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10950-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w11433" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11433-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10950-collapse" class="collapse navbar-collapse"><ul id="w10951" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10952" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11433-collapse" class="collapse navbar-collapse"><ul id="w11434" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w11435" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,7 +48,7 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10948" data-toggle="collapse" data-parent="#navigation">yii\mongodb <b class="caret"></b></a><div id="navigation-10948" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-mongodb-activefixture.html">ActiveFixture</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-11428" data-toggle="collapse" data-parent="#navigation">yii\mongodb <b class="caret"></b></a><div id="navigation-11428" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-mongodb-activefixture.html">ActiveFixture</a>
 <a class="list-group-item" href="./yii-mongodb-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-mongodb-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-mongodb-cache.html">Cache</a>
@@ -56,12 +56,16 @@
 <a class="list-group-item active" href="./yii-mongodb-connection.html">Connection</a>
 <a class="list-group-item" href="./yii-mongodb-database.html">Database</a>
 <a class="list-group-item" href="./yii-mongodb-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-mongodb-migration.html">Migration</a>
 <a class="list-group-item" href="./yii-mongodb-query.html">Query</a>
 <a class="list-group-item" href="./yii-mongodb-session.html">Session</a></div>
-<a class="list-group-item" href="#navigation-10949" data-toggle="collapse" data-parent="#navigation">yii\mongodb\file <b class="caret"></b></a><div id="navigation-10949" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-file-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="#navigation-11429" data-toggle="collapse" data-parent="#navigation">yii\mongodb\console\controllers <b class="caret"></b></a><div id="navigation-11429" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-console-controllers-migratecontroller.html">MigrateController</a></div>
+<a class="list-group-item" href="#navigation-11430" data-toggle="collapse" data-parent="#navigation">yii\mongodb\file <b class="caret"></b></a><div id="navigation-11430" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-file-activequery.html">ActiveQuery</a>
 <a class="list-group-item" href="./yii-mongodb-file-activerecord.html">ActiveRecord</a>
 <a class="list-group-item" href="./yii-mongodb-file-collection.html">Collection</a>
-<a class="list-group-item" href="./yii-mongodb-file-query.html">Query</a></div></div>    </div>
+<a class="list-group-item" href="./yii-mongodb-file-query.html">Query</a></div>
+<a class="list-group-item" href="#navigation-11431" data-toggle="collapse" data-parent="#navigation">yii\mongodb\gii\model <b class="caret"></b></a><div id="navigation-11431" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-gii-model-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-11432" data-toggle="collapse" data-parent="#navigation">yii\mongodb\log <b class="caret"></b></a><div id="navigation-11432" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mongodb-log-mongodbtarget.html">MongoDbTarget</a></div></div>    </div>
     <div class="col-md-9 api-content" role="main">
         <h1>Class yii\mongodb\Connection</h1>
 <div id="nav">
@@ -115,12 +119,12 @@ $collection = $connection-&gt;getCollection(['mydatabase', 'customer']);
 <p>Connection is often used as an application component and configured in the application
 configuration like the following:</p>
 <pre><code>[
- 'components' =&gt; [
-	 'mongodb' =&gt; [
-		 'class' =&gt; '\yii\mongodb\Connection',
-		 'dsn' =&gt; 'mongodb://developer:password@localhost:27017/mydatabase',
-	 ],
- ],
+     'components' =&gt; [
+         'mongodb' =&gt; [
+             'class' =&gt; '\yii\mongodb\Connection',
+             'dsn' =&gt; 'mongodb://developer:password@localhost:27017/mydatabase',
+         ],
+     ],
 ]
 </code></pre>
 
@@ -275,7 +279,7 @@ mongodb://[username:password@]host1[:port1][,host2[:port2:],.</td>
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr id="close()">
@@ -576,8 +580,8 @@ for example:</p>
     <div class="detail-header h3" id="close()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#close()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L259" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L259" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L261" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L261" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         close()
         <span class="detail-header-tag small">
@@ -601,8 +605,8 @@ for example:</p>
     <div class="detail-header h3" id="fetchDefaultDatabaseName()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#fetchDefaultDatabaseName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L144" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L144" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         fetchDefaultDatabaseName()
         <span class="detail-header-tag small">
@@ -638,8 +642,8 @@ attempts to determine it from <a href="yii-mongodb-connection.html#$dsn-detail">
     <div class="detail-header h3" id="getCollection()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#getCollection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L182" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L182" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L184" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L184" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getCollection()
         <span class="detail-header-tag small">
@@ -658,10 +662,9 @@ attempts to determine it from <a href="yii-mongodb-connection.html#$dsn-detail">
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Collection name. If string considered as the name of the collection</p>
-<pre><code>                          inside the default database. If array - first element considered as the name of the database,
-                          second - as name of collection inside that database
-</code></pre>
+                  <td class="param-desc-col"><p>Collection name. If string considered as the name of the collection
+inside the default database. If array - first element considered as the name of the database,
+second - as name of collection inside that database</p>
 </td>
                 </tr>
                             <tr>
@@ -683,8 +686,8 @@ attempts to determine it from <a href="yii-mongodb-connection.html#$dsn-detail">
     <div class="detail-header h3" id="getDatabase()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#getDatabase()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L128" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L128" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getDatabase()
         <span class="detail-header-tag small">
@@ -725,8 +728,8 @@ attempts to determine it from <a href="yii-mongodb-connection.html#$dsn-detail">
     <div class="detail-header h3" id="getFileCollection()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#getFileCollection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L202" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L202" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L204" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L204" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getFileCollection()
         <span class="detail-header-tag small">
@@ -745,11 +748,10 @@ attempts to determine it from <a href="yii-mongodb-connection.html#$dsn-detail">
                                     <tr>
                   <td class="param-name-col"><span style="color: #0000BB">$prefix</span></td>
                   <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
-                  <td class="param-desc-col"><p>Collection prefix. If string considered as the prefix of the GridFS</p>
-<pre><code>                             collection inside the default database. If array - first element considered as the name of the database,
-                             second - as prefix of the GridFS collection inside that database, if no second element present
-                             default "fs" prefix will be used.
-</code></pre>
+                  <td class="param-desc-col"><p>Collection prefix. If string considered as the prefix of the GridFS
+collection inside the default database. If array - first element considered as the name of the database,
+second - as prefix of the GridFS collection inside that database, if no second element present
+default "fs" prefix will be used.</p>
 </td>
                 </tr>
                             <tr>
@@ -771,8 +773,8 @@ attempts to determine it from <a href="yii-mongodb-connection.html#$dsn-detail">
     <div class="detail-header h3" id="getIsActive()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#getIsActive()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L220" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L220" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L222" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L222" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         getIsActive()
         <span class="detail-header-tag small">
@@ -801,8 +803,8 @@ attempts to determine it from <a href="yii-mongodb-connection.html#$dsn-detail">
     <div class="detail-header h3" id="initConnection()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#initConnection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L273" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L273" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L275" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L275" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         initConnection()
         <span class="detail-header-tag small">
@@ -827,8 +829,8 @@ The default implementation triggers an <a href="yii-mongodb-connection.html#EVEN
     <div class="detail-header h3" id="open()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#open()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L230" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L230" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L232" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L232" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         open()
         <span class="detail-header-tag small">
@@ -858,8 +860,8 @@ The default implementation triggers an <a href="yii-mongodb-connection.html#EVEN
     <div class="detail-header h3" id="selectDatabase()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-mongodb-connection.html#selectDatabase()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L164" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L164" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/mongodb/Connection.php#L166" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/mongodb/Connection.php#L166" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         selectDatabase()
         <span class="detail-header-tag small">
@@ -949,7 +951,7 @@ The default implementation triggers an <a href="yii-mongodb-connection.html#EVEN
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:40 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:43:01 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

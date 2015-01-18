@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w10338" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10338-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10814" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10814-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10338-collapse" class="collapse navbar-collapse"><ul id="w10339" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10340" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10814-collapse" class="collapse navbar-collapse"><ul id="w10815" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10816" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,12 +48,11 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10337" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-10337" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-activefield.html">ActiveField</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10813" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-10813" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-activefield.html">ActiveField</a>
 <a class="list-group-item" href="./yii-bootstrap-activeform.html">ActiveForm</a>
 <a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrapasset.html">BootstrapAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrappluginasset.html">BootstrapPluginAsset</a>
-<a class="list-group-item" href="./yii-bootstrap-bootstrapthemeasset.html">BootstrapThemeAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-button.html">Button</a>
 <a class="list-group-item" href="./yii-bootstrap-buttondropdown.html">ButtonDropdown</a>
 <a class="list-group-item" href="./yii-bootstrap-buttongroup.html">ButtonGroup</a>
@@ -132,8 +131,8 @@ or <a href="yii-widgets-menu.html">yii\widgets\Menu</a> to build up such content
     </tr>
             <tr id="$brandLabel">
         <td><a href="yii-bootstrap-navbar.html#$brandLabel-detail">$brandLabel</a></td>
-        <td><a href="http://www.php.net/language.types.string">string</a></td>
-        <td>The text of the brand.</td>
+        <td><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>The text of the brand of false if it's not used.</td>
         <td><a href="yii-bootstrap-navbar.html">yii\bootstrap\NavBar</a></td>
     </tr>
             <tr id="$brandOptions">
@@ -307,7 +306,7 @@ adds left and right padding.</td>
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr class="inherited" id="detachBehavior()">
@@ -469,17 +468,17 @@ adds left and right padding.</td>
                     </span>
     </div>
 
-    <div class="signature"><a href="http://www.php.net/language.types.string">string</a> <a href="yii-bootstrap-navbar.html#$brandLabel-detail">$brandLabel</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+    <div class="signature"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a> <a href="yii-bootstrap-navbar.html#$brandLabel-detail">$brandLabel</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
 
-    <p>The text of the brand. Note that this is not HTML-encoded.</p>
+    <p>The text of the brand of false if it's not used. Note that this is not HTML-encoded.</p>
 
     <p>See also <a href="http://getbootstrap.com/components/#navbar">http://getbootstrap.com/components/#navbar</a>.</p>
 
     <div class="detail-header h3" id="$brandOptions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$brandOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L72" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L72" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L73" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L73" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $brandOptions        <span class="detailHeaderTag small">
             public                                    property
@@ -495,15 +494,15 @@ adds left and right padding.</td>
     <div class="detail-header h3" id="$brandUrl-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$brandUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $brandUrl        <span class="detailHeaderTag small">
             public                                    property
                     </span>
     </div>
 
-    <div class="signature"> <a href="yii-bootstrap-navbar.html#$brandUrl-detail">$brandUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+    <div class="signature"> <a href="yii-bootstrap-navbar.html#$brandUrl-detail">$brandUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
 
     
     
@@ -531,8 +530,8 @@ adds left and right padding.</td>
     <div class="detail-header h3" id="$innerContainerOptions-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$innerContainerOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L86" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L86" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L87" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L87" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $innerContainerOptions        <span class="detailHeaderTag small">
             public                                    property
@@ -568,8 +567,8 @@ adds left and right padding.</td>
     <div class="detail-header h3" id="$renderInnerContainer-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$renderInnerContainer-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L82" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L82" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $renderInnerContainer        <span class="detailHeaderTag small">
             public                                    property
@@ -586,8 +585,8 @@ adds left and right padding. Set this to false for a 100% width navbar.</p>
     <div class="detail-header h3" id="$screenReaderToggleText-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#$screenReaderToggleText-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $screenReaderToggleText        <span class="detailHeaderTag small">
             public                                    property
@@ -607,8 +606,8 @@ adds left and right padding. Set this to false for a 100% width navbar.</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L93" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L93" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -631,8 +630,8 @@ adds left and right padding. Set this to false for a 100% width navbar.</p>
     <div class="detail-header h3" id="renderToggleButton()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#renderToggleButton()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L148" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L148" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L150" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L150" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderToggleButton()
         <span class="detail-header-tag small">
@@ -661,8 +660,8 @@ adds left and right padding. Set this to false for a 100% width navbar.</p>
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-navbar.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L132" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L132" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/NavBar.php#L134" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/NavBar.php#L134" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -720,7 +719,7 @@ adds left and right padding. Set this to false for a 100% width navbar.</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:34 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:42:55 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {

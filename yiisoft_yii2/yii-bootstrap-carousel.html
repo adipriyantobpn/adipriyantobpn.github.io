@@ -13,11 +13,11 @@
 <body>
 
 <div class="wrap">
-    <nav id="w10318" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10318-collapse"><span class="sr-only">Toggle navigation</span>
+    <nav id="w10794" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10794-collapse"><span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10318-collapse" class="collapse navbar-collapse"><ul id="w10319" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
-<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10320" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w10794-collapse" class="collapse navbar-collapse"><ul id="w10795" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w10796" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
 <li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
 <li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
 <li><a href="./ext-codeception-index.html" tabindex="-1">codeception</a></li>
@@ -48,12 +48,11 @@
     
 <div class="row">
     <div class="col-md-3">
-                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10317" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-10317" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-activefield.html">ActiveField</a>
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-10793" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-10793" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-activefield.html">ActiveField</a>
 <a class="list-group-item" href="./yii-bootstrap-activeform.html">ActiveForm</a>
 <a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrapasset.html">BootstrapAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-bootstrappluginasset.html">BootstrapPluginAsset</a>
-<a class="list-group-item" href="./yii-bootstrap-bootstrapthemeasset.html">BootstrapThemeAsset</a>
 <a class="list-group-item" href="./yii-bootstrap-button.html">Button</a>
 <a class="list-group-item" href="./yii-bootstrap-buttondropdown.html">ButtonDropdown</a>
 <a class="list-group-item" href="./yii-bootstrap-buttongroup.html">ButtonGroup</a>
@@ -170,6 +169,12 @@
         <td>The HTML attributes for the widget container tag.</td>
         <td><a href="yii-bootstrap-widget.html">yii\bootstrap\Widget</a></td>
     </tr>
+            <tr id="$showIndicators">
+        <td><a href="yii-bootstrap-carousel.html#$showIndicators-detail">$showIndicators</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>If false carousel indicators (<ol> tag with anchors to items) should not be displayed.</td>
+        <td><a href="yii-bootstrap-carousel.html">yii\bootstrap\Carousel</a></td>
+    </tr>
             <tr class="inherited" id="$stack">
         <td><a href="yii-base-widget.html#$stack-detail">$stack</a></td>
         <td><a href="yii-base-widget.html">yii\base\Widget</a>[]</td>
@@ -274,7 +279,7 @@
     </tr>
             <tr class="inherited" id="className()">
         <td><a href="yii-base-object.html#className()-detail">className()</a></td>
-        <td></td>
+        <td>Returns the fully qualified name of this class.</td>
         <td><a href="yii-base-object.html">yii\base\Object</a></td>
     </tr>
             <tr class="inherited" id="detachBehavior()">
@@ -461,8 +466,8 @@ If false, it means the previous and the next control buttons should not be displ
     <div class="detail-header h3" id="$items-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-carousel.html#$items-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L62" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L62" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         $items        <span class="detailHeaderTag small">
             public                                    property
@@ -476,6 +481,23 @@ slide with the following structure:</p>
 <pre><code class="language-php"><span style="color: #0000BB"></span><span style="color: #007700">[<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;required,&nbsp;slide&nbsp;content&nbsp;(HTML),&nbsp;such&nbsp;as&nbsp;an&nbsp;image&nbsp;tag<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'content'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'&lt;img&nbsp;src="http://twitter.github.io/bootstrap/assets/img/bootstrap-mdo-sfmoma-01.jpg"/&gt;'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;optional,&nbsp;the&nbsp;caption&nbsp;(HTML)&nbsp;of&nbsp;the&nbsp;slide<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'caption'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'&lt;h4&gt;This&nbsp;is&nbsp;title&lt;/h4&gt;&lt;p&gt;This&nbsp;is&nbsp;the&nbsp;caption&nbsp;text&lt;/p&gt;'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;optional&nbsp;the&nbsp;HTML&nbsp;attributes&nbsp;of&nbsp;the&nbsp;slide&nbsp;container<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'options'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;[],<br />]</span></code></pre>
 
     
+
+    <div class="detail-header h3" id="$showIndicators-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-carousel.html#$showIndicators-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $showIndicators        <span class="detailHeaderTag small">
+            public                                    property
+                    </span>
+    </div>
+
+    <div class="signature"><a href="http://www.php.net/language.types.boolean">boolean</a> <a href="yii-bootstrap-carousel.html#$showIndicators-detail">$showIndicators</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+    <p>If false carousel indicators (<ol> tag with anchors to items) should not be displayed.</p>
+
+    
 </div>
 <h2>Method Details</h2>
 
@@ -484,8 +506,8 @@ slide with the following structure:</p>
     <div class="detail-header h3" id="init()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-carousel.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L73" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L73" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         init()
         <span class="detail-header-tag small">
@@ -508,8 +530,8 @@ slide with the following structure:</p>
     <div class="detail-header h3" id="renderControls()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-carousel.html#renderControls()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L154" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L154" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L163" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L163" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderControls()
         <span class="detail-header-tag small">
@@ -538,8 +560,8 @@ slide with the following structure:</p>
     <div class="detail-header h3" id="renderIndicators()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-carousel.html#renderIndicators()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L90" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L90" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L96" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L96" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderIndicators()
         <span class="detail-header-tag small">
@@ -568,8 +590,8 @@ slide with the following structure:</p>
     <div class="detail-header h3" id="renderItem()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-carousel.html#renderItem()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L125" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L125" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L134" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L134" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderItem()
         <span class="detail-header-tag small">
@@ -616,8 +638,8 @@ slide with the following structure:</p>
     <div class="detail-header h3" id="renderItems()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-carousel.html#renderItems()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L108" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L108" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L117" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L117" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         renderItems()
         <span class="detail-header-tag small">
@@ -646,8 +668,8 @@ slide with the following structure:</p>
     <div class="detail-header h3" id="run()-detail">
         <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
         <a class="tool-link hash" href="yii-bootstrap-carousel.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
-                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
-            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/extensions/bootstrap/Carousel.php#L82" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/extensions/bootstrap/Carousel.php#L82" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
         
         run()
         <span class="detail-header-tag small">
@@ -705,7 +727,7 @@ slide with the following structure:</p>
 </div>
 
 <footer class="footer">
-        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:22:34 +0700</small></p>
+        <p class="pull-right"><small>Page generated on Mon, 19 Jan 2015 03:42:55 +0700</small></p>
     Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
 
 <script type="text/javascript">jQuery(document).ready(function () {
